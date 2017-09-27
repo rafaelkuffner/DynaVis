@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<Definitions>
+	<Tiers>
+		<Tier name="upper_body_mu">
+			<TierString>upper_body_mu-f3g1a_p1r1</TierString>
+			<TierString>upper_body_mu-f3g1a_p2r1</TierString>
+			<TierString>upper_body_mu-f3g1a_p3r1</TierString>
+			<TierString>upper_body_mu-f3g1a_p4r1</TierString>
+			<TierString>upper_body_mu-f3g1a_p5r1</TierString>
+			<TierString>upper_body_mu-f3g1a_p6r1</TierString>
+		</Tier>
+		<Tier name="lower_body_mu">
+			<TierString>lower_body_mu-f3g1a_p1r1</TierString>
+			<TierString>lower_body_mu-f3g1a_p2r1</TierString>
+			<TierString>lower_body_mu-f3g1a_p3r1</TierString>
+			<TierString>lower_body_mu-f3g1a_p4r1</TierString>
+			<TierString>lower_body_mu-f3g1a_p5r1</TierString>
+			<TierString>lower_body_mu-f3g1a_p6r1</TierString>
+		</Tier>
+		<Tier name="head_face_mu">
+			<TierString>head_face_mu-f3g1a_p1r1</TierString>
+			<TierString>head_face_mu-f3g1a_p2r1</TierString>
+			<TierString>head_face_mu-f3g1a_p3r1</TierString>
+			<TierString>head_face_mu-f3g1a_p4r1</TierString>
+			<TierString>head_face_mu-f3g1a_p5r1</TierString>
+			<TierString>head_face_mu-f3g1a_p6r1</TierString>
+		</Tier>
+		<Tier name="location">
+			<TierString>location-f3g1a_p1r1</TierString>
+			<TierString>location-f3g1a_p2r1</TierString>
+			<TierString>location-f3g1a_p3r1</TierString>
+			<TierString>location-f3g1a_p4r1</TierString>
+			<TierString>location-f3g1a_p5r1</TierString>
+			<TierString>location-f3g1a_p6r1</TierString>
+		</Tier>
+		<Tier name="gaze_points">
+			<TierString>gaze_points-f3g1a_p1r1</TierString>
+			<TierString>gaze_points-f3g1a_p2r1</TierString>
+			<TierString>gaze_points-f3g1a_p3r1</TierString>
+			<TierString>gaze_points-f3g1a_p4r1</TierString>
+			<TierString>gaze_points-f3g1a_p5r1</TierString>
+			<TierString>gaze_points-f3g1a_p6r1</TierString>	
+		</Tier>
+		<Tier name="head_face_function">
+			<TierString>head_face_function-f3g1a_p1r1</TierString>
+			<TierString>head_face_function-f3g1a_p2r1</TierString>
+			<TierString>head_face_function-f3g1a_p3r1</TierString>
+			<TierString>head_face_function-f3g1a_p4r1</TierString>
+			<TierString>head_face_function-f3g1a_p5r1</TierString>
+			<TierString>head_face_function-f3g1a_p6r1</TierString>
+		</Tier>
+		<Tier name="lower_body_function">
+			<TierString>lower_body_function-f3g1a_p1r1</TierString>
+			<TierString>lower_body_function-f3g1a_p2r1</TierString>
+			<TierString>lower_body_function-f3g1a_p3r1</TierString>
+			<TierString>lower_body_function-f3g1a_p4r1</TierString>
+			<TierString>lower_body_function-f3g1a_p5r1</TierString>
+			<TierString>lower_body_function-f3g1a_p6r1</TierString>
+		</Tier>
+		<Tier name="upper_body_function">
+			<TierString>upper_body_function-f3g1a_p1r1</TierString>
+			<TierString>upper_body_function-f3g1a_p2r1</TierString>
+			<TierString>upper_body_function-f3g1a_p3r1</TierString>
+			<TierString>upper_body_function-f3g1a_p4r1</TierString>
+			<TierString>upper_body_function-f3g1a_p5r1</TierString>
+			<TierString>upper_body_function-f3g1a_p6r1</TierString>
+		</Tier>
+	</Tiers>
+	<Actions>
+		<Action name="UpperBodyAction">
+			<ApplicableTiers>
+				<ApplicableTier>upper_body_mu</ApplicableTier>
+			</ApplicableTiers>
+			<Parameters>
+				<Parameter input="mu_arm_right" output="arm_right"/> 
+				<Parameter input="mu_arm_left" output="arm_left"/> 
+				<Parameter input="mu_arms_both" output="arms_both"/> 
+				<Parameter input="mu_hand_right" output="hand_right"/> 
+				<Parameter input="mu_hand_left" output="hand_left"/> 
+				<Parameter input="mu_hands_both" output="hands_both"/> 
+				<Parameter input="mu_shoulder_right" output="shoulder_right"/> 
+				<Parameter input="mu_shoulder_left" output="shoulder_left"/> 
+				<Parameter input="mu_shoulders_both" output="shoulders_both"/> 
+				<Parameter input="mu_torso_fwrd" output="torso_fwrd"/> 
+				<Parameter input="mu_torso_back" output="torso_back"/> 
+				<Parameter input="mu_torso_lat" output="torso_lat"/> 
+				<Parameter input="mu_ub_all" output="all"/> 
+				<Parameter input="mu_ub_limb_both" output="limbs_both"/> 
+				<Parameter input="mu_ub_limb_left" output="limb_left"/> 
+				<Parameter input="mu_ub_limb_right" output="limb_right"/> 
+				<Parameter input="mu_ub_other" output="all"/>
+			</Parameters>
+		</Action>
+		<Action name="LowerBodyAction">
+			<ApplicableTiers>
+				<ApplicableTier>lower_body_mu</ApplicableTier>
+			</ApplicableTiers>
+			<Parameters>
+				<Parameter input="mu_leg_right" output="leg_right"/> 
+				<Parameter input="mu_leg_left" output="leg_left"/> 
+				<Parameter input="mu_legs_both" output="legs_both"/> 
+				<Parameter input="mu_foot_right" output="foot_right"/> 
+				<Parameter input="mu_foot_left" output="foot_left"/> 
+				<Parameter input="mu_feet_both" output="feet_both"/> 
+				<Parameter input="mu_hip_s" output="hip_s"/> 
+				<Parameter input="mu_ub_all" output="all"/> 
+				<Parameter input="mu_lb_limbs_both" output="limbs_both"/> 
+				<Parameter input="mu_lb_limb_left" output="limb_left"/> 
+				<Parameter input="mu_ub_limb_right" output="limb_right"/> 
+				<Parameter input="mu_ub_other" output="all"/>
+			</Parameters>
+		</Action>
+		<Action name="HeadFaceAction">
+			<ApplicableTiers>
+				<ApplicableTier>head_face_mu</ApplicableTier>
+			</ApplicableTiers>
+			<Parameters>
+				<Parameter input="mu_head" output="head"/> 
+				<Parameter input="mu_face" output="face"/> 
+				<Parameter input="mu_face_head" output="face_head"/> 
+				<Parameter input="mu_eyes_brows" output="eyes_brows"/> 
+				<Parameter input="mu_eyes_brows_head" output="eyes_brows_head"/> 
+				<Parameter input="mu_mouth" output="mouth"/> 
+				<Parameter input="mu_mouth_head" output="mouth_head"/> 
+				<Parameter input="mu_nose" output="nose"/> 	
+				<Parameter input="mu_nose_head" output="nose_head"/> 
+				<Parameter input="mu_hf_other" output="face_head"/> 
+			</Parameters>
+		</Action>
+		<Action name="LocationAction">
+			<ApplicableTiers>
+				<ApplicableTier>location</ApplicableTier>
+			</ApplicableTiers>
+			<Parameters>
+				<Parameter input="goTo_prep" output="settling"/> 
+				<Parameter input="goTo_free" output="goTo_free"/> 
+				<Parameter input="goTo_1" output="goTo_1"/> 
+				<Parameter input="goTo_2" output="goTo_2"/> 
+				<Parameter input="goTo_3" output="goTo_3"/> 
+				<Parameter input="goTo_4" output="goTo_4"/> 
+				<Parameter input="goTo_5" output="goTo_5"/> 
+				<Parameter input="goTo_6" output="goTo_6"/> 
+				<Parameter input="goTo_object" output="goTo_object"/> 
+				<Parameter input="goTo_pacing" output="goTo_pacing"/> 	
+				<Parameter input="goTo_gameT" output="goTo_gameT"/> 
+				<Parameter input="goTo_objT" output="goTo_objT"/>  
+				<Parameter input="sit_full" output="sit_full"/>  
+				<Parameter input="sit_part" output="sit_part"/> 
+				<Parameter input="stand_at_home" output="stand_at_home"/>  
+				<Parameter input="stand_at_gameT" output="stand_at_gameT"/> 
+				<Parameter input="stand_at_objT" output="stand_at_objT"/>  
+				<Parameter input="stand_free" output="stand_free"/> 
+				<Parameter input="settling" output="settling"/> 	
+			</Parameters>
+		</Action>
+		<Action name="GazeAction">
+			<ApplicableTiers>
+				<ApplicableTier>gaze_points</ApplicableTier>
+			</ApplicableTiers>
+			<Parameters>
+				<Parameter input="gaze_up" output="up"/> 
+				<Parameter input="gaze_down" output="down"/> 
+				<Parameter input="gaze_free_fixation" output="free"/> 
+				<Parameter input="gaze_to_camera" output="camera"/> 
+				<Parameter input="gaze_to_gameT" output="gameT"/> 
+				<Parameter input="gaze_to_object_other" output="object"/> 
+				<Parameter input="gaze_to_objT" output="objT"/> 
+				<Parameter input="gaze_to_p1" output="p1"/> 
+				<Parameter input="gaze_to_p2" output="p2"/> 
+				<Parameter input="gaze_to_p3" output="p3"/> 	
+				<Parameter input="gaze_to_p4" output="p4"/> 
+				<Parameter input="gaze_to_p5" output="p5"/>  
+				<Parameter input="gaze_to_p6" output="p6"/> 	
+				<Parameter input="gaze_to_home" output="home"/> 	
+			</Parameters>
+		</Action>
+	</Actions>
+	<Modifiers>
+		<Modifier name="ColorModifier">
+			<Mappings>
+				<Mapping input="context" output="1 0 0"/>
+				<Mapping input="self" output="0 1 0"/>
+				<Mapping input="communication" output="0 0 1"/>
+			</Mappings>
+			<ModifiableActions>
+				<ModifiableAction name="HeadFaceAction">
+					<Tiers>
+						<TierString>head_face_function</TierString>
+					</Tiers>
+					<Parameters>
+						<Parameter input="context_focused_hf" output="context"/>
+						<Parameter input="self_focused_hf" output="self"/>
+						<Parameter input="communication_focused_hf" output="communication"/>
+					</Parameters>
+				</ModifiableAction>
+				<ModifiableAction name="LowerBodyAction">
+					<Tiers>
+						<TierString>lower_body_function</TierString>
+					</Tiers>
+					<Parameters>
+						<Parameter input="context_focused_lb" output="context"/>
+						<Parameter input="self_focused_lb" output="self"/>
+						<Parameter input="communication_focused_lb" output="communication"/>
+					</Parameters>
+				</ModifiableAction>
+				<ModifiableAction name="UpperBodyAction">
+					<Tiers>
+						<TierString>upper_body_function</TierString>
+					</Tiers>
+					<Parameters>
+						<Parameter input="context_focused_ub" output="context"/>
+						<Parameter input="self_focused_ub" output="self"/>
+						<Parameter input="communication_focused_ub" output="communication"/>
+					</Parameters>
+				</ModifiableAction>
+			</ModifiableActions>
+		</Modifier>
+	</Modifiers>
+</Definitions>

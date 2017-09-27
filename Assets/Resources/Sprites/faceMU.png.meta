@@ -1,0 +1,165 @@
+fileFormatVersion: 2
+guid: 764921bbe4a8b0541884b91cae898dab
+timeCreated: 1456763133
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: none
+    21300002: head
+    21300004: face_head
+    21300006: eyes_brows
+    21300008: eyes_brows_head
+    21300010: mouth
+    21300012: mouth_head
+    21300014: nose
+    21300016: nose_head
+    21300018: face
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: none
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 540
+        width: 333
+        height: 432
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: head
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 544
+        width: 333
+        height: 432
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face_head
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 546
+        width: 333
+        height: 432
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: eyes_brows
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 546
+        width: 333
+        height: 432
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: eyes_brows_head
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 544
+        width: 333
+        height: 432
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mouth
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 43
+        width: 333
+        height: 432
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mouth_head
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 47
+        width: 333
+        height: 432
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nose
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 49
+        width: 333
+        height: 432
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: nose_head
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 49
+        width: 333
+        height: 432
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: face
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 47
+        width: 333
+        height: 432
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

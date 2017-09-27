@@ -1,0 +1,412 @@
+fileFormatVersion: 2
+guid: d1ef06b3a588a3a40813384419ef35a3
+timeCreated: 1490025442
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: stand_none
+    21300002: stand_leg_left
+    21300004: stand_leg_right
+    21300006: stand_legs_both
+    21300008: stand_foot_left
+    21300010: stand_foot_right
+    21300012: stand_feet_both
+    21300014: stand_hip_s
+    21300016: stand_limb_left
+    21300018: stand_limb_right
+    21300020: stand_limbs_both
+    21300022: stand_all
+    21300024: sit_none
+    21300026: sit_leg_left
+    21300028: sit_leg_right
+    21300030: sit_legs_both
+    21300032: sit_foot_left
+    21300034: sit_foot_right
+    21300036: sit_feet_both
+    21300038: sit_hip_s
+    21300040: sit_limb_left
+    21300042: sit_limb_right
+    21300044: sit_limbs_both
+    21300046: sit_all
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: stand_none
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 1066
+        width: 130
+        height: 311
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: stand_leg_left
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 716
+        width: 130
+        height: 311
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: stand_leg_right
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 716
+        width: 130
+        height: 311
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: stand_legs_both
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 716
+        width: 130
+        height: 311
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: stand_foot_left
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 700
+        width: 130
+        height: 327
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: stand_foot_right
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 700
+        width: 130
+        height: 327
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: stand_feet_both
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 700
+        width: 130
+        height: 327
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: stand_hip_s
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 716
+        width: 130
+        height: 311
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: stand_limb_left
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 709
+        width: 130
+        height: 318
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: stand_limb_right
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 708
+        width: 130
+        height: 319
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: stand_limbs_both
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 707
+        width: 130
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: stand_all
+      rect:
+        serializedVersion: 2
+        x: 1835
+        y: 706
+        width: 130
+        height: 321
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sit_none
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 383
+        width: 104
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sit_leg_left
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 59
+        width: 104
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sit_leg_right
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 59
+        width: 104
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sit_legs_both
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 59
+        width: 104
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sit_foot_left
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 49
+        width: 104
+        height: 266
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sit_foot_right
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 46
+        width: 111
+        height: 269
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sit_feet_both
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 44
+        width: 110
+        height: 271
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sit_hip_s
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 59
+        width: 104
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sit_limb_left
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 56
+        width: 104
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sit_limb_right
+      rect:
+        serializedVersion: 2
+        x: 1476
+        y: 54
+        width: 109
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sit_limbs_both
+      rect:
+        serializedVersion: 2
+        x: 1657
+        y: 49
+        width: 105
+        height: 266
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sit_all
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 57
+        width: 108
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
