@@ -33,6 +33,7 @@ public class Simulation : MonoBehaviour {
 	bool fileLoaded;
 	SettingsButton settings;
 	PlayButton control;
+	SetupButton setupAnnotation;
 	Dictionary<Transform,Vector2> initialState;
 	float playspeed;
 	public Text speedtext;
@@ -75,6 +76,7 @@ public class Simulation : MonoBehaviour {
 		currentText = GameObject.Find ("CurrentText").GetComponent<Text> ();
 		control = GameObject.Find ("ButtonPlay").GetComponentInChildren<PlayButton> ();
 		settings = GameObject.Find ("Button Settings").GetComponentInChildren<SettingsButton> ();
+		setupAnnotation = GameObject.Find ("Button Setup").GetComponentInChildren<SetupButton> ();
 		loadedFileText = GameObject.Find ("LoadedFileText").GetComponent<Text> ();
 		timeline.value = 0;
 		current = 0;
@@ -201,6 +203,10 @@ public class Simulation : MonoBehaviour {
 		settings.toggleOpen();
 	}
 
+	public void toggleSetup(){
+		setupAnnotation.startSetup ();
+	}
+
 	public void stop(){
 		control.stop ();
 		resetInitialState ();
@@ -234,6 +240,7 @@ public class Simulation : MonoBehaviour {
 		currentText.text = string.Format("{0:00}:{1:00}:{2:00}:{3:00}",ts.Hours,ts.Minutes, ts.Seconds,ts.Milliseconds);
 	
 		settings.drawGUI ();
+		setupAnnotation.drawSetupTiers ();
 		if (fb.outputFile != null && fileLoaded) {
 			loadedFileText.text ="Loaded File: "+ fb.outputFile.ToString();
 		}
