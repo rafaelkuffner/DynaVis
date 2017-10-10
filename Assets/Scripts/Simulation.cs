@@ -240,7 +240,14 @@ public class Simulation : MonoBehaviour {
 		currentText.text = string.Format("{0:00}:{1:00}:{2:00}:{3:00}",ts.Hours,ts.Minutes, ts.Seconds,ts.Milliseconds);
 	
 		settings.drawGUI ();
-		setupAnnotation.drawSetupTiers ();
+
+		if(setupAnnotation.isSetupTiersActive)
+			setupAnnotation.drawSetupTiers ();
+
+		if (setupAnnotation.isSetupActionActive)
+			setupAnnotation.drawSetupActions ();
+
+
 		if (fb.outputFile != null && fileLoaded) {
 			loadedFileText.text ="Loaded File: "+ fb.outputFile.ToString();
 		}
