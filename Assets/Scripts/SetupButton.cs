@@ -84,6 +84,11 @@ public class SetupButton : MonoBehaviour {
 			int pListy = Mathf.RoundToInt(posy + bordery);
 			Rect listBox = new Rect (pListx, pListy, sListx, sListy);
 		
+			/*int selGridInt = 0;
+			string[] selStrings = new string[] {"Grid 1", "Grid 2", "Grid 3", "Grid 4"};
+
+			selGridInt = GUI.SelectionGrid(listBox, selGridInt, selStrings, 1);*/
+			//GUI.BeginScrollView(
 			GUI.Box (listBox, "Tiers", boxStyle);
 
 			// Edit Window
@@ -143,6 +148,10 @@ public class SetupButton : MonoBehaviour {
 			Rect listBox = new Rect (pListx, pListy, sListx, sListy);
 
 			GUI.Box (listBox, "Actions", boxStyle);
+
+			// buttons to add and remove 
+			//GUI.Box(
+
 
 			// Edit Window
 			int sEditx = Mathf.RoundToInt(sizex * 0.4f);
