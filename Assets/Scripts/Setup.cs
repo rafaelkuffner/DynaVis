@@ -18,6 +18,8 @@ public class Setup : MonoBehaviour {
 	GameObject playerGO;
 	GameObject chairGO;
 
+	private float startTime;
+
 	// Use this for initialization
 	void Start () {
 		players = GameObject.Find ("Players").GetComponent<Button> ();
@@ -37,6 +39,8 @@ public class Setup : MonoBehaviour {
 
 		playerGO = Resources.Load ("Prefabs/player") as GameObject;
 		chairGO = Resources.Load ("Prefabs/chair") as GameObject;
+
+		startTime = Time.time;
 	}
 
 	void OnGUI(){
@@ -67,8 +71,13 @@ public class Setup : MonoBehaviour {
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 			RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
 			// Casts the ray and get the first game object hit
-			if (hit)
+			if (hit) {
+				GameObject hitGO = hit.transform.gameObject;
 				Debug.Log (hit.transform.name);
+				Vector3 clickedPosition =  Camera.main.ScreenToWorldPoint(Input.mousePosition);
+				Vector3.Lerp(hitGO.transform.position, clickedPosition, (Time.time - startTime) / 1.0f);
+				hitGO.transform.position = Input.mousePosition;
+			}
 			else
 				Debug.Log ("no hit");
 		}
