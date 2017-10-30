@@ -18,14 +18,25 @@ public class Setup : MonoBehaviour {
 	GameObject playerGO;
 	GameObject chairGO;
 	GameObject tableGO;
-	GameObject hitGO;
+	GameObject hitLeftButtonGO;
+	GameObject hitRightButtonGO;
+
+	bool rightButtonClicked;
+	bool popupMenuDrawn;
 
 	private float startTime;
+
+	RectTransform canvasTransform;
+	float scale;
 
 	bool lmbclicked;
 	float deltaLastClick;
 	float deltaHoldTime;
 	private float doubleClickTimeLimit = 0.25f;
+
+	List<GameObject> playersList;
+	List<GameObject> chairsList;
+	List<GameObject> tablesList;
 
 	// Use this for initialization
 	void Start () {
@@ -50,6 +61,18 @@ public class Setup : MonoBehaviour {
 
 
 		startTime = Time.time;
+		canvasTransform = GameObject.Find ("Canvas").GetComponent<RectTransform> ();
+
+		float sx = canvasTransform.localScale.x;
+		float sy = canvasTransform.localScale.y;
+		scale = sx > sy ? sy : sx;
+
+		rightButtonClicked = false;
+		popupMenuDrawn = false;
+
+		playersList = new List<GameObject>();
+		chairsList = new List<GameObject>();
+		tablesList = new List<GameObject>();
 	}
 
 	private void handleMouseInput()
@@ -68,6 +91,9 @@ public class Setup : MonoBehaviour {
 
 		if (Input.GetMouseButtonUp (0)) 
 			LeftMouseReleaseEvent ();
+
+		if (Input.GetMouseButtonDown(1))
+			RightMouseClickEvent();
 
 	}
 
@@ -96,7 +122,7 @@ public class Setup : MonoBehaviour {
 		RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
 
 		if (hit) {
-			hitGO = hit.transform.gameObject;
+			hitLeftButtonGO = hit.transform.gameObject;
 			Debug.Log (hit.transform.name);
 		}
 		else
@@ -107,38 +133,90 @@ public class Setup : MonoBehaviour {
 	{
 		Debug.Log ("left mouse hold down");
 		Vector3 clickedPosition =  Camera.main.ScreenToWorldPoint(Input.mousePosition);
-		Vector3 displacement = Vector3.Lerp(hitGO.transform.position, clickedPosition, (Time.time - startTime) / 10.0f);
-		hitGO.transform.position = new Vector3 (displacement.x, displacement.y, hitGO.transform.position.z);
+		Vector3 displacement = Vector3.Lerp(hitLeftButtonGO.transform.position, clickedPosition, (Time.time - startTime) / 10.0f);
+		hitLeftButtonGO.transform.position = new Vector3 (displacement.x, displacement.y, hitLeftButtonGO.transform.position.z);
 	}
 
 
 	private void LeftMouseReleaseEvent()
 	{
 		Debug.Log ("left mouse release");
-		//pause a frame so you don't pick up the same mouse down event.
-		//yield return new WaitForEndOfFrame();
+
 		lmbclicked = false;
 		deltaHoldTime = 0;
 	}
 
+	private void RightMouseClickEvent()
+	{
+		Debug.Log("right mouse single click");
+		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+		RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
+
+		if (hit) {
+			hitRightButtonGO = hit.transform.gameObject;
+			rightButtonClicked = true;
+		} else {
+			Debug.Log ("no hit");
+			rightButtonClicked = false;
+			hitRightButtonGO = null;
+		}
+	}
+
 	void OnGUI(){
+
+		if (rightButtonClicked && hitRightButtonGO != null) {
+			// void draw right click contextual menu
+			GUIStyle boxStyle = new GUIStyle (GUI.skin.button);
+			boxStyle.fontSize = Mathf.RoundToInt ((GUI.skin.font.fontSize - 2) * 3 * scale / 2);
+
+			int sizex = Mathf.RoundToInt (canvasTransform.rect.width * 0.1f);
+			int sizey = Mathf.RoundToInt (canvasTransform.rect.height * 0.05f);
+
+			Vector3 pos = Camera.main.WorldToScreenPoint (hitRightButtonGO.transform.position);
+
+			Debug.Log ("hit = " + hitRightButtonGO.name);
+			Debug.Log ("pos = " + pos.ToString ());
+
+			Rect boxRect = new Rect (pos.x, pos.y, sizex, sizey);
+
+			if (GUI.Button (boxRect, "delete", boxStyle)) {
+				DeletePlayerFromList (hitRightButtonGO);
+				Destroy (hitRightButtonGO);
+			}
+
+			popupMenuDrawn = true;
+		}
+	}
+
+	// TODO FIX THIS!
+	void DeletePlayerFromList(GameObject player){
+
+		Debug.Log ("Count Before = " + playersList.Count);
+		foreach (GameObject playerGO in playersList) {
+			if (playerGO.GetInstanceID () == player.GetInstanceID ())
+				playersList.Remove (player);
+		}
+		Debug.Log ("Count after = " + playersList.Count);
 
 	}
 
 	void PlayersButtonClick(){
 		GameObject player = Instantiate (playerGO) as GameObject;
+		playersList.Add (player);
 		Debug.Log ("players button click");
 
 	}
 
 	void ChairsButtonClick(){
 		GameObject chair = Instantiate (chairGO) as GameObject;
+		chairsList.Add (chair);
 		Debug.Log ("chairs button click");
 	
 	}
 
 	void TablesButtonClick(){
 		GameObject table = Instantiate (tableGO) as GameObject;
+		tablesList.Add (table);
 		Debug.Log ("tables button click");
 
 	}
@@ -147,19 +225,5 @@ public class Setup : MonoBehaviour {
 	void Update () {
 
 		handleMouseInput ();
-	/*	if (Input.GetMouseButtonDown (0)) {
-			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
-			RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
-			// Casts the ray and get the first game object hit
-			if (hit) {
-				GameObject hitGO = hit.transform.gameObject;
-				Debug.Log (hit.transform.name);
-				Vector3 clickedPosition =  Camera.main.ScreenToWorldPoint(Input.mousePosition);
-				Vector3.Lerp(hitGO.transform.position, clickedPosition, (Time.time - startTime) / 1.0f);
-				hitGO.transform.position = Input.mousePosition;
-			}
-			else
-				Debug.Log ("no hit");
-		} */
 	}
 }
