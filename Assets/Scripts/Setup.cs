@@ -9,16 +9,23 @@ public class Setup : MonoBehaviour {
 	Button tables;
 	Button chairs;
 
-	bool isPlayersButtonActive;
-	bool isTablesButtonActive;
-	bool isChairsButtonActive;
+//	bool isPlayersButtonActive;
+//	bool isTablesButtonActive;
+//	bool isChairsButtonActive;
 
 	Canvas canvas;
 
 	GameObject playerGO;
 	GameObject chairGO;
+	GameObject tableGO;
+	GameObject hitGO;
 
 	private float startTime;
+
+	bool lmbclicked;
+	float deltaLastClick;
+	float deltaHoldTime;
+	private float doubleClickTimeLimit = 0.25f;
 
 	// Use this for initialization
 	void Start () {
@@ -31,16 +38,87 @@ public class Setup : MonoBehaviour {
 		chairs = GameObject.Find("Chairs").GetComponent<Button> ();
 		chairs.onClick.AddListener (ChairsButtonClick);
 
-		isPlayersButtonActive = false;
-		isTablesButtonActive = false;
-		isChairsButtonActive = false;
+//		isPlayersButtonActive = false;
+//		isTablesButtonActive = false;
+//		isChairsButtonActive = false;
 
 		canvas = GameObject.Find ("Canvas").GetComponent<Canvas> ();
 
 		playerGO = Resources.Load ("Prefabs/player") as GameObject;
 		chairGO = Resources.Load ("Prefabs/chair") as GameObject;
+		tableGO = Resources.Load ("Prefabs/table") as GameObject;
+
 
 		startTime = Time.time;
+	}
+
+	private void handleMouseInput()
+	{
+
+		deltaLastClick += Time.deltaTime;
+		if (lmbclicked) 
+			deltaHoldTime += Time.deltaTime;
+
+
+		if (lmbclicked && deltaHoldTime > doubleClickTimeLimit) 
+			LeftMouseButtonHoldDown();
+
+		if (Input.GetMouseButtonDown(0))
+			LeftMouseClickEvent();
+
+		if (Input.GetMouseButtonUp (0)) 
+			LeftMouseReleaseEvent ();
+
+	}
+
+	private void LeftMouseClickEvent()
+	{
+		//pause a frame so you don't pick up the same mouse down event.
+		//  yield return new WaitForEndOfFrame();
+
+		lmbclicked = true;
+
+		if (deltaLastClick <= doubleClickTimeLimit)
+		{
+			//TODO: LeftMouseButtonDoubleClick();
+		}
+
+		deltaLastClick = 0;
+
+		LeftMouseButtonSingleClick();
+
+	}
+
+	private void LeftMouseButtonSingleClick()
+	{
+		Debug.Log ("left mouse single click");
+		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+		RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
+
+		if (hit) {
+			hitGO = hit.transform.gameObject;
+			Debug.Log (hit.transform.name);
+		}
+		else
+			Debug.Log ("no hit");
+	}
+
+	private void LeftMouseButtonHoldDown()
+	{
+		Debug.Log ("left mouse hold down");
+		Vector3 clickedPosition =  Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		Vector3 displacement = Vector3.Lerp(hitGO.transform.position, clickedPosition, (Time.time - startTime) / 10.0f);
+		hitGO.transform.position = new Vector3 (displacement.x, displacement.y, hitGO.transform.position.z);
+	}
+
+
+	private void LeftMouseReleaseEvent()
+	{
+		Debug.Log ("left mouse release");
+		//pause a frame so you don't pick up the same mouse down event.
+		//yield return new WaitForEndOfFrame();
+		lmbclicked = false;
+		deltaHoldTime = 0;
 	}
 
 	void OnGUI(){
@@ -60,6 +138,7 @@ public class Setup : MonoBehaviour {
 	}
 
 	void TablesButtonClick(){
+		GameObject table = Instantiate (tableGO) as GameObject;
 		Debug.Log ("tables button click");
 
 	}
@@ -67,7 +146,8 @@ public class Setup : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetMouseButtonDown (0)) {
+		handleMouseInput ();
+	/*	if (Input.GetMouseButtonDown (0)) {
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 			RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
 			// Casts the ray and get the first game object hit
@@ -80,6 +160,6 @@ public class Setup : MonoBehaviour {
 			}
 			else
 				Debug.Log ("no hit");
-		}
+		} */
 	}
 }
