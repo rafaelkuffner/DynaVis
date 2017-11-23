@@ -51,6 +51,11 @@ public class SetupButton : MonoBehaviour {
 			lateInit ();
 	}
 
+	void ClickedSetupButton () {
+
+
+	}
+
 	public void drawSetupTiers(){
 
 		float sx = canvasTransform.localScale.x;

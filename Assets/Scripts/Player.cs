@@ -535,7 +535,7 @@ public class Player : MonoBehaviour {
 		}
 		lineRenderer2D.enabled = true;
         //lineRenderer2D.positionCount = 3;
-		lineRenderer2D.numPositions = 3;
+		lineRenderer2D.positionCount = 3;
         Vector3 EyesPos = new Vector3 (0, 0.9f, 0);
 		lineRenderer2D.SetPosition (0, dude2D.position + EyesPos);
 		Vector3 diff = end-(dude2D.position + EyesPos);
@@ -558,7 +558,7 @@ public class Player : MonoBehaviour {
 		}
 		lineRenderer3D.enabled = true;
 		//lineRenderer3D.positionCount = 3;
-		lineRenderer2D.numPositions = 3;
+		lineRenderer2D.positionCount = 3;
 		lineRenderer3D.SetPosition (0, head.transform.position);
 		Vector3 diff = end-(head.transform.position);
 		diff.x *= 0.01f;diff.y *= 0.01f;diff.z *= 0.01f;
