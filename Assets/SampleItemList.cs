@@ -8,4 +8,8 @@ public class SampleItemList : MonoBehaviour {
 	public void SetItemListText(string text){
 		gameObject.GetComponentInChildren<Text> ().text = text;
 	}
+
+	public string GetItemListText(){
+		return gameObject.GetComponentInChildren<Text> ().text.ToString ();
+	}
 }
