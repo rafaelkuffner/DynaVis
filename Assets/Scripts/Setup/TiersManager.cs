@@ -33,7 +33,7 @@ public class TiersManager : MonoBehaviour {
 		foreach (string t in tiersConfig.Keys) {
 			GameObject tierStringGO = GameObject.Instantiate (itemList);
 			Button currentButton = tierStringGO.GetComponent<Button> ();
-			tierStringGO.GetComponent<SampleItemList> ().SetItemListText (t);
+			tierStringGO.GetComponent<SampleItemButton> ().SetItemListText (t);
 			tierStringGO.transform.SetParent (contentPanelTierStrings);
 
 			EventTrigger trigger = currentButton.GetComponent<EventTrigger>();
@@ -90,7 +90,7 @@ public class TiersManager : MonoBehaviour {
 	public void OnPointerClickButton(PointerEventData data)
 	{
 		GameObject currentButtonGO = data.selectedObject;
-		Debug.Log("OnPointerClickButton called = " + currentButtonGO.GetComponent<SampleItemList>().GetItemListText());
+		Debug.Log("OnPointerClickButton called = " + currentButtonGO.GetComponent<SampleItemButton>().GetItemListText());
 
 		if (currentInputFieldGO == null)
 			return;
@@ -98,7 +98,7 @@ public class TiersManager : MonoBehaviour {
 		string selectedTier = currentInputFieldGO.GetComponent<InputField>().text.ToString ();
 		foreach (string tier in newTiersConfig.Keys) {
 			if (selectedTier.Equals (tier)) {
-				newTiersConfig [tier].Add (currentButtonGO.GetComponent<SampleItemList>().GetItemListText());
+				newTiersConfig [tier].Add (currentButtonGO.GetComponent<SampleItemButton>().GetItemListText());
 				itemListByInputField [currentInputFieldGO].Add (currentButtonGO);
 				currentButtonGO.transform.SetParent (contentPanelNewTiers);
 			}

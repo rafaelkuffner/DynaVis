@@ -6,6 +6,7 @@ public class AnnotationSetupManager : MonoBehaviour {
 
 	Simulation boss;
 	Dictionary<string, List<string>> newTiersConfig;
+	public string filepath;
 
 	//DELETE
 	GameObject actionSetupPanel;

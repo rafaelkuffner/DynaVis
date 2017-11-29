@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SampleItemList : MonoBehaviour {
+public class SampleItemButton : MonoBehaviour {
 
 	public void SetItemListText(string text){
 		gameObject.GetComponentInChildren<Text> ().text = text;
