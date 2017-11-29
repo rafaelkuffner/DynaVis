@@ -111,17 +111,20 @@ public class SpriteManager : MonoBehaviour {
 			return;
 
 		string selectedSprite = currentItemListInputFieldGO.GetComponentInChildren<InputField>().text.ToString ();
+		string key = "";
+		string value = "";
 		foreach (string newSpriteName in newSpriteTranslationTable.Keys) {
 			if (selectedSprite.Equals (newSpriteName)) {
-				string spriteName = currentButtonGO.GetComponentInParent<SampleItemButton> ().GetItemListText ();
-				newSpriteTranslationTable.Remove (newSpriteName);
-				newSpriteTranslationTable.Add(newSpriteName, spriteName);
+				key = newSpriteName;
+				value = currentButtonGO.GetComponentInParent<SampleItemButton> ().GetItemListText ();
 				Debug.Log ("currentItemListInputFieldGO = " + currentItemListInputFieldGO.name);
-				currentItemListButtonGO.GetComponent<SampleItemButton> ().SetItemListText(spriteName);
+				currentItemListButtonGO.GetComponent<SampleItemButton> ().SetItemListText(value);
 				//itemListByInputField [currentInputFieldGO].Add (currentButtonGO);
 				Destroy(currentButtonGO);
 			}
 		}
+		newSpriteTranslationTable.Remove (key);
+		newSpriteTranslationTable.Add(key, value);
 	}
 
 	public void DeleteNewSpriteName(){
