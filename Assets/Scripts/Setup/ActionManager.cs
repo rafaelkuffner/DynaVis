@@ -53,6 +53,7 @@ public class ActionManager : MonoBehaviour {
 
 	public void OnPointerClickActionButton(PointerEventData data){
 		currentActionGO = data.selectedObject;
+		// reorder items!
 		currentActionGO.transform.SetParent (contentTiers);
 	}
 
