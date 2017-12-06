@@ -32,6 +32,11 @@ public class ActionManager : MonoBehaviour {
 			tierGO.transform.SetParent (contentTiers);
 		}
 	}
+
+	public void OnClickNext(){
+		annotationSetupManager.ActionSetupPanel.SetActive (false);
+		annotationSetupManager.SpriteSetupPanel.SetActive (true);
+	}
 	
 	// Update is called once per frame
 	void Update () {

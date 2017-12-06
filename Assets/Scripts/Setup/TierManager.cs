@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class TiersManager : MonoBehaviour {
+public class TierManager : MonoBehaviour {
 
 	public GameObject itemList; // SampleListItem Prefab
 	public Transform contentPanelTierStrings;
@@ -13,7 +13,7 @@ public class TiersManager : MonoBehaviour {
 
 	private Dictionary<string, List<string>> newTiersConfig;
 	private AnnotationSetupManager annotationSetupManager;
-	private Dictionary<string, string> tiersConfig;
+	private List<string> setupTiers;
 	private Dictionary<GameObject, List<GameObject>> itemListByInputField;
 	private GameObject currentInputFieldGO;
 	private GameObject currentButtonGO;
@@ -27,10 +27,10 @@ public class TiersManager : MonoBehaviour {
 		currentButtonGO = null;
 
 		annotationSetupManager = GameObject.Find ("Boss Object").GetComponent<AnnotationSetupManager> ();
-		Simulation boss = annotationSetupManager.GetBoss ();
-		tiersConfig = boss.tiersConfig;
+		//Simulation boss = annotationSetupManager.GetBoss ();
+		setupTiers = annotationSetupManager.SetupTiers;
 
-		foreach (string t in tiersConfig.Keys) {
+		foreach (string t in setupTiers) {
 			GameObject tierStringGO = GameObject.Instantiate (itemList);
 			Button currentButton = tierStringGO.GetComponent<Button> ();
 			tierStringGO.GetComponent<SampleItemButton> ().SetItemListText (t);
@@ -111,16 +111,12 @@ public class TiersManager : MonoBehaviour {
 		Debug.Log("OnPointerClickInputField called = " + currentInputFieldGO.GetComponent<InputField>().text.ToString ());
 	}
 
-	public void OnClickExit(){
+	public void OnClickNext(){
 		annotationSetupManager.SetNewTierConfig (newTiersConfig);
 
 		// TODO: this showed be done by the EventSystem
-		GameObject tiersSetupPanel = GameObject.Find ("TiersSetupPanel");
-		tiersSetupPanel.SetActive (false);
-
-		annotationSetupManager.GetActionSetupPanel ().SetActive (true);
-
-
+		annotationSetupManager.TierSetupPanel.SetActive (false);
+		annotationSetupManager.ActionSetupPanel.SetActive(true);
 	}
 
 }

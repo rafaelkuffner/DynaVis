@@ -13,6 +13,7 @@ public class SpriteManager : MonoBehaviour {
 	private SpriteCollection lowerBodySprite;
 	private SpriteCollection settlingSprite;
 	private SpriteCollection errorSprite;
+
 	private AnnotationSetupManager annotationSetupManager;
 	private List<Configuration> actions;
 	private Dictionary<string, string> spriteTranslationTable;
@@ -130,6 +131,8 @@ public class SpriteManager : MonoBehaviour {
 	public void DeleteNewSpriteName(){
 		Debug.Log ("Delete new sprite name");
 	}
+
+
 
 	// Update is called once per frame
 	void Update () {
