@@ -37,9 +37,4 @@ public class ActionManager : MonoBehaviour {
 		annotationSetupManager.ActionSetupPanel.SetActive (false);
 		annotationSetupManager.SpriteSetupPanel.SetActive (true);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

@@ -6,14 +6,6 @@ using UnityEngine.EventSystems;
 
 public class SpriteManager : MonoBehaviour {
 
-	private SpriteHelper sh;
-	private SpriteCollection dudeSprite;
-	private SpriteCollection faceMUSprite;
-	private SpriteCollection upperBodySprite;
-	private SpriteCollection lowerBodySprite;
-	private SpriteCollection settlingSprite;
-	private SpriteCollection errorSprite;
-
 	private AnnotationSetupManager annotationSetupManager;
 	private List<Configuration> actions;
 	private Dictionary<string, string> spriteTranslationTable;
@@ -29,14 +21,6 @@ public class SpriteManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		sh = GameObject.Find ("Sprites").GetComponent<SpriteHelper> ();
-		dudeSprite = sh.dude;
-		faceMUSprite = sh.faceMU;
-		upperBodySprite = sh.upperBody;
-		lowerBodySprite = sh.lowerBody;
-		settlingSprite = sh.settling;
-		errorSprite = sh.error;
-
 		newSpriteTranslationTable = new Dictionary<string, string> ();
 
 		annotationSetupManager = GameObject.Find ("Boss Object").GetComponent<AnnotationSetupManager> ();
@@ -132,10 +116,8 @@ public class SpriteManager : MonoBehaviour {
 		Debug.Log ("Delete new sprite name");
 	}
 
-
-
-	// Update is called once per frame
-	void Update () {
-		
+	public void OnClickNext(){
+		annotationSetupManager.SpriteSetupPanel.SetActive (false);
+		annotationSetupManager.ModifiersSetupPanel.SetActive (true);
 	}
 }
