@@ -113,7 +113,6 @@ public class TierManager : MonoBehaviour {
 
 	public void OnClickNext(){
 		annotationSetupManager.SetNewTierConfig (newTiersConfig);
-		annotationSetupManager.WriteXMLFile ();
 
 		// TODO: this showed be done by the EventSystem
 		annotationSetupManager.TierSetupPanel.SetActive (false);

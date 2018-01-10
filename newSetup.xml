@@ -14,4 +14,15 @@
       <TierString>location-f3g1a_p2r1</TierString>
     </Tier>
   </Tiers>
+  <Actions>
+    <Parameters>
+      <Parameter input="newName" output="mu_arm_right" />
+      <Parameter input="newName2" output="mu_arm_left" />
+      <Parameter input="newName3" output="mu_arms_both" />
+      <Parameter input="newName4" output="mu_hand_right" />
+      <Parameter input="newName5" output="mu_hand_left" />
+      <Parameter input="newName6" output="mu_hands_both" />
+      <Parameter input="newName7" output="mu_shoulder_right" />
+    </Parameters>
+  </Actions>
 </Definitions>

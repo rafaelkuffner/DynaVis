@@ -9,10 +9,6 @@ public class AnnotationSetupManager : MonoBehaviour {
 	public string setupFilename;
 	public List<string> SetupTiers { get; set; }
 
-	Simulation boss;
-	Dictionary<string, List<string>> newTiersConfig;
-	List<SetupData> setupDataList;
-
 	//DELETE
 	public GameObject TierSetupPanel { get; set; }
 	public GameObject ActionSetupPanel { get; set; }
@@ -20,6 +16,11 @@ public class AnnotationSetupManager : MonoBehaviour {
 	public GameObject ModifiersSetupPanel { get; set; }
 	public GameObject OutputSetupPanel { get; set; }
 	public GameObject ParameterSetupPanel { get; set; }
+
+	private Simulation boss;
+	private Dictionary<string, List<string>> newTiersConfig;
+	private List<SetupData> setupDataList;
+	private SpriteManager spriteManager;
 
 	public Simulation GetBoss(){
 		return boss;
@@ -99,6 +100,9 @@ public class AnnotationSetupManager : MonoBehaviour {
 
 		setupDataList = new List<SetupData> ();
 		SetupTiers = new List<string> ();
+
+		spriteManager = SpriteSetupPanel.GetComponent<SpriteManager> ();
+
 		loadFile ();
 		GetUniqueSetupTiers ();
 
@@ -125,6 +129,23 @@ public class AnnotationSetupManager : MonoBehaviour {
 				newTierString.InnerText = tierString;
 				newTierNode.AppendChild (newTierString);
 			}
+		}
+
+		XmlNode actionsNode = xmlDoc.CreateElement("Actions");
+		rootNode.AppendChild (actionsNode);
+
+		XmlNode parametersNode = xmlDoc.CreateElement("Parameters");
+		actionsNode.AppendChild (parametersNode);
+		Dictionary<string, string> newSpriteTranslateTable = spriteManager.NewSpriteTranslationTable;
+		foreach (string newSprinteName in newSpriteTranslateTable.Keys) {
+			XmlNode parameterNode = xmlDoc.CreateElement("Parameter");
+			XmlAttribute attributeInput = xmlDoc.CreateAttribute("input");
+			attributeInput.Value = newSpriteTranslateTable[newSprinteName];
+			parameterNode.Attributes.Append (attributeInput);
+			XmlAttribute attributeOutput = xmlDoc.CreateAttribute("output");
+			attributeOutput.Value = newSprinteName;
+			parameterNode.Attributes.Append (attributeOutput);
+			parametersNode.AppendChild (parameterNode);
 		}
 
 		xmlDoc.Save("newSetup.xml");

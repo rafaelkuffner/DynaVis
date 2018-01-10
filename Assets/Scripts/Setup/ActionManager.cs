@@ -54,15 +54,25 @@ public class ActionManager : MonoBehaviour {
 	public void OnPointerClickActionButton(PointerEventData data){
 		currentActionGO = data.selectedObject;
 		// reorder items!
-		currentActionGO.transform.SetParent (currentTierGO.transform);
+		if (currentTierGO == null)
+			return;
+
+		currentActionGO.transform.SetParent (contentTiers);
+
+		SampleItemButton[] listOfItems = contentTiers.GetComponentsInChildren<SampleItemButton> ();
+		int numberOfItems = contentTiers.childCount;
+		for (int i = 0; i < numberOfItems; i++) {
+			Transform item = contentTiers.GetChild (i);
+		}
+
 	}
 
 	public void OnPointerClickTierButton(PointerEventData data){
 		currentTierGO = data.selectedObject;
-		Button button = currentTierGO.GetComponent<Button> ();
+		/*Button button = currentTierGO.GetComponent<Button> ();
 		ColorBlock buttonColors = button.colors;
-		buttonColors.highlightedColor = new Color (0.0f, 0.2f, 0.3f);
-		button.colors = buttonColors;
+		buttonColors.highlightedColor = new Color (0.0f, 0.8f, 0.8f);
+		button.colors = buttonColors;*/
 	}
 
 	public void OnClickNext(){

@@ -6,22 +6,23 @@ using UnityEngine.EventSystems;
 
 public class SpriteManager : MonoBehaviour {
 
-	private AnnotationSetupManager annotationSetupManager;
-	private List<Configuration> actions;
-	private Dictionary<string, string> spriteTranslationTable;
-	private GameObject spriteNameGO;
-	private Dictionary<string, string> newSpriteTranslationTable;
-	private GameObject currentButtonGO;
-	private GameObject currentItemListButtonGO;
-	private GameObject currentItemListInputFieldGO;
 	public Transform contentSprites;
 	public GameObject itemPrefab;
 	public Transform contentSpriteName;
 	public GameObject inputFieldPrefab;
 
+	private AnnotationSetupManager annotationSetupManager;
+	private List<Configuration> actions;
+	private Dictionary<string, string> spriteTranslationTable;
+	private GameObject spriteNameGO;
+	public Dictionary<string, string> NewSpriteTranslationTable { get; set; }
+	private GameObject currentButtonGO;
+	private GameObject currentItemListButtonGO;
+	private GameObject currentItemListInputFieldGO;
+
 	// Use this for initialization
 	void Start () {
-		newSpriteTranslationTable = new Dictionary<string, string> ();
+		NewSpriteTranslationTable = new Dictionary<string, string> ();
 
 		annotationSetupManager = GameObject.Find ("Boss Object").GetComponent<AnnotationSetupManager> ();
 		actions = annotationSetupManager.GetBoss ().actionsConfig;
@@ -70,21 +71,19 @@ public class SpriteManager : MonoBehaviour {
 
 		Debug.Log("EditedInputField = " + currentItemListInputFieldGO.GetComponentInChildren<Text>().text.ToString ());
 
-		if (!newSpriteTranslationTable.ContainsKey (currentInputField.text.ToString())) {
-			newSpriteTranslationTable.Add (currentInputField.text.ToString (), "");
+		if (!NewSpriteTranslationTable.ContainsKey (currentInputField.text.ToString())) {
+			NewSpriteTranslationTable.Add (currentInputField.text.ToString (), "");
 		}
 	}
 
 	public void OnPointerExitInputField(PointerEventData data)
 	{
 		currentItemListInputFieldGO = data.selectedObject;
-		Debug.Log("OnPointerExitInputField called = " + currentItemListInputFieldGO.GetComponentInChildren<Text>().text.ToString ());
 	}
 
 	public void OnPointerClickItemListButton(PointerEventData data)
 	{
 		currentItemListButtonGO = data.selectedObject;
-		Debug.Log("OnPointerClickItemListButton called = " + currentItemListButtonGO.GetComponentInChildren<Text>().text.ToString ());
 	}
 
 	public void OnPointerClickButton(PointerEventData data)
@@ -98,7 +97,7 @@ public class SpriteManager : MonoBehaviour {
 		string selectedSprite = currentItemListInputFieldGO.GetComponentInChildren<InputField>().text.ToString ();
 		string key = "";
 		string value = "";
-		foreach (string newSpriteName in newSpriteTranslationTable.Keys) {
+		foreach (string newSpriteName in NewSpriteTranslationTable.Keys) {
 			if (selectedSprite.Equals (newSpriteName)) {
 				key = newSpriteName;
 				value = currentButtonGO.GetComponentInParent<SampleItemButton> ().GetItemListText ();
@@ -108,8 +107,8 @@ public class SpriteManager : MonoBehaviour {
 				Destroy(currentButtonGO);
 			}
 		}
-		newSpriteTranslationTable.Remove (key);
-		newSpriteTranslationTable.Add(key, value);
+		NewSpriteTranslationTable.Remove (key);
+		NewSpriteTranslationTable.Add(key, value);
 	}
 
 	public void DeleteNewSpriteName(){

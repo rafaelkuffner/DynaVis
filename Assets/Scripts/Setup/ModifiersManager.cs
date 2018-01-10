@@ -13,7 +13,7 @@ public class ModifiersManager : MonoBehaviour {
 	
 	public void OnClickNext(){
 		// TODO: this showed be done by the EventSystem
-		annotationSetupManager.SpriteSetupPanel.SetActive (false);
-		annotationSetupManager.ModifiersSetupPanel.SetActive(true);
+		annotationSetupManager.ModifiersSetupPanel.SetActive (false);
+		annotationSetupManager.OutputSetupPanel.SetActive(true);
 	}
 }
