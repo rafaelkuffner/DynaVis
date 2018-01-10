@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using System.Xml;
 
 public class AnnotationSetupManager : MonoBehaviour {
 
@@ -102,7 +103,34 @@ public class AnnotationSetupManager : MonoBehaviour {
 		GetUniqueSetupTiers ();
 
 	}
+
+
+	public void WriteXMLFile(){
 	
+		XmlDocument xmlDoc = new XmlDocument();
+		XmlNode rootNode = xmlDoc.CreateElement("Definitions");
+		xmlDoc.AppendChild(rootNode);
+
+		XmlNode tiersNode = xmlDoc.CreateElement("Tiers");
+		rootNode.AppendChild (tiersNode);
+
+		foreach (string newTier in newTiersConfig.Keys) {
+			XmlNode newTierNode = xmlDoc.CreateElement("Tier");
+			XmlAttribute attribute = xmlDoc.CreateAttribute("name");
+			attribute.Value = newTier;
+			newTierNode.Attributes.Append(attribute);
+			tiersNode.AppendChild (newTierNode);
+			foreach (string tierString in newTiersConfig[newTier]) {
+				XmlNode newTierString = xmlDoc.CreateElement("TierString");
+				newTierString.InnerText = tierString;
+				newTierNode.AppendChild (newTierString);
+			}
+		}
+
+		xmlDoc.Save("newSetup.xml");
+		
+	}
+
 	// Update is called once per frame
 	void Update () {
 		
