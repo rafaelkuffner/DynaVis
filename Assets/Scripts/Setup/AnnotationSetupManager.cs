@@ -9,6 +9,9 @@ public class AnnotationSetupManager : MonoBehaviour {
 	public string setupFilename;
 	public List<string> SetupTiersList { get; set; }
 	public List<string> ParametersList { get; set; }
+	public Dictionary<string, List<string>> TiersByAction { get; set; }
+	public List<string> ActionList { get; set; } // implemented actions: see folder Scripts>Actions
+	public List<string> ModifierList { get; set;} // implemented modifiers: see folder Scripts>Actions>Modifiers
 
 	//DELETE
 	public GameObject TierSetupPanel { get; set; }
@@ -59,6 +62,16 @@ public class AnnotationSetupManager : MonoBehaviour {
 		setupDataList = new List<SetupData> ();
 		SetupTiersList = new List<string> ();
 		ParametersList = new List<string> ();
+
+		ActionList = new List<string> ();
+		ActionList.Add ("UpperBodyAction");
+		ActionList.Add ("LowerBodyAction");
+		ActionList.Add ("HeadFaceAction");
+		ActionList.Add ("LocationAction");
+		ActionList.Add ("GazeAction");
+
+		ModifierList = new List<string> ();
+		ModifierList.Add ("ColorModifier");
 
 		spriteManager = SpriteSetupPanel.GetComponent<SpriteManager> ();
 
@@ -122,6 +135,24 @@ public class AnnotationSetupManager : MonoBehaviour {
 		ParametersList.Sort ();
 	}
 		
+	public List<string> getParametersByTierString(List<string> tiers){
+
+		List<string> parametersByTier = new List<string> ();
+
+		foreach (string tier in tiers) {
+			List<string> tierStrings = newTiersConfig [tier];
+			foreach (string tierString in tierStrings) {
+				foreach (SetupData data in setupDataList) {
+					if (tierString == data.Tier) {
+						if (!parametersByTier.Contains (data.Parameter))
+							parametersByTier.Add (data.Parameter);
+					}
+				}
+			}
+		}
+		return parametersByTier;
+	}
+
 	public void WriteXMLFile(){
 	
 		XmlDocument xmlDoc = new XmlDocument();

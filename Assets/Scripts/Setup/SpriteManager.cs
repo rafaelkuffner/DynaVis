@@ -10,24 +10,51 @@ public class SpriteManager : MonoBehaviour {
 	public GameObject itemPrefab;
 	public Transform contentSpriteName;
 	public GameObject inputFieldPrefab;
+	public Dictionary<string, string> NewSpriteTranslationTable { get; set; }
 
 	private AnnotationSetupManager annotationSetupManager;
-	private List<Configuration> actions;
+	private List<string> actionList;
 	private Dictionary<string, string> spriteTranslationTable;
 	private GameObject spriteNameGO;
-	public Dictionary<string, string> NewSpriteTranslationTable { get; set; }
 	private GameObject currentButtonGO;
 	private GameObject currentItemListButtonGO;
 	private GameObject currentItemListInputFieldGO;
+	private Dictionary<string, List<string>> tiersByAction;
+	private List<string> actions;
+
 
 	// Use this for initialization
 	void Start () {
 		NewSpriteTranslationTable = new Dictionary<string, string> ();
 
 		annotationSetupManager = GameObject.Find ("Boss Object").GetComponent<AnnotationSetupManager> ();
-		actions = annotationSetupManager.GetBoss ().actionsConfig;
+		actionList = annotationSetupManager.ActionList;
+		tiersByAction = annotationSetupManager.TiersByAction;
+		actions = new List<string>(tiersByAction.Keys);
 
-		foreach (Configuration actionConfiguration in actions) {
+		if (actions.Count > 0) {
+			string action = actions [0];
+			List<string> tiers = tiersByAction [action];
+			List<string> parameterList = annotationSetupManager.getParametersByTierString (tiers);
+
+			foreach (string param in parameterList) {
+				GameObject spriteNameGO = GameObject.Instantiate (itemPrefab);
+				Button currentButton = spriteNameGO.GetComponent<Button> ();
+				spriteNameGO.GetComponent<SampleItemButton> ().SetItemListText (param);
+				spriteNameGO.transform.SetParent (contentSprites);
+
+				EventTrigger trigger = currentButton.GetComponent<EventTrigger> ();
+				EventTrigger.Entry entry = new EventTrigger.Entry ();
+				entry.eventID = EventTriggerType.PointerDown;
+				entry.callback.AddListener ((data) => {
+					OnPointerClickButton ((PointerEventData)data);
+				});
+				trigger.triggers.Add (entry);
+			}
+			actions.RemoveAt (0);
+		}
+		/*
+		foreach (string action in actions) {
 			spriteTranslationTable = actionConfiguration.translationTable;
 			foreach (string spriteName in spriteTranslationTable.Keys) {
 				GameObject spriteNameGO = GameObject.Instantiate (itemPrefab);
@@ -41,7 +68,40 @@ public class SpriteManager : MonoBehaviour {
 				entry.callback.AddListener((data) => { OnPointerClickButton((PointerEventData)data); });
 				trigger.triggers.Add(entry);
 			}
+		}*/
+	}
+
+	private void LoadContent(){
+		contentSprites.DetachChildren();
+		contentSpriteName.DetachChildren();
+
+		GameObject[] contentListDetached = GameObject.FindGameObjectsWithTag ("SampleListItem") as GameObject[];
+		for (int i = 0; i < contentListDetached.Length; i++) {
+			Destroy(contentListDetached[i]);
 		}
+
+		if (actions.Count <= 0)
+			return;
+
+		string action = actions [0];
+		List<string> tiers = tiersByAction [action];
+		List<string> parameterList = annotationSetupManager.getParametersByTierString (tiers);
+
+		foreach (string param in parameterList) {
+			GameObject spriteNameGO = GameObject.Instantiate (itemPrefab);
+			Button currentButton = spriteNameGO.GetComponent<Button> ();
+			spriteNameGO.GetComponent<SampleItemButton> ().SetItemListText (param);
+			spriteNameGO.transform.SetParent (contentSprites);
+
+			EventTrigger trigger = currentButton.GetComponent<EventTrigger> ();
+			EventTrigger.Entry entry = new EventTrigger.Entry ();
+			entry.eventID = EventTriggerType.PointerDown;
+			entry.callback.AddListener ((data) => {
+				OnPointerClickButton ((PointerEventData)data);
+			});
+			trigger.triggers.Add (entry);
+		}
+		actions.RemoveAt (0);
 	}
 
 	public void ClickedAddNewSpriteName(){
@@ -115,8 +175,11 @@ public class SpriteManager : MonoBehaviour {
 		Debug.Log ("Delete new sprite name");
 	}
 
-	public void OnClickNext(){
-		annotationSetupManager.SpriteSetupPanel.SetActive (false);
-		annotationSetupManager.ModifiersSetupPanel.SetActive (true);
+	public void OnClickNextAction(){
+
+		LoadContent ();
+
+		//annotationSetupManager.SpriteSetupPanel.SetActive (false);
+		//annotationSetupManager.ModifiersSetupPanel.SetActive (true);
 	}
 }

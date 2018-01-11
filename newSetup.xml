@@ -1,6 +1,25 @@
 <Definitions>
-  <Tiers />
+  <Tiers>
+    <Tier name="Tier3" />
+    <Tier name="Tier2">
+      <TierString>gaze_points-f3g1a_p3r1</TierString>
+      <TierString>gaze_points-f3g1a_p4r1</TierString>
+      <TierString>gaze_points-f3g1a_p5r1</TierString>
+      <TierString>gaze_points-f3g1a_p6r1</TierString>
+      <TierString>head_face_function-f3g1a_p1r1</TierString>
+      <TierString>head_face_function-f3g1a_p2r1</TierString>
+      <TierString>head_face_function-f3g1a_p4r1</TierString>
+      <TierString>head_face_function-f3g1a_p5r1</TierString>
+      <TierString>head_face_function-f3g1a_p6r1</TierString>
+      <TierString>head_face_mu-f3g1a_p1r1</TierString>
+      <TierString>head_face_mu-f3g1a_p2r1</TierString>
+      <TierString>head_face_mu-f3g1a_p3r1</TierString>
+      <TierString>head_face_mu-f3g1a_p4r1</TierString>
+    </Tier>
+  </Tiers>
   <Actions>
-    <Parameters />
+    <Parameters>
+      <Parameter input="gaze_to_p2" output="newName" />
+    </Parameters>
   </Actions>
 </Definitions>
