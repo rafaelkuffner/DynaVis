@@ -13,7 +13,7 @@ public class TierManager : MonoBehaviour {
 
 	private Dictionary<string, List<string>> newTiersConfig;
 	private AnnotationSetupManager annotationSetupManager;
-	private List<string> setupTiers;
+	private List<string> setupTiersList;
 	private Dictionary<GameObject, List<GameObject>> itemListByInputField;
 	private GameObject currentInputFieldGO;
 	private GameObject currentButtonGO;
@@ -28,9 +28,9 @@ public class TierManager : MonoBehaviour {
 
 		annotationSetupManager = GameObject.Find ("Boss Object").GetComponent<AnnotationSetupManager> ();
 		//Simulation boss = annotationSetupManager.GetBoss ();
-		setupTiers = annotationSetupManager.SetupTiers;
+		setupTiersList = annotationSetupManager.SetupTiersList;
 
-		foreach (string t in setupTiers) {
+		foreach (string t in setupTiersList) {
 			GameObject tierStringGO = GameObject.Instantiate (itemList);
 			Button currentButton = tierStringGO.GetComponent<Button> ();
 			tierStringGO.GetComponent<SampleItemButton> ().SetItemListText (t);

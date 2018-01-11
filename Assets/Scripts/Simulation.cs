@@ -346,7 +346,7 @@ public class Simulation : MonoBehaviour {
 		StreamReader sr = new StreamReader (filename);
 		//Skipping header;
 		string line = sr.ReadLine ();
-		char[] delim = {'\t'};
+		char[] delim = {','};
         List<Modifier> modifs = new List<Modifier>();
 		while((line = sr.ReadLine()) != null)
 		{

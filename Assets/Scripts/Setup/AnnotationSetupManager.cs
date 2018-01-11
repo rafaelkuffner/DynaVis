@@ -7,7 +7,8 @@ using System.Xml;
 public class AnnotationSetupManager : MonoBehaviour {
 
 	public string setupFilename;
-	public List<string> SetupTiers { get; set; }
+	public List<string> SetupTiersList { get; set; }
+	public List<string> ParametersList { get; set; }
 
 	//DELETE
 	public GameObject TierSetupPanel { get; set; }
@@ -32,6 +33,39 @@ public class AnnotationSetupManager : MonoBehaviour {
 
 	public Dictionary<string, List<string>> GetNewTiersConfig(){
 		return newTiersConfig;
+	}
+
+	// Use this for initialization
+	void Awake () {
+		boss = GameObject.Find ("Boss Object").GetComponent<Simulation> ();
+
+		TierSetupPanel = GameObject.Find ("TierSetupPanel");
+
+		ActionSetupPanel = GameObject.Find ("ActionSetupPanel");
+		ActionSetupPanel.SetActive(false);
+
+		SpriteSetupPanel = GameObject.Find ("SpritesSetupPanel");
+		SpriteSetupPanel.SetActive (false);
+
+		ModifiersSetupPanel = GameObject.Find ("ModifierSetupPanel");
+		ModifiersSetupPanel.SetActive (false);
+
+		OutputSetupPanel = GameObject.Find ("OutputSetupPanel");
+		OutputSetupPanel.SetActive (false);
+
+		ParameterSetupPanel = GameObject.Find ("ParameterSetupPanel");
+		ParameterSetupPanel.SetActive (false);
+
+		setupDataList = new List<SetupData> ();
+		SetupTiersList = new List<string> ();
+		ParametersList = new List<string> ();
+
+		spriteManager = SpriteSetupPanel.GetComponent<SpriteManager> ();
+
+		loadFile ();
+		GetUniqueSetupTiers ();
+		GetUniqueParameters ();
+
 	}
 
 	void loadFile(){
@@ -70,45 +104,24 @@ public class AnnotationSetupManager : MonoBehaviour {
 	void GetUniqueSetupTiers(){
 		
 		foreach (SetupData setupData in setupDataList) {
-			if (!SetupTiers.Contains (setupData.Tier)) {
-				SetupTiers.Add (setupData.Tier);
+			if (!SetupTiersList.Contains (setupData.Tier)) {
+				SetupTiersList.Add (setupData.Tier);
 				Debug.Log ("Tier = " + setupData.Tier);
 			}
 		}
+		SetupTiersList.Sort ();
 	}
 
-	// Use this for initialization
-	void Awake () {
-		boss = GameObject.Find ("Boss Object").GetComponent<Simulation> ();
+	void GetUniqueParameters(){
 
-		TierSetupPanel = GameObject.Find ("TierSetupPanel");
-
-		ActionSetupPanel = GameObject.Find ("ActionSetupPanel");
-		ActionSetupPanel.SetActive(false);
-
-		SpriteSetupPanel = GameObject.Find ("SpritesSetupPanel");
-		SpriteSetupPanel.SetActive (false);
-
-		ModifiersSetupPanel = GameObject.Find ("ModifierSetupPanel");
-		ModifiersSetupPanel.SetActive (false);
-
-		OutputSetupPanel = GameObject.Find ("OutputSetupPanel");
-		OutputSetupPanel.SetActive (false);
-
-		ParameterSetupPanel = GameObject.Find ("ParameterSetupPanel");
-		ParameterSetupPanel.SetActive (false);
-
-		setupDataList = new List<SetupData> ();
-		SetupTiers = new List<string> ();
-
-		spriteManager = SpriteSetupPanel.GetComponent<SpriteManager> ();
-
-		loadFile ();
-		GetUniqueSetupTiers ();
-
+		foreach (SetupData setupData in setupDataList) {
+			if (!ParametersList.Contains (setupData.Parameter)) {
+				ParametersList.Add (setupData.Parameter);
+			}	
+		}
+		ParametersList.Sort ();
 	}
-
-
+		
 	public void WriteXMLFile(){
 	
 		XmlDocument xmlDoc = new XmlDocument();

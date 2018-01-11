@@ -1,28 +1,6 @@
 <Definitions>
-  <Tiers>
-    <Tier name="Tier1">
-      <TierString>upper_body_mu-f3g1a_p1r1</TierString>
-      <TierString>upper_body_function-f3g1a_p1r1</TierString>
-      <TierString>head_face_mu-f3g1a_p1r1</TierString>
-      <TierString>head_face_function-f3g1a_p1r1</TierString>
-    </Tier>
-    <Tier name="Tier2">
-      <TierString>location-f3g1a_p1r1</TierString>
-      <TierString>gaze_points-f3g1a_p1r1</TierString>
-      <TierString>head_face_function-f3g1a_p2r1</TierString>
-      <TierString>lower_body_function-f3g1a_p2r1</TierString>
-      <TierString>location-f3g1a_p2r1</TierString>
-    </Tier>
-  </Tiers>
+  <Tiers />
   <Actions>
-    <Parameters>
-      <Parameter input="newName" output="mu_arm_right" />
-      <Parameter input="newName2" output="mu_arm_left" />
-      <Parameter input="newName3" output="mu_arms_both" />
-      <Parameter input="newName4" output="mu_hand_right" />
-      <Parameter input="newName5" output="mu_hand_left" />
-      <Parameter input="newName6" output="mu_hands_both" />
-      <Parameter input="newName7" output="mu_shoulder_right" />
-    </Parameters>
+    <Parameters />
   </Actions>
 </Definitions>

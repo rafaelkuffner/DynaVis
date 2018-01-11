@@ -7,7 +7,9 @@ using UnityEngine.EventSystems;
 public class ParameterManager : MonoBehaviour {
 
 	public Transform contentPanelModifiers;
+	public Transform contentPanelParameters;
 	public GameObject dropdownItem;
+	public GameObject itemList;
 
 	private AnnotationSetupManager annotationSetupManager;
 	private GameObject currentDropdownGO;
@@ -21,6 +23,15 @@ public class ParameterManager : MonoBehaviour {
 
 		dropdownItem.GetComponent<Dropdown> ().ClearOptions ();
 		dropdownItem.GetComponent<Dropdown> ().AddOptions (modifierList);
+
+		List<string> parameters = annotationSetupManager.ParametersList;
+
+		foreach (string parameter in parameters) {
+			GameObject paramGO = GameObject.Instantiate (itemList);
+			Button currentButton = paramGO.GetComponent<Button> ();
+			paramGO.GetComponent<SampleItemButton> ().SetItemListText (parameter);
+			paramGO.transform.SetParent (contentPanelParameters);
+		}
 	}
 
 
@@ -64,7 +75,7 @@ public class ParameterManager : MonoBehaviour {
 	public void OnClickExit(){
 		// TODO: this showed be done by the EventSystem
 		annotationSetupManager.WriteXMLFile ();
-		annotationSetupManager.OutputSetupPanel.SetActive (false);
+		annotationSetupManager.ParameterSetupPanel.SetActive (false);
 		//annotationSetupManager.ModifiersSetupPanel.SetActive(true);
 	}
 }
