@@ -25,6 +25,7 @@ public class AnnotationSetupManager : MonoBehaviour {
 	private Dictionary<string, List<string>> newTiersConfig;
 	private List<SetupData> setupDataList;
 	private SpriteManager spriteManager;
+	private ModifiersManager modifierManager;
 
 	public Simulation GetBoss(){
 		return boss;
@@ -74,6 +75,7 @@ public class AnnotationSetupManager : MonoBehaviour {
 		ModifierList.Add ("ColorModifier");
 
 		spriteManager = SpriteSetupPanel.GetComponent<SpriteManager> ();
+		modifierManager = ModifiersSetupPanel.GetComponent<ModifiersManager> ();
 
 		loadFile ();
 		GetUniqueSetupTiers ();
@@ -178,22 +180,64 @@ public class AnnotationSetupManager : MonoBehaviour {
 		XmlNode actionsNode = xmlDoc.CreateElement("Actions");
 		rootNode.AppendChild (actionsNode);
 
-		XmlNode parametersNode = xmlDoc.CreateElement("Parameters");
-		actionsNode.AppendChild (parametersNode);
-		Dictionary<string, string> newSpriteTranslateTable = spriteManager.NewSpriteTranslationTable;
-		foreach (string newSprinteName in newSpriteTranslateTable.Keys) {
-			XmlNode parameterNode = xmlDoc.CreateElement("Parameter");
-			XmlAttribute attributeInput = xmlDoc.CreateAttribute("input");
-			attributeInput.Value = newSpriteTranslateTable[newSprinteName];
-			parameterNode.Attributes.Append (attributeInput);
-			XmlAttribute attributeOutput = xmlDoc.CreateAttribute("output");
-			attributeOutput.Value = newSprinteName;
-			parameterNode.Attributes.Append (attributeOutput);
-			parametersNode.AppendChild (parameterNode);
+		Dictionary<string, Dictionary<string, string>> newSpriteTranslateTableByAction = spriteManager.NewSpriteTranslationTableByAction;
+		foreach (string action in TiersByAction.Keys) {
+			List<string> tiers = TiersByAction [action];
+
+			XmlNode actionNode = xmlDoc.CreateElement("Action");
+			XmlAttribute attributeName = xmlDoc.CreateAttribute("name");
+			attributeName.Value = action;
+			actionNode.Attributes.Append (attributeName);
+			actionsNode.AppendChild (actionNode);
+
+			XmlNode applicableTiersNode = xmlDoc.CreateElement("ApplicableTiers");
+			actionNode.AppendChild (applicableTiersNode);
+
+			foreach (string tier in tiers) {
+				XmlNode applicableTierNode = xmlDoc.CreateElement("ApplicableTier");
+				applicableTierNode.InnerText = tier;
+				applicableTiersNode.AppendChild (applicableTierNode);
+			}
+
+			XmlNode parametersNode = xmlDoc.CreateElement("Parameters");
+			actionNode.AppendChild (parametersNode);
+			Dictionary<string, string> newSpriteTranslateTable = newSpriteTranslateTableByAction [action];
+			foreach (string oldSpriteName in newSpriteTranslateTable.Keys) {
+				XmlNode parameterNode = xmlDoc.CreateElement ("Parameter");
+				XmlAttribute attributeInput = xmlDoc.CreateAttribute ("input");
+				attributeInput.Value = oldSpriteName;
+				parameterNode.Attributes.Append (attributeInput);
+				XmlAttribute attributeOutput = xmlDoc.CreateAttribute ("output");
+				attributeOutput.Value = newSpriteTranslateTable[oldSpriteName];
+				parameterNode.Attributes.Append (attributeOutput);
+				parametersNode.AppendChild (parameterNode);
+			}
 		}
 
+		XmlNode modifiersNode = xmlDoc.CreateElement("Modifiers");
+		rootNode.AppendChild (modifiersNode);
+
+		Dictionary<string, List<string>> actionsByModifiers = modifierManager.ActionsByModifier;
+		foreach (string modifier in actionsByModifiers.Keys) {
+			List<string> actions = actionsByModifiers[modifier];
+
+			XmlNode modifierNode = xmlDoc.CreateElement("Modifier");
+			modifiersNode.AppendChild (modifierNode);
+			XmlAttribute attributeModifierName = xmlDoc.CreateAttribute ("name");
+			attributeModifierName.Value = modifier;
+			modifierNode.Attributes.Append (attributeModifierName);
+
+			XmlNode modifiableActionsNode = xmlDoc.CreateElement("modifiableActions");
+			modifierNode.AppendChild (modifiableActionsNode);
+			foreach (string action in actions) {
+				XmlNode modifiableActionNode = xmlDoc.CreateElement("ModifiableAction");
+				modifiableActionsNode.AppendChild (modifiableActionNode);
+				XmlAttribute attributeName = xmlDoc.CreateAttribute ("name");
+				attributeName.Value = action;
+				modifiableActionNode.Attributes.Append (attributeName);
+			}
+		}
 		xmlDoc.Save("newSetup.xml");
-		
 	}
 
 	// Update is called once per frame

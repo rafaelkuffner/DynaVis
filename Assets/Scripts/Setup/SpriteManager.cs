@@ -9,32 +9,36 @@ public class SpriteManager : MonoBehaviour {
 	public Transform contentSprites;
 	public GameObject itemPrefab;
 	public Transform contentSpriteName;
+	public Vector3 contentSpriteNamePosition;
 	public GameObject inputFieldPrefab;
-	public Dictionary<string, string> NewSpriteTranslationTable { get; set; }
+	public Dictionary<string, Dictionary<string,  string>> NewSpriteTranslationTableByAction { get; set; }
+	public Button buttonNext;
 
 	private AnnotationSetupManager annotationSetupManager;
 	private List<string> actionList;
 	private Dictionary<string, string> spriteTranslationTable;
 	private GameObject spriteNameGO;
 	private GameObject currentButtonGO;
-	private GameObject currentItemListButtonGO;
-	private GameObject currentItemListInputFieldGO;
+	private GameObject currentItemGO;
 	private Dictionary<string, List<string>> tiersByAction;
 	private List<string> actions;
+	private string currentAction = "";
 
 
 	// Use this for initialization
 	void Start () {
-		NewSpriteTranslationTable = new Dictionary<string, string> ();
+		NewSpriteTranslationTableByAction = new Dictionary<string, Dictionary<string,  string>> ();
 
+		contentSpriteNamePosition = contentSpriteName.position;
 		annotationSetupManager = GameObject.Find ("Boss Object").GetComponent<AnnotationSetupManager> ();
 		actionList = annotationSetupManager.ActionList;
 		tiersByAction = annotationSetupManager.TiersByAction;
 		actions = new List<string>(tiersByAction.Keys);
 
 		if (actions.Count > 0) {
-			string action = actions [0];
-			List<string> tiers = tiersByAction [action];
+			currentAction = actions [0];
+			NewSpriteTranslationTableByAction.Add (currentAction, new Dictionary<string, string> ());
+			List<string> tiers = tiersByAction [currentAction];
 			List<string> parameterList = annotationSetupManager.getParametersByTierString (tiers);
 
 			foreach (string param in parameterList) {
@@ -53,28 +57,13 @@ public class SpriteManager : MonoBehaviour {
 			}
 			actions.RemoveAt (0);
 		}
-		/*
-		foreach (string action in actions) {
-			spriteTranslationTable = actionConfiguration.translationTable;
-			foreach (string spriteName in spriteTranslationTable.Keys) {
-				GameObject spriteNameGO = GameObject.Instantiate (itemPrefab);
-				Button currentButton = spriteNameGO.GetComponent<Button> ();
-				spriteNameGO.GetComponent<SampleItemButton> ().SetItemListText (spriteName);
-				spriteNameGO.transform.SetParent (contentSprites);
-
-				EventTrigger trigger = currentButton.GetComponent<EventTrigger>();
-				EventTrigger.Entry entry = new EventTrigger.Entry();
-				entry.eventID = EventTriggerType.PointerDown;
-				entry.callback.AddListener((data) => { OnPointerClickButton((PointerEventData)data); });
-				trigger.triggers.Add(entry);
-			}
-		}*/
 	}
 
 	private void LoadContent(){
 		contentSprites.DetachChildren();
 		contentSpriteName.DetachChildren();
-
+		contentSpriteName.position = contentSpriteNamePosition;
+			
 		GameObject[] contentListDetached = GameObject.FindGameObjectsWithTag ("SampleListItem") as GameObject[];
 		for (int i = 0; i < contentListDetached.Length; i++) {
 			Destroy(contentListDetached[i]);
@@ -83,8 +72,9 @@ public class SpriteManager : MonoBehaviour {
 		if (actions.Count <= 0)
 			return;
 
-		string action = actions [0];
-		List<string> tiers = tiersByAction [action];
+		currentAction = actions [0];
+		NewSpriteTranslationTableByAction.Add (currentAction, new Dictionary<string, string> ());
+		List<string> tiers = tiersByAction [currentAction];
 		List<string> parameterList = annotationSetupManager.getParametersByTierString (tiers);
 
 		foreach (string param in parameterList) {
@@ -104,71 +94,28 @@ public class SpriteManager : MonoBehaviour {
 		actions.RemoveAt (0);
 	}
 
-	public void ClickedAddNewSpriteName(){
-		Debug.Log ("Added new sprite name");
-		GameObject newInputFieldGO = GameObject.Instantiate (inputFieldPrefab);
-		InputField currentInputField = newInputFieldGO.GetComponentInChildren<InputField> ();
-		Button currentInputButton = newInputFieldGO.GetComponentInChildren<Button> ();
-		currentInputField.onEndEdit.AddListener (delegate {EditedInputField (); });
-		newInputFieldGO.transform.SetParent (contentSpriteName);
-		//itemListByInputField.Add (newInputFieldGO, new List<GameObject>());
-
-		EventTrigger triggerInputField = currentInputField.GetComponent<EventTrigger>();
-		EventTrigger.Entry entryInputField = new EventTrigger.Entry();
-		entryInputField.eventID = EventTriggerType.PointerExit;
-		entryInputField.callback.AddListener((data) => { OnPointerExitInputField((PointerEventData)data); });
-		triggerInputField.triggers.Add(entryInputField);
-
-		EventTrigger triggerButton = currentInputButton.GetComponent<EventTrigger>();
-		EventTrigger.Entry entryButton = new EventTrigger.Entry();
-		entryButton.eventID = EventTriggerType.PointerClick;
-		entryButton.callback.AddListener((data) => { OnPointerClickItemListButton((PointerEventData)data); });
-		triggerButton.triggers.Add(entryButton);
-	}
-
 	private void EditedInputField(){
-		InputField currentInputField = currentItemListInputFieldGO.GetComponent<InputField> ();
+		InputField currentInputField = currentItemGO.GetComponentInChildren<InputField> ();
+		Button button = currentItemGO.GetComponentInChildren<Button> ();
 
-		Debug.Log("EditedInputField = " + currentItemListInputFieldGO.GetComponentInChildren<Text>().text.ToString ());
+		Debug.Log("EditedInputField = " + currentItemGO.GetComponentInChildren<Text>().text.ToString ());
 
-		if (!NewSpriteTranslationTable.ContainsKey (currentInputField.text.ToString())) {
-			NewSpriteTranslationTable.Add (currentInputField.text.ToString (), "");
-		}
+		NewSpriteTranslationTableByAction[currentAction].Add (button.GetComponent<SampleItemButton>().GetItemListText(), currentInputField.text.ToString ());
 	}
-
-	public void OnPointerExitInputField(PointerEventData data)
-	{
-		currentItemListInputFieldGO = data.selectedObject;
-	}
-
-	public void OnPointerClickItemListButton(PointerEventData data)
-	{
-		currentItemListButtonGO = data.selectedObject;
-	}
-
+		
 	public void OnPointerClickButton(PointerEventData data)
 	{
 		currentButtonGO = data.selectedObject;
 		Debug.Log("OnPointerClickButton called = " + currentButtonGO.GetComponent<SampleItemButton>().GetItemListText());
 
-		if (currentItemListInputFieldGO == null)
-			return;
+		currentItemGO = GameObject.Instantiate (inputFieldPrefab);
+		InputField currentInputField = currentItemGO.GetComponentInChildren<InputField> ();
+		Button currentInputButton = currentItemGO.GetComponentInChildren<Button> ();
+		currentInputButton.GetComponent<SampleItemButton>().SetItemListText(currentButtonGO.GetComponent<SampleItemButton>().GetItemListText());
+		currentInputField.onEndEdit.AddListener (delegate {EditedInputField (); });
+		currentItemGO.transform.SetParent (contentSpriteName);
 
-		string selectedSprite = currentItemListInputFieldGO.GetComponentInChildren<InputField>().text.ToString ();
-		string key = "";
-		string value = "";
-		foreach (string newSpriteName in NewSpriteTranslationTable.Keys) {
-			if (selectedSprite.Equals (newSpriteName)) {
-				key = newSpriteName;
-				value = currentButtonGO.GetComponentInParent<SampleItemButton> ().GetItemListText ();
-				Debug.Log ("currentItemListInputFieldGO = " + currentItemListInputFieldGO.name);
-				currentItemListButtonGO.GetComponent<SampleItemButton> ().SetItemListText(value);
-				//itemListByInputField [currentInputFieldGO].Add (currentButtonGO);
-				Destroy(currentButtonGO);
-			}
-		}
-		NewSpriteTranslationTable.Remove (key);
-		NewSpriteTranslationTable.Add(key, value);
+		Destroy(currentButtonGO);
 	}
 
 	public void DeleteNewSpriteName(){
@@ -178,8 +125,20 @@ public class SpriteManager : MonoBehaviour {
 	public void OnClickNextAction(){
 
 		LoadContent ();
+		if (actions.Count == 0) {
+			buttonNext.GetComponentInChildren<Text> ().text = "Next";
+			buttonNext.onClick.AddListener(OnClickNext);
+		}
+	}
 
-		//annotationSetupManager.SpriteSetupPanel.SetActive (false);
-		//annotationSetupManager.ModifiersSetupPanel.SetActive (true);
+	public void OnClickNext(){
+
+		GameObject[] contentItemDetached = GameObject.FindGameObjectsWithTag ("SampleItem") as GameObject[];
+		for (int i = 0; i < contentItemDetached.Length; i++) {
+			Destroy(contentItemDetached[i]);
+		}
+
+		annotationSetupManager.SpriteSetupPanel.SetActive (false);
+		annotationSetupManager.ModifiersSetupPanel.SetActive (true);
 	}
 }
