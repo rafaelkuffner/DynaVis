@@ -10,10 +10,12 @@ public class ModifiersManager : MonoBehaviour {
 	public Transform contentModifiers;
 	public GameObject itemList;
 	public Dictionary<string, List<string>> ActionsByModifier { get; set; }
+	public Dictionary<string, List<string>> MappingsByModifier { get; set; }
 
 	private AnnotationSetupManager annotationSetupManager;
 	private GameObject currentModifierGO;
 	private GameObject currentActionGO;
+	GameObject currentMappingGO;
 	private int currentModifierIndex;
 	private List<Transform> contentModifiersItemList;
 
@@ -25,7 +27,15 @@ public class ModifiersManager : MonoBehaviour {
 		List<string> modifierList = annotationSetupManager.ModifierList;
 		contentModifiersItemList = new List<Transform> ();
 		ActionsByModifier = new Dictionary<string, List<string>> ();
+		MappingsByModifier = new Dictionary<string, List<string>> ();
 
+		// Add button to separate actions from mappings
+		GameObject actionSeparatorGO = GameObject.Instantiate(itemList);
+		Button buttonAction = actionSeparatorGO.GetComponent<Button> ();
+		actionSeparatorGO.GetComponent<SampleItemButton> ().SetItemListText ("ACTION");
+		actionSeparatorGO.transform.SetParent (contentActions);
+
+		// ACTIONS
 		foreach (string action in actionList) {
 			GameObject actionGO = GameObject.Instantiate (itemList);
 			Button currentButton = actionGO.GetComponent<Button> ();
@@ -36,6 +46,26 @@ public class ModifiersManager : MonoBehaviour {
 			EventTrigger.Entry entry = new EventTrigger.Entry();
 			entry.eventID = EventTriggerType.PointerDown;
 			entry.callback.AddListener((data) => { OnPointerClickActionButton((PointerEventData)data); });
+			trigger.triggers.Add(entry);
+		}
+
+		GameObject mappingSeparatorGO = GameObject.Instantiate(itemList);
+		Button buttonMapping = mappingSeparatorGO.GetComponent<Button> ();
+		mappingSeparatorGO.GetComponent<SampleItemButton> ().SetItemListText ("MAPPING");
+		mappingSeparatorGO.transform.SetParent (contentActions);
+
+		//MAPPINGS
+		List<string> mappings = new List<string>(annotationSetupManager.MappingsManager.MappingInputOutput.Keys);
+		foreach (string mapping in mappings) {
+			GameObject mappingGO = GameObject.Instantiate (itemList);
+			Button currentButton = mappingGO.GetComponent<Button> ();
+			mappingGO.GetComponent<SampleItemButton> ().SetItemListText (mapping);
+			mappingGO.transform.SetParent (contentActions);
+
+			EventTrigger trigger = currentButton.GetComponent<EventTrigger>();
+			EventTrigger.Entry entry = new EventTrigger.Entry();
+			entry.eventID = EventTriggerType.PointerDown;
+			entry.callback.AddListener((data) => { OnPointerClickMappingButton((PointerEventData)data); });
 			trigger.triggers.Add(entry);
 		}
 
@@ -51,6 +81,31 @@ public class ModifiersManager : MonoBehaviour {
 			entry.callback.AddListener((data) => { OnPointerClickModifierButton((PointerEventData)data); });
 			trigger.triggers.Add(entry);
 		}
+	}
+
+	public void OnPointerClickMappingButton(PointerEventData data){
+		currentMappingGO = data.selectedObject;
+		//MappingsByModifier
+	
+		string currentModifierName = currentModifierGO.GetComponent<SampleItemButton> ().GetItemListText ();
+		string currentMappingName = currentMappingGO.GetComponent<SampleItemButton> ().GetItemListText ();
+
+		int numberOfItems = contentModifiers.childCount;
+		for (int i = 0; i < numberOfItems; i++) {
+			Transform item = contentModifiers.GetChild (i);
+			if (item.GetComponent<SampleItemButton> ().GetItemListText() == currentModifierName) {
+				currentModifierIndex = i;
+				break;
+			}
+		}
+
+		if (MappingsByModifier.ContainsKey (currentModifierName))
+			MappingsByModifier [currentModifierName].Add (currentMappingName);
+		else {
+			MappingsByModifier.Add (currentModifierName, new List<string> ());
+			MappingsByModifier [currentModifierName].Add (currentMappingName);
+		}
+		RedrawContentModifiers (currentMappingGO);
 	}
 
 	public void OnPointerClickActionButton(PointerEventData data){
@@ -74,14 +129,14 @@ public class ModifiersManager : MonoBehaviour {
 			ActionsByModifier.Add (currentModifierName, new List<string> ());
 			ActionsByModifier [currentModifierName].Add (currentActionName);
 		}
-		RedrawContentModifiers ();
+		RedrawContentModifiers (currentActionGO);
 	}
 
 	public void OnPointerClickModifierButton(PointerEventData data){
 		currentModifierGO = data.selectedObject;
 	}
 
-	public void RedrawContentModifiers(){
+	public void RedrawContentModifiers(GameObject newItem){
 
 		contentModifiersItemList.Clear ();
 		int numberOfItems = contentModifiers.childCount;
@@ -90,7 +145,7 @@ public class ModifiersManager : MonoBehaviour {
 			//Destroy (contentActions.GetChild (i));
 		}
 
-		contentModifiersItemList.Insert (++currentModifierIndex, currentActionGO.transform);
+		contentModifiersItemList.Insert (++currentModifierIndex, newItem.transform);
 
 		contentModifiers.DetachChildren ();
 		foreach (Transform transform in contentModifiersItemList)
@@ -102,6 +157,6 @@ public class ModifiersManager : MonoBehaviour {
 	public void OnClickNext(){
 		// TODO: this showed be done by the EventSystem
 		annotationSetupManager.ModifiersSetupPanel.SetActive (false);
-		annotationSetupManager.OutputSetupPanel.SetActive(true);
+		annotationSetupManager.ModifiableActionSetupPanel.SetActive(true);
 	}
 }

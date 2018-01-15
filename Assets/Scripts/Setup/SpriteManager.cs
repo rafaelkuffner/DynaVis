@@ -139,6 +139,6 @@ public class SpriteManager : MonoBehaviour {
 		}
 
 		annotationSetupManager.SpriteSetupPanel.SetActive (false);
-		annotationSetupManager.ModifiersSetupPanel.SetActive (true);
+		annotationSetupManager.MappingsSetupPanel.SetActive (true);
 	}
 }

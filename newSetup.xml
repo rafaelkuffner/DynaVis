@@ -7,12 +7,19 @@
       <TierString>game_action-f3g1a_p6r1</TierString>
     </Tier>
     <Tier name="Tier2">
-      <TierString>head_face_mu-f3g1a_p1r1</TierString>
-      <TierString>head_face_mu-f3g1a_p2r1</TierString>
-      <TierString>head_face_mu-f3g1a_p3r1</TierString>
-      <TierString>head_face_mu-f3g1a_p4r1</TierString>
-      <TierString>head_face_mu-f3g1a_p5r1</TierString>
-      <TierString>head_face_mu-f3g1a_p6r1</TierString>
+      <TierString>head_face_function-f3g1a_p1r1</TierString>
+      <TierString>head_face_function-f3g1a_p2r1</TierString>
+      <TierString>head_face_function-f3g1a_p3r1</TierString>
+      <TierString>head_face_function-f3g1a_p4r1</TierString>
+      <TierString>head_face_function-f3g1a_p5r1</TierString>
+      <TierString>head_face_function-f3g1a_p6r1</TierString>
+    </Tier>
+    <Tier name="Tier3">
+      <TierString>lower_body_function-f3g1a_p2r1</TierString>
+      <TierString>lower_body_function-f3g1a_p3r1</TierString>
+      <TierString>lower_body_function-f3g1a_p4r1</TierString>
+      <TierString>lower_body_function-f3g1a_p5r1</TierString>
+      <TierString>lower_body_function-f3g1a_p6r1</TierString>
     </Tier>
   </Tiers>
   <Actions>
@@ -24,30 +31,20 @@
         <Parameter input="game_action" output="newName" />
       </Parameters>
     </Action>
-    <Action name="LowerBodyAction">
-      <ApplicableTiers>
-        <ApplicableTier>Tier2</ApplicableTier>
-      </ApplicableTiers>
-      <Parameters>
-        <Parameter input="mu_head" output="newName" />
-        <Parameter input="mu_eyes_brows" output="newName" />
-        <Parameter input="mu_eyes_brows_head" output="newName" />
-        <Parameter input="mu_mouth" output="newName" />
-        <Parameter input="mu_mouth_head" output="newName" />
-        <Parameter input="mu_face_head" output="newName" />
-        <Parameter input="mu_face" output="newName" />
-      </Parameters>
-    </Action>
   </Actions>
   <Modifiers>
     <Modifier name="ColorModifier">
-      <modifiableActionsNode>
-        <ModifiableAction />
-        <ModifiableAction />
-        <ModifiableAction />
-        <ModifiableAction />
-        <ModifiableAction />
-      </modifiableActionsNode>
+      <Mappings>
+        <Mapping input="input" output="output" />
+        <Mapping input="input1" output="output1" />
+      </Mappings>
+      <modifiableActions>
+        <ModifiableAction name="UpperBodyAction" />
+        <ModifiableAction name="LowerBodyAction" />
+        <ModifiableAction name="HeadFaceAction" />
+        <ModifiableAction name="LocationAction" />
+        <ModifiableAction name="GazeAction" />
+      </modifiableActions>
     </Modifier>
   </Modifiers>
 </Definitions>

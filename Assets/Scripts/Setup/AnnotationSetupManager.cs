@@ -18,7 +18,8 @@ public class AnnotationSetupManager : MonoBehaviour {
 	public GameObject ActionSetupPanel { get; set; }
 	public GameObject SpriteSetupPanel { get; set; }
 	public GameObject ModifiersSetupPanel { get; set; }
-	public GameObject OutputSetupPanel { get; set; }
+	public GameObject ModifiableActionSetupPanel { get; set; }
+	public GameObject MappingsSetupPanel { get; set; }
 	public GameObject ParameterSetupPanel { get; set; }
 
 	private Simulation boss;
@@ -26,6 +27,8 @@ public class AnnotationSetupManager : MonoBehaviour {
 	private List<SetupData> setupDataList;
 	private SpriteManager spriteManager;
 	private ModifiersManager modifierManager;
+	public MappingsManager MappingsManager { get; set; }
+	public ModifiableActionManager ModifiableActionManager { get; set; }
 
 	public Simulation GetBoss(){
 		return boss;
@@ -54,8 +57,11 @@ public class AnnotationSetupManager : MonoBehaviour {
 		ModifiersSetupPanel = GameObject.Find ("ModifierSetupPanel");
 		ModifiersSetupPanel.SetActive (false);
 
-		OutputSetupPanel = GameObject.Find ("OutputSetupPanel");
-		OutputSetupPanel.SetActive (false);
+		ModifiableActionSetupPanel = GameObject.Find ("ModifiableActionSetupPanel");
+		ModifiableActionSetupPanel.SetActive (false);
+
+		MappingsSetupPanel = GameObject.Find ("MappingsSetupPanel");
+		MappingsSetupPanel.SetActive (false);
 
 		ParameterSetupPanel = GameObject.Find ("ParameterSetupPanel");
 		ParameterSetupPanel.SetActive (false);
@@ -76,6 +82,8 @@ public class AnnotationSetupManager : MonoBehaviour {
 
 		spriteManager = SpriteSetupPanel.GetComponent<SpriteManager> ();
 		modifierManager = ModifiersSetupPanel.GetComponent<ModifiersManager> ();
+		MappingsManager = MappingsSetupPanel.GetComponent<MappingsManager> ();
+		ModifiableActionManager = ModifiableActionSetupPanel.GetComponent<ModifiableActionManager> ();
 
 		loadFile ();
 		GetUniqueSetupTiers ();
@@ -218,15 +226,31 @@ public class AnnotationSetupManager : MonoBehaviour {
 		rootNode.AppendChild (modifiersNode);
 
 		Dictionary<string, List<string>> actionsByModifiers = modifierManager.ActionsByModifier;
+		Dictionary<string, List<string>> mappingsByModifiers = modifierManager.MappingsByModifier;
 		foreach (string modifier in actionsByModifiers.Keys) {
-			List<string> actions = actionsByModifiers[modifier];
-
 			XmlNode modifierNode = xmlDoc.CreateElement("Modifier");
 			modifiersNode.AppendChild (modifierNode);
 			XmlAttribute attributeModifierName = xmlDoc.CreateAttribute ("name");
 			attributeModifierName.Value = modifier;
 			modifierNode.Attributes.Append (attributeModifierName);
 
+			XmlNode mappingsNode = xmlDoc.CreateElement("Mappings");
+			modifierNode.AppendChild (mappingsNode);
+			List<string> mappings = mappingsByModifiers [modifier];
+			foreach (string mapping in mappings) {
+				XmlNode mappingNode = xmlDoc.CreateElement ("Mapping");
+				XmlAttribute attributeInput = xmlDoc.CreateAttribute ("input");
+				attributeInput.Value = mapping;
+				mappingNode.Attributes.Append (attributeInput);
+
+				XmlAttribute attributeOutput = xmlDoc.CreateAttribute ("output");
+				attributeOutput.Value = MappingsManager.MappingInputOutput [mapping];
+				mappingNode.Attributes.Append (attributeOutput);
+
+				mappingsNode.AppendChild (mappingNode);
+			}
+
+			List<string> actions = actionsByModifiers[modifier];
 			XmlNode modifiableActionsNode = xmlDoc.CreateElement("modifiableActions");
 			modifierNode.AppendChild (modifiableActionsNode);
 			foreach (string action in actions) {
