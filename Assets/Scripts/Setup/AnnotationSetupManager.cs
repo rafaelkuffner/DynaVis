@@ -25,10 +25,12 @@ public class AnnotationSetupManager : MonoBehaviour {
 	private Simulation boss;
 	private Dictionary<string, List<string>> newTiersConfig;
 	private List<SetupData> setupDataList;
+	public ActionManager ActionManager { get; set; }
 	private SpriteManager spriteManager;
 	private ModifiersManager modifierManager;
 	public MappingsManager MappingsManager { get; set; }
 	public ModifiableActionManager ModifiableActionManager { get; set; }
+	public ParameterManager ParameterManager { get; set; }
 
 	public Simulation GetBoss(){
 		return boss;
@@ -80,10 +82,12 @@ public class AnnotationSetupManager : MonoBehaviour {
 		ModifierList = new List<string> ();
 		ModifierList.Add ("ColorModifier");
 
+		ActionManager = ActionSetupPanel.GetComponent<ActionManager> ();
 		spriteManager = SpriteSetupPanel.GetComponent<SpriteManager> ();
 		modifierManager = ModifiersSetupPanel.GetComponent<ModifiersManager> ();
 		MappingsManager = MappingsSetupPanel.GetComponent<MappingsManager> ();
 		ModifiableActionManager = ModifiableActionSetupPanel.GetComponent<ModifiableActionManager> ();
+		ParameterManager = ParameterSetupPanel.GetComponent<ParameterManager> ();
 
 		loadFile ();
 		GetUniqueSetupTiers ();
@@ -96,7 +100,7 @@ public class AnnotationSetupManager : MonoBehaviour {
 		//Skipping header;
 		string line = sr.ReadLine ();
 		char[] delim = {','};
-		List<Modifier> modifs = new List<Modifier>();
+		//List<Modifier> modifs = new List<Modifier>();
 		while((line = sr.ReadLine()) != null)
 		{
 			string[] components = line.Split(delim);
@@ -253,12 +257,44 @@ public class AnnotationSetupManager : MonoBehaviour {
 			List<string> actions = actionsByModifiers[modifier];
 			XmlNode modifiableActionsNode = xmlDoc.CreateElement("modifiableActions");
 			modifierNode.AppendChild (modifiableActionsNode);
-			foreach (string action in actions) {
+			foreach (string mAction in actions) {
 				XmlNode modifiableActionNode = xmlDoc.CreateElement("ModifiableAction");
 				modifiableActionsNode.AppendChild (modifiableActionNode);
 				XmlAttribute attributeName = xmlDoc.CreateAttribute ("name");
-				attributeName.Value = action;
+				attributeName.Value = mAction;
 				modifiableActionNode.Attributes.Append (attributeName);
+
+				if (!ModifiableActionManager.TiersByModifiableAction.ContainsKey (mAction))
+					continue;
+				List<string>  tiers = ModifiableActionManager.TiersByModifiableAction[mAction];
+				XmlNode tNodes = xmlDoc.CreateElement ("Tiers");
+				modifiableActionNode.AppendChild (tNodes);
+				foreach (string tierString in tiers) {
+					XmlNode tierStringNode = xmlDoc.CreateElement ("TierString");
+					tierStringNode.InnerText = tierString;
+					tNodes.AppendChild (tierStringNode);
+				}
+
+				if (!ParameterManager.ParametersByModifiableAction.ContainsKey (mAction))
+					continue;
+
+				Dictionary<string, string> parameterDic = ParameterManager.ParametersByModifiableAction[mAction];
+
+				XmlNode parametersNode = xmlDoc.CreateElement ("Parameters");
+				modifiableActionsNode.AppendChild (parametersNode);
+				foreach (string paramInput in parameterDic.Keys) {
+					XmlNode parameterNode = xmlDoc.CreateElement ("Parameter");
+					XmlAttribute attributeInput = xmlDoc.CreateAttribute ("input");
+					attributeInput.Value = paramInput;
+					parameterNode.Attributes.Append (attributeInput);
+
+					XmlAttribute attributeOutput = xmlDoc.CreateAttribute ("output");
+					attributeOutput.Value = parameterDic [paramInput];
+					parameterNode.Attributes.Append (attributeOutput);
+
+					parametersNode.AppendChild (parameterNode);
+
+				}
 			}
 		}
 		xmlDoc.Save("newSetup.xml");

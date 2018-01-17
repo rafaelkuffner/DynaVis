@@ -12,17 +12,20 @@ public class ParameterManager : MonoBehaviour {
 	public GameObject itemPrefab;
 	public Vector3 contentMappingsPosition;
 	public Button buttonNext;
+	public Dictionary<string, Dictionary<string, string>> ParametersByModifiableAction;
 
 	private AnnotationSetupManager annotationSetupManager;
 	private GameObject currentDropdownGO;
 	private Dictionary<string, List<string>> tiersByModifiableAction;
 	private List<string> actions;
 	private string currentAction;
+	private List<string> currentParameterList;
 
 	// Use this for initialization
 	void Start () {
 		annotationSetupManager = GameObject.Find ("Boss Object").GetComponent<AnnotationSetupManager> ();
 		tiersByModifiableAction = annotationSetupManager.ModifiableActionManager.TiersByModifiableAction;
+		ParametersByModifiableAction = new Dictionary<string, Dictionary<string, string>> ();
 
 		MappingsManager mappingsManager = annotationSetupManager.MappingsSetupPanel.GetComponent<MappingsManager> ();
 		List<string> mappingsOutputManager = new List<string>(mappingsManager.MappingInputOutput.Values);
@@ -35,9 +38,9 @@ public class ParameterManager : MonoBehaviour {
 			currentAction = actions [0];
 
 			List<string> tiers = tiersByModifiableAction [currentAction];
-			List<string> parameterList = annotationSetupManager.getParametersByTierString (tiers);
+			currentParameterList = annotationSetupManager.getParametersByTierString (tiers);
 
-			foreach (string param in parameterList) {
+			foreach (string param in currentParameterList) {
 				GameObject spriteNameGO = GameObject.Instantiate (itemPrefab);
 				Button currentButton = spriteNameGO.GetComponent<Button> ();
 				spriteNameGO.GetComponent<SampleItemButton> ().SetItemListText (param);
@@ -47,6 +50,7 @@ public class ParameterManager : MonoBehaviour {
 
 		}
 		dropdownItem.GetComponent<Dropdown> ().ClearOptions ();
+		mappingsOutputManager.Insert (0, "");
 		dropdownItem.GetComponent<Dropdown> ().AddOptions (mappingsOutputManager);
 	}
 
@@ -65,9 +69,9 @@ public class ParameterManager : MonoBehaviour {
 
 		currentAction = actions [0];
 		List<string> tiers = tiersByModifiableAction [currentAction];
-		List<string> parameterList = annotationSetupManager.getParametersByTierString (tiers);
+		currentParameterList = annotationSetupManager.getParametersByTierString (tiers);
 
-		foreach (string param in parameterList) {
+		foreach (string param in currentParameterList) {
 			GameObject spriteNameGO = GameObject.Instantiate (itemPrefab);
 			Button currentButton = spriteNameGO.GetComponent<Button> ();
 			spriteNameGO.GetComponent<SampleItemButton> ().SetItemListText (param);
@@ -91,13 +95,13 @@ public class ParameterManager : MonoBehaviour {
 
 		EventTrigger trigger = newDropdowGO.GetComponent<EventTrigger>();
 		EventTrigger.Entry entry = new EventTrigger.Entry();
-		entry.eventID = EventTriggerType.PointerDown;
+		entry.eventID = EventTriggerType.PointerExit;
 		entry.callback.AddListener((data) => { OnPointerClickDropdown((PointerEventData)data); });
 		trigger.triggers.Add(entry);
 
 		EventTrigger trigger2 = newDropdowGO.GetComponent<EventTrigger>();
 		EventTrigger.Entry entry2 = new EventTrigger.Entry();
-		entry2.eventID = EventTriggerType.Select;
+		entry2.eventID = EventTriggerType.UpdateSelected;
 		entry2.callback.AddListener((data) => { OnSelect((PointerEventData)data); });
 		trigger2.triggers.Add(entry);
 	
@@ -111,6 +115,31 @@ public class ParameterManager : MonoBehaviour {
 	public void OnPointerClickDropdown(PointerEventData data)
 	{
 		currentDropdownGO = data.selectedObject;
+		Dropdown currentDropdown = currentDropdownGO.GetComponent<Dropdown> ();
+		if (currentDropdown == null)
+			return;
+
+		string dropdownText = currentDropdown.captionText.text;
+		int index = currentDropdown.value;
+
+		if (currentParameterList.Count == 0 || currentParameterList == null)
+			return;
+		
+		string parameter = currentParameterList [--index];
+		if(ParametersByModifiableAction.ContainsKey(currentAction)){
+			if (!ParametersByModifiableAction [currentAction].ContainsKey (parameter)) {
+				ParametersByModifiableAction [currentAction].Add (parameter, dropdownText);
+
+			}
+			else
+				ParametersByModifiableAction[currentAction][parameter] = dropdownText;
+		}
+		else {
+			ParametersByModifiableAction.Add(currentAction, new Dictionary<string, string>());
+			ParametersByModifiableAction [currentAction].Add (parameter, dropdownText);
+		}
+		Debug.Log("dropbox = " + currentDropdown.captionText.text.ToString ());
+
 
 	}
 

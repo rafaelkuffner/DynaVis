@@ -34,7 +34,7 @@ public class ModifiableActionManager : MonoBehaviour {
 
 		actionList = annotationSetupManager.ActionList;
 		newTierConfig = annotationSetupManager.GetNewTiersConfig ();
-		tiersByAction = annotationSetupManager.TiersByAction;
+		tiersByAction = annotationSetupManager.ActionManager.tiersByAction;
 
 		// Tiers not assigned yet
 		tierList = new List<string> ();
@@ -68,15 +68,19 @@ public class ModifiableActionManager : MonoBehaviour {
 	}
 
 	void GetTiersNotAssigned(){
-		foreach (string newTier in newTierConfig.Keys) {
+
+		if (tiersByAction.Count != 0) {
 			foreach (string action in tiersByAction.Keys) {
-				List<string> tiers = tiersByAction[action];
-				foreach(string tier in tiers){
-					if (newTier != tier)
-						tierList.Add (newTier);
+				List<string> tiers = tiersByAction [action];
+				foreach (string tier in tiers) {
+					foreach (string newTier in newTierConfig.Keys) {
+						if (newTier != tier)
+							tierList.Add (newTier);
+					}
 				}
 			}
-		}
+		} else
+			tierList.AddRange (newTierConfig.Keys);
 	}
 
 	public void OnPointerClickActionButton(PointerEventData data){

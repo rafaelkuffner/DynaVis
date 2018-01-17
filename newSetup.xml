@@ -14,13 +14,6 @@
       <TierString>head_face_function-f3g1a_p5r1</TierString>
       <TierString>head_face_function-f3g1a_p6r1</TierString>
     </Tier>
-    <Tier name="Tier3">
-      <TierString>lower_body_function-f3g1a_p2r1</TierString>
-      <TierString>lower_body_function-f3g1a_p3r1</TierString>
-      <TierString>lower_body_function-f3g1a_p4r1</TierString>
-      <TierString>lower_body_function-f3g1a_p5r1</TierString>
-      <TierString>lower_body_function-f3g1a_p6r1</TierString>
-    </Tier>
   </Tiers>
   <Actions>
     <Action name="UpperBodyAction">
@@ -37,11 +30,20 @@
       <Mappings>
         <Mapping input="input" output="output" />
         <Mapping input="input1" output="output1" />
+        <Mapping input="input2" output="output2" />
       </Mappings>
       <modifiableActions>
         <ModifiableAction name="UpperBodyAction" />
         <ModifiableAction name="LowerBodyAction" />
-        <ModifiableAction name="HeadFaceAction" />
+        <ModifiableAction name="HeadFaceAction">
+          <Tiers>
+            <TierString>Tier2</TierString>
+          </Tiers>
+        </ModifiableAction>
+        <Parameters>
+          <Parameter input="context_focused_hf" output="output" />
+          <Parameter input="self_focused_hf" output="output1" />
+        </Parameters>
         <ModifiableAction name="LocationAction" />
         <ModifiableAction name="GazeAction" />
       </modifiableActions>
