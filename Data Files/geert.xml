@@ -1,0 +1,40 @@
+<Definitions>
+  <Tiers>
+    <Tier name="gaze">
+      <TierString>gaze s1</TierString>
+      <TierString>gaze s2</TierString>
+      <TierString>gaze s3</TierString>
+    </Tier>
+  </Tiers>
+  <Actions>
+    <Action name="GazeAction">
+      <ApplicableTiers>
+        <ApplicableTier>gaze</ApplicableTier>
+      </ApplicableTiers>
+      <Parameters>
+        <Parameter input="face s3" output="f3" />
+        <Parameter input="body s3" output="t3" />
+        <Parameter input="background floor" output="down" />
+        <Parameter input="background own body" output="self" />
+        <Parameter input="face s1" output="f1" />
+        <Parameter input="background wall" output="beyond" />
+        <Parameter input="background ceiling" output="up" />
+        <Parameter input="face s2" output="f2" />
+        <Parameter input="background window" output="beyond" />
+        <Parameter input="face s3 " output="f3" />
+        <Parameter input="body s2" output="t2" />
+        <Parameter input="background camera" output="camera" />
+        <Parameter input="gestures s2" output="g2" />
+        <Parameter input="face s2 " output="f2" />
+        <Parameter input="background close s3" output="beyond" />
+        <Parameter input="gestures s3" output="g3" />
+        <Parameter input="body s1" output="t1" />
+        <Parameter input="gestures s1" output="g1" />
+        <Parameter input="background own gestures" output="self" />
+        <Parameter input="background down" output="down" />
+        <Parameter input="NA" output="boo" />
+      </Parameters>
+    </Action>
+  </Actions>
+  <Modifiers />
+</Definitions>

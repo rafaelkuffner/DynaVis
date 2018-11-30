@@ -14,8 +14,8 @@ public class SpriteManager : MonoBehaviour {
 	public Dictionary<string, Dictionary<string,  string>> NewSpriteTranslationTableByAction { get; set; }
 	public Button buttonNext;
 
-	private AnnotationSetupManager annotationSetupManager;
-	private List<string> actionList;
+	private SetupButton setup;
+	private List<Action> actionList;
 	private Dictionary<string, string> spriteTranslationTable;
 	private GameObject spriteNameGO;
 	private GameObject currentButtonGO;
@@ -23,29 +23,30 @@ public class SpriteManager : MonoBehaviour {
 	private Dictionary<string, List<string>> tiersByAction;
 	private List<string> actions;
 	private string currentAction = "";
-
+    
 
 	// Use this for initialization
 	void Start () {
 		NewSpriteTranslationTableByAction = new Dictionary<string, Dictionary<string,  string>> ();
 
 		contentSpriteNamePosition = contentSpriteName.position;
-		annotationSetupManager = GameObject.Find ("Boss Object").GetComponent<AnnotationSetupManager> ();
-		actionList = annotationSetupManager.ActionList;
-		tiersByAction = annotationSetupManager.TiersByAction;
+        setup = GameObject.Find("Button Setup").GetComponent<SetupButton>();
+        actionList = setup.ActionList;
+		tiersByAction = setup.TiersByAction;
 		actions = new List<string>(tiersByAction.Keys);
 
 		if (actions.Count > 0) {
 			currentAction = actions [0];
 			NewSpriteTranslationTableByAction.Add (currentAction, new Dictionary<string, string> ());
 			List<string> tiers = tiersByAction [currentAction];
-			List<string> parameterList = annotationSetupManager.getParametersByTierString (tiers);
+			List<string> parameterList = setup.getParametersByTierString (tiers);
 
 			foreach (string param in parameterList) {
 				GameObject spriteNameGO = GameObject.Instantiate (itemPrefab);
 				Button currentButton = spriteNameGO.GetComponent<Button> ();
 				spriteNameGO.GetComponent<SampleItemButton> ().SetItemListText (param);
 				spriteNameGO.transform.SetParent (contentSprites);
+                spriteNameGO.transform.localScale = Vector3.one;
 
 				EventTrigger trigger = currentButton.GetComponent<EventTrigger> ();
 				EventTrigger.Entry entry = new EventTrigger.Entry ();
@@ -56,7 +57,13 @@ public class SpriteManager : MonoBehaviour {
 				trigger.triggers.Add (entry);
 			}
 			actions.RemoveAt (0);
+
 		}
+        if (actions.Count == 0)
+        {
+            buttonNext.GetComponentInChildren<Text>().text = "Next";
+            buttonNext.onClick.AddListener(OnClickNext);
+        }
 	}
 
 	private void LoadContent(){
@@ -75,7 +82,7 @@ public class SpriteManager : MonoBehaviour {
 		currentAction = actions [0];
 		NewSpriteTranslationTableByAction.Add (currentAction, new Dictionary<string, string> ());
 		List<string> tiers = tiersByAction [currentAction];
-		List<string> parameterList = annotationSetupManager.getParametersByTierString (tiers);
+		List<string> parameterList = setup.getParametersByTierString (tiers);
 
 		foreach (string param in parameterList) {
 			GameObject spriteNameGO = GameObject.Instantiate (itemPrefab);
@@ -111,16 +118,91 @@ public class SpriteManager : MonoBehaviour {
 		currentItemGO = GameObject.Instantiate (inputFieldPrefab);
 		InputField currentInputField = currentItemGO.GetComponentInChildren<InputField> ();
 		Button currentInputButton = currentItemGO.GetComponentInChildren<Button> ();
+
+        EventTrigger trigger = currentInputButton.GetComponent<EventTrigger>();
+        EventTrigger.Entry entry = new EventTrigger.Entry();
+        entry.eventID = EventTriggerType.PointerDown;
+        entry.callback.AddListener((datac) => { OnPointerClickButtonRight((PointerEventData)datac); });
+        trigger.triggers.Add(entry);
+
 		currentInputButton.GetComponent<SampleItemButton>().SetItemListText(currentButtonGO.GetComponent<SampleItemButton>().GetItemListText());
 		currentInputField.onEndEdit.AddListener (delegate {EditedInputField (); });
-		currentItemGO.transform.SetParent (contentSpriteName);
+        trigger = currentInputField.GetComponent<EventTrigger>();
+        entry = new EventTrigger.Entry();
+        entry.eventID = EventTriggerType.PointerDown;
+        entry.callback.AddListener((datad) => { OnPointerClickButtonRight((PointerEventData)datad); });
+        trigger.triggers.Add(entry);
 
+        currentItemGO.transform.SetParent (contentSpriteName);
+        currentItemGO.transform.localScale = Vector3.one;
 		Destroy(currentButtonGO);
 	}
 
+    Color normalButtonColor;
+    Color highlightButtonColor;
+    public void OnPointerClickButtonRight(PointerEventData data)
+    {
+
+        if (currentItemGO == null)
+        {
+            normalButtonColor = data.selectedObject.GetComponentInChildren<Button>().colors.normalColor;
+            highlightButtonColor = data.selectedObject.GetComponentInChildren<Button>().colors.highlightedColor;
+        }
+        else
+        {
+            ColorBlock cb = currentItemGO.GetComponentInChildren<Button>().colors;
+            cb.normalColor = normalButtonColor;
+            cb.highlightedColor = highlightButtonColor;
+            currentItemGO.GetComponentInChildren<Button>().colors = cb;
+        }
+
+        currentItemGO = data.selectedObject.transform.parent.gameObject;
+
+        ColorBlock cb1 = currentItemGO.GetComponentInChildren<Button>().colors;
+        cb1.normalColor = cb1.pressedColor;
+        cb1.highlightedColor = cb1.pressedColor;
+        currentItemGO.GetComponentInChildren<Button>().colors = cb1;
+
+    }
+
+    //public void OnPointerClickButton(PointerEventData data)
+    //{
+    //    currentButtonGO = data.selectedObject;
+    //    Debug.Log("OnPointerClickButton called = " + currentButtonGO.GetComponent<SampleItemButton>().GetItemListText());
+
+    //    currentItemGO = GameObject.Instantiate(inputFieldPrefab);
+    //    InputField currentInputField = currentItemGO.GetComponentInChildren<InputField>();
+    //    Button currentInputButton = currentItemGO.GetComponentInChildren<Button>();
+    //    currentInputButton.GetComponent<SampleItemButton>().SetItemListText(currentButtonGO.GetComponent<SampleItemButton>().GetItemListText());
+    //    currentInputField.onEndEdit.AddListener(delegate { EditedInputField(); });
+
+
+    //    currentItemGO.transform.SetParent(contentSpriteName);
+    //    currentItemGO.transform.localScale = Vector3.one;
+    //    Destroy(currentButtonGO);
+    //}
+
+
 	public void DeleteNewSpriteName(){
-		Debug.Log ("Delete new sprite name");
+        string spritename = currentItemGO.GetComponentInChildren<SampleItemButton>().GetItemListText();
+        GameObject.Destroy(currentItemGO);
+        GameObject spriteNameGO = GameObject.Instantiate (itemPrefab);
+		Button currentButton = spriteNameGO.GetComponent<Button> ();
+		spriteNameGO.GetComponent<SampleItemButton> ().SetItemListText (spritename);
+		spriteNameGO.transform.SetParent (contentSprites);
+        spriteNameGO.transform.localScale = Vector3.one;
+
+		EventTrigger trigger = currentButton.GetComponent<EventTrigger> ();
+		EventTrigger.Entry entry = new EventTrigger.Entry ();
+		entry.eventID = EventTriggerType.PointerDown;
+		entry.callback.AddListener ((data) => {
+			OnPointerClickButton ((PointerEventData)data);
+		});
+		trigger.triggers.Add (entry);
 	}
+
+
+
 
 	public void OnClickNextAction(){
 
@@ -138,7 +220,7 @@ public class SpriteManager : MonoBehaviour {
 			Destroy(contentItemDetached[i]);
 		}
 
-		annotationSetupManager.SpriteSetupPanel.SetActive (false);
-		annotationSetupManager.MappingsSetupPanel.SetActive (true);
+		setup.SpriteSetupPanel.SetActive (false);
+		setup.MappingsSetupPanel.SetActive (true);
 	}
 }

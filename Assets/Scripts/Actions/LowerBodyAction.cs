@@ -30,11 +30,6 @@ public class LowerBodyAction : ColorChangeableAction
         }
     }
 
-    public override void execute3D(int current)
-    {
-        execute(current);
-    }
-
 
     public override string ToString ()
 	{

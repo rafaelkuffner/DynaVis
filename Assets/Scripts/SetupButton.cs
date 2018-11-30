@@ -1,48 +1,76 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using System.IO;
+using System.Xml;
 
 public class SetupButton : MonoBehaviour {
 
-	bool open;
-	Button theButton;
-	Simulation boss;
+	//Private Variables
+	private Simulation boss;
+	private bool lateInited = false;
+    private Dictionary<string, List<string>> newTiersConfig;
+    private List<SetupData> setupDataList;
+    private bool menusOpened;
 
-	Button nextButton;
-	public GameObject nextButtonGO;
+    //Scene game objects, have to be set
+    public GameObject TierSetupPanel;
+    public GameObject ActionSetupPanel;
+    public GameObject SpriteSetupPanel;
+    public GameObject ModifiersSetupPanel;
+    public GameObject ModifiableActionSetupPanel; 
+    public GameObject MappingsSetupPanel;
+    public GameObject ParameterSetupPanel;
 
-	Color normalColor;
-	Color pressedColor;
-	Color highlightedColor;
+    //public properties
+    public List<string> SetupTiersList { get; set; }
+    public List<string> ParametersList { get; set; }
+    public Dictionary<string, List<string>> TiersByAction { get; set; }
+    public List<Action> ActionList { get; set; } // implemented actions: see folder Scripts>Actions
+    public List<string> ModifierList { get; set; } // implemented modifiers: see folder Scripts>Actions>Modifiers
+    public ActionManager ActionManager { get; set; }
+    public SpriteManager SpriteManager { get; set; }
+    public ModifiersManager ModifierManager { get; set; }
+    public MappingsManager MappingsManager { get; set; }
+    public ModifiableActionManager ModifiableActionManager { get; set; }
+    public ParameterManager ParameterManager { get; set; }
 
-	RectTransform canvasTransform;
-
-	bool lateInited = false;
-
-	public bool isSetupTiersActive = false;
-	public bool isSetupActionActive = false;
-
-
+   
 	void lateInit(){
 		boss = GameObject.Find ("Boss Object").GetComponent<Simulation> ();
-		open = false;
-		theButton = transform.GetComponent<Button> ();
-		ColorBlock cb = theButton.colors;
-		normalColor = cb.normalColor;
-		pressedColor = cb.pressedColor;
-		highlightedColor = cb.highlightedColor;
-		canvasTransform = GameObject.Find ("Canvas").GetComponent<RectTransform> ();
+        menusOpened = false;
 
-		// TODO CREATE BUTTON PROGRAMMATICALLY 
-		//nextButton = Instantiate(nextButtonGO, Vector3.zero, Quaternion.identity) as Button;
-		//Transform rectTransform = nextButton.GetComponent<RectTransform>();
-		//rectTransform.SetParent(canvasTransform);
-		//rectTransform.offsetMin = Vector2.zero;
-		//rectTransform.offsetMax = Vector2.zero;
-		//TODO: button.onClick.AddListener(SpawnPlayer);
+        setupDataList = new List<SetupData>();
+        SetupTiersList = new List<string>();
+        ParametersList = new List<string>();
+
+        //different action types
+        ActionList = new List<Action>();
+        ActionList.Add(new LocationAction());
+        ActionList.Add(new GazeAction());
+        ActionList.Add(new HeadFaceAction());
+        ActionList.Add(new UpperBodyAction());
+        ActionList.Add(new LowerBodyAction());
+
+        //ActionList = new List<string>();
+        //ActionList.Add("UpperBodyAction");
+        //ActionList.Add("LowerBodyAction");
+        //ActionList.Add("HeadFaceAction");
+        //ActionList.Add("LocationAction");
+        //ActionList.Add("GazeAction");
+
+        ModifierList = new List<string>();
+        ModifierList.Add("ColorModifier");
+
+        ActionManager = ActionSetupPanel.GetComponent<ActionManager>();
+        SpriteManager = SpriteSetupPanel.GetComponent<SpriteManager>();
+        ModifierManager = ModifiersSetupPanel.GetComponent<ModifiersManager>();
+        MappingsManager = MappingsSetupPanel.GetComponent<MappingsManager>();
+        ModifiableActionManager = ModifiableActionSetupPanel.GetComponent<ModifiableActionManager>();
+        ParameterManager = ParameterSetupPanel.GetComponent<ParameterManager>();
 
 		lateInited = true;
+        print("Late init setupButton");
 	}
 	
 	// Update is called once per frame
@@ -51,159 +79,266 @@ public class SetupButton : MonoBehaviour {
 			lateInit ();
 	}
 
-	void ClickedSetupButton () {
+    public void startSetup()
+    {
+        if (!menusOpened) {
+            if (boss.filename == "")
+            {
+                Debug.Log("Please load a file!");
+                return;
+            }
+            loadFile();
+            GetUniqueSetupTiers();
+            GetUniqueParameters();
+            TierSetupPanel.SetActive(true);
+            menusOpened = true;
+        }
+        else
+        {
+            menusOpened = true;
+            ActionSetupPanel.SetActive(false);
+        }
+    }
+
+    void loadFile()
+    {
+       
+        StreamReader sr = new StreamReader(boss.filename);
+        //Skipping header;
+        string line = sr.ReadLine();
+        char[] delim = { ',' };
+        //List<Modifier> modifs = new List<Modifier>();
+        while ((line = sr.ReadLine()) != null)
+        {
+            string[] components = line.Split(delim);
+            if (components.Length == 5)
+            {
+                int startTime;
+                int endTime;
+                if (int.TryParse(components[2], out startTime) && int.TryParse(components[3], out endTime))
+                {
+                    SetupData setupData = new SetupData(components[0], components[1], startTime, endTime, components[4]);
+                    setupDataList.Add(setupData);
+
+                    // Debug
+                    //setupData.DebugSetupData();
+                }
+                else
+                {
+                    Debug.Log("ERROR READING SETUP FILE: INCORRECT START TIME OR END TIME");
+                    break;
+                }
+            }
+            else
+            {
+                Debug.Log("ERROR READING SETUP FILE: WRONG NUMBER OF PARAMENTERS");
+                break;
+            }
+
+        }
+
+    }
+
+    void GetUniqueSetupTiers()
+    {
+
+        foreach (SetupData setupData in setupDataList)
+        {
+            if (!SetupTiersList.Contains(setupData.Tier))
+            {
+                SetupTiersList.Add(setupData.Tier);
+                Debug.Log("Tier = " + setupData.Tier);
+            }
+        }
+        SetupTiersList.Sort();
+    }
+    public Dictionary<string, List<string>> GetNewTiersConfig()
+    {
+        return newTiersConfig;
+    }
+    public void SetNewTierConfig(Dictionary<string, List<string>> tiersConfig)
+    {
+        newTiersConfig = tiersConfig;
+    }
+
+    void GetUniqueParameters()
+    {
+
+        foreach (SetupData setupData in setupDataList)
+        {
+            if (!ParametersList.Contains(setupData.Parameter))
+            {
+                ParametersList.Add(setupData.Parameter);
+            }
+        }
+        ParametersList.Sort();
+    }
 
 
-	}
+    public List<string> getParametersByTierString(List<string> tiers)
+    {
 
-	public void drawSetupTiers(){
+        List<string> parametersByTier = new List<string>();
 
-		float sx = canvasTransform.localScale.x;
-		float sy = canvasTransform.localScale.y;
-		float scale = sx > sy ? sy : sx;
+        foreach (string tier in tiers)
+        {
+            List<string> tierStrings = newTiersConfig[tier];
+            foreach (string tierString in tierStrings)
+            {
+                foreach (SetupData data in setupDataList)
+                {
+                    if (tierString == data.Tier)
+                    {
+                        if (!parametersByTier.Contains(data.Parameter))
+                            parametersByTier.Add(data.Parameter);
+                    }
+                }
+            }
+        }
+        return parametersByTier;
+    }
 
-		GUIStyle boxStyle =new GUIStyle(GUI.skin.box);
-		boxStyle.fontSize =Mathf.RoundToInt((GUI.skin.font.fontSize+6)*3*scale/4);
+    public void WriteXMLFile()
+    {
 
-		GUIStyle butStyle =new GUIStyle(GUI.skin.button);
-		butStyle.fontSize = Mathf.RoundToInt((GUI.skin.font.fontSize - 2) * 3*scale/4);
+        XmlDocument xmlDoc = new XmlDocument();
+        XmlNode rootNode = xmlDoc.CreateElement("Definitions");
+        xmlDoc.AppendChild(rootNode);
 
-		if (open) {
+        XmlNode tiersNode = xmlDoc.CreateElement("Tiers");
+        rootNode.AppendChild(tiersNode);
 
-			// Main Window
-			int sizex = Mathf.RoundToInt(canvasTransform.rect.width * 0.8f);
-			int sizey = Mathf.RoundToInt(canvasTransform.rect.height * 0.8f);
-			int posx = Mathf.RoundToInt((canvasTransform.rect.width / 2) - (sizex / 2));
-			int posy = Mathf.RoundToInt((canvasTransform.rect.height / 2) - (sizey / 2));
-			Rect boxRect = new Rect (posx, posy, sizex, sizey);
+        foreach (string newTier in newTiersConfig.Keys)
+        {
+            XmlNode newTierNode = xmlDoc.CreateElement("Tier");
+            XmlAttribute attribute = xmlDoc.CreateAttribute("name");
+            attribute.Value = newTier;
+            newTierNode.Attributes.Append(attribute);
+            tiersNode.AppendChild(newTierNode);
+            foreach (string tierString in newTiersConfig[newTier])
+            {
+                XmlNode newTierString = xmlDoc.CreateElement("TierString");
+                newTierString.InnerText = tierString;
+                newTierNode.AppendChild(newTierString);
+            }
+        }
 
-			GUI.Box (boxRect, "Setup Tiers", boxStyle);
+        XmlNode actionsNode = xmlDoc.CreateElement("Actions");
+        rootNode.AppendChild(actionsNode);
 
-			int borderx = Mathf.RoundToInt((sizex - (sizex * 0.4f) * 2) / 3);
-			int bordery = Mathf.RoundToInt((sizey - (sizey * 0.8f)) / 2);
+        Dictionary<string, Dictionary<string, string>> newSpriteTranslateTableByAction = SpriteManager.NewSpriteTranslationTableByAction;
+        foreach (string action in TiersByAction.Keys)
+        {
+            List<string> tiers = TiersByAction[action];
 
-			// List Window
-			int sListx = Mathf.RoundToInt(sizex * 0.4f);
-			int sListy = Mathf.RoundToInt(sizey * 0.8f);
-			int pListx = Mathf.RoundToInt(posx + borderx);
-			int pListy = Mathf.RoundToInt(posy + bordery);
-			Rect listBox = new Rect (pListx, pListy, sListx, sListy);
-		
-			/*int selGridInt = 0;
-			string[] selStrings = new string[] {"Grid 1", "Grid 2", "Grid 3", "Grid 4"};
+            XmlNode actionNode = xmlDoc.CreateElement("Action");
+            XmlAttribute attributeName = xmlDoc.CreateAttribute("name");
+            attributeName.Value = action;
+            actionNode.Attributes.Append(attributeName);
+            actionsNode.AppendChild(actionNode);
 
-			selGridInt = GUI.SelectionGrid(listBox, selGridInt, selStrings, 1);*/
-			//GUI.BeginScrollView(
-			GUI.Box (listBox, "Tiers", boxStyle);
+            XmlNode applicableTiersNode = xmlDoc.CreateElement("ApplicableTiers");
+            actionNode.AppendChild(applicableTiersNode);
 
-			// Edit Window
-			int sEditx = Mathf.RoundToInt(sizex * 0.4f);
-			int sEdity = Mathf.RoundToInt(sizey * 0.8f);
-			int pEditx = posx + borderx * 2 + sListx;
-			int pEdity = Mathf.RoundToInt(posy + bordery);
-			Rect editBox = new Rect (pEditx, pEdity, sEditx, sEdity);
+            foreach (string tier in tiers)
+            {
+                XmlNode applicableTierNode = xmlDoc.CreateElement("ApplicableTier");
+                applicableTierNode.InnerText = tier;
+                applicableTiersNode.AppendChild(applicableTierNode);
+            }
 
-			GUI.Box (editBox, "New Tiers", boxStyle);
+            XmlNode parametersNode = xmlDoc.CreateElement("Parameters");
+            actionNode.AppendChild(parametersNode);
+            Dictionary<string, string> newSpriteTranslateTable = newSpriteTranslateTableByAction[action];
+            foreach (string oldSpriteName in newSpriteTranslateTable.Keys)
+            {
+                XmlNode parameterNode = xmlDoc.CreateElement("Parameter");
+                XmlAttribute attributeInput = xmlDoc.CreateAttribute("input");
+                attributeInput.Value = oldSpriteName;
+                parameterNode.Attributes.Append(attributeInput);
+                XmlAttribute attributeOutput = xmlDoc.CreateAttribute("output");
+                attributeOutput.Value = newSpriteTranslateTable[oldSpriteName];
+                parameterNode.Attributes.Append(attributeOutput);
+                parametersNode.AppendChild(parameterNode);
+            }
+        }
 
-			// Setup Action - Tiers
-			boxRect.x += sizex*0.85f;
-			boxRect.y += sizey*0.93f;
-			boxRect.width = 0.075f*sizex;
-			boxRect.height = 0.035f*sizey;
-			if (GUI.Button (boxRect, "Next", butStyle)) {
-				Debug.Log ("Button Next");
-				isSetupActionActive = true;
-				isSetupTiersActive = false;
-			}
-		}
-	}
+        XmlNode modifiersNode = xmlDoc.CreateElement("Modifiers");
+        rootNode.AppendChild(modifiersNode);
 
+        Dictionary<string, List<string>> actionsByModifiers = ModifierManager.ActionsByModifier;
+        Dictionary<string, List<string>> mappingsByModifiers = ModifierManager.MappingsByModifier;
+        foreach (string modifier in actionsByModifiers.Keys)
+        {
+            XmlNode modifierNode = xmlDoc.CreateElement("Modifier");
+            modifiersNode.AppendChild(modifierNode);
+            XmlAttribute attributeModifierName = xmlDoc.CreateAttribute("name");
+            attributeModifierName.Value = modifier;
+            modifierNode.Attributes.Append(attributeModifierName);
 
-	public void drawSetupActions(){
-	
-		float sx = canvasTransform.localScale.x;
-		float sy = canvasTransform.localScale.y;
-		float scale = sx > sy ? sy : sx;
+            XmlNode mappingsNode = xmlDoc.CreateElement("Mappings");
+            modifierNode.AppendChild(mappingsNode);
+            List<string> mappings = mappingsByModifiers[modifier];
+            foreach (string mapping in mappings)
+            {
+                XmlNode mappingNode = xmlDoc.CreateElement("Mapping");
+                XmlAttribute attributeInput = xmlDoc.CreateAttribute("input");
+                attributeInput.Value = mapping;
+                mappingNode.Attributes.Append(attributeInput);
 
-		GUIStyle boxStyle =new GUIStyle(GUI.skin.box);
-		boxStyle.fontSize =Mathf.RoundToInt((GUI.skin.font.fontSize+6)*3*scale/4);
+                XmlAttribute attributeOutput = xmlDoc.CreateAttribute("output");
+                attributeOutput.Value = MappingsManager.MappingInputOutput[mapping];
+                mappingNode.Attributes.Append(attributeOutput);
 
-		GUIStyle butStyle =new GUIStyle(GUI.skin.button);
-		butStyle.fontSize = Mathf.RoundToInt((GUI.skin.font.fontSize - 2) * 3*scale/4);
+                mappingsNode.AppendChild(mappingNode);
+            }
 
-		if (open) {
+            List<string> actions = actionsByModifiers[modifier];
+            XmlNode modifiableActionsNode = xmlDoc.CreateElement("modifiableActions");
+            modifierNode.AppendChild(modifiableActionsNode);
+            foreach (string mAction in actions)
+            {
+                XmlNode modifiableActionNode = xmlDoc.CreateElement("ModifiableAction");
+                modifiableActionsNode.AppendChild(modifiableActionNode);
+                XmlAttribute attributeName = xmlDoc.CreateAttribute("name");
+                attributeName.Value = mAction;
+                modifiableActionNode.Attributes.Append(attributeName);
 
-			// Main Window
-			int sizex = Mathf.RoundToInt(canvasTransform.rect.width * 0.8f);
-			int sizey = Mathf.RoundToInt(canvasTransform.rect.height * 0.8f);
-			int posx = Mathf.RoundToInt((canvasTransform.rect.width / 2) - (sizex / 2));
-			int posy = Mathf.RoundToInt((canvasTransform.rect.height / 2) - (sizey / 2));
-			Rect boxRect = new Rect (posx, posy, sizex, sizey);
+                if (!ModifiableActionManager.TiersByModifiableAction.ContainsKey(mAction))
+                    continue;
+                List<string> tiers = ModifiableActionManager.TiersByModifiableAction[mAction];
+                XmlNode tNodes = xmlDoc.CreateElement("Tiers");
+                modifiableActionNode.AppendChild(tNodes);
+                foreach (string tierString in tiers)
+                {
+                    XmlNode tierStringNode = xmlDoc.CreateElement("TierString");
+                    tierStringNode.InnerText = tierString;
+                    tNodes.AppendChild(tierStringNode);
+                }
 
-			GUI.Box (boxRect, "Setup Actions", boxStyle);
+                if (!ParameterManager.ParametersByModifiableAction.ContainsKey(mAction))
+                    continue;
 
-			int borderx = Mathf.RoundToInt((sizex - (sizex * 0.4f) * 2) / 3);
-			int bordery = Mathf.RoundToInt((sizey - (sizey * 0.8f)) / 2);
+                Dictionary<string, string> parameterDic = ParameterManager.ParametersByModifiableAction[mAction];
 
-			// List Window
-			int sListx = Mathf.RoundToInt(sizex * 0.4f);
-			int sListy = Mathf.RoundToInt(sizey * 0.8f);
-			int pListx = Mathf.RoundToInt(posx + borderx);
-			int pListy = Mathf.RoundToInt(posy + bordery);
-			Rect listBox = new Rect (pListx, pListy, sListx, sListy);
+                XmlNode parametersNode = xmlDoc.CreateElement("Parameters");
+                modifiableActionsNode.AppendChild(parametersNode);
+                foreach (string paramInput in parameterDic.Keys)
+                {
+                    XmlNode parameterNode = xmlDoc.CreateElement("Parameter");
+                    XmlAttribute attributeInput = xmlDoc.CreateAttribute("input");
+                    attributeInput.Value = paramInput;
+                    parameterNode.Attributes.Append(attributeInput);
 
-			GUI.Box (listBox, "Actions", boxStyle);
+                    XmlAttribute attributeOutput = xmlDoc.CreateAttribute("output");
+                    attributeOutput.Value = parameterDic[paramInput];
+                    parameterNode.Attributes.Append(attributeOutput);
 
-			// buttons to add and remove 
-			//GUI.Box(
+                    parametersNode.AppendChild(parameterNode);
 
-
-			// Edit Window
-			int sEditx = Mathf.RoundToInt(sizex * 0.4f);
-			int sEdity = Mathf.RoundToInt(sizey * 0.8f);
-			int pEditx = posx + borderx * 2 + sListx;
-			int pEdity = Mathf.RoundToInt(posy + bordery);
-			Rect editBox = new Rect (pEditx, pEdity, sEditx, sEdity);
-
-			GUI.Box (editBox, "Tiers", boxStyle);
-
-			// Setup Action - Tiers
-			boxRect.x += sizex*0.85f;
-			boxRect.y += sizey*0.93f;
-			boxRect.width = 0.075f * sizex;
-			boxRect.height = 0.035f * sizey;
-			if (GUI.Button (boxRect, "Next", butStyle)) {
-				Debug.Log ("Button Next");
-				isSetupActionActive = true;
-				isSetupTiersActive = false;
-			}
-
-			// Setup Tiers - New Tiers
-			Debug.Log ("drawing button back 2");
-			Rect backButton = new Rect (sizex * 0.15f, boxRect.y, 0.075f * sizex, 0.035f * sizey);
-			if (GUI.Button (backButton, "Back", butStyle)) {
-				Debug.Log ("Button Back");
-				isSetupActionActive = false;
-				isSetupTiersActive = true;
-			}
-		}
-	}
-
-	public void startSetup(){
-		open = !open;
-		if (open) {
-			ColorBlock cb = theButton.colors;
-			cb.normalColor = pressedColor;
-			cb.highlightedColor = pressedColor;
-			theButton.colors = cb;
-			isSetupTiersActive = true;
-		} else {
-			ColorBlock cb = theButton.colors;
-			cb.normalColor = normalColor;
-			cb.highlightedColor = highlightedColor;
-			theButton.colors = cb;
-			isSetupActionActive = false;
-
-		}
-	}
+                }
+            }
+        }
+        xmlDoc.Save("newSetup.xml");
+    }
 }

@@ -44,7 +44,6 @@ public abstract class Action :  IComparable{
     }
 
     public abstract void execute(int current);
-	public abstract void execute3D(int current);
 
 	//0: shouldnt, 1 with function, 2 no function
     public bool shouldExecute()

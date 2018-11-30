@@ -200,21 +200,24 @@ public class FileBrowser{
 		if(isSearching){
 			GUILayout.Label("Searching For: \""+searchBarString+"\"");
 		}else{
-			searchBarString = GUILayout.TextField(searchBarString,GUILayout.MinWidth(150));
-			if(GUILayout.Button("search")){
-				if(searchBarString.Length > 0){
-					isSearching = true;
-					#if thread
-					startSearchTime = Time.time;
-					t = new Thread(threadSearchFileList);
-					t.Start(true);
-					#else
-					searchFileList(currentDirectory);
-					#endif
-				}else{
-					getFileList(currentDirectory);
-				}
-			}
+            string newSearch = GUILayout.TextField(searchBarString,GUILayout.MinWidth(150));
+            if (searchBarString != newSearch)
+            {
+                searchBarString = newSearch;
+                isSearching = true;
+                #if thread
+                startSearchTime = Time.time;
+                t = new Thread(threadSearchFileList);
+                t.Start(true);
+                #else
+				searchFileList(currentDirectory);
+                #endif
+            }
+            if(searchBarString.Length == 0) 
+            {
+                getFileList(currentDirectory);
+            }
+			GUILayout.Label("Search");
 		}
 	}
 	

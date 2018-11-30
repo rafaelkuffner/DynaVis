@@ -14,7 +14,7 @@ public class ParameterManager : MonoBehaviour {
 	public Button buttonNext;
 	public Dictionary<string, Dictionary<string, string>> ParametersByModifiableAction;
 
-	private AnnotationSetupManager annotationSetupManager;
+	private SetupButton setup;
 	private GameObject currentDropdownGO;
 	private Dictionary<string, List<string>> tiersByModifiableAction;
 	private List<string> actions;
@@ -23,11 +23,11 @@ public class ParameterManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		annotationSetupManager = GameObject.Find ("Boss Object").GetComponent<AnnotationSetupManager> ();
-		tiersByModifiableAction = annotationSetupManager.ModifiableActionManager.TiersByModifiableAction;
+        setup = GameObject.Find("Button Setup").GetComponent<SetupButton>();
+        tiersByModifiableAction = setup.ModifiableActionManager.TiersByModifiableAction;
 		ParametersByModifiableAction = new Dictionary<string, Dictionary<string, string>> ();
 
-		MappingsManager mappingsManager = annotationSetupManager.MappingsSetupPanel.GetComponent<MappingsManager> ();
+		MappingsManager mappingsManager = setup.MappingsSetupPanel.GetComponent<MappingsManager> ();
 		List<string> mappingsOutputManager = new List<string>(mappingsManager.MappingInputOutput.Values);
 
 		contentMappingsPosition = contentPanelMappings.position;
@@ -38,7 +38,7 @@ public class ParameterManager : MonoBehaviour {
 			currentAction = actions [0];
 
 			List<string> tiers = tiersByModifiableAction [currentAction];
-			currentParameterList = annotationSetupManager.getParametersByTierString (tiers);
+			currentParameterList = setup.getParametersByTierString (tiers);
 
 			foreach (string param in currentParameterList) {
 				GameObject spriteNameGO = GameObject.Instantiate (itemPrefab);
@@ -69,7 +69,7 @@ public class ParameterManager : MonoBehaviour {
 
 		currentAction = actions [0];
 		List<string> tiers = tiersByModifiableAction [currentAction];
-		currentParameterList = annotationSetupManager.getParametersByTierString (tiers);
+		currentParameterList = setup.getParametersByTierString (tiers);
 
 		foreach (string param in currentParameterList) {
 			GameObject spriteNameGO = GameObject.Instantiate (itemPrefab);
@@ -174,7 +174,7 @@ public class ParameterManager : MonoBehaviour {
 			Destroy(contentItemDetached[i]);
 		}
 
-		annotationSetupManager.WriteXMLFile ();
-		annotationSetupManager.ParameterSetupPanel.SetActive (false);
+		setup.WriteXMLFile ();
+		setup.ParameterSetupPanel.SetActive (false);
 	}
 }

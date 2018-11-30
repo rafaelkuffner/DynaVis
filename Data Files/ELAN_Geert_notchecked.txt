@@ -1,0 +1,1988 @@
+gaze s1	Cara	290902	291657	755	background wall
+gaze s1	Cara	291657	293076	1419	face s3
+gaze s1	Cara	293076	298161	5085	body s3
+gaze s1	Cara	298161	298715	554	background floor
+gaze s1	Cara	298718	300832	2114	face s3
+gaze s1	Cara	300832	300997	165	body s3
+gaze s1	Cara	300997	303681	2684	face s3
+gaze s1	Cara	303681	304622	941	background own body
+gaze s1	Cara	304622	313374	8752	face s1
+gaze s1	Cara	313374	314919	1545	NA
+gaze s1	Cara	314919	317036	2117	face s3
+gaze s1	Cara	317036	318687	1651	background wall
+gaze s1	Cara	318687	319721	1034	background ceiling
+gaze s1	Cara	319721	320451	730	face s3
+gaze s1	Cara	320451	320679	228	background floor
+gaze s1	Cara	320679	320817	138	body s3
+gaze s1	Cara	320817	324198	3381	face s3
+gaze s1	Cara	324198	327243	3045	face s2
+gaze s1	Cara	327243	328326	1083	face s3
+gaze s1	Cara	328326	328804	478	background floor
+gaze s1	Cara	328804	330985	2181	face s3
+gaze s1	Cara	330985	331162	177	NA
+gaze s1	Cara	331162	332161	999	face s3
+gaze s1	Cara	332161	332400	239	background floor
+gaze s1	Cara	332400	335795	3395	face s3
+gaze s1	Cara	335795	343915	8120	NA
+gaze s1	Cara	343915	344846	931	face s3
+gaze s1	Cara	344846	347502	2656	background floor
+gaze s1	Cara	347502	349889	2387	face s3
+gaze s1	Cara	349889	350179	290	NA
+gaze s1	Cara	350179	350699	520	background wall
+gaze s1	Cara	350704	351181	477	face s3
+gaze s1	Cara	351181	352127	946	face s2
+gaze s1	Cara	352127	353480	1353	background wall
+gaze s1	Cara	353480	353784	304	background ceiling
+gaze s1	Cara	353784	355306	1522	background wall
+gaze s1	Cara	355306	356285	979	face s2
+gaze s1	Cara	356285	357926	1641	background wall
+gaze s1	Cara	357926	359218	1292	face s3
+gaze s1	Cara	359218	360528	1310	background wall
+gaze s1	Cara	360528	365599	5071	face s3
+gaze s1	Cara	365599	365966	367	background own body
+gaze s1	Cara	365966	369533	3567	face s3
+gaze s1	Cara	369533	369726	193	background wall
+gaze s1	Cara	369726	372353	2627	background eyes closed
+gaze s1	Cara	372353	376067	3714	background wall
+gaze s1	Cara	376067	376809	742	face s3
+gaze s1	Cara	376809	377793	984	background window
+gaze s1	Cara	377793	379628	1835	background floor
+gaze s1	Cara	379628	379967	339	background eyes closed
+gaze s1	Cara	379970	380483	513	body s3
+gaze s1	Cara	380483	383042	2559	face s3 
+gaze s1	Cara	383042	383400	358	background eyes closed
+gaze s1	Cara	383400	383846	446	background window
+gaze s1	Cara	383846	384117	271	background wall
+gaze s1	Cara	384117	385082	965	background window
+gaze s1	Cara	385082	387800	2718	face s3
+gaze s1	Cara	387800	388723	923	background window
+gaze s1	Cara	388723	389520	797	background ceiling
+gaze s1	Cara	389520	390414	894	background floor
+gaze s1	Cara	390414	391233	819	background window
+gaze s1	Cara	391233	392280	1047	background wall
+gaze s1	Cara	392280	395357	3077	face s3
+gaze s1	Cara	395357	396119	762	background window
+gaze s1	Cara	396119	396562	443	background wall
+gaze s1	Cara	396562	397158	596	body s3
+gaze s1	Cara	397158	398112	954	face s3
+gaze s1	Cara	398112	398648	536	face s2
+gaze s1	Cara	398649	401295	2646	face s3
+gaze s1	Cara	401295	402263	968	background wall
+gaze s1	Cara	402263	402528	265	background window
+gaze s1	Cara	402528	403944	1416	background eyes closed
+gaze s1	Cara	403944	404075	131	face s3
+gaze s1	Cara	404076	404676	600	face s2
+gaze s1	Cara	404676	407380	2704	face s3
+gaze s1	Cara	407380	408124	744	background wall
+gaze s1	Cara	408124	409610	1486	face s3
+gaze s1	Cara	409610	409768	158	background wall
+gaze s1	Cara	409769	411619	1850	face s3
+gaze s1	Cara	411619	415810	4191	NA
+gaze s1	Cara	415810	424357	8547	face s2
+gaze s1	Cara	424357	425411	1054	face s3
+gaze s1	Cara	425411	426728	1317	face s2
+gaze s1	Cara	426728	427238	510	body s2
+gaze s1	Cara	427238	430324	3086	face s2
+gaze s1	Cara	430324	430558	234	body s2
+gaze s1	Cara	430558	436961	6403	face s2
+gaze s1	Cara	436961	437962	1001	NA
+gaze s1	Cara	437962	438228	266	face s2
+gaze s1	Cara	438228	439123	895	face s3
+gaze s1	Cara	439123	439853	730	face s2
+gaze s1	Cara	439853	442004	2151	face s3
+gaze s1	Cara	442006	444927	2921	face s2
+gaze s1	Cara	444927	447111	2184	background eyes closed
+gaze s1	Cara	447111	447285	174	background wall
+gaze s1	Cara	447285	448453	1168	face s2
+gaze s1	Cara	448453	449881	1428	NA
+gaze s1	Cara	449881	450037	156	face s3
+gaze s1	Cara	450037	450847	810	NA
+gaze s1	Cara	450851	451160	309	face s2
+gaze s1	Cara	451160	452755	1595	NA
+gaze s1	Cara	452755	453364	609	face s3
+gaze s1	Cara	453364	454039	675	face s2
+gaze s1	Cara	454039	455357	1318	face s3
+gaze s1	Cara	455357	456024	667	background window
+gaze s1	Cara	456024	456202	178	background eyes closed
+gaze s1	Cara	456202	456456	254	face s3
+gaze s1	Cara	456456	457179	723	face s2
+gaze s1	Cara	457179	457723	544	NA
+gaze s1	Cara	457723	458304	581	background wall
+gaze s1	Cara	458304	463350	5046	face s2
+gaze s1	Cara	463350	464988	1638	face s3
+gaze s1	Cara	464989	467167	2178	background own body
+gaze s1	Cara	467167	470721	3554	NA
+gaze s1	Cara	470721	472941	2220	background window
+gaze s1	Cara	472941	475279	2338	face s3
+gaze s1	Cara	475279	479044	3765	background camera
+gaze s1	Cara	479047	479800	753	background wall
+gaze s1	Cara	479800	482188	2388	NA
+gaze s1	Cara	482189	482657	468	background wall
+gaze s1	Cara	482657	484672	2015	face s3
+gaze s1	Cara	484672	487119	2447	face s2
+gaze s1	Cara	487119	488208	1089	face s3
+gaze s1	Cara	488208	488623	415	background wall
+gaze s1	Cara	488623	490467	1844	background ceiling
+gaze s1	Cara	490467	491574	1107	background own body
+gaze s1	Cara	491574	492379	805	face s3
+gaze s1	Cara	492379	493961	1582	face s2
+gaze s1	Cara	493961	494211	250	body s2
+gaze s1	Cara	494211	496452	2241	face s2
+gaze s1	Cara	496452	496680	228	NA
+gaze s1	Cara	496680	497200	520	face s3
+gaze s1	Cara	497200	498213	1013	face s2
+gaze s1	Cara	498213	500217	2004	face s3
+gaze s1	Cara	500217	501096	879	face s2
+gaze s1	Cara	501096	502312	1216	face s3
+gaze s1	Cara	502312	503201	889	face s2
+gaze s1	Cara	503201	506412	3211	face s3
+gaze s1	Cara	506412	507679	1267	background own body
+gaze s1	Cara	507680	513531	5851	face s3 
+gaze s1	Cara	513531	515012	1481	background wall
+gaze s1	Cara	515012	519484	4472	NA
+gaze s1	Cara	519484	520198	714	background wall
+gaze s1	Cara	520198	520598	400	NA
+gaze s1	Cara	520598	522881	2283	background wall
+gaze s1	Cara	522881	524728	1847	face s3
+gaze s1	Cara	524728	526719	1991	background wall
+gaze s1	Cara	526719	527251	532	NA
+gaze s1	Cara	527251	528725	1474	background wall
+gaze s1	Cara	528725	533143	4418	NA
+gaze s1	Cara	533143	536064	2921	background floor
+gaze s1	Cara	536064	536246	182	NA
+gaze s1	Cara	536246	536474	228	background wall
+gaze s1	Cara	536474	537082	608	background wall
+gaze s1	Cara	537082	537283	201	face s3
+gaze s1	Cara	537283	538040	757	NA
+gaze s1	Cara	538040	539217	1177	face s3
+gaze s1	Cara	539217	540384	1167	background own body
+gaze s1	Cara	540384	541555	1171	face s3
+gaze s1	Cara	541555	541997	442	body s3
+gaze s1	Cara	541997	545307	3310	face s3
+gaze s1	Cara	545310	545447	137	body s3
+gaze s1	Cara	545451	546656	1205	face s3
+gaze s1	Cara	546656	548203	1547	background window
+gaze s1	Cara	548206	548847	641	background wall
+gaze s1	Cara	548847	549565	718	face s2
+gaze s1	Cara	549565	550967	1402	face s3
+gaze s1	Cara	550967	552239	1272	face s2
+gaze s1	Cara	552239	552439	200	body s2
+gaze s1	Cara	552439	552681	242	body s3
+gaze s1	Cara	552681	553763	1082	background window
+gaze s1	Cara	553764	557807	4043	face s3
+gaze s1	Cara	557807	559160	1353	background eyes closed
+gaze s1	Cara	559160	559518	358	face s3
+gaze s1	Cara	559518	559766	248	background wall
+gaze s1	Cara	559767	561165	1398	background window
+gaze s1	Cara	561165	562642	1477	face s3
+gaze s1	Cara	562642	564358	1716	face s2
+gaze s1	Cara	564358	565482	1124	face s3
+gaze s1	Cara	565482	566852	1370	background window
+gaze s1	Cara	566852	569053	2201	face s3
+gaze s1	Cara	569054	569681	627	face s2
+gaze s1	Cara	569681	572085	2404	face s3
+gaze s1	Cara	572085	574968	2883	background floor
+gaze s1	Cara	574968	576569	1601	face s3
+gaze s1	Cara	576569	576871	302	body s3
+gaze s1	Cara	576871	577882	1011	face s3
+gaze s1	Cara	577882	578122	240	NA
+gaze s1	Cara	578123	583074	4951	face s3
+gaze s1	Cara	583074	583886	812	background window
+gaze s1	Cara	583886	586046	2160	face s3
+gaze s1	Cara	586046	587453	1407	face s2
+gaze s1	Cara	587453	589279	1826	face s3
+gaze s1	Cara	589279	589779	500	background wall
+gaze s1	Cara	589779	590313	534	body s2
+gaze s1	Cara	590313	591184	871	background eyes closed
+gaze s1	Cara	591184	592506	1322	background wall
+gaze s1	Cara	592506	593318	812	NA
+gaze s1	Cara	593318	593665	347	background wall
+gaze s1	Cara	593667	595384	1717	background ceiling
+gaze s1	Cara	595384	596563	1179	background wall
+gaze s1	Cara	596563	596966	403	face s3
+gaze s1	Cara	596966	598494	1528	background wall
+gaze s1	Cara	598496	598866	370	face s3
+gaze s1	Cara	598866	600202	1336	background window
+gaze s1	Cara	600205	600526	321	face s3
+gaze s1	Cara	600526	600885	359	background wall
+gaze s1	Cara	600885	604961	4076	face s3
+gaze s1	Cara	604963	606231	1268	face s2
+gaze s1	Cara	606231	609872	3641	NA
+gaze s1	Cara	609873	612230	2357	face s3
+gaze s1	Cara	612230	613365	1135	NA
+gaze s1	Cara	613366	613860	494	background wall
+gaze s1	Cara	613860	616749	2889	background floor
+gaze s1	Cara	616749	618006	1257	face s3
+gaze s1	Cara	618006	619930	1924	background window
+gaze s1	Cara	619931	622220	2289	face s3
+gaze s1	Cara	622221	622729	508	background own body
+gaze s1	Cara	622729	623964	1235	face s3
+gaze s1	Cara	623964	624323	359	body s3
+gaze s1	Cara	624326	625678	1352	background ceiling
+gaze s1	Cara	625678	626965	1287	face s3
+gaze s1	Cara	626968	627988	1020	background own body
+gaze s1	Cara	627988	628132	144	body s3
+gaze s1	Cara	628132	629376	1244	background window
+gaze s1	Cara	629376	635680	6304	face s3
+gaze s1	Cara	635680	637842	2162	face s2
+gaze s1	Cara	637842	637981	139	background wall
+gaze s1	Cara	637981	638666	685	NA
+gaze s1	Cara	638666	639132	466	background wall
+gaze s1	Cara	639132	639922	790	face s3
+gaze s1	Cara	639922	640568	646	face s2
+gaze s1	Cara	640568	643641	3073	face s3
+gaze s1	Cara	643641	644126	485	background eyes closed
+gaze s1	Cara	644128	649767	5639	face s3
+gaze s1	Cara	649767	650165	398	background floor
+gaze s1	Cara	650165	652536	2371	face s3
+gaze s1	Cara	652539	653442	903	NA
+gaze s1	Cara	653443	654105	662	background window
+gaze s1	Cara	654105	656441	2336	face s3
+gaze s1	Cara	656441	658017	1576	NA
+gaze s1	Cara	658017	658770	753	background wall
+gaze s1	Cara	658770	662043	3273	background floor
+gaze s1	Cara	662043	664364	2321	face s3
+gaze s1	Cara	664364	664600	236	NA
+gaze s1	Cara	664600	668329	3729	face s3
+gaze s1	Cara	668329	669285	956	background wall
+gaze s1	Cara	669285	669660	375	face s3
+gaze s1	Cara	669661	670711	1050	background window
+gaze s1	Cara	670711	673052	2341	face s3
+gaze s1	Cara	673052	673482	430	NA
+gaze s1	Cara	673482	674563	1081	face s2
+gaze s1	Cara	674563	681313	6750	face s3
+gaze s1	Cara	681313	682207	894	background wall
+gaze s1	Cara	682207	683602	1395	face s3
+gaze s1	Cara	683602	683747	145	NA
+gaze s1	Cara	683747	688887	5140	face s3
+gaze s1	Cara	688887	689327	440	NA
+gaze s1	Cara	689327	692006	2679	face s3
+gaze s1	Cara	692006	692248	242	background wall
+gaze s1	Cara	692248	693003	755	face s3
+gaze s1	Cara	693003	697607	4604	NA
+gaze s1	Cara	697607	699034	1427	background ceiling
+gaze s1	Cara	699034	700690	1656	NA
+gaze s1	Cara	700690	708707	8017	face s2
+gaze s1	Cara	708710	709403	693	face s3
+gaze s1	Cara	709403	711836	2433	face s2
+gaze s1	Cara	711836	712369	533	face s3
+gaze s1	Cara	712369	714894	2525	face s2
+gaze s1	Cara	714894	715322	428	body s2
+gaze s1	Cara	715322	717015	1693	face s2
+gaze s1	Cara	717015	717472	457	face s3
+gaze s1	Cara	717474	721226	3752	face s2
+gaze s1	Cara	721227	721491	264	gestures s2
+gaze s1	Cara	721491	722438	947	face s2
+gaze s1	Cara	722438	723026	588	background eyes closed
+gaze s1	Cara	723026	723915	889	face s2
+gaze s1	Cara	723915	724602	687	face s3
+gaze s1	Cara	724602	724918	316	background wall
+gaze s1	Cara	724918	725482	564	face s2
+gaze s1	Cara	725482	727674	2192	face s3
+gaze s1	Cara	727674	728317	643	face s2
+gaze s1	Cara	728317	729688	1371	face s3
+gaze s1	Cara	729688	730288	600	face s2
+gaze s1	Cara	730288	731235	947	NA
+gaze s1	Cara	731235	731812	577	face s3
+gaze s1	Cara	731812	733727	1915	background floor
+gaze s1	Cara	733727	734866	1139	face s2
+gaze s1	Cara	734868	735194	326	body s2
+gaze s1	Cara	735194	739210	4016	face s2
+gaze s1	Cara	739210	739970	760	background wall
+gaze s1	Cara	739970	745007	5037	face s2
+gaze s1	Cara	745007	745476	469	NA
+gaze s1	Cara	745476	749499	4023	face s2
+gaze s1	Cara	749499	750491	992	NA
+gaze s1	Cara	750491	750682	191	body s2
+gaze s1	Cara	750685	752757	2072	face s2
+gaze s1	Cara	752758	753636	878	background eyes closed
+gaze s1	Cara	753636	755371	1735	face s2
+gaze s1	Cara	755371	755846	475	face s3
+gaze s1	Cara	755848	758209	2361	face s2
+gaze s1	Cara	758209	758555	346	NA
+gaze s1	Cara	758555	758922	367	face s2
+gaze s1	Cara	758922	760689	1767	face s3
+gaze s1	Cara	760690	767606	6916	face s2
+gaze s1	Cara	767606	768170	564	background eyes closed
+gaze s1	Cara	768170	772064	3894	face s2
+gaze s1	Cara	772064	772885	821	NA
+gaze s1	Cara	772885	773118	233	face s2
+gaze s1	Cara	773118	775299	2181	face s3
+gaze s1	Cara	775299	776805	1506	face s2
+gaze s1	Cara	776805	777891	1086	face s3
+gaze s1	Cara	777891	778640	749	face s2
+gaze s1	Cara	778640	779554	914	NA
+gaze s1	Cara	779554	779882	328	background floor
+gaze s1	Cara	779882	780361	479	NA
+gaze s1	Cara	780361	784201	3840	face s2
+gaze s1	Cara	784201	784821	620	NA
+gaze s1	Cara	784821	785897	1076	face s2
+gaze s1	Cara	785897	786761	864	body s2
+gaze s1	Cara	786762	788403	1641	face s2
+gaze s1	Cara	788403	788769	366	background ceiling
+gaze s1	Cara	788769	789277	508	face s3
+gaze s1	Cara	789277	794676	5399	face s2
+gaze s1	Cara	794678	797359	2681	background floor
+gaze s1	Cara	797359	799721	2362	face s3
+gaze s1	Cara	799721	801297	1576	background floor
+gaze s1	Cara	801297	802734	1437	face s2
+gaze s1	Cara	802735	803600	865	NA
+gaze s1	Cara	803600	808606	5006	face s2
+gaze s1	Cara	808606	810722	2116	NA
+gaze s1	Cara	810722	813248	2526	face s2
+gaze s1	Cara	813248	813734	486	face s3
+gaze s1	Cara	813734	814443	709	background window
+gaze s1	Cara	814443	815363	920	face s3
+gaze s1	Cara	815363	816469	1106	face s2
+gaze s1	Cara	816469	816629	160	body s2
+gaze s1	Cara	816629	825452	8823	face s2
+gaze s1	Cara	825452	826017	565	background eyes closed
+gaze s1	Cara	826017	842318	16301	face s2 
+gaze s1	Cara	842318	842996	678	background eyes closed
+gaze s1	Cara	842996	848090	5094	face s2 
+gaze s1	Cara	848090	848594	504	background eyes closed
+gaze s1	Cara	848594	849886	1292	face s2
+gaze s1	Cara	849886	851240	1354	NA
+gaze s1	Cara	851240	851447	207	face s3
+gaze s1	Cara	851447	851964	517	face s2
+gaze s1	Cara	851964	853258	1294	background window
+gaze s1	Cara	853258	853723	465	face s3
+gaze s1	Cara	853723	854877	1154	face s2
+gaze s1	Cara	854877	858688	3811	background window
+gaze s1	Cara	858688	859326	638	face s3
+gaze s1	Cara	859326	859740	414	background wall
+gaze s1	Cara	859740	864932	5192	NA 
+gaze s1	Cara	864933	866043	1110	background wall
+gaze s1	Cara	866043	867422	1379	NA
+gaze s1	Cara	867422	868927	1505	face s3
+gaze s1	Cara	868927	870264	1337	background wall
+gaze s1	Cara	870264	870571	307	background floor
+gaze s1	Cara	870572	872241	1669	NA
+gaze s1	Cara	872241	872462	221	background wall
+gaze s1	Cara	872462	873342	880	face s3
+gaze s1	Cara	873342	877439	4097	NA
+gaze s1	Cara	877439	877768	329	face s3
+gaze s1	Cara	877768	879113	1345	NA
+gaze s1	Cara	879113	879243	130	background wall
+gaze s1	Cara	879243	882989	3746	NA
+gaze s1	Cara	882989	886192	3203	background floor
+gaze s1	Cara	886192	888201	2009	face s3
+gaze s1	Cara	888201	900332	12131	face s2
+gaze s1	Cara	900332	900501	169	NA
+gaze s1	Cara	900501	906804	6303	face s2
+gaze s1	Cara	906804	907766	962	background wall
+gaze s1	Cara	907766	908837	1071	face s3
+gaze s1	Cara	908837	911156	2319	face s2
+gaze s1	Cara	911156	911440	284	face s3
+gaze s1	Cara	911440	913089	1649	face s2
+gaze s1	Cara	913089	914564	1475	face s3
+gaze s1	Cara	914566	915475	909	face s2
+gaze s1	Cara	915475	916285	810	face s3
+gaze s1	Cara	916287	916752	465	NA
+gaze s1	Cara	916752	917557	805	face s2
+gaze s1	Cara	917557	918082	525	face s3
+gaze s1	Cara	918082	922000	3918	background window
+gaze s1	Cara	922000	922437	437	face s3
+gaze s1	Cara	922437	924051	1614	face s2
+gaze s1	Cara	924051	928404	4353	face s3
+gaze s1	Cara	928404	929156	752	background wall
+gaze s1	Cara	929156	929527	371	background floor
+gaze s1	Cara	929529	930814	1285	background wall
+gaze s1	Cara	930816	933364	2548	face s3
+gaze s1	Cara	933364	934001	637	face s2
+gaze s1	Cara	934001	935384	1383	face s3
+gaze s1	Cara	935384	935748	364	background window
+gaze s1	Cara	935748	936392	644	NA
+gaze s1	Cara	936392	937369	977	face s3
+gaze s1	Cara	937369	937987	618	body s3
+gaze s1	Cara	937987	941368	3381	face s3
+gaze s1	Cara	941368	942007	639	background window
+gaze s1	Cara	942008	943044	1036	face s3
+gaze s1	Cara	943044	944501	1457	face s2
+gaze s1	Cara	944502	950498	5996	face s3
+gaze s1	Cara	950500	950724	224	face s2
+gaze s1	Cara	950724	953119	2395	face s3
+gaze s1	Cara	953119	953362	243	background floor
+gaze s1	Cara	953362	955578	2216	NA
+gaze s1	Cara	955578	957399	1821	face s3
+gaze s1	Cara	957399	959923	2524	background window
+gaze s1	Cara	959923	960043	120	NA
+gaze s1	Cara	960044	962456	2412	face s3
+gaze s1	Cara	962456	963126	670	background wall
+gaze s1	Cara	963126	963929	803	NA
+gaze s1	Cara	963929	964243	314	background wall
+gaze s1	Cara	964244	965282	1038	NA
+gaze s1	Cara	965282	967408	2126	background floor
+gaze s1	Cara	967408	968446	1038	background ceiling
+gaze s1	Cara	968446	971289	2843	face s3
+gaze s1	Cara	971289	971924	635	background wall
+gaze s1	Cara	971924	972366	442	face s3
+gaze s1	Cara	972366	976487	4121	background wall
+gaze s1	Cara	976487	977575	1088	face s3
+gaze s1	Cara	977575	979407	1832	background wall
+gaze s1	Cara	979407	979928	521	background window
+gaze s1	Cara	979928	980079	151	face s3
+gaze s1	Cara	980079	981826	1747	NA
+gaze s1	Cara	981827	982168	341	face s3
+gaze s1	Cara	982168	982646	478	background wall
+gaze s1	Cara	982646	983093	447	background window
+gaze s1	Cara	983093	983400	307	face s3
+gaze s1	Cara	983400	987133	3733	NA
+gaze s1	Cara	987133	988723	1590	face s3
+gaze s1	Cara	988723	992923	4200	background window
+gaze s1	Cara	992923	994138	1215	background wall
+gaze s1	Cara	994138	994758	620	background window
+gaze s1	Cara	994758	996475	1717	face s3
+gaze s1	Cara	996475	997522	1047	background wall
+gaze s1	Cara	997522	999770	2248	body s3
+gaze s1	Cara	999770	1000226	456	face s3
+gaze s1	Cara	1000226	1000542	316	body s3
+gaze s1	Cara	1000542	1001562	1020	face s3
+gaze s1	Cara	1001562	1003860	2298	background floor
+gaze s1	Cara	1003860	1004732	872	face s3
+gaze s1	Cara	1004732	1006482	1750	body s3
+gaze s1	Cara	1006482	1007119	637	background wall
+gaze s1	Cara	1007119	1009232	2113	body s3
+gaze s1	Cara	1009232	1011480	2248	face s3
+gaze s1	Cara	1011480	1011920	440	NA
+gaze s1	Cara	1011920	1012924	1004	background window
+gaze s1	Cara	1012924	1014754	1830	background ceiling
+gaze s1	Cara	1014754	1016013	1259	background wall
+gaze s1	Cara	1016013	1018765	2752	face s3
+gaze s1	Cara	1018766	1019005	239	NA
+gaze s1	Cara	1019005	1020441	1436	background wall
+gaze s1	Cara	1020441	1021238	797	face s3
+gaze s1	Cara	1021238	1024393	3155	background floor
+gaze s1	Cara	1024393	1025645	1252	face s3
+gaze s1	Cara	1025645	1026897	1252	background window
+gaze s1	Cara	1026897	1029161	2264	body s3
+gaze s1	Cara	1029161	1029339	178	face s3
+gaze s1	Cara	1029341	1029914	573	NA
+gaze s1	Cara	1029914	1031404	1490	face s3
+gaze s1	Cara	1031404	1032760	1356	face s2
+gaze s1	Cara	1032761	1033706	945	face s3
+gaze s1	Cara	1033706	1036004	2298	background window
+gaze s1	Cara	1036007	1037665	1658	background floor
+gaze s1	Cara	1037665	1038649	984	face s3
+gaze s1	Cara	1038649	1039486	837	background window
+gaze s1	Cara	1039486	1040686	1200	background wall
+gaze s1	Cara	1040686	1043100	2414	face s3
+gaze s1	Cara	1043100	1043960	860	body s3
+gaze s1	Cara	1043962	1044235	273	background eyes closed
+gaze s1	Cara	1044235	1044885	650	background window
+gaze s1	Cara	1044885	1045237	352	body s3
+gaze s1	Cara	1045237	1047530	2293	face s3
+gaze s1	Cara	1047530	1048080	550	background window
+gaze s1	Cara	1048081	1050163	2082	face s3
+gaze s1	Cara	1050163	1052146	1983	background own body
+gaze s1	Cara	1052146	1053265	1119	NA
+gaze s1	Cara	1053265	1053643	378	face s3
+gaze s1	Cara	1053643	1055037	1394	background ceiling
+gaze s1	Cara	1055038	1056391	1353	background window
+gaze s1	Cara	1056391	1056758	367	background wall
+gaze s1	Cara	1056758	1057803	1045	face s3
+gaze s1	Cara	1057803	1059433	1630	NA
+gaze s1	Cara	1059433	1059686	253	background ceiling
+gaze s1	Cara	1059686	1060704	1018	background wall
+gaze s1	Cara	1060704	1061167	463	background own body
+gaze s1	Cara	1061167	1062557	1390	background eyes closed
+gaze s1	Cara	1062557	1063477	920	face s3
+gaze s1	Cara	1063477	1066343	2866	background floor
+gaze s1	Cara	1066343	1066639	296	body s3
+gaze s1	Cara	1066639	1067400	761	face s3
+gaze s1	Cara	1067400	1071837	4437	background wall
+gaze s1	Cara	1071837	1072363	526	NA
+gaze s1	Cara	1072363	1075397	3034	background wall
+gaze s1	Cara	1075397	1076570	1173	NA
+gaze s1	Cara	1076570	1077651	1081	background wall
+gaze s1	Cara	1077652	1078440	788	face s3
+gaze s1	Cara	1078440	1078966	526	background wall
+gaze s1	Cara	1078966	1080235	1269	NA
+gaze s1	Cara	1080235	1080839	604	face s3
+gaze s1	Cara	1080839	1081518	679	NA
+gaze s1	Cara	1081518	1082459	941	background window
+gaze s1	Cara	1082461	1082975	514	background camera
+gaze s1	Cara	1082975	1083694	719	background floor
+gaze s1	Cara	1083694	1084743	1049	NA
+gaze s1	Cara	1084743	1085126	383	face s2
+gaze s1	Cara	1085129	1089004	3875	NA
+gaze s1	Cara	1089004	1093642	4638	background close s3
+gaze s1	Cara	1093642	1093969	327	face s3
+gaze s1	Cara	1093969	1096046	2077	NA
+gaze s1	Cara	1096046	1098104	2058	background ceiling
+gaze s1	Cara	1098104	1098321	217	background wall
+gaze s1	Cara	1098321	1098487	166	face s3
+gaze s1	Cara	1098489	1098768	279	NA
+gaze s1	Cara	1098768	1102404	3636	face s3
+gaze s1	Cara	1102404	1102925	521	body s3
+gaze s1	Cara	1102925	1103811	886	face s3
+gaze s1	Cara	1103811	1105524	1713	face s2
+gaze s1	Cara	1105524	1107884	2360	face s3
+gaze s1	Cara	1107884	1110886	3002	background floor
+gaze s1	Cara	1110886	1113373	2487	face s3
+gaze s1	Cara	1113373	1114622	1249	background floor
+gaze s1	Cara	1114622	1115771	1149	face s3
+gaze s1	Cara	1115773	1116223	450	background window
+gaze s1	Cara	1116224	1117214	990	background floor
+gaze s1	Cara	1117214	1118490	1276	face s3
+gaze s1	Cara	1118490	1118850	360	body s2
+gaze s1	Cara	1118850	1119680	830	face s3
+gaze s1	Cara	1119680	1120293	613	background window
+gaze s1	Cara	1120293	1120815	522	background wall
+gaze s1	Cara	1120815	1122085	1270	face s3
+gaze s1	Cara	1122085	1123966	1881	background wall
+gaze s1	Cara	1123966	1124521	555	face s3
+gaze s1	Cara	1124521	1124997	476	background wall
+gaze s1	Cara	1124997	1125242	245	face s2
+gaze s1	Cara	1125242	1126089	847	face s3
+gaze s1	Cara	1126089	1126327	238	body s3
+gaze s1	Cara	1126327	1128433	2106	background floor
+gaze s1	Cara	1128433	1128631	198	NA
+gaze s1	Cara	1128631	1129002	371	face s3
+gaze s1	Cara	1129002	1129442	440	NA
+gaze s1	Cara	1129442	1130611	1169	background wall
+gaze s1	Cara	1130611	1132251	1640	face s3
+gaze s1	Cara	1132251	1132903	652	NA
+gaze s1	Cara	1132906	1134198	1292	background window
+gaze s1	Cara	1134198	1134553	355	background wall
+gaze s1	Cara	1134553	1137280	2727	face s3
+gaze s1	Cara	1137280	1139322	2042	face s2
+gaze s1	Cara	1139322	1139644	322	face s3
+gaze s1	Cara	1139644	1141291	1647	face s2
+gaze s1	Cara	1141291	1142742	1451	face s3
+gaze s1	Cara	1142742	1143769	1027	NA
+gaze s1	Cara	1143769	1143970	201	body s2
+gaze s1	Cara	1143970	1145488	1518	NA
+gaze s1	Cara	1145488	1146574	1086	background wall
+gaze s1	Cara	1146574	1150652	4078	face s3
+gaze s1	Cara	1150652	1151477	825	background wall
+gaze s1	Cara	1151477	1152241	764	NA
+gaze s1	Cara	1152241	1153568	1327	face s3
+gaze s1	Cara	1153568	1154832	1264	face s2
+gaze s1	Cara	1154832	1155846	1014	face s3
+gaze s1	Cara	1155846	1156079	233	body s3
+gaze s1	Cara	1156079	1156768	689	face s3
+gaze s1	Cara	1156768	1157494	726	face s2
+gaze s1	Cara	1157494	1157675	181	body s2
+gaze s1	Cara	1157675	1158315	640	face s2
+gaze s1	Cara	1158315	1158842	527	NA
+gaze s1	Cara	1158842	1159165	323	face s3
+gaze s1	Cara	1159165	1159518	353	NA
+gaze s1	Cara	1159518	1160276	758	face s2
+gaze s1	Cara	1160276	1161365	1089	face s3
+gaze s1	Cara	1161365	1161874	509	NA
+gaze s1	Cara	1161874	1164281	2407	face s3
+gaze s1	Cara	1164281	1167321	3040	NA
+gaze s1	Cara	1167321	1167682	361	background wall
+gaze s1	Cara	1167682	1169289	1607	face s2
+gaze s1	Cara	1169289	1169770	481	background wall
+gaze s1	Cara	1169770	1170370	600	face s3
+gaze s1	Cara	1170371	1171503	1132	background window
+gaze s1	Cara	1171503	1171919	416	background camera
+gaze s1	Cara	1171919	1172653	734	background floor
+gaze s1	Cara	1172653	1173090	437	background wall
+gaze s1	Cara	1173090	1174368	1278	face s3
+gaze s1	Cara	1174368	1174851	483	face s2
+gaze s1	Cara	1174851	1176246	1395	NA
+gaze s1	Cara	1176247	1176482	235	background wall
+gaze s1	Cara	1176482	1176982	500	face s3
+gaze s1	Cara	1176982	1178234	1252	NA
+gaze s1	Cara	1178234	1184479	6245	face s2
+gaze s1	Cara	1184479	1185681	1202	NA
+gaze s1	Cara	1185681	1185963	282	background wall
+gaze s1	Cara	1185963	1186124	161	NA
+gaze s1	Cara	1186124	1186284	160	background wall
+gaze s1	Cara	1186284	1186763	479	face s2
+gaze s1	Cara	1186763	1188131	1368	NA
+gaze s1	Cara	1188131	1188527	396	face s2
+gaze s1	Cara	1188527	1188750	223	face s3
+gaze s1	Cara	1188750	1190330	1580	face s2
+gaze s1	Cara	1190330	1191292	962	NA
+gaze s1	Cara	1191292	1191602	310	background wall
+gaze s1	Cara	1191602	1194119	2517	NA
+gaze s1	Cara	1194119	1194484	365	face s2
+gaze s1	Cara	1194484	1194709	225	NA
+gaze s1	Cara	1194711	1195560	849	face s3
+gaze s1	Cara	1195560	1196514	954	NA
+gaze s1	Cara	1196514	1198015	1501	background wall
+gaze s1	Cara	1198015	1198538	523	NA
+gaze s1	Cara	1198538	1200139	1601	background wall
+gaze s2	Susan	294726	299247	4521	face s3
+gaze s2	Susan	299247	301883	2636	gestures s3
+gaze s2	Susan	301883	303040	1157	face s3
+gaze s2	Susan	303040	303488	448	body s3
+gaze s2	Susan	303488	310834	7346	face s3
+gaze s2	Susan	310834	311156	322	background wall
+gaze s2	Susan	311156	316645	5489	face s1
+gaze s2	Susan	316645	317232	587	body s1
+gaze s2	Susan	317232	323296	6064	face s1
+gaze s2	Susan	323296	323958	662	body s1
+gaze s2	Susan	323958	324470	512	NA
+gaze s2	Susan	324470	324727	257	background camera
+gaze s2	Susan	324727	325128	401	face s1
+gaze s2	Susan	325128	325568	440	background wall
+gaze s2	Susan	325568	326119	551	face s1
+gaze s2	Susan	326119	326601	482	NA
+gaze s2	Susan	326601	327201	600	face s1
+gaze s2	Susan	327201	328727	1526	NA
+gaze s2	Susan	328727	329601	874	face s1
+gaze s2	Susan	329601	329833	232	background wall
+gaze s2	Susan	329833	330082	249	face s1
+gaze s2	Susan	330082	335374	5292	body s1
+gaze s2	Susan	335374	337361	1987	NA
+gaze s2	Susan	337361	339734	2373	background camera
+gaze s2	Susan	339734	341521	1787	background wall
+gaze s2	Susan	341521	342566	1045	face s3
+gaze s2	Susan	342566	344164	1598	background wall
+gaze s2	Susan	344164	345448	1284	face s3
+gaze s2	Susan	345448	346284	836	NA
+gaze s2	Susan	346284	348961	2677	face s1
+gaze s2	Susan	348961	349242	281	NA
+gaze s2	Susan	349242	351806	2564	face s1
+gaze s2	Susan	351806	352043	237	NA
+gaze s2	Susan	352043	353242	1199	face s1
+gaze s2	Susan	353242	353521	279	NA
+gaze s2	Susan	353521	353909	388	face s1
+gaze s2	Susan	353909	354125	216	body s1
+gaze s2	Susan	354126	355845	1719	face s1
+gaze s2	Susan	355845	356403	558	background floor
+gaze s2	Susan	356403	357202	799	NA
+gaze s2	Susan	357202	358769	1567	face s1
+gaze s2	Susan	358769	366245	7476	face s3
+gaze s2	Susan	366245	366801	556	background window
+gaze s2	Susan	366801	368042	1241	face s1
+gaze s2	Susan	368042	368404	362	background wall
+gaze s2	Susan	368404	368807	403	face s3
+gaze s2	Susan	368807	369241	434	background wall
+gaze s2	Susan	369241	371285	2044	face s3
+gaze s2	Susan	371285	371611	326	NA
+gaze s2	Susan	371611	371882	271	face s3
+gaze s2	Susan	371882	372605	723	NA
+gaze s2	Susan	372606	375643	3037	face s3
+gaze s2	Susan	375643	376049	406	background wall
+gaze s2	Susan	376049	376248	199	face s3
+gaze s2	Susan	376249	377682	1433	background wall
+gaze s2	Susan	377682	378058	376	face s3
+gaze s2	Susan	378058	378437	379	background wall
+gaze s2	Susan	378437	379245	808	face s3
+gaze s2	Susan	379245	379601	356	background wall
+gaze s2	Susan	379601	381323	1722	face s1
+gaze s2	Susan	381323	381800	477	NA
+gaze s2	Susan	381800	383140	1340	face s1
+gaze s2	Susan	383140	385853	2713	body s1
+gaze s2	Susan	385853	387717	1864	face s1
+gaze s2	Susan	387717	389002	1285	body s1
+gaze s2	Susan	389002	389804	802	background wall
+gaze s2	Susan	389805	391148	1343	face s1
+gaze s2	Susan	391148	391766	618	NA
+gaze s2	Susan	391766	392443	677	face s1
+gaze s2	Susan	392444	392976	532	background wall
+gaze s2	Susan	392977	393213	236	body s1
+gaze s2	Susan	393215	394052	837	face s1
+gaze s2	Susan	394052	394327	275	background wall
+gaze s2	Susan	394328	395842	1514	face s1
+gaze s2	Susan	395842	397600	1758	body s1
+gaze s2	Susan	397600	397973	373	face s1
+gaze s2	Susan	397973	398582	609	background wall
+gaze s2	Susan	398582	400768	2186	background floor
+gaze s2	Susan	400768	401606	838	NA
+gaze s2	Susan	401606	402011	405	background camera
+gaze s2	Susan	402011	402688	677	body s1
+gaze s2	Susan	402688	402885	197	face s1
+gaze s2	Susan	402885	403879	994	body s1
+gaze s2	Susan	403879	405129	1250	face s1
+gaze s2	Susan	405129	406447	1318	background wall
+gaze s2	Susan	406447	406925	478	NA
+gaze s2	Susan	406926	407082	156	face s3
+gaze s2	Susan	407082	407444	362	NA
+gaze s2	Susan	407444	409927	2483	face s3
+gaze s2	Susan	409927	410084	157	background wall
+gaze s2	Susan	410084	411404	1320	NA
+gaze s2	Susan	411404	411573	169	background camera
+gaze s2	Susan	411573	412322	749	face s3
+gaze s2	Susan	412322	412921	599	NA
+gaze s2	Susan	412921	413246	325	face s3
+gaze s2	Susan	413246	413554	308	NA
+gaze s2	Susan	413554	413900	346	face s3
+gaze s2	Susan	413900	415364	1464	background wall
+gaze s2	Susan	415364	415763	399	NA
+gaze s2	Susan	415763	416362	599	face s1
+gaze s2	Susan	416362	418321	1959	background ceiling
+gaze s2	Susan	418321	419524	1203	NA
+gaze s2	Susan	419524	421519	1995	background floor
+gaze s2	Susan	421519	422062	543	background camera
+gaze s2	Susan	422063	424574	2511	face s1
+gaze s2	Susan	424574	425977	1403	face s3
+gaze s2	Susan	425977	426561	584	NA
+gaze s2	Susan	426561	427084	523	background floor
+gaze s2	Susan	427084	429292	2208	face s1
+gaze s2	Susan	429294	429719	425	NA
+gaze s2	Susan	429719	430611	892	face s1
+gaze s2	Susan	430611	431866	1255	background wall
+gaze s2	Susan	431866	432522	656	face s3
+gaze s2	Susan	432522	433722	1200	background wall
+gaze s2	Susan	433724	434243	519	face s1
+gaze s2	Susan	434245	435244	999	body s1
+gaze s2	Susan	435244	436362	1118	face s1
+gaze s2	Susan	436363	436692	329	background wall
+gaze s2	Susan	436692	438921	2229	face s1
+gaze s2	Susan	438921	442394	3473	face s3
+gaze s2	Susan	442399	442803	404	background wall
+gaze s2	Susan	442803	443284	481	face s1
+gaze s2	Susan	443284	443611	327	NA
+gaze s2	Susan	443611	444065	454	face s1
+gaze s2	Susan	444065	444482	417	background camera
+gaze s2	Susan	444484	444641	157	face s1
+gaze s2	Susan	444641	444890	249	background wall
+gaze s2	Susan	444890	445200	310	NA
+gaze s2	Susan	445200	445336	136	background wall
+gaze s2	Susan	445336	445485	149	face s1
+gaze s2	Susan	445485	445988	503	face s3
+gaze s2	Susan	445989	448763	2774	NA
+gaze s2	Susan	448763	450366	1603	background wall
+gaze s2	Susan	450366	450521	155	face s1
+gaze s2	Susan	450521	450923	402	background camera
+gaze s2	Susan	450926	452165	1239	face s3
+gaze s2	Susan	452165	452641	476	NA
+gaze s2	Susan	452641	456253	3612	face s1
+gaze s2	Susan	456254	456535	281	background wall
+gaze s2	Susan	456535	457882	1347	NA
+gaze s2	Susan	457882	458972	1090	background floor
+gaze s2	Susan	458972	459314	342	background camera
+gaze s2	Susan	459314	460131	817	background wall
+gaze s2	Susan	460131	461285	1154	face s1
+gaze s2	Susan	461285	461443	158	NA
+gaze s2	Susan	461443	461768	325	background wall
+gaze s2	Susan	461768	465853	4085	face s1
+gaze s2	Susan	465853	466658	805	background wall
+gaze s2	Susan	466658	466876	218	NA
+gaze s2	Susan	466876	467805	929	background wall
+gaze s2	Susan	467805	468125	320	NA
+gaze s2	Susan	468125	468515	390	NA
+gaze s2	Susan	468515	469059	544	face s3
+gaze s2	Susan	469059	469765	706	NA
+gaze s2	Susan	469765	470787	1022	face s3
+gaze s2	Susan	470787	471947	1160	background wall
+gaze s2	Susan	471948	473930	1982	background floor
+gaze s2	Susan	473930	476860	2930	face s3
+gaze s2	Susan	476860	477282	422	background ceiling
+gaze s2	Susan	477282	479058	1776	NA
+gaze s2	Susan	479058	479907	849	background wall
+gaze s2	Susan	479907	480222	315	face s1
+gaze s2	Susan	480222	480664	442	background wall
+gaze s2	Susan	480665	480841	176	face s1
+gaze s2	Susan	480841	481110	269	background wall
+gaze s2	Susan	481112	482489	1377	face s3
+gaze s2	Susan	482489	483163	674	background wall
+gaze s2	Susan	483163	484129	966	face s3
+gaze s2	Susan	484129	484489	360	NA
+gaze s2	Susan	484489	484609	120	background wall
+gaze s2	Susan	484610	484759	149	face s3
+gaze s2	Susan	484759	484932	173	background wall
+gaze s2	Susan	484932	485280	348	face s3
+gaze s2	Susan	485281	485688	407	NA
+gaze s2	Susan	485688	487238	1550	face s3
+gaze s2	Susan	487238	487648	410	background ceiling
+gaze s2	Susan	487648	488875	1227	NA
+gaze s2	Susan	488875	490668	1793	background floor
+gaze s2	Susan	490668	491321	653	face s1
+gaze s2	Susan	491321	491780	459	background own body
+gaze s2	Susan	491780	492041	261	face s3
+gaze s2	Susan	492041	492229	188	background wall
+gaze s2	Susan	492231	492404	173	NA
+gaze s2	Susan	492404	492765	361	face s3
+gaze s2	Susan	492765	493242	477	background wall
+gaze s2	Susan	493242	493854	612	face s3
+gaze s2	Susan	493854	494007	153	background wall
+gaze s2	Susan	494007	494210	203	face s3
+gaze s2	Susan	494210	494617	407	background wall
+gaze s2	Susan	494617	499644	5027	face s1
+gaze s2	Susan	499644	500825	1181	body s1
+gaze s2	Susan	500825	503604	2779	face s1
+gaze s2	Susan	503604	503937	333	gestures s1
+gaze s2	Susan	503937	504169	232	face s1
+gaze s2	Susan	504169	513128	8959	face s3
+gaze s2	Susan	513128	514061	933	gestures s3
+gaze s2	Susan	514061	516220	2159	NA
+gaze s2	Susan	516220	518079	1859	face s3
+gaze s2	Susan	518079	521371	3292	background wall
+gaze s2	Susan	521371	522109	738	face s3
+gaze s2	Susan	522109	522366	257	gestures s3
+gaze s2	Susan	522366	523507	1141	face s3
+gaze s2	Susan	523507	523777	270	body s3
+gaze s2	Susan	523777	526450	2673	face s3
+gaze s2	Susan	526450	526758	308	NA
+gaze s2	Susan	526758	527804	1046	face s3
+gaze s2	Susan	527804	527923	119	NA
+gaze s2	Susan	527923	528471	548	face s3
+gaze s2	Susan	528471	529203	732	body s3
+gaze s2	Susan	529203	529324	121	background floor
+gaze s2	Susan	529324	529732	408	NA
+gaze s2	Susan	529732	530163	431	face s1
+gaze s2	Susan	530166	531023	857	face s3
+gaze s2	Susan	531023	532604	1581	NA
+gaze s2	Susan	532605	534213	1608	face s3
+gaze s2	Susan	534213	534488	275	background wall
+gaze s2	Susan	534488	534685	197	face s3
+gaze s2	Susan	534685	534924	239	background wall
+gaze s2	Susan	534925	536484	1559	face s3
+gaze s2	Susan	536484	537160	676	background wall
+gaze s2	Susan	537160	537460	300	face s3
+gaze s2	Susan	537460	538167	707	background wall
+gaze s2	Susan	538167	538889	722	face s3
+gaze s2	Susan	538889	539099	210	background wall
+gaze s2	Susan	539099	541775	2676	face s3
+gaze s2	Susan	541775	543413	1638	face s1
+gaze s2	Susan	543416	543687	271	background wall
+gaze s2	Susan	543687	545961	2274	face s3
+gaze s2	Susan	545961	546416	455	background ceiling
+gaze s2	Susan	546416	547479	1063	face s3
+gaze s2	Susan	547479	548850	1371	body s3
+gaze s2	Susan	548850	549340	490	background floor
+gaze s2	Susan	549340	549802	462	NA
+gaze s2	Susan	549802	550285	483	face s1
+gaze s2	Susan	550285	550811	526	body s1
+gaze s2	Susan	550811	552280	1469	face s1
+gaze s2	Susan	552282	552771	489	body s1
+gaze s2	Susan	552771	553281	510	face s1
+gaze s2	Susan	553281	554467	1186	body s1
+gaze s2	Susan	554468	555964	1496	face s1
+gaze s2	Susan	555965	556665	700	body s1
+gaze s2	Susan	556665	558158	1493	face s1
+gaze s2	Susan	558158	558615	457	body s1
+gaze s2	Susan	558615	559448	833	face s1
+gaze s2	Susan	559448	559660	212	body s1
+gaze s2	Susan	559660	562202	2542	face s1
+gaze s2	Susan	562202	562964	762	face s3
+gaze s2	Susan	562964	563363	399	background wall
+gaze s2	Susan	563363	563541	178	face s3
+gaze s2	Susan	563541	563967	426	background wall
+gaze s2	Susan	563967	565165	1198	NA
+gaze s2	Susan	565165	565293	128	background wall
+gaze s2	Susan	565293	568258	2965	face s1
+gaze s2	Susan	568258	568733	475	gestures s1
+gaze s2	Susan	568733	569540	807	face s1
+gaze s2	Susan	569540	570329	789	NA
+gaze s2	Susan	570329	570480	151	background wall
+gaze s2	Susan	570482	572371	1889	face s3
+gaze s2	Susan	572371	573452	1081	face s1
+gaze s2	Susan	573452	576988	3536	background floor
+gaze s2	Susan	576988	585128	8140	face s3
+gaze s2	Susan	585128	585374	246	gestures s3
+gaze s2	Susan	585374	586088	714	face s3
+gaze s2	Susan	586088	586322	234	gestures s3
+gaze s2	Susan	586322	586901	579	face s3
+gaze s2	Susan	586901	587022	121	gestures s3
+gaze s2	Susan	587025	587528	503	NA
+gaze s2	Susan	587528	588570	1042	face s3
+gaze s2	Susan	588572	589045	473	NA
+gaze s2	Susan	589045	593154	4109	face s1
+gaze s2	Susan	593154	593488	334	background wall
+gaze s2	Susan	593488	593806	318	NA
+gaze s2	Susan	593806	594089	283	background wall
+gaze s2	Susan	594089	594554	465	NA
+gaze s2	Susan	594555	594967	412	background wall
+gaze s2	Susan	594969	595491	522	face s3
+gaze s2	Susan	595491	596014	523	background camera
+gaze s2	Susan	596014	599040	3026	face s1
+gaze s2	Susan	599040	599810	770	background camera
+gaze s2	Susan	599810	600046	236	background floor
+gaze s2	Susan	600046	601895	1849	background camera
+gaze s2	Susan	601899	603381	1482	background floor
+gaze s2	Susan	603382	603565	183	background camera
+gaze s2	Susan	603565	605572	2007	face s1
+gaze s2	Susan	605572	606126	554	NA
+gaze s2	Susan	606127	607720	1593	face s1
+gaze s2	Susan	607720	607864	144	body s1
+gaze s2	Susan	607864	610366	2502	background wall
+gaze s2	Susan	610366	615058	4692	face s3
+gaze s2	Susan	615058	615561	503	background wall
+gaze s2	Susan	615561	616723	1162	face s3
+gaze s2	Susan	616723	617684	961	background wall
+gaze s2	Susan	617684	618167	483	face s3
+gaze s2	Susan	618167	618969	802	NA
+gaze s2	Susan	618970	620032	1062	face s3
+gaze s2	Susan	620032	622162	2130	face s1
+gaze s2	Susan	622162	623253	1091	body s1
+gaze s2	Susan	623253	623965	712	background wall
+gaze s2	Susan	623965	624687	722	face s1
+gaze s2	Susan	624687	624879	192	NA
+gaze s2	Susan	624879	625362	483	background wall
+gaze s2	Susan	625362	626325	963	body s1
+gaze s2	Susan	626325	629289	2964	face s1
+gaze s2	Susan	629289	630367	1078	background floor
+gaze s2	Susan	630368	631137	769	background camera
+gaze s2	Susan	631137	631423	286	face s1
+gaze s2	Susan	631423	632139	716	body s1
+gaze s2	Susan	632139	632885	746	background floor
+gaze s2	Susan	632888	633320	432	body s1
+gaze s2	Susan	633320	634330	1010	face s1
+gaze s2	Susan	634332	634621	289	body s1
+gaze s2	Susan	634622	635690	1068	face s1
+gaze s2	Susan	635690	636203	513	body s1
+gaze s2	Susan	636203	637169	966	face s1
+gaze s2	Susan	637169	637447	278	background wall
+gaze s2	Susan	637449	639643	2194	NA
+gaze s2	Susan	639643	643453	3810	face s3
+gaze s2	Susan	643453	644327	874	background floor
+gaze s2	Susan	644327	646985	2658	face s3
+gaze s2	Susan	646986	648010	1024	background wall
+gaze s2	Susan	648010	649246	1236	face s3
+gaze s2	Susan	649246	652489	3243	body s3
+gaze s2	Susan	652489	654530	2041	face s3
+gaze s2	Susan	654530	655085	555	NA
+gaze s2	Susan	655085	656178	1093	face s3
+gaze s2	Susan	656178	656644	466	background wall
+gaze s2	Susan	656644	657884	1240	face s3
+gaze s2	Susan	657884	659403	1519	background wall
+gaze s2	Susan	659403	671849	12446	face s3
+gaze s2	Susan	671849	672046	197	background floor
+gaze s2	Susan	672047	672330	283	face s3
+gaze s2	Susan	672330	672571	241	background floor
+gaze s2	Susan	672574	672772	198	face s3
+gaze s2	Susan	672772	672926	154	background wall
+gaze s2	Susan	672926	673365	439	NA
+gaze s2	Susan	673365	673568	203	face s3
+gaze s2	Susan	673571	673763	192	NA
+gaze s2	Susan	673763	674207	444	face s3
+gaze s2	Susan	674207	674565	358	body s3
+gaze s2	Susan	674566	675083	517	background wall
+gaze s2	Susan	675084	678929	3845	face s3
+gaze s2	Susan	678929	679906	977	background wall
+gaze s2	Susan	679906	680689	783	body s3
+gaze s2	Susan	680689	682768	2079	face s3
+gaze s2	Susan	682768	683321	553	body s3
+gaze s2	Susan	683321	686904	3583	face s3
+gaze s2	Susan	686905	691043	4138	face s1
+gaze s2	Susan	691043	691439	396	body s1
+gaze s2	Susan	691439	691621	182	face s1
+gaze s2	Susan	691621	694976	3355	face s3
+gaze s2	Susan	694977	696608	1631	NA
+gaze s2	Susan	696608	697252	644	face s3
+gaze s2	Susan	697252	698682	1430	NA
+gaze s2	Susan	698682	698928	246	background ceiling
+gaze s2	Susan	698928	699420	492	background wall
+gaze s2	Susan	699421	701201	1780	face s1
+gaze s2	Susan	701201	701843	642	NA
+gaze s2	Susan	701843	702124	281	background wall
+gaze s2	Susan	702125	702742	617	face s1
+gaze s2	Susan	702743	703754	1011	face s3
+gaze s2	Susan	703754	704903	1149	NA
+gaze s2	Susan	704904	706009	1105	face s3
+gaze s2	Susan	706009	707485	1476	background floor
+gaze s2	Susan	707485	709616	2131	face s3
+gaze s2	Susan	709616	710001	385	background wall
+gaze s2	Susan	710001	710772	771	face s3
+gaze s2	Susan	710772	711171	399	background wall
+gaze s2	Susan	711172	712725	1553	face s3
+gaze s2	Susan	712727	714325	1598	face s1
+gaze s2	Susan	714325	714575	250	body s1
+gaze s2	Susan	714575	717204	2629	face s1
+gaze s2	Susan	717204	717605	401	NA
+gaze s2	Susan	717606	717987	381	face s3
+gaze s2	Susan	717989	720329	2340	face s1
+gaze s2	Susan	720330	720610	280	background floor
+gaze s2	Susan	720610	723606	2996	face s1
+gaze s2	Susan	723606	724806	1200	NA
+gaze s2	Susan	724806	725812	1006	face s3
+gaze s2	Susan	725812	726171	359	body s3
+gaze s2	Susan	726171	728053	1882	face s3
+gaze s2	Susan	728054	728174	120	background wall
+gaze s2	Susan	728174	728894	720	NA
+gaze s2	Susan	728894	729536	642	background wall
+gaze s2	Susan	729536	730585	1049	face s3
+gaze s2	Susan	730585	731247	662	body s3
+gaze s2	Susan	731247	732968	1721	face s3
+gaze s2	Susan	732968	733164	196	background wall
+gaze s2	Susan	733164	733324	160	face s3
+gaze s2	Susan	733324	737489	4165	face s1
+gaze s2	Susan	737490	738520	1030	NA
+gaze s2	Susan	738520	739606	1086	background floor
+gaze s2	Susan	739606	740575	969	background wall
+gaze s2	Susan	740576	740810	234	NA
+gaze s2	Susan	740810	741621	811	background ceiling
+gaze s2	Susan	741621	742257	636	background own body
+gaze s2	Susan	742257	742867	610	background wall
+gaze s2	Susan	742867	745166	2299	face s1
+gaze s2	Susan	745166	745288	122	background wall
+gaze s2	Susan	745288	746562	1274	NA
+gaze s2	Susan	746562	747764	1202	background wall
+gaze s2	Susan	747764	748926	1162	background ceiling
+gaze s2	Susan	748926	750560	1634	background wall
+gaze s2	Susan	750560	751655	1095	face s1
+gaze s2	Susan	751657	752138	481	background wall
+gaze s2	Susan	752138	753448	1310	NA
+gaze s2	Susan	753449	757567	4118	face s1
+gaze s2	Susan	757567	757842	275	background wall
+gaze s2	Susan	757842	758728	886	NA
+gaze s2	Susan	758728	759971	1243	face s1
+gaze s2	Susan	759971	761140	1169	face s3
+gaze s2	Susan	761140	762132	992	face s1
+gaze s2	Susan	762132	762328	196	background wall
+gaze s2	Susan	762328	762807	479	NA
+gaze s2	Susan	762807	763526	719	background wall
+gaze s2	Susan	763526	763775	249	NA
+gaze s2	Susan	763775	766765	2990	background ceiling
+gaze s2	Susan	766765	769332	2567	face s1
+gaze s2	Susan	769332	770728	1396	NA
+gaze s2	Susan	770728	771979	1251	background wall
+gaze s2	Susan	771979	772760	781	face s1
+gaze s2	Susan	772760	773057	297	background wall
+gaze s2	Susan	773057	773885	828	face s3
+gaze s2	Susan	773885	774600	715	NA
+gaze s2	Susan	774600	775725	1125	face s3
+gaze s2	Susan	775725	777281	1556	background wall
+gaze s2	Susan	777281	777403	122	NA
+gaze s2	Susan	777403	779365	1962	face s3
+gaze s2	Susan	779365	779648	283	NA
+gaze s2	Susan	779648	781164	1516	face s1
+gaze s2	Susan	781164	781284	120	background floor
+gaze s2	Susan	781284	781768	484	NA
+gaze s2	Susan	781768	782364	596	face s1
+gaze s2	Susan	782364	782920	556	background wall
+gaze s2	Susan	782920	783525	605	NA
+gaze s2	Susan	783525	788243	4718	face s1
+gaze s2	Susan	788243	788489	246	background camera
+gaze s2	Susan	788489	791762	3273	face s1
+gaze s2	Susan	791762	792292	530	background wall
+gaze s2	Susan	792292	792422	130	face s3
+gaze s2	Susan	792423	792723	300	NA
+gaze s2	Susan	792723	792961	238	body s3
+gaze s2	Susan	792961	793169	208	body s1
+gaze s2	Susan	793169	793529	360	background camera
+gaze s2	Susan	793529	795668	2139	face s1
+gaze s2	Susan	795668	796415	747	face s3
+gaze s2	Susan	796415	796656	241	body s1
+gaze s2	Susan	796656	797006	350	NA
+gaze s2	Susan	797006	797370	364	face s1
+gaze s2	Susan	797370	800764	3394	face s3
+gaze s2	Susan	800764	801806	1042	background wall
+gaze s2	Susan	801806	802007	201	NA
+gaze s2	Susan	802007	802492	485	background wall
+gaze s2	Susan	802492	806328	3836	face s1
+gaze s2	Susan	806328	806482	154	body s1
+gaze s2	Susan	806482	806885	403	face s1
+gaze s2	Susan	806885	807122	237	background camera
+gaze s2	Susan	807123	809282	2159	face s1
+gaze s2	Susan	809282	809771	489	background wall
+gaze s2	Susan	809771	810031	260	face s3
+gaze s2	Susan	810031	811364	1333	background wall
+gaze s2	Susan	811364	811884	520	face s1
+gaze s2	Susan	811884	812206	322	background wall
+gaze s2	Susan	812206	812454	248	background camera
+gaze s2	Susan	812454	813043	589	face s1
+gaze s2	Susan	813043	813643	600	NA
+gaze s2	Susan	813643	814002	359	face s3
+gaze s2	Susan	814002	814362	360	NA
+gaze s2	Susan	814362	814529	167	face s1
+gaze s2	Susan	814529	816565	2036	face s3
+gaze s2	Susan	816565	820891	4326	background wall
+gaze s2	Susan	820891	821160	269	background camera
+gaze s2	Susan	821160	822212	1052	background floor
+gaze s2	Susan	822212	822525	313	background own body
+gaze s2	Susan	822525	822776	251	background camera
+gaze s2	Susan	822776	823082	306	background own gestures
+gaze s2	Susan	823082	825160	2078	face s3
+gaze s2	Susan	825160	825820	660	face s1
+gaze s2	Susan	825820	827325	1505	face s3
+gaze s2	Susan	827325	827739	414	background camera
+gaze s2	Susan	827739	828884	1145	background wall
+gaze s2	Susan	828884	829565	681	NA
+gaze s2	Susan	829565	833243	3678	face s1
+gaze s2	Susan	833243	833565	322	background camera
+gaze s2	Susan	833565	834006	441	face s3
+gaze s2	Susan	834006	834528	522	NA
+gaze s2	Susan	834528	835207	679	background floor
+gaze s2	Susan	835207	836778	1571	face s3
+gaze s2	Susan	836778	837243	465	background floor
+gaze s2	Susan	837243	837487	244	NA
+gaze s2	Susan	837487	837800	313	background wall
+gaze s2	Susan	837800	839684	1884	face s3
+gaze s2	Susan	839684	839887	203	background camera
+gaze s2	Susan	839887	841801	1914	face s3
+gaze s2	Susan	841801	842612	811	background wall
+gaze s2	Susan	842612	843760	1148	face s1
+gaze s2	Susan	843760	844092	332	background floor
+gaze s2	Susan	844092	846732	2640	face s1
+gaze s2	Susan	846732	847129	397	background wall
+gaze s2	Susan	847130	847609	479	NA
+gaze s2	Susan	847609	852048	4439	face s1
+gaze s2	Susan	852048	852368	320	body s1
+gaze s2	Susan	852368	852564	196	face s1
+gaze s2	Susan	852564	853325	761	body s1
+gaze s2	Susan	853325	853681	356	face s1
+gaze s2	Susan	853681	854329	648	body s1
+gaze s2	Susan	854329	856125	1796	face s1
+gaze s2	Susan	856125	856490	365	body s1
+gaze s2	Susan	856490	856684	194	face s1
+gaze s2	Susan	856684	856914	230	NA
+gaze s2	Susan	856914	857040	126	body s1
+gaze s2	Susan	857040	857326	286	NA
+gaze s2	Susan	857326	861162	3836	face s1
+gaze s2	Susan	861162	865615	4453	face s3
+gaze s2	Susan	865615	866368	753	background wall
+gaze s2	Susan	866368	866800	432	face s3
+gaze s2	Susan	866800	866968	168	NA
+gaze s2	Susan	866968	870048	3080	face s3
+gaze s2	Susan	870048	870385	337	NA
+gaze s2	Susan	870385	875723	5338	face s1
+gaze s2	Susan	875723	877329	1606	background wall
+gaze s2	Susan	877329	879043	1714	face s1
+gaze s2	Susan	879045	879406	361	background wall
+gaze s2	Susan	879406	879526	120	face s1
+gaze s2	Susan	879526	879871	345	NA
+gaze s2	Susan	879871	880048	177	background wall
+gaze s2	Susan	880048	880775	727	NA
+gaze s2	Susan	880775	887405	6630	background camera
+gaze s2	Susan	887405	887812	407	NA
+gaze s2	Susan	887812	890970	3158	face s3
+gaze s2	Susan	890970	891532	562	NA
+gaze s2	Susan	891532	892251	719	background wall
+gaze s2	Susan	892251	894245	1994	face s3
+gaze s2	Susan	894245	896446	2201	background wall
+gaze s2	Susan	896446	896654	208	NA
+gaze s2	Susan	896654	897660	1006	background wall
+gaze s2	Susan	897660	898253	593	background camera
+gaze s2	Susan	898253	898921	668	NA
+gaze s2	Susan	898921	899176	255	face s3
+gaze s2	Susan	899176	900364	1188	background camera
+gaze s2	Susan	900364	904160	3796	face s1
+gaze s2	Susan	904160	904362	202	background camera
+gaze s2	Susan	904362	904851	489	face s1
+gaze s2	Susan	904851	905009	158	background wall
+gaze s2	Susan	905009	907335	2326	face s1
+gaze s2	Susan	907335	908565	1230	face s3
+gaze s2	Susan	908565	909646	1081	face s1
+gaze s2	Susan	909646	909842	196	NA
+gaze s2	Susan	909842	910409	567	face s1
+gaze s2	Susan	910409	910657	248	background wall
+gaze s2	Susan	910657	911329	672	face s1
+gaze s2	Susan	911329	911804	475	background wall
+gaze s2	Susan	911804	912473	669	face s1
+gaze s2	Susan	912473	912690	217	body s1
+gaze s2	Susan	912690	912973	283	NA
+gaze s2	Susan	912973	916123	3150	face s1
+gaze s2	Susan	916123	916729	606	background wall
+gaze s2	Susan	916729	917048	319	background camera
+gaze s2	Susan	917048	918321	1273	face s1
+gaze s2	Susan	918321	918681	360	NA
+gaze s2	Susan	918681	919168	487	face s1
+gaze s2	Susan	919168	919728	560	background camera
+gaze s2	Susan	919728	921453	1725	body s1
+gaze s2	Susan	921453	922248	795	face s3
+gaze s2	Susan	922248	923403	1155	background down
+gaze s2	Susan	923403	923809	406	NA
+gaze s2	Susan	923809	927084	3275	face s3
+gaze s2	Susan	927084	934092	7008	face s1
+gaze s2	Susan	934092	934492	400	NA
+gaze s2	Susan	934492	935092	600	face s1
+gaze s2	Susan	935092	935485	393	gestures s1
+gaze s2	Susan	935485	936640	1155	NA
+gaze s2	Susan	936640	937765	1125	body s1
+gaze s2	Susan	937765	938087	322	background camera
+gaze s2	Susan	938087	944015	5928	face s3
+gaze s2	Susan	944015	944285	270	background wall
+gaze s2	Susan	944285	944848	563	NA
+gaze s2	Susan	944848	945164	316	background wall
+gaze s2	Susan	945165	945575	410	NA
+gaze s2	Susan	945575	946001	426	background ceiling
+gaze s2	Susan	946001	946967	966	NA
+gaze s2	Susan	946967	947240	273	background ceiling
+gaze s2	Susan	947242	947726	484	NA
+gaze s2	Susan	947726	949969	2243	face s3
+gaze s2	Susan	949969	950406	437	NA
+gaze s2	Susan	950406	950723	317	face s3
+gaze s2	Susan	950723	951321	598	NA
+gaze s2	Susan	951321	951923	602	face s3
+gaze s2	Susan	951923	952440	517	NA
+gaze s2	Susan	952440	954081	1641	face s3
+gaze s2	Susan	954081	954523	442	face s1
+gaze s2	Susan	954523	954960	437	NA
+gaze s2	Susan	954960	955081	121	background wall
+gaze s2	Susan	955081	955284	203	NA
+gaze s2	Susan	955284	962682	7398	face s1
+gaze s2	Susan	962682	962892	210	body s1
+gaze s2	Susan	962892	966364	3472	face s1
+gaze s2	Susan	966364	966701	337	gestures s1
+gaze s2	Susan	966701	973365	6664	face s1
+gaze s2	Susan	973365	974000	635	NA
+gaze s2	Susan	974000	975010	1010	face s1
+gaze s2	Susan	975010	979330	4320	face s3
+gaze s2	Susan	979330	981403	2073	face s1
+gaze s2	Susan	981403	981603	200	gestures s1
+gaze s2	Susan	981604	982625	1021	face s1
+gaze s2	Susan	982625	984317	1692	NA
+gaze s2	Susan	984317	984442	125	background window
+gaze s2	Susan	984442	984772	330	background wall
+gaze s2	Susan	984775	985246	471	NA
+gaze s2	Susan	985246	985803	557	background camera
+gaze s2	Susan	985804	986166	362	face s1
+gaze s2	Susan	986167	986407	240	NA
+gaze s2	Susan	986408	986772	364	face s1
+gaze s2	Susan	986772	986923	151	NA
+gaze s2	Susan	986924	987601	677	face s1
+gaze s2	Susan	987602	987802	200	NA
+gaze s2	Susan	987803	988011	208	background wall
+gaze s2	Susan	988011	988242	231	NA
+gaze s2	Susan	988242	988486	244	background wall
+gaze s2	Susan	988486	988687	201	NA
+gaze s2	Susan	988687	989683	996	face s1
+gaze s2	Susan	989684	989943	259	background down
+gaze s2	Susan	989943	990162	219	face s1
+gaze s2	Susan	990162	990844	682	background camera
+gaze s2	Susan	990844	991444	600	NA
+gaze s2	Susan	991445	992698	1253	gestures s1
+gaze s2	Susan	992698	998640	5942	face s1
+gaze s2	Susan	998640	1000964	2324	background camera
+gaze s2	Susan	1000964	1001882	918	body s1
+gaze s2	Susan	1001882	1002005	123	background wall
+gaze s2	Susan	1002005	1002205	200	body s1
+gaze s2	Susan	1002207	1010519	8312	face s1
+gaze s2	Susan	1010519	1010728	209	body s1
+gaze s2	Susan	1010728	1029359	18631	face s1
+gaze s2	Susan	1029359	1029568	209	background camera
+gaze s2	Susan	1029568	1030006	438	NA
+gaze s2	Susan	1030006	1031409	1403	face s3
+gaze s2	Susan	1031409	1032808	1399	NA
+gaze s2	Susan	1032809	1032944	135	face s1
+gaze s2	Susan	1032945	1033153	208	background camera
+gaze s2	Susan	1033153	1035635	2482	background floor
+gaze s2	Susan	1035635	1039720	4085	face s1
+gaze s2	Susan	1039720	1040322	602	background own body
+gaze s2	Susan	1040322	1040923	601	NA
+gaze s2	Susan	1040923	1043285	2362	face s1
+gaze s2	Susan	1043286	1044372	1086	body s1
+gaze s2	Susan	1044372	1046492	2120	face s1
+gaze s2	Susan	1046493	1048160	1667	body s1
+gaze s2	Susan	1048160	1049884	1724	face s1
+gaze s2	Susan	1049884	1050489	605	gestures s1
+gaze s2	Susan	1050489	1051002	513	face s1
+gaze s2	Susan	1051002	1051251	249	background wall
+gaze s2	Susan	1051251	1051403	152	face s1
+gaze s2	Susan	1051403	1051845	442	NA
+gaze s2	Susan	1051845	1052766	921	face s1
+gaze s2	Susan	1052766	1053176	410	body s1
+gaze s2	Susan	1053176	1053366	190	face s1
+gaze s2	Susan	1053367	1054125	758	body s1
+gaze s2	Susan	1054125	1054886	761	face s1
+gaze s2	Susan	1054886	1055723	837	body s1
+gaze s2	Susan	1055723	1056893	1170	background down
+gaze s2	Susan	1056893	1057082	189	body s1
+gaze s2	Susan	1057082	1057245	163	NA
+gaze s2	Susan	1057245	1058201	956	face s1
+gaze s2	Susan	1058203	1058373	170	body s1
+gaze s2	Susan	1058374	1058762	388	background wall
+gaze s2	Susan	1058763	1059005	242	NA
+gaze s2	Susan	1059006	1059645	639	background camera
+gaze s2	Susan	1059645	1060242	597	NA
+gaze s2	Susan	1060242	1060447	205	background wall
+gaze s2	Susan	1060448	1060979	531	face s1
+gaze s2	Susan	1060981	1062000	1019	background camera
+gaze s2	Susan	1062000	1062599	599	NA
+gaze s2	Susan	1062599	1062886	287	background wall
+gaze s2	Susan	1062886	1063812	926	face s3
+gaze s2	Susan	1063812	1064081	269	NA
+gaze s2	Susan	1064081	1064443	362	face s3
+gaze s2	Susan	1064443	1065001	558	background wall
+gaze s2	Susan	1065001	1069721	4720	face s1
+gaze s2	Susan	1069721	1069885	164	body s1
+gaze s2	Susan	1069885	1072725	2840	face s1
+gaze s2	Susan	1072725	1073562	837	body s1
+gaze s2	Susan	1073562	1075243	1681	background camera
+gaze s2	Susan	1075243	1075920	677	face s1
+gaze s2	Susan	1075921	1076772	851	body s1
+gaze s2	Susan	1076773	1077403	630	face s1
+gaze s2	Susan	1077403	1077689	286	gestures s1
+gaze s2	Susan	1077689	1079756	2067	face s1
+gaze s2	Susan	1079756	1080283	527	body s1
+gaze s2	Susan	1080283	1082815	2532	background down
+gaze s2	Susan	1082816	1085161	2345	face s1
+gaze s2	Susan	1085161	1086039	878	NA
+gaze s2	Susan	1086039	1088630	2591	background down
+gaze s2	Susan	1088630	1089175	545	NA
+gaze s2	Susan	1089176	1089614	438	background wall
+gaze s2	Susan	1089614	1091567	1953	face s1
+gaze s2	Susan	1091567	1092286	719	background window
+gaze s2	Susan	1092286	1092721	435	background wall
+gaze s2	Susan	1092721	1092926	205	background window
+gaze s2	Susan	1092926	1093748	822	background wall
+gaze s2	Susan	1093750	1094030	280	background ceiling
+gaze s2	Susan	1094030	1095102	1072	background wall
+gaze s2	Susan	1095102	1096284	1182	background ceiling
+gaze s2	Susan	1096287	1096644	357	face s1
+gaze s2	Susan	1096644	1096961	317	body s1
+gaze s2	Susan	1096961	1097852	891	face s1
+gaze s2	Susan	1097852	1098257	405	background wall
+gaze s2	Susan	1098257	1105165	6908	face s1
+gaze s2	Susan	1105165	1106366	1201	background eyes closed
+gaze s2	Susan	1106366	1107302	936	face s1
+gaze s2	Susan	1107303	1108167	864	body s1
+gaze s2	Susan	1108167	1109411	1244	face s1
+gaze s2	Susan	1109411	1109698	287	background down
+gaze s2	Susan	1109698	1109858	160	body s1
+gaze s2	Susan	1109860	1110925	1065	face s1
+gaze s2	Susan	1110925	1111089	164	body s1
+gaze s2	Susan	1111090	1111458	368	face s1
+gaze s2	Susan	1111458	1111682	224	gestures s1
+gaze s2	Susan	1111682	1122762	11080	face s1
+gaze s2	Susan	1122762	1122884	122	gestures s1
+gaze s2	Susan	1122884	1128241	5357	face s1
+gaze s2	Susan	1128241	1128608	367	gestures s1
+gaze s2	Susan	1128609	1129563	954	face s1
+gaze s2	Susan	1129563	1129702	139	body s1
+gaze s2	Susan	1129702	1130406	704	background floor
+gaze s2	Susan	1130406	1130605	199	background camera
+gaze s2	Susan	1130605	1132362	1757	face s1
+gaze s2	Susan	1132363	1133162	799	gestures s1
+gaze s2	Susan	1133163	1133802	639	face s1
+gaze s2	Susan	1133802	1134162	360	body s1
+gaze s2	Susan	1134162	1134603	441	face s1
+gaze s2	Susan	1134603	1135606	1003	face s3
+gaze s2	Susan	1135607	1137406	1799	face s1
+gaze s2	Susan	1137406	1137573	167	background floor
+gaze s2	Susan	1137574	1140168	2594	face s1
+gaze s2	Susan	1140169	1140722	553	NA
+gaze s2	Susan	1140722	1141417	695	background camera
+gaze s2	Susan	1141417	1143847	2430	background floor
+gaze s2	Susan	1143847	1146100	2253	background camera
+gaze s2	Susan	1146100	1149003	2903	face s3
+gaze s2	Susan	1149003	1149328	325	background wall
+gaze s2	Susan	1149328	1149764	436	NA
+gaze s2	Susan	1149765	1151537	1772	background wall
+gaze s2	Susan	1151537	1153648	2111	face s1
+gaze s2	Susan	1153649	1153964	315	body s1
+gaze s2	Susan	1153964	1155840	1876	face s1
+gaze s2	Susan	1155840	1156246	406	NA
+gaze s2	Susan	1156247	1157042	795	face s1
+gaze s2	Susan	1157042	1157508	466	background wall
+gaze s2	Susan	1157508	1158048	540	background eyes closed
+gaze s2	Susan	1158049	1158777	728	background floor
+gaze s2	Susan	1158777	1160520	1743	face s1
+gaze s2	Susan	1160520	1160647	127	background wall
+gaze s2	Susan	1160648	1161882	1234	NA
+gaze s2	Susan	1161882	1163148	1266	background wall
+gaze s2	Susan	1163148	1164719	1571	face s1
+gaze s2	Susan	1164719	1166720	2001	NA
+gaze s2	Susan	1166720	1167115	395	background wall
+gaze s2	Susan	1167115	1169481	2366	face s1
+gaze s2	Susan	1169481	1169769	288	background wall
+gaze s2	Susan	1169769	1170603	834	face s1
+gaze s2	Susan	1170603	1170764	161	NA
+gaze s2	Susan	1170766	1172365	1599	face s1
+gaze s2	Susan	1172365	1172929	564	background wall
+gaze s2	Susan	1172929	1174065	1136	NA
+gaze s2	Susan	1174065	1175162	1097	face s1
+gaze s2	Susan	1175162	1175817	655	background wall
+gaze s2	Susan	1175817	1178406	2589	face s1
+gaze s2	Susan	1178407	1179404	997	NA
+gaze s2	Susan	1179405	1179811	406	background floor
+gaze s2	Susan	1179812	1180203	391	body s1
+gaze s2	Susan	1180203	1180546	343	background floor
+gaze s2	Susan	1180546	1182003	1457	face s1
+gaze s2	Susan	1182003	1182364	361	NA
+gaze s2	Susan	1182364	1182568	204	background wall
+gaze s2	Susan	1182569	1183133	564	NA
+gaze s2	Susan	1183133	1183685	552	background camera
+gaze s2	Susan	1183685	1184041	356	background floor
+gaze s2	Susan	1184041	1184166	125	background camera
+gaze s2	Susan	1184166	1184607	441	NA
+gaze s2	Susan	1184607	1184884	277	background wall
+gaze s2	Susan	1184884	1185442	558	background wall
+gaze s2	Susan	1185442	1188798	3356	face s3
+gaze s2	Susan	1188798	1189528	730	face s1
+gaze s2	Susan	1189528	1189889	361	face s3
+gaze s2	Susan	1189890	1190610	720	NA
+gaze s2	Susan	1190610	1191486	876	background camera
+gaze s2	Susan	1191486	1191680	194	background wall
+gaze s2	Susan	1191680	1194410	2730	face s3
+gaze s2	Susan	1194410	1194679	269	background wall
+gaze s2	Susan	1194679	1196167	1488	face s3
+gaze s2	Susan	1196167	1196402	235	background wall
+gaze s2	Susan	1196402	1197373	971	face s1
+gaze s2	Susan	1197373	1197640	267	background camera
+gaze s2	Susan	1197640	1198444	804	face s3
+gaze s2	Susan	1198444	1199731	1287	NA
+gaze s3	Saskia	295837	303484	7647	face s1
+gaze s3	Saskia	303484	305558	2074	background wall
+gaze s3	Saskia	305558	306683	1125	face s1
+gaze s3	Saskia	306683	308920	2237	NA
+gaze s3	Saskia	308920	309159	239	face s1
+gaze s3	Saskia	309159	309683	524	NA
+gaze s3	Saskia	309683	312042	2359	face s1
+gaze s3	Saskia	312042	312291	249	body s1
+gaze s3	Saskia	312291	316169	3878	face s1
+gaze s3	Saskia	316169	316489	320	background wall
+gaze s3	Saskia	316489	317165	676	face s1
+gaze s3	Saskia	317165	317311	146	body s1
+gaze s3	Saskia	317311	320370	3059	face s1
+gaze s3	Saskia	320370	321206	836	body s1
+gaze s3	Saskia	321206	326757	5551	face s1
+gaze s3	Saskia	326757	327041	284	body s1
+gaze s3	Saskia	327041	327808	767	face s1
+gaze s3	Saskia	327809	333207	5398	background floor
+gaze s3	Saskia	333207	334010	803	face s1
+gaze s3	Saskia	334010	335170	1160	NA
+gaze s3	Saskia	335171	336005	834	face s1
+gaze s3	Saskia	336005	336662	657	NA
+gaze s3	Saskia	336664	336974	310	face s2
+gaze s3	Saskia	336974	337215	241	NA
+gaze s3	Saskia	337215	338340	1125	face s1
+gaze s3	Saskia	338340	338921	581	face s2
+gaze s3	Saskia	338921	339413	492	NA
+gaze s3	Saskia	339413	339618	205	background wall
+gaze s3	Saskia	339618	340403	785	background floor
+gaze s3	Saskia	340403	341404	1001	face s1
+gaze s3	Saskia	341404	341546	142	NA
+gaze s3	Saskia	341546	341726	180	background wall
+gaze s3	Saskia	341727	342238	511	NA
+gaze s3	Saskia	342239	344295	2056	background own body
+gaze s3	Saskia	344295	345204	909	background wall
+gaze s3	Saskia	345204	350763	5559	face s1
+gaze s3	Saskia	350763	350943	180	body s2
+gaze s3	Saskia	350943	357800	6857	face s2
+gaze s3	Saskia	357800	358901	1101	face s2
+gaze s3	Saskia	358901	360896	1995	NA
+gaze s3	Saskia	360897	361103	206	background wall
+gaze s3	Saskia	361105	362071	966	face s1
+gaze s3	Saskia	362071	363299	1228	background own body
+gaze s3	Saskia	363299	364366	1067	face s1
+gaze s3	Saskia	364366	365404	1038	background floor
+gaze s3	Saskia	365404	366161	757	face s1
+gaze s3	Saskia	366161	368125	1964	background wall
+gaze s3	Saskia	368125	369153	1028	background floor
+gaze s3	Saskia	369153	370684	1531	face s1
+gaze s3	Saskia	370684	371532	848	face s2
+gaze s3	Saskia	371534	372094	560	NA
+gaze s3	Saskia	372096	374051	1955	face s1
+gaze s3	Saskia	374051	375925	1874	NA
+gaze s3	Saskia	375925	377065	1140	background wall
+gaze s3	Saskia	377065	380328	3263	face s1
+gaze s3	Saskia	380328	380478	150	background floor
+gaze s3	Saskia	380478	381297	819	face s1
+gaze s3	Saskia	381297	381446	149	gestures s1
+gaze s3	Saskia	381446	384697	3251	face s1
+gaze s3	Saskia	384697	385292	595	body s1
+gaze s3	Saskia	385293	386173	880	face s1
+gaze s3	Saskia	386175	387003	828	background wall
+gaze s3	Saskia	387003	394920	7917	face s1
+gaze s3	Saskia	394920	396179	1259	background wall
+gaze s3	Saskia	396179	396531	352	face s1
+gaze s3	Saskia	396531	397898	1367	NA
+gaze s3	Saskia	397898	398021	123	body s1
+gaze s3	Saskia	398022	398643	621	face s1
+gaze s3	Saskia	398643	399004	361	body s1
+gaze s3	Saskia	399004	399241	237	background down
+gaze s3	Saskia	399241	400362	1121	face s1
+gaze s3	Saskia	400362	400507	145	body s1
+gaze s3	Saskia	400507	402561	2054	face s1
+gaze s3	Saskia	402561	403717	1156	background wall
+gaze s3	Saskia	403717	404005	288	NA
+gaze s3	Saskia	404005	406523	2518	face s1
+gaze s3	Saskia	406525	407321	796	background wall
+gaze s3	Saskia	407323	407964	641	face s1
+gaze s3	Saskia	407964	409172	1208	face s2
+gaze s3	Saskia	409172	409444	272	body s1
+gaze s3	Saskia	409444	409646	202	face s1
+gaze s3	Saskia	409646	409806	160	background wall
+gaze s3	Saskia	409808	410607	799	NA
+gaze s3	Saskia	410607	411485	878	face s1
+gaze s3	Saskia	411485	412010	525	face s2
+gaze s3	Saskia	412010	413280	1270	face s1
+gaze s3	Saskia	413280	414574	1294	NA
+gaze s3	Saskia	414574	415767	1193	face s1
+gaze s3	Saskia	415767	416402	635	face s2
+gaze s3	Saskia	416402	417861	1459	background floor
+gaze s3	Saskia	417861	423570	5709	face s2
+gaze s3	Saskia	423570	424202	632	face s1
+gaze s3	Saskia	424202	424362	160	background wall
+gaze s3	Saskia	424363	426084	1721	NA
+gaze s3	Saskia	426084	426803	719	face s2
+gaze s3	Saskia	426804	427054	250	face s1
+gaze s3	Saskia	427057	427366	309	NA
+gaze s3	Saskia	427366	428524	1158	face s1
+gaze s3	Saskia	428524	431209	2685	face s2
+gaze s3	Saskia	431209	431646	437	NA
+gaze s3	Saskia	431646	437120	5474	face s2
+gaze s3	Saskia	437120	441397	4277	face s1
+gaze s3	Saskia	441397	441530	133	background wall
+gaze s3	Saskia	441530	442765	1235	NA
+gaze s3	Saskia	442765	447491	4726	face s2
+gaze s3	Saskia	447491	449460	1969	face s1
+gaze s3	Saskia	449461	450131	670	body s1
+gaze s3	Saskia	450131	450665	534	face s1
+gaze s3	Saskia	450666	452245	1579	face s2
+gaze s3	Saskia	452245	452443	198	NA
+gaze s3	Saskia	452443	453985	1542	face s1
+gaze s3	Saskia	453985	454482	497	gestures s1
+gaze s3	Saskia	454482	458390	3908	face s1
+gaze s3	Saskia	458390	459475	1085	background wall
+gaze s3	Saskia	459476	462767	3291	face s2
+gaze s3	Saskia	462767	466246	3479	face s1
+gaze s3	Saskia	466246	466443	197	NA
+gaze s3	Saskia	466443	467091	648	body s1
+gaze s3	Saskia	467091	467482	391	face s1
+gaze s3	Saskia	467482	467963	481	body s1
+gaze s3	Saskia	467963	469407	1444	face s1
+gaze s3	Saskia	469407	469718	311	NA
+gaze s3	Saskia	469718	471840	2122	background floor
+gaze s3	Saskia	471840	476682	4842	background camera
+gaze s3	Saskia	476682	477918	1236	face s1
+gaze s3	Saskia	477918	480712	2794	background camera
+gaze s3	Saskia	480712	483161	2449	face s1
+gaze s3	Saskia	483161	483375	214	NA
+gaze s3	Saskia	483375	484485	1110	background own gestures
+gaze s3	Saskia	484488	485204	716	face s1
+gaze s3	Saskia	485204	485970	766	face s2
+gaze s3	Saskia	485970	490049	4079	face s1
+gaze s3	Saskia	490049	490204	155	NA
+gaze s3	Saskia	490204	491013	809	background wall
+gaze s3	Saskia	491013	491252	239	face s1
+gaze s3	Saskia	491255	494925	3670	face s2
+gaze s3	Saskia	494925	499662	4737	face s1
+gaze s3	Saskia	499662	500094	432	NA
+gaze s3	Saskia	500094	502083	1989	face s1
+gaze s3	Saskia	502083	503659	1576	face s2
+gaze s3	Saskia	503659	506319	2660	face s1
+gaze s3	Saskia	506319	506680	361	NA
+gaze s3	Saskia	506680	506805	125	background wall
+gaze s3	Saskia	506805	508997	2192	face s1
+gaze s3	Saskia	508997	509122	125	background floor
+gaze s3	Saskia	509122	509890	768	face s1
+gaze s3	Saskia	509892	511116	1224	background wall
+gaze s3	Saskia	511116	512328	1212	face s1
+gaze s3	Saskia	512328	513358	1030	background down
+gaze s3	Saskia	513358	514767	1409	face s1
+gaze s3	Saskia	514767	515561	794	face s2
+gaze s3	Saskia	515561	516525	964	face s1
+gaze s3	Saskia	516527	518039	1512	background wall
+gaze s3	Saskia	518039	518207	168	face s1
+gaze s3	Saskia	518207	518529	322	background wall
+gaze s3	Saskia	518530	520037	1507	face s1
+gaze s3	Saskia	520037	520540	503	NA
+gaze s3	Saskia	520540	520812	272	background ceiling
+gaze s3	Saskia	520812	521800	988	face s1
+gaze s3	Saskia	521800	522607	807	background down
+gaze s3	Saskia	522609	523608	999	face s1
+gaze s3	Saskia	523608	525405	1797	face s2
+gaze s3	Saskia	525405	526807	1402	face s1
+gaze s3	Saskia	526807	527312	505	background wall
+gaze s3	Saskia	527312	527537	225	face s1
+gaze s3	Saskia	527537	528216	679	background down
+gaze s3	Saskia	528216	531575	3359	face s1
+gaze s3	Saskia	531575	532128	553	face s2
+gaze s3	Saskia	532128	533560	1432	NA
+gaze s3	Saskia	533560	533884	324	face s1
+gaze s3	Saskia	533884	534989	1105	background wall
+gaze s3	Saskia	534989	535440	451	face s1
+gaze s3	Saskia	535440	537706	2266	background floor
+gaze s3	Saskia	537706	539357	1651	face s1
+gaze s3	Saskia	539357	540689	1332	background wall
+gaze s3	Saskia	540689	543847	3158	face s1
+gaze s3	Saskia	543847	544488	641	background wall
+gaze s3	Saskia	544488	545805	1317	face s1
+gaze s3	Saskia	545805	545921	116	background floor
+gaze s3	Saskia	545921	546041	120	body s1
+gaze s3	Saskia	546041	556121	10080	face s1
+gaze s3	Saskia	556124	556645	521	NA
+gaze s3	Saskia	556646	557767	1121	background wall
+gaze s3	Saskia	557767	558475	708	face s1
+gaze s3	Saskia	558475	558767	292	body s1
+gaze s3	Saskia	558767	561767	3000	face s1
+gaze s3	Saskia	561767	561972	205	background floor
+gaze s3	Saskia	561973	562118	145	face s1
+gaze s3	Saskia	562118	563162	1044	face s2
+gaze s3	Saskia	563162	563320	158	NA
+gaze s3	Saskia	563320	563840	520	face s1
+gaze s3	Saskia	563840	563964	124	NA
+gaze s3	Saskia	563964	568925	4961	face s1
+gaze s3	Saskia	568925	569122	197	NA
+gaze s3	Saskia	569122	571077	1955	face s1
+gaze s3	Saskia	571077	571762	685	NA
+gaze s3	Saskia	571762	573348	1586	face s1
+gaze s3	Saskia	573348	573947	599	body s1
+gaze s3	Saskia	573947	575776	1829	face s1
+gaze s3	Saskia	575776	576125	349	NA
+gaze s3	Saskia	576127	576362	235	background wall
+gaze s3	Saskia	576362	576724	362	NA
+gaze s3	Saskia	576724	578205	1481	face s1
+gaze s3	Saskia	578205	578351	146	background floor
+gaze s3	Saskia	578351	578928	577	face s1
+gaze s3	Saskia	578928	579274	346	background wall
+gaze s3	Saskia	579274	582014	2740	face s1
+gaze s3	Saskia	582014	582200	186	NA
+gaze s3	Saskia	582200	583099	899	face s1
+gaze s3	Saskia	583099	583531	432	face s2
+gaze s3	Saskia	583531	584367	836	background wall
+gaze s3	Saskia	584367	584948	581	face s1
+gaze s3	Saskia	584948	585738	790	background down
+gaze s3	Saskia	585738	586074	336	face s1
+gaze s3	Saskia	586074	586364	290	background wall
+gaze s3	Saskia	586367	587010	643	face s2
+gaze s3	Saskia	587010	588761	1751	face s1
+gaze s3	Saskia	588761	589686	925	NA
+gaze s3	Saskia	589686	592042	2356	face s1
+gaze s3	Saskia	592042	592764	722	body s1
+gaze s3	Saskia	592764	593041	277	face s1
+gaze s3	Saskia	593041	593968	927	face s2
+gaze s3	Saskia	593968	595444	1476	face s1
+gaze s3	Saskia	595444	596128	684	background wall
+gaze s3	Saskia	596128	596354	226	body s1
+gaze s3	Saskia	596354	597360	1006	face s1
+gaze s3	Saskia	597360	600490	3130	background down
+gaze s3	Saskia	600490	604006	3516	face s1
+gaze s3	Saskia	604007	604560	553	background wall
+gaze s3	Saskia	604560	605280	720	NA
+gaze s3	Saskia	605280	608000	2720	face s1
+gaze s3	Saskia	608000	608129	129	face s2
+gaze s3	Saskia	608129	608418	289	NA
+gaze s3	Saskia	608418	609792	1374	face s1
+gaze s3	Saskia	609792	610118	326	background wall
+gaze s3	Saskia	610118	615672	5554	face s1
+gaze s3	Saskia	615672	616683	1011	NA
+gaze s3	Saskia	616683	618135	1452	face s1
+gaze s3	Saskia	618135	619038	903	background floor
+gaze s3	Saskia	619038	619771	733	NA
+gaze s3	Saskia	619771	620476	705	
+gaze s3	Saskia	620476	621439	963	face s1
+gaze s3	Saskia	621439	621735	296	face s1
+gaze s3	Saskia	621735	621849	114	face s1
+gaze s3	Saskia	621849	622200	351	NA
+gaze s3	Saskia	622200	622456	256	face s1
+gaze s3	Saskia	622457	623322	865	NA
+gaze s3	Saskia	623322	624796	1474	face s1
+gaze s3	Saskia	624796	624937	141	background eyes closed
+gaze s3	Saskia	624937	626727	1790	face s1
+gaze s3	Saskia	626727	627361	634	background eyes closed
+gaze s3	Saskia	627361	632201	4840	face s1
+gaze s3	Saskia	632201	632356	155	NA
+gaze s3	Saskia	632356	635442	3086	face s1
+gaze s3	Saskia	635442	636005	563	NA
+gaze s3	Saskia	636005	636170	165	face s2
+gaze s3	Saskia	636171	636360	189	NA
+gaze s3	Saskia	636360	637445	1085	face s1
+gaze s3	Saskia	637445	638529	1084	face s2
+gaze s3	Saskia	638529	641682	3153	face s1
+gaze s3	Saskia	641682	642451	769	background floor
+gaze s3	Saskia	642451	643685	1234	face s1
+gaze s3	Saskia	643685	650292	6607	background wall
+gaze s3	Saskia	650292	651722	1430	face s1
+gaze s3	Saskia	651722	651963	241	NA
+gaze s3	Saskia	651963	653238	1275	background wall
+gaze s3	Saskia	653238	653405	167	NA
+gaze s3	Saskia	653405	654128	723	face s2
+gaze s3	Saskia	654128	654325	197	NA
+gaze s3	Saskia	654325	657242	2917	face s1
+gaze s3	Saskia	657243	657520	277	NA
+gaze s3	Saskia	657520	659423	1903	background wall
+gaze s3	Saskia	659423	659812	389	face s1
+gaze s3	Saskia	659813	660627	814	background floor
+gaze s3	Saskia	660627	661453	826	face s1
+gaze s3	Saskia	661455	661605	150	body s1
+gaze s3	Saskia	661605	661807	202	NA
+gaze s3	Saskia	661807	662362	555	background wall
+gaze s3	Saskia	662363	663395	1032	face s1
+gaze s3	Saskia	663395	663687	292	background wall
+gaze s3	Saskia	663687	664803	1116	face s1
+gaze s3	Saskia	664805	665327	522	NA
+gaze s3	Saskia	665327	666203	876	face s1
+gaze s3	Saskia	666203	666481	278	NA
+gaze s3	Saskia	666481	666807	326	face s2
+gaze s3	Saskia	666807	667067	260	NA
+gaze s3	Saskia	667068	667240	172	background wall
+gaze s3	Saskia	667242	667646	404	NA
+gaze s3	Saskia	667647	668735	1088	face s1
+gaze s3	Saskia	668735	668857	122	body s1
+gaze s3	Saskia	668858	669871	1013	NA
+gaze s3	Saskia	669871	670371	500	background own gestures
+gaze s3	Saskia	670372	671285	913	face s1
+gaze s3	Saskia	671285	671939	654	face s2
+gaze s3	Saskia	671939	673454	1515	face s1
+gaze s3	Saskia	673454	674640	1186	face s2
+gaze s3	Saskia	674640	676620	1980	background wall
+gaze s3	Saskia	676620	677279	659	face s1
+gaze s3	Saskia	677279	677599	320	NA
+gaze s3	Saskia	677599	678241	642	face s1
+gaze s3	Saskia	678241	679081	840	face s2
+gaze s3	Saskia	679081	680172	1091	face s1
+gaze s3	Saskia	680172	680532	360	background wall
+gaze s3	Saskia	680532	683478	2946	face s1
+gaze s3	Saskia	683478	683754	276	NA
+gaze s3	Saskia	683754	683876	122	face s2
+gaze s3	Saskia	683878	684269	391	NA
+gaze s3	Saskia	684269	688293	4024	face s1
+gaze s3	Saskia	688293	688436	143	NA
+gaze s3	Saskia	688436	690491	2055	face s1
+gaze s3	Saskia	690491	690914	423	NA
+gaze s3	Saskia	690914	692409	1495	face s1
+gaze s3	Saskia	692409	692760	351	face s2
+gaze s3	Saskia	692760	693517	757	face s1
+gaze s3	Saskia	693517	694405	888	background floor
+gaze s3	Saskia	694405	695324	919	face s1
+gaze s3	Saskia	695324	696417	1093	face s2
+gaze s3	Saskia	696419	697927	1508	face s1
+gaze s3	Saskia	697927	698125	198	background wall
+gaze s3	Saskia	698125	698685	560	face s1
+gaze s3	Saskia	698685	699283	598	background wall
+gaze s3	Saskia	699283	699653	370	face s1
+gaze s3	Saskia	699653	700906	1253	background down
+gaze s3	Saskia	700906	701393	487	face s1
+gaze s3	Saskia	701393	711804	10411	face s2
+gaze s3	Saskia	711804	714129	2325	face s1
+gaze s3	Saskia	714129	715200	1071	face s2
+gaze s3	Saskia	715200	716246	1046	face s1
+gaze s3	Saskia	716246	716685	439	body s1
+gaze s3	Saskia	716685	717735	1050	face s2
+gaze s3	Saskia	717735	717886	151	NA
+gaze s3	Saskia	717886	718793	907	face s1
+gaze s3	Saskia	718793	719008	215	gestures s1
+gaze s3	Saskia	719009	724898	5889	face s2
+gaze s3	Saskia	724898	726569	1671	face s1
+gaze s3	Saskia	726569	727738	1169	background floor
+gaze s3	Saskia	727738	728198	460	face s2
+gaze s3	Saskia	728198	728967	769	face s1
+gaze s3	Saskia	728967	729562	595	NA
+gaze s3	Saskia	729562	730922	1360	background wall
+gaze s3	Saskia	730922	731370	448	face s1
+gaze s3	Saskia	731371	733763	2392	background down
+gaze s3	Saskia	733763	739727	5964	face s2
+gaze s3	Saskia	739727	740086	359	body s2
+gaze s3	Saskia	740086	748843	8757	face s2
+gaze s3	Saskia	748843	749163	320	background wall
+gaze s3	Saskia	749163	750409	1246	face s2
+gaze s3	Saskia	750410	750655	245	background wall
+gaze s3	Saskia	750655	750818	163	face s1
+gaze s3	Saskia	750818	751296	478	background wall
+gaze s3	Saskia	751296	751571	275	face s2
+gaze s3	Saskia	751571	752086	515	NA
+gaze s3	Saskia	752086	758618	6532	face s2
+gaze s3	Saskia	758618	760007	1389	face s1
+gaze s3	Saskia	760007	760203	196	background wall
+gaze s3	Saskia	760203	760493	290	face s1
+gaze s3	Saskia	760493	761481	988	NA
+gaze s3	Saskia	761481	768051	6570	face s2
+gaze s3	Saskia	768052	769565	1513	background own gestures
+gaze s3	Saskia	769565	773046	3481	face s2
+gaze s3	Saskia	773046	773441	395	face s1
+gaze s3	Saskia	773441	773599	158	NA
+gaze s3	Saskia	773599	773912	313	background wall
+gaze s3	Saskia	773912	774037	125	face s1
+gaze s3	Saskia	774039	778246	4207	face s2
+gaze s3	Saskia	778246	779206	960	NA
+gaze s3	Saskia	779207	782377	3170	face s1
+gaze s3	Saskia	782377	786076	3699	face s2
+gaze s3	Saskia	786076	789301	3225	face s1
+gaze s3	Saskia	789301	792243	2942	face s2
+gaze s3	Saskia	792246	792725	479	NA
+gaze s3	Saskia	792728	794962	2234	face s2
+gaze s3	Saskia	794962	795603	641	NA
+gaze s3	Saskia	795603	796164	561	face s1
+gaze s3	Saskia	796164	796769	605	NA
+gaze s3	Saskia	796769	797087	318	face s2
+gaze s3	Saskia	797087	797525	438	background wall
+gaze s3	Saskia	797525	798289	764	face s1
+gaze s3	Saskia	798289	801408	3119	background wall
+gaze s3	Saskia	801408	809579	8171	face s2
+gaze s3	Saskia	809579	809843	264	background wall
+gaze s3	Saskia	809843	810481	638	NA
+gaze s3	Saskia	810483	811069	586	background wall
+gaze s3	Saskia	811069	811604	535	body s1
+gaze s3	Saskia	811604	812338	734	face s1
+gaze s3	Saskia	812339	813004	665	face s2
+gaze s3	Saskia	813004	814212	1208	background wall
+gaze s3	Saskia	814212	843125	28913	face s2
+gaze s3	Saskia	843125	843814	689	NA
+gaze s3	Saskia	843814	845845	2031	face s1
+gaze s3	Saskia	845846	850121	4275	face s2
+gaze s3	Saskia	850121	850530	409	face s1
+gaze s3	Saskia	850530	851525	995	NA
+gaze s3	Saskia	851525	851723	198	background floor
+gaze s3	Saskia	851723	853931	2208	face s1
+gaze s3	Saskia	853931	854441	510	body s1
+gaze s3	Saskia	854441	856122	1681	face s1
+gaze s3	Saskia	856122	857607	1485	background floor
+gaze s3	Saskia	857609	861362	3753	face s1
+gaze s3	Saskia	861362	862004	642	NA
+gaze s3	Saskia	862004	863526	1522	background floor
+gaze s3	Saskia	863526	864281	755	face s1
+gaze s3	Saskia	864281	866444	2163	background floor
+gaze s3	Saskia	866444	867397	953	face s1
+gaze s3	Saskia	867397	868202	805	background wall
+gaze s3	Saskia	868202	868524	322	face s2
+gaze s3	Saskia	868525	869005	480	background down
+gaze s3	Saskia	869005	869847	842	face s1
+gaze s3	Saskia	869847	870082	235	background wall
+gaze s3	Saskia	870084	870357	273	NA
+gaze s3	Saskia	870357	874326	3969	face s1
+gaze s3	Saskia	874326	875273	947	background wall
+gaze s3	Saskia	875273	875853	580	face s1
+gaze s3	Saskia	875853	876005	152	background wall
+gaze s3	Saskia	876005	876282	277	face s1
+gaze s3	Saskia	876282	876880	598	background wall
+gaze s3	Saskia	876880	877284	404	face s1
+gaze s3	Saskia	877284	878897	1613	body s1
+gaze s3	Saskia	878897	879603	706	background floor
+gaze s3	Saskia	879603	880364	761	face s1
+gaze s3	Saskia	880364	882828	2464	background wall
+gaze s3	Saskia	882828	883534	706	face s1
+gaze s3	Saskia	883534	884121	587	background wall
+gaze s3	Saskia	884121	884943	822	face s1
+gaze s3	Saskia	884943	886366	1423	background wall
+gaze s3	Saskia	886366	887126	760	background floor
+gaze s3	Saskia	887126	891726	4600	face s2
+gaze s3	Saskia	891726	892246	520	NA
+gaze s3	Saskia	892246	892808	562	background wall
+gaze s3	Saskia	892808	893329	521	face s1
+gaze s3	Saskia	893329	899361	6032	face s2
+gaze s3	Saskia	899361	899758	397	NA
+gaze s3	Saskia	899758	900130	372	face s1
+gaze s3	Saskia	900130	900489	359	background wall
+gaze s3	Saskia	900489	904243	3754	face s1
+gaze s3	Saskia	904243	907659	3416	face s2
+gaze s3	Saskia	907660	908093	433	face s1
+gaze s3	Saskia	908093	910915	2822	face s2
+gaze s3	Saskia	910915	913939	3024	face s1
+gaze s3	Saskia	913939	915118	1179	background wall
+gaze s3	Saskia	915118	916602	1484	face s1
+gaze s3	Saskia	916602	922648	6046	background wall
+gaze s3	Saskia	922649	924201	1552	NA
+gaze s3	Saskia	924201	928202	4001	face s1
+gaze s3	Saskia	928202	928652	450	NA
+gaze s3	Saskia	928652	936395	7743	face s1
+gaze s3	Saskia	936395	936519	124	body s1
+gaze s3	Saskia	936519	937124	605	face s1
+gaze s3	Saskia	937127	938008	881	NA
+gaze s3	Saskia	938009	939996	1987	face s1
+gaze s3	Saskia	939996	940683	687	NA
+gaze s3	Saskia	940683	941376	693	background wall
+gaze s3	Saskia	941376	942599	1223	face s1
+gaze s3	Saskia	942599	942925	326	background wall
+gaze s3	Saskia	942925	944079	1154	face s2
+gaze s3	Saskia	944079	944718	639	background wall
+gaze s3	Saskia	944718	945835	1117	face s1
+gaze s3	Saskia	945835	946482	647	background wall
+gaze s3	Saskia	946482	946807	325	face s1
+gaze s3	Saskia	946807	947818	1011	background wall
+gaze s3	Saskia	947818	949098	1280	face s1
+gaze s3	Saskia	949098	949445	347	background wall
+gaze s3	Saskia	949445	949721	276	face s2
+gaze s3	Saskia	949721	951798	2077	face s1
+gaze s3	Saskia	951798	952891	1093	background floor
+gaze s3	Saskia	952891	959522	6631	face s1
+gaze s3	Saskia	959522	959840	318	background wall
+gaze s3	Saskia	959840	969486	9646	face s1
+gaze s3	Saskia	969486	970240	754	background wall
+gaze s3	Saskia	970240	974402	4162	face s1
+gaze s3	Saskia	974402	975805	1403	background wall
+gaze s3	Saskia	975807	976820	1013	face s1
+gaze s3	Saskia	976820	977492	672	background floor
+gaze s3	Saskia	977492	978054	562	face s1
+gaze s3	Saskia	978054	978489	435	background wall
+gaze s3	Saskia	978489	979052	563	NA
+gaze s3	Saskia	979052	983671	4619	face s1
+gaze s3	Saskia	983671	984052	381	face s2
+gaze s3	Saskia	984052	986568	2516	face s1
+gaze s3	Saskia	986568	987207	639	background wall
+gaze s3	Saskia	987207	1005295	18088	face s1
+gaze s3	Saskia	1005295	1005802	507	NA
+gaze s3	Saskia	1005802	1010738	4936	face s1
+gaze s3	Saskia	1010738	1011602	864	NA
+gaze s3	Saskia	1011602	1015287	3685	face s1
+gaze s3	Saskia	1015287	1016656	1369	background wall
+gaze s3	Saskia	1016656	1017043	387	NA
+gaze s3	Saskia	1017043	1018440	1397	face s1
+gaze s3	Saskia	1018440	1019040	600	NA
+gaze s3	Saskia	1019040	1019644	604	face s1
+gaze s3	Saskia	1019646	1020042	396	NA
+gaze s3	Saskia	1020042	1021528	1486	background floor
+gaze s3	Saskia	1021528	1022439	911	face s1
+gaze s3	Saskia	1022439	1023015	576	body s1
+gaze s3	Saskia	1023015	1023672	657	face s1
+gaze s3	Saskia	1023672	1024329	657	body s1
+gaze s3	Saskia	1024329	1027684	3355	face s1
+gaze s3	Saskia	1027684	1028158	474	background wall
+gaze s3	Saskia	1028158	1029707	1549	face s1
+gaze s3	Saskia	1029710	1030935	1225	face s2
+gaze s3	Saskia	1030935	1031483	548	face s1
+gaze s3	Saskia	1031483	1031765	282	face s2
+gaze s3	Saskia	1031765	1049969	18204	face s1
+gaze s3	Saskia	1049969	1050645	676	NA
+gaze s3	Saskia	1050645	1051438	793	background wall
+gaze s3	Saskia	1051438	1053684	2246	face s1
+gaze s3	Saskia	1053684	1055612	1928	background down
+gaze s3	Saskia	1055613	1059242	3629	face s1
+gaze s3	Saskia	1059242	1059364	122	background wall
+gaze s3	Saskia	1059364	1059775	411	NA
+gaze s3	Saskia	1059776	1062119	2343	face s1
+gaze s3	Saskia	1062119	1062362	243	NA
+gaze s3	Saskia	1062362	1065323	2961	background wall
+gaze s3	Saskia	1065323	1065442	119	NA
+gaze s3	Saskia	1065443	1076239	10796	face s1
+gaze s3	Saskia	1076239	1077361	1122	body s1
+gaze s3	Saskia	1077362	1080438	3076	face s1
+gaze s3	Saskia	1080438	1081764	1326	background wall
+gaze s3	Saskia	1081764	1082701	937	face s1
+gaze s3	Saskia	1082701	1083089	388	body s1
+gaze s3	Saskia	1083089	1084796	1707	face s1
+gaze s3	Saskia	1084796	1085125	329	face s2
+gaze s3	Saskia	1085125	1087653	2528	face s1
+gaze s3	Saskia	1087653	1088678	1025	background camera
+gaze s3	Saskia	1088678	1091093	2415	face s1
+gaze s3	Saskia	1091096	1091567	471	face s2
+gaze s3	Saskia	1091567	1092881	1314	face s1
+gaze s3	Saskia	1092881	1093135	254	body s1
+gaze s3	Saskia	1093136	1093603	467	face s1
+gaze s3	Saskia	1093603	1095768	2165	background camera
+gaze s3	Saskia	1095769	1096405	636	background wall
+gaze s3	Saskia	1096405	1096541	136	body s1
+gaze s3	Saskia	1096543	1096848	305	face s1
+gaze s3	Saskia	1096848	1097104	256	body s1
+gaze s3	Saskia	1097104	1103136	6032	face s1
+gaze s3	Saskia	1103136	1103260	124	background wall
+gaze s3	Saskia	1103260	1103649	389	NA
+gaze s3	Saskia	1103649	1104175	526	face s1
+gaze s3	Saskia	1104175	1105098	923	face s2
+gaze s3	Saskia	1105098	1108053	2955	face s1
+gaze s3	Saskia	1108054	1108724	670	background wall
+gaze s3	Saskia	1108724	1109083	359	NA
+gaze s3	Saskia	1109083	1109810	727	face s1
+gaze s3	Saskia	1109810	1110337	527	body s1
+gaze s3	Saskia	1110337	1111205	868	face s1
+gaze s3	Saskia	1111205	1111760	555	body s1
+gaze s3	Saskia	1111760	1128293	16533	face s1
+gaze s3	Saskia	1128295	1128682	387	background wall
+gaze s3	Saskia	1128682	1133930	5248	face s1
+gaze s3	Saskia	1133930	1134279	349	background wall
+gaze s3	Saskia	1134279	1134401	122	NA
+gaze s3	Saskia	1134401	1137375	2974	face s1
+gaze s3	Saskia	1137375	1137768	393	face s2
+gaze s3	Saskia	1137768	1138121	353	background floor
+gaze s3	Saskia	1138121	1142726	4605	face s1
+gaze s3	Saskia	1142726	1143971	1245	background wall
+gaze s3	Saskia	1143971	1144285	314	body s1
+gaze s3	Saskia	1144285	1147660	3375	face s1
+gaze s3	Saskia	1147660	1149295	1635	face s2
+gaze s3	Saskia	1149295	1149644	349	background floor
+gaze s3	Saskia	1149644	1156840	7196	face s1
+gaze s3	Saskia	1156840	1159687	2847	face s2
+gaze s3	Saskia	1159690	1165656	5966	face s1
+gaze s3	Saskia	1165656	1166482	826	background wall
+gaze s3	Saskia	1166482	1166692	210	body s1
+gaze s3	Saskia	1166692	1166886	194	face s1
+gaze s3	Saskia	1166886	1167935	1049	NA
+gaze s3	Saskia	1167935	1168648	713	face s2
+gaze s3	Saskia	1168648	1173281	4633	face s1
+gaze s3	Saskia	1173281	1173401	120	NA
+gaze s3	Saskia	1173402	1174764	1362	background floor
+gaze s3	Saskia	1174764	1175282	518	face s1
+gaze s3	Saskia	1175282	1175885	603	NA
+gaze s3	Saskia	1175885	1176245	360	background wall
+gaze s3	Saskia	1176245	1176711	466	body s1
+gaze s3	Saskia	1176711	1178042	1331	face s1
+gaze s3	Saskia	1178042	1180442	2400	face s2
+gaze s3	Saskia	1180442	1180757	315	body s2
+gaze s3	Saskia	1180757	1191764	11007	face s2
+gaze s3	Saskia	1191764	1193160	1396	face s1
+gaze s3	Saskia	1193160	1195927	2767	face s2
+gaze s3	Saskia	1195927	1197605	1678	face s1
+gaze s3	Saskia	1197605	1198525	920	NA
+gaze s3	Saskia	1198526	1199492	966	face s1

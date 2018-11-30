@@ -31,10 +31,7 @@ public class HeadFaceAction : ColorChangeableAction
         }
     }
 
-    public override void execute3D(int current)
-    {
-        execute(current);
-    }
+
 
     public override string ToString ()
 	{

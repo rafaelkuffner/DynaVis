@@ -14,14 +14,14 @@ public class MappingsManager : MonoBehaviour {
 	//public List<string> MappingInputList { get; set; }
 	///public List<string> MappingOutputList { get; set; }
 
-	private AnnotationSetupManager annotationSetupManager;
+	private SetupButton setup;
 	private GameObject currentMappingInputGO = null;
 	private GameObject currentMappingOutputGO = null;
 	private string currentModifier;
 
 	// Use this for initialization
 	void Start () {
-		annotationSetupManager = GameObject.Find ("Boss Object").GetComponent<AnnotationSetupManager> ();
+        setup = GameObject.Find("Button Setup").GetComponent<SetupButton>();
 		MappingInputOutput = new Dictionary<string, string> ();
 		//MappingInputList = new List<string> ();
 		//MappingOutputList = new List<string> ();
@@ -101,8 +101,8 @@ public class MappingsManager : MonoBehaviour {
 
 	public void OnClickNext(){
 		// TODO: this showed be done by the EventSystem
-		annotationSetupManager.MappingsSetupPanel.SetActive (false);
-		annotationSetupManager.ModifiersSetupPanel.SetActive(true);
+		setup.MappingsSetupPanel.SetActive (false);
+		setup.ModifiersSetupPanel.SetActive(true);
 	}
 	
 

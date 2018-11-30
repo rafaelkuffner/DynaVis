@@ -12,7 +12,7 @@ public class TierManager : MonoBehaviour {
 	public Transform contentPanelNewTiers;
 
 	private Dictionary<string, List<string>> newTiersConfig;
-	private AnnotationSetupManager annotationSetupManager;
+	private SetupButton setup;
 	private List<string> setupTiersList;
 	private Dictionary<GameObject, List<GameObject>> itemListByInputField;
 	private GameObject currentInputFieldGO;
@@ -26,15 +26,18 @@ public class TierManager : MonoBehaviour {
 		currentInputFieldGO = null;
 		currentButtonGO = null;
 
-		annotationSetupManager = GameObject.Find ("Boss Object").GetComponent<AnnotationSetupManager> ();
-		//Simulation boss = annotationSetupManager.GetBoss ();
-		setupTiersList = annotationSetupManager.SetupTiersList;
+        setup = GameObject.Find("Button Setup").GetComponent<SetupButton>();
+        //Simulation boss = annotationSetupManager.GetBoss ();
+		setupTiersList = setup.SetupTiersList;
 
 		foreach (string t in setupTiersList) {
 			GameObject tierStringGO = GameObject.Instantiate (itemList);
 			Button currentButton = tierStringGO.GetComponent<Button> ();
-			tierStringGO.GetComponent<SampleItemButton> ().SetItemListText (t);
+            SampleItemButton sib = tierStringGO.GetComponent<SampleItemButton>();
+            sib.SetItemListText(t);
+            sib.myPanel = SampleItemButton.Panel.Left;
 			tierStringGO.transform.SetParent (contentPanelTierStrings);
+            tierStringGO.transform.localScale = Vector3.one;
 
 			EventTrigger trigger = currentButton.GetComponent<EventTrigger>();
 			EventTrigger.Entry entry = new EventTrigger.Entry();
@@ -42,16 +45,31 @@ public class TierManager : MonoBehaviour {
 			entry.callback.AddListener((data) => { OnPointerClickButton((PointerEventData)data); });
 			trigger.triggers.Add(entry);
 		}
+
+        AddDefaultTiers();
+
 	}
 
+    //Vito Requested this
+    public void AddDefaultTiers()
+    {
+        ClickedAddNewTier("Gaze");
+        ClickedAddNewTier("Change Location");
+        ClickedAddNewTier("Upper Body Movement");
+        ClickedAddNewTier("Lower Body Movement");
+        ClickedAddNewTier("Facial expression");
+    
+    }
 
-	public void ClickedAddNewTier(){
+	public void ClickedAddNewTier(string title){
 
 		Debug.Log ("Add new tier");
 		GameObject newInputFieldGO = GameObject.Instantiate (inputField);
 		InputField currentInputField = newInputFieldGO.GetComponent<InputField> ();
 		currentInputField.onEndEdit.AddListener (delegate {EditedInputField (); });
+        currentInputField.text = title;
 		newInputFieldGO.transform.SetParent (contentPanelNewTiers);
+        newInputFieldGO.transform.localScale = Vector3.one;
 		itemListByInputField.Add (newInputFieldGO, new List<GameObject>());
 
 		EventTrigger trigger = currentInputField.GetComponent<EventTrigger>();
@@ -61,6 +79,34 @@ public class TierManager : MonoBehaviour {
 		trigger.triggers.Add(entry);
 	}
 
+    public void SortTiers()
+    {
+       SampleItemButton[] items = contentPanelTierStrings.GetComponentsInChildren<SampleItemButton>();
+       List<string> names = new List<string>(); 
+       foreach (SampleItemButton i in items)
+       {
+           names.Add(i.GetItemListText());
+           GameObject.Destroy(i.gameObject);
+       }
+
+       names.Sort();
+       foreach (string t in names)
+       {
+           GameObject tierStringGO = GameObject.Instantiate(itemList);
+           Button currentButton = tierStringGO.GetComponent<Button>();
+           SampleItemButton sib = tierStringGO.GetComponent<SampleItemButton>();
+           sib.SetItemListText(t);
+           sib.myPanel = SampleItemButton.Panel.Left;
+           tierStringGO.transform.SetParent(contentPanelTierStrings);
+           tierStringGO.transform.localScale = Vector3.one;
+
+           EventTrigger trigger = currentButton.GetComponent<EventTrigger>();
+           EventTrigger.Entry entry = new EventTrigger.Entry();
+           entry.eventID = EventTriggerType.PointerDown;
+           entry.callback.AddListener((data) => { OnPointerClickButton((PointerEventData)data); });
+           trigger.triggers.Add(entry);
+       }
+    }
 	public void DeleteNewTier(){
 	
 		// Delete new Tiers
@@ -92,31 +138,81 @@ public class TierManager : MonoBehaviour {
 		GameObject currentButtonGO = data.selectedObject;
 		Debug.Log("OnPointerClickButton called = " + currentButtonGO.GetComponent<SampleItemButton>().GetItemListText());
 
-		if (currentInputFieldGO == null)
-			return;
+        SampleItemButton sib = currentButtonGO.GetComponent<SampleItemButton>();
+        if (sib.myPanel == SampleItemButton.Panel.Left) { 
 
-		string selectedTier = currentInputFieldGO.GetComponent<InputField>().text.ToString ();
-		foreach (string tier in newTiersConfig.Keys) {
-			if (selectedTier.Equals (tier)) {
-				newTiersConfig [tier].Add (currentButtonGO.GetComponent<SampleItemButton>().GetItemListText());
-				itemListByInputField [currentInputFieldGO].Add (currentButtonGO);
-				currentButtonGO.transform.SetParent (contentPanelNewTiers);
-			}
-		}
+            
+		    if (currentInputFieldGO == null)
+			    return;
+
+            currentButtonGO.GetComponent<SampleItemButton>().myPanel = SampleItemButton.Panel.Right;
+            string selectedTier = currentInputFieldGO.GetComponent<InputField>().text.ToString ();
+		    foreach (string tier in newTiersConfig.Keys) {
+			    if (selectedTier.Equals (tier)) {
+				    newTiersConfig [tier].Add (currentButtonGO.GetComponent<SampleItemButton>().GetItemListText());
+				    itemListByInputField [currentInputFieldGO].Add (currentButtonGO);
+				    currentButtonGO.transform.SetParent (contentPanelNewTiers);
+                    currentButtonGO.transform.SetSiblingIndex(currentInputFieldGO.transform.GetSiblingIndex() + 1);
+			    }
+		    }
+        }
+        else
+        {
+            currentButtonGO.transform.SetParent(contentPanelTierStrings);
+            currentButtonGO.GetComponent<SampleItemButton>().myPanel = SampleItemButton.Panel.Left;
+            string deltier = "";
+            string value = currentButtonGO.GetComponent<SampleItemButton>().GetItemListText();
+            foreach (KeyValuePair<string,List<string>> pair in newTiersConfig)
+            {
+                if (pair.Value.Contains(value))
+                {
+                    deltier = pair.Key;
+                    break;
+                }
+            }
+            newTiersConfig[deltier].Remove(value);
+            GameObject tierGO = null;
+            foreach (KeyValuePair<GameObject, List<GameObject>> objectPair in itemListByInputField)
+            {
+                if (objectPair.Value.Contains(currentButtonGO))
+                {
+                    tierGO = objectPair.Key;
+                    break;
+                }
+            }
+            itemListByInputField[tierGO].Remove(currentButtonGO);
+        }
 	}
 
+
+    Color normalTextFieldColor;
 	public void OnPointerClickInputField(PointerEventData data)
 	{
-		currentInputFieldGO = data.selectedObject;
+        if (currentInputFieldGO == null)
+        {
+            normalTextFieldColor = data.selectedObject.GetComponent<InputField>().colors.normalColor;
+        }
+        else { 
+            ColorBlock cb = currentInputFieldGO.GetComponent<InputField>().colors;
+            cb.normalColor = normalTextFieldColor;
+            currentInputFieldGO.GetComponent<InputField>().colors = cb;
+        }
+        currentInputFieldGO = data.selectedObject;
+
+        ColorBlock cb1 = currentInputFieldGO.GetComponent<InputField>().colors;
+        cb1.normalColor = cb1.highlightedColor;
+        currentInputFieldGO.GetComponent<InputField>().colors = cb1;
+
+        
 		Debug.Log("OnPointerClickInputField called = " + currentInputFieldGO.GetComponent<InputField>().text.ToString ());
 	}
 
 	public void OnClickNext(){
-		annotationSetupManager.SetNewTierConfig (newTiersConfig);
+		setup.SetNewTierConfig (newTiersConfig);
 
 		// TODO: this showed be done by the EventSystem
-		annotationSetupManager.TierSetupPanel.SetActive (false);
-		annotationSetupManager.ActionSetupPanel.SetActive(true);
+		setup.TierSetupPanel.SetActive (false);
+		setup.ActionSetupPanel.SetActive(true);
 	}
 
 }

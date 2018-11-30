@@ -1,0 +1,1989 @@
+Begin Time - msec	End Time - msec	Duration - msec	gaze s1	gaze s2	gaze s3	
+290902	291657	755	background wall		
+291657	293076	1419	face s3		
+293076	298161	5085	body s3		
+298161	298715	554	background floor	face s3	face s1
+298718	300832	2114	face s3		face s1
+300832	300997	165	body s3	gestures s3	face s1
+300997	303681	2684	face s3		
+303681	304622	941	background own body	face s3	background wall
+304622	313374	8752	face s1		
+313374	314919	1545	NA	face s1	face s1
+314919	317036	2117	face s3		
+317036	318687	1651	background wall		
+318687	319721	1034	background ceiling	face s1	face s1
+319721	320451	730	face s3	face s1	
+320451	320679	228	background floor	face s1	body s1
+320679	320817	138	body s3	face s1	body s1
+320817	324198	3381	face s3		
+324198	327243	3045	face s2		
+327243	328326	1083	face s3	NA	
+328326	328804	478	background floor		background floor
+328804	330985	2181	face s3		background floor
+330985	331162	177	NA	body s1	background floor
+331162	332161	999	face s3	body s1	background floor
+332161	332400	239	background floor	body s1	background floor
+332400	335795	3395	face s3		
+335795	343915	8120	NA		
+343915	344846	931	face s3		
+344846	347502	2656	background floor		
+347502	349889	2387	face s3		face s1
+349889	350179	290	NA	face s1	face s1
+350179	350699	520	background wall	face s1	face s1
+350704	351181	477	face s3	face s1	
+351181	352127	946	face s2		face s2
+352127	353480	1353	background wall		face s2
+353480	353784	304	background ceiling		face s2
+353784	355306	1522	background wall		face s2
+355306	356285	979	face s2		face s2
+356285	357926	1641	background wall		
+357926	359218	1292	face s3		
+359218	360528	1310	background wall	face s3	NA
+360528	365599	5071	face s3	face s3	
+365599	365966	367	background own body	face s3	face s1
+365966	369533	3567	face s3		
+369533	369726	193	background wall	face s3	face s1
+369726	372353	2627	background eyes closed		
+372353	376067	3714	background wall		
+376067	376809	742	face s3		background wall
+376809	377793	984	background window		
+377793	379628	1835	background floor		face s1
+379628	379967	339	background eyes closed	face s1	face s1
+379970	380483	513	body s3	face s1	
+380483	383042	2559	face s3 		
+383042	383400	358	background eyes closed		face s1
+383400	383846	446	background window	body s1	face s1
+383846	384117	271	background wall	body s1	face s1
+384117	385082	965	background window	body s1	
+385082	387800	2718	face s3		
+387800	388723	923	background window	body s1	face s1
+388723	389520	797	background ceiling		face s1
+389520	390414	894	background floor		face s1
+390414	391233	819	background window		face s1
+391233	392280	1047	background wall		face s1
+392280	395357	3077	face s3		
+395357	396119	762	background window		background wall
+396119	396562	443	background wall	body s1	
+396562	397158	596	body s3	body s1	NA
+397158	398112	954	face s3		
+398112	398648	536	face s2		
+398649	401295	2646	face s3		
+401295	402263	968	background wall		face s1
+402263	402528	265	background window	body s1	face s1
+402528	403944	1416	background eyes closed		
+403944	404075	131	face s3	face s1	
+404076	404676	600	face s2	face s1	face s1
+404676	407380	2704	face s3		
+407380	408124	744	background wall		
+408124	409610	1486	face s3	face s3	
+409610	409768	158	background wall	face s3	
+409769	411619	1850	face s3		
+411619	415810	4191	NA		
+415810	424357	8547	face s2		
+424357	425411	1054	face s3		
+425411	426728	1317	face s2		
+426728	427238	510	body s2		
+427238	430324	3086	face s2		
+430324	430558	234	body s2	face s1	face s2
+430558	436961	6403	face s2		
+436961	437962	1001	NA	face s1	
+437962	438228	266	face s2	face s1	face s1
+438228	439123	895	face s3		face s1
+439123	439853	730	face s2	face s3	face s1
+439853	442004	2151	face s3	face s3	
+442006	444927	2921	face s2		
+444927	447111	2184	background eyes closed		face s2
+447111	447285	174	background wall	NA	face s2
+447285	448453	1168	face s2	NA	
+448453	449881	1428	NA		
+449881	450037	156	face s3	background wall	body s1
+450037	450847	810	NA		
+450851	451160	309	face s2		face s2
+451160	452755	1595	NA		
+452755	453364	609	face s3	face s1	face s1
+453364	454039	675	face s2	face s1	
+454039	455357	1318	face s3	face s1	
+455357	456024	667	background window	face s1	face s1
+456024	456202	178	background eyes closed	face s1	face s1
+456202	456456	254	face s3		face s1
+456456	457179	723	face s2		face s1
+457179	457723	544	NA	NA	face s1
+457723	458304	581	background wall		face s1
+458304	463350	5046	face s2		
+463350	464988	1638	face s3	face s1	face s1
+464989	467167	2178	background own body		
+467167	470721	3554	NA		
+470721	472941	2220	background window		
+472941	475279	2338	face s3		background camera
+475279	479044	3765	background camera		
+479047	479800	753	background wall		background camera
+479800	482188	2388	NA		
+482189	482657	468	background wall		face s1
+482657	484672	2015	face s3		
+484672	487119	2447	face s2		
+487119	488208	1089	face s3		face s1
+488208	488623	415	background wall	NA	face s1
+488623	490467	1844	background ceiling		
+490467	491574	1107	background own body		
+491574	492379	805	face s3		face s2
+492379	493961	1582	face s2		face s2
+493961	494211	250	body s2		face s2
+494211	496452	2241	face s2		
+496452	496680	228	NA	face s1	face s1
+496680	497200	520	face s3	face s1	face s1
+497200	498213	1013	face s2	face s1	face s1
+498213	500217	2004	face s3		
+500217	501096	879	face s2		face s1
+501096	502312	1216	face s3	face s1	
+502312	503201	889	face s2	face s1	face s2
+503201	506412	3211	face s3		
+506412	507679	1267	background own body	face s3	
+507680	513531	5851	face s3 		
+513531	515012	1481	background wall		
+515012	519484	4472	NA		
+519484	520198	714	background wall	background wall	
+520198	520598	400	NA	background wall	
+520598	522881	2283	background wall		
+522881	524728	1847	face s3		
+524728	526719	1991	background wall		
+526719	527251	532	NA		
+527251	528725	1474	background wall		
+528725	533143	4418	NA		
+533143	536064	2921	background floor		
+536064	536246	182	NA	face s3	background floor
+536246	536474	228	background wall	face s3	background floor
+536474	537082	608	background wall		background floor
+537082	537283	201	face s3		background floor
+537283	538040	757	NA		
+538040	539217	1177	face s3		face s1
+539217	540384	1167	background own body	face s3	
+540384	541555	1171	face s3	face s3	
+541555	541997	442	body s3		face s1
+541997	545307	3310	face s3		
+545310	545447	137	body s3	face s3	face s1
+545451	546656	1205	face s3		
+546656	548203	1547	background window		face s1
+548206	548847	641	background wall	body s3	face s1
+548847	549565	718	face s2		face s1
+549565	550967	1402	face s3		face s1
+550967	552239	1272	face s2	face s1	face s1
+552239	552439	200	body s2		face s1
+552439	552681	242	body s3	body s1	face s1
+552681	553763	1082	background window		face s1
+553764	557807	4043	face s3		
+557807	559160	1353	background eyes closed		
+559160	559518	358	face s3		face s1
+559518	559766	248	background wall		face s1
+559767	561165	1398	background window	face s1	face s1
+561165	562642	1477	face s3		
+562642	564358	1716	face s2		
+564358	565482	1124	face s3		face s1
+565482	566852	1370	background window	face s1	face s1
+566852	569053	2201	face s3		
+569054	569681	627	face s2		
+569681	572085	2404	face s3		
+572085	574968	2883	background floor		
+574968	576569	1601	face s3	background floor	
+576569	576871	302	body s3	background floor	
+576871	577882	1011	face s3		face s1
+577882	578122	240	NA	face s3	face s1
+578123	583074	4951	face s3	face s3	
+583074	583886	812	background window	face s3	
+583886	586046	2160	face s3		
+586046	587453	1407	face s2		
+587453	589279	1826	face s3		
+589279	589779	500	background wall	face s1	
+589779	590313	534	body s2	face s1	face s1
+590313	591184	871	background eyes closed	face s1	face s1
+591184	592506	1322	background wall	face s1	
+592506	593318	812	NA		
+593318	593665	347	background wall		face s2
+593667	595384	1717	background ceiling		
+595384	596563	1179	background wall		
+596563	596966	403	face s3	face s1	face s1
+596966	598494	1528	background wall	face s1	
+598496	598866	370	face s3	face s1	background down
+598866	600202	1336	background window		background down
+600205	600526	321	face s3	background camera	
+600526	600885	359	background wall	background camera	face s1
+600885	604961	4076	face s3		
+604963	606231	1268	face s2		
+606231	609872	3641	NA		
+609873	612230	2357	face s3		
+612230	613365	1135	NA	face s3	face s1
+613366	613860	494	background wall	face s3	face s1
+613860	616749	2889	background floor		
+616749	618006	1257	face s3		face s1
+618006	619930	1924	background window		
+619931	622220	2289	face s3		
+622221	622729	508	background own body	body s1	
+622729	623964	1235	face s3		
+623964	624323	359	body s3		face s1
+624326	625678	1352	background ceiling		
+625678	626965	1287	face s3		
+626968	627988	1020	background own body	face s1	
+627988	628132	144	body s3	face s1	face s1
+628132	629376	1244	background window		face s1
+629376	635680	6304	face s3		
+635680	637842	2162	face s2		
+637842	637981	139	background wall	NA	face s2
+637981	638666	685	NA	NA	
+638666	639132	466	background wall	NA	face s1
+639132	639922	790	face s3		face s1
+639922	640568	646	face s2	face s3	face s1
+640568	643641	3073	face s3		
+643641	644126	485	background eyes closed	background floor	
+644128	649767	5639	face s3		background wall
+649767	650165	398	background floor	body s3	background wall
+650165	652536	2371	face s3		
+652539	653442	903	NA	face s3	
+653443	654105	662	background window	face s3	face s2
+654105	656441	2336	face s3		
+656441	658017	1576	NA		
+658017	658770	753	background wall	background wall	background wall
+658770	662043	3273	background floor		
+662043	664364	2321	face s3	face s3	
+664364	664600	236	NA	face s3	face s1
+664600	668329	3729	face s3	face s3	
+668329	669285	956	background wall	face s3	
+669285	669660	375	face s3	face s3	NA
+669661	670711	1050	background window	face s3	
+670711	673052	2341	face s3		
+673052	673482	430	NA		
+673482	674563	1081	face s2		face s2
+674563	681313	6750	face s3		
+681313	682207	894	background wall	face s3	face s1
+682207	683602	1395	face s3		
+683602	683747	145	NA	face s3	NA
+683747	688887	5140	face s3		
+688887	689327	440	NA	face s1	face s1
+689327	692006	2679	face s3		
+692006	692248	242	background wall	face s3	face s1
+692248	693003	755	face s3	face s3	
+693003	697607	4604	NA		
+697607	699034	1427	background ceiling		
+699034	700690	1656	NA		
+700690	708707	8017	face s2		
+708710	709403	693	face s3	face s3	face s2
+709403	711836	2433	face s2		
+711836	712369	533	face s3	face s3	face s1
+712369	714894	2525	face s2		
+714894	715322	428	body s2	face s1	
+715322	717015	1693	face s2	face s1	
+717015	717472	457	face s3		face s2
+717474	721226	3752	face s2		
+721227	721491	264	gestures s2	face s1	face s2
+721491	722438	947	face s2	face s1	face s2
+722438	723026	588	background eyes closed	face s1	face s2
+723026	723915	889	face s2		face s2
+723915	724602	687	face s3	NA	face s2
+724602	724918	316	background wall		
+724918	725482	564	face s2	face s3	face s1
+725482	727674	2192	face s3		
+727674	728317	643	face s2		
+728317	729688	1371	face s3		
+729688	730288	600	face s2	face s3	background wall
+730288	731235	947	NA		
+731235	731812	577	face s3		
+731812	733727	1915	background floor		background down
+733727	734866	1139	face s2	face s1	
+734868	735194	326	body s2	face s1	face s2
+735194	739210	4016	face s2		face s2
+739210	739970	760	background wall		
+739970	745007	5037	face s2		
+745007	745476	469	NA		face s2
+745476	749499	4023	face s2		
+749499	750491	992	NA	background wall	
+750491	750682	191	body s2		
+750685	752757	2072	face s2		
+752758	753636	878	background eyes closed		face s2
+753636	755371	1735	face s2	face s1	face s2
+755371	755846	475	face s3	face s1	face s2
+755848	758209	2361	face s2		face s2
+758209	758555	346	NA	NA	face s2
+758555	758922	367	face s2		
+758922	760689	1767	face s3		
+760690	767606	6916	face s2		
+767606	768170	564	background eyes closed	face s1	
+768170	772064	3894	face s2		
+772064	772885	821	NA		face s2
+772885	773118	233	face s2		
+773118	775299	2181	face s3		
+775299	776805	1506	face s2		face s2
+776805	777891	1086	face s3		face s2
+777891	778640	749	face s2	face s3	
+778640	779554	914	NA		
+779554	779882	328	background floor		face s1
+779882	780361	479	NA	face s1	face s1
+780361	784201	3840	face s2		
+784201	784821	620	NA	face s1	face s2
+784821	785897	1076	face s2	face s1	face s2
+785897	786761	864	body s2	face s1	
+786762	788403	1641	face s2		face s1
+788403	788769	366	background ceiling		face s1
+788769	789277	508	face s3	face s1	face s1
+789277	794676	5399	face s2		
+794678	797359	2681	background floor		
+797359	799721	2362	face s3		
+799721	801297	1576	background floor		background wall
+801297	802734	1437	face s2		
+802735	803600	865	NA	face s1	face s2
+803600	808606	5006	face s2		face s2
+808606	810722	2116	NA		
+810722	813248	2526	face s2		
+813248	813734	486	face s3		background wall
+813734	814443	709	background window		
+814443	815363	920	face s3		face s2
+815363	816469	1106	face s2	face s3	face s2
+816469	816629	160	body s2		face s2
+816629	825452	8823	face s2		face s2
+825452	826017	565	background eyes closed		face s2
+826017	842318	16301	face s2 		face s2
+842318	842996	678	background eyes closed		face s2
+842996	848090	5094	face s2 		
+848090	848594	504	background eyes closed	face s1	face s2
+848594	849886	1292	face s2	face s1	face s2
+849886	851240	1354	NA	face s1	
+851240	851447	207	face s3	face s1	NA
+851447	851964	517	face s2	face s1	
+851964	853258	1294	background window		face s1
+853258	853723	465	face s3		face s1
+853723	854877	1154	face s2		
+854877	858688	3811	background window		
+858688	859326	638	face s3	face s1	face s1
+859326	859740	414	background wall	face s1	face s1
+859740	864932	5192	NA 		
+864933	866043	1110	background wall		background floor
+866043	867422	1379	NA		
+867422	868927	1505	face s3	face s3	
+868927	870264	1337	background wall		
+870264	870571	307	background floor		
+870572	872241	1669	NA	face s1	face s1
+872241	872462	221	background wall	face s1	face s1
+872462	873342	880	face s3	face s1	face s1
+873342	877439	4097	NA		
+877439	877768	329	face s3	face s1	body s1
+877768	879113	1345	NA		
+879113	879243	130	background wall	background wall	background floor
+879243	882989	3746	NA		
+882989	886192	3203	background floor	background camera	
+886192	888201	2009	face s3		
+888201	900332	12131	face s2		
+900332	900501	169	NA		
+900501	906804	6303	face s2		
+906804	907766	962	background wall		
+907766	908837	1071	face s3		
+908837	911156	2319	face s2		
+911156	911440	284	face s3		face s1
+911440	913089	1649	face s2		face s1
+913089	914564	1475	face s3	face s1	
+914566	915475	909	face s2	face s1	
+915475	916285	810	face s3		face s1
+916287	916752	465	NA		
+916752	917557	805	face s2		background wall
+917557	918082	525	face s3	face s1	background wall
+918082	922000	3918	background window		background wall
+922000	922437	437	face s3		background wall
+922437	924051	1614	face s2		
+924051	928404	4353	face s3		
+928404	929156	752	background wall	face s1	
+929156	929527	371	background floor	face s1	face s1
+929529	930814	1285	background wall	face s1	face s1
+930816	933364	2548	face s3	face s1	face s1
+933364	934001	637	face s2	face s1	face s1
+934001	935384	1383	face s3		face s1
+935384	935748	364	background window		face s1
+935748	936392	644	NA	NA	face s1
+936392	937369	977	face s3		
+937369	937987	618	body s3		NA
+937987	941368	3381	face s3		
+941368	942007	639	background window	face s3	
+942008	943044	1036	face s3	face s3	
+943044	944501	1457	face s2		
+944502	950498	5996	face s3		
+950500	950724	224	face s2		face s1
+950724	953119	2395	face s3		
+953119	953362	243	background floor	face s3	face s1
+953362	955578	2216	NA		face s1
+955578	957399	1821	face s3	face s1	face s1
+957399	959923	2524	background window	face s1	
+959923	960043	120	NA	face s1	face s1
+960044	962456	2412	face s3	face s1	face s1
+962456	963126	670	background wall		face s1
+963126	963929	803	NA	face s1	face s1
+963929	964243	314	background wall	face s1	face s1
+964244	965282	1038	NA	face s1	face s1
+965282	967408	2126	background floor		face s1
+967408	968446	1038	background ceiling	face s1	face s1
+968446	971289	2843	face s3	face s1	
+971289	971924	635	background wall	face s1	face s1
+971924	972366	442	face s3	face s1	face s1
+972366	976487	4121	background wall		
+976487	977575	1088	face s3	face s3	
+977575	979407	1832	background wall		
+979407	979928	521	background window	face s1	face s1
+979928	980079	151	face s3	face s1	face s1
+980079	981826	1747	NA		face s1
+981827	982168	341	face s3	face s1	face s1
+982168	982646	478	background wall		face s1
+982646	983093	447	background window	NA	face s1
+983093	983400	307	face s3	NA	face s1
+983400	987133	3733	NA		
+987133	988723	1590	face s3		
+988723	992923	4200	background window		face s1
+992923	994138	1215	background wall	face s1	face s1
+994138	994758	620	background window	face s1	face s1
+994758	996475	1717	face s3	face s1	face s1
+996475	997522	1047	background wall	face s1	face s1
+997522	999770	2248	body s3		face s1
+999770	1000226	456	face s3	background camera	face s1
+1000226	1000542	316	body s3	background camera	face s1
+1000542	1001562	1020	face s3		face s1
+1001562	1003860	2298	background floor		face s1
+1003860	1004732	872	face s3	face s1	face s1
+1004732	1006482	1750	body s3	face s1	
+1006482	1007119	637	background wall	face s1	face s1
+1007119	1009232	2113	body s3	face s1	face s1
+1009232	1011480	2248	face s3		
+1011480	1011920	440	NA	face s1	
+1011920	1012924	1004	background window	face s1	face s1
+1012924	1014754	1830	background ceiling	face s1	face s1
+1014754	1016013	1259	background wall	face s1	
+1016013	1018765	2752	face s3	face s1	
+1018766	1019005	239	NA	face s1	NA
+1019005	1020441	1436	background wall	face s1	
+1020441	1021238	797	face s3	face s1	background floor
+1021238	1024393	3155	background floor	face s1	
+1024393	1025645	1252	face s3	face s1	face s1
+1025645	1026897	1252	background window	face s1	face s1
+1026897	1029161	2264	body s3	face s1	
+1029161	1029339	178	face s3	face s1	face s1
+1029341	1029914	573	NA		
+1029914	1031404	1490	face s3		
+1031404	1032760	1356	face s2		
+1032761	1033706	945	face s3		face s1
+1033706	1036004	2298	background window		face s1
+1036007	1037665	1658	background floor	face s1	face s1
+1037665	1038649	984	face s3	face s1	face s1
+1038649	1039486	837	background window	face s1	face s1
+1039486	1040686	1200	background wall		face s1
+1040686	1043100	2414	face s3		face s1
+1043100	1043960	860	body s3		face s1
+1043962	1044235	273	background eyes closed	body s1	face s1
+1044235	1044885	650	background window		face s1
+1044885	1045237	352	body s3	face s1	face s1
+1045237	1047530	2293	face s3		face s1
+1047530	1048080	550	background window	body s1	face s1
+1048081	1050163	2082	face s3		
+1050163	1052146	1983	background own body		
+1052146	1053265	1119	NA		face s1
+1053265	1053643	378	face s3		face s1
+1053643	1055037	1394	background ceiling		
+1055038	1056391	1353	background window		
+1056391	1056758	367	background wall	background down	face s1
+1056758	1057803	1045	face s3		face s1
+1057803	1059433	1630	NA		
+1059433	1059686	253	background ceiling		NA
+1059686	1060704	1018	background wall		
+1060704	1061167	463	background own body		face s1
+1061167	1062557	1390	background eyes closed		
+1062557	1063477	920	face s3		background wall
+1063477	1066343	2866	background floor		
+1066343	1066639	296	body s3	face s1	face s1
+1066639	1067400	761	face s3	face s1	face s1
+1067400	1071837	4437	background wall		face s1
+1071837	1072363	526	NA	face s1	face s1
+1072363	1075397	3034	background wall		face s1
+1075397	1076570	1173	NA		
+1076570	1077651	1081	background wall		
+1077652	1078440	788	face s3		face s1
+1078440	1078966	526	background wall	face s1	face s1
+1078966	1080235	1269	NA		face s1
+1080235	1080839	604	face s3		
+1080839	1081518	679	NA	background down	background wall
+1081518	1082459	941	background window	background down	
+1082461	1082975	514	background camera		
+1082975	1083694	719	background floor	face s1	
+1083694	1084743	1049	NA	face s1	face s1
+1084743	1085126	383	face s2	face s1	
+1085129	1089004	3875	NA		
+1089004	1093642	4638	background close s3		
+1093642	1093969	327	face s3		background camera
+1093969	1096046	2077	NA		
+1096046	1098104	2058	background ceiling		
+1098104	1098321	217	background wall		face s1
+1098321	1098487	166	face s3	face s1	face s1
+1098489	1098768	279	NA	face s1	face s1
+1098768	1102404	3636	face s3	face s1	face s1
+1102404	1102925	521	body s3	face s1	face s1
+1102925	1103811	886	face s3	face s1	
+1103811	1105524	1713	face s2		
+1105524	1107884	2360	face s3		face s1
+1107884	1110886	3002	background floor		
+1110886	1113373	2487	face s3		
+1113373	1114622	1249	background floor	face s1	face s1
+1114622	1115771	1149	face s3	face s1	face s1
+1115773	1116223	450	background window	face s1	face s1
+1116224	1117214	990	background floor	face s1	face s1
+1117214	1118490	1276	face s3	face s1	face s1
+1118490	1118850	360	body s2	face s1	face s1
+1118850	1119680	830	face s3	face s1	face s1
+1119680	1120293	613	background window	face s1	face s1
+1120293	1120815	522	background wall	face s1	face s1
+1120815	1122085	1270	face s3	face s1	face s1
+1122085	1123966	1881	background wall		face s1
+1123966	1124521	555	face s3	face s1	face s1
+1124521	1124997	476	background wall	face s1	face s1
+1124997	1125242	245	face s2	face s1	face s1
+1125242	1126089	847	face s3	face s1	face s1
+1126089	1126327	238	body s3	face s1	face s1
+1126327	1128433	2106	background floor		
+1128433	1128631	198	NA		background wall
+1128631	1129002	371	face s3	face s1	
+1129002	1129442	440	NA	face s1	face s1
+1129442	1130611	1169	background wall		face s1
+1130611	1132251	1640	face s3	face s1	face s1
+1132251	1132903	652	NA		face s1
+1132906	1134198	1292	background window		
+1134198	1134553	355	background wall	face s1	
+1134553	1137280	2727	face s3		face s1
+1137280	1139322	2042	face s2		
+1139322	1139644	322	face s3	face s1	face s1
+1139644	1141291	1647	face s2		face s1
+1141291	1142742	1451	face s3		
+1142742	1143769	1027	NA	background floor	background wall
+1143769	1143970	201	body s2		background wall
+1143970	1145488	1518	NA	background camera	
+1145488	1146574	1086	background wall		face s1
+1146574	1150652	4078	face s3		
+1150652	1151477	825	background wall	background wall	face s1
+1151477	1152241	764	NA		face s1
+1152241	1153568	1327	face s3	face s1	face s1
+1153568	1154832	1264	face s2		face s1
+1154832	1155846	1014	face s3		face s1
+1155846	1156079	233	body s3	NA	face s1
+1156079	1156768	689	face s3		face s1
+1156768	1157494	726	face s2		
+1157494	1157675	181	body s2		face s2
+1157675	1158315	640	face s2		face s2
+1158315	1158842	527	NA		face s2
+1158842	1159165	323	face s3	face s1	face s2
+1159165	1159518	353	NA	face s1	face s2
+1159518	1160276	758	face s2	face s1	
+1160276	1161365	1089	face s3		face s1
+1161365	1161874	509	NA	NA	face s1
+1161874	1164281	2407	face s3		face s1
+1164281	1167321	3040	NA		
+1167321	1167682	361	background wall	face s1	NA
+1167682	1169289	1607	face s2	face s1	
+1169289	1169770	481	background wall		face s1
+1169770	1170370	600	face s3	face s1	face s1
+1170371	1171503	1132	background window		face s1
+1171503	1171919	416	background camera	face s1	face s1
+1171919	1172653	734	background floor		face s1
+1172653	1173090	437	background wall		face s1
+1173090	1174368	1278	face s3		
+1174368	1174851	483	face s2	face s1	
+1174851	1176246	1395	NA		
+1176247	1176482	235	background wall	face s1	body s1
+1176482	1176982	500	face s3	face s1	
+1176982	1178234	1252	NA	face s1	
+1178234	1184479	6245	face s2		
+1184479	1185681	1202	NA		face s2
+1185681	1185963	282	background wall	face s3	face s2
+1185963	1186124	161	NA	face s3	face s2
+1186124	1186284	160	background wall	face s3	face s2
+1186284	1186763	479	face s2	face s3	face s2
+1186763	1188131	1368	NA	face s3	face s2
+1188131	1188527	396	face s2	face s3	face s2
+1188527	1188750	223	face s3	face s3	face s2
+1188750	1190330	1580	face s2		face s2
+1190330	1191292	962	NA		face s2
+1191292	1191602	310	background wall		face s2
+1191602	1194119	2517	NA		
+1194119	1194484	365	face s2		face s2
+1194484	1194709	225	NA		face s2
+1194711	1195560	849	face s3	face s3	face s2
+1195560	1196514	954	NA		
+1196514	1198015	1501	background wall		
+1198015	1198538	523	NA		
+1198538	1200139	1601	background wall		
+294726	299247	4521		face s3	
+299247	301883	2636		gestures s3	face s1
+301883	303040	1157	face s3	face s3	face s1
+303040	303488	448	face s3	body s3	
+303488	310834	7346		face s3	
+310834	311156	322	face s1	background wall	face s1
+311156	316645	5489		face s1	
+316645	317232	587		body s1	
+317232	323296	6064		face s1	
+323296	323958	662	face s3	body s1	face s1
+323958	324470	512		NA	face s1
+324470	324727	257	face s2	background camera	face s1
+324727	325128	401	face s2	face s1	face s1
+325128	325568	440	face s2	background wall	face s1
+325568	326119	551	face s2	face s1	face s1
+326119	326601	482	face s2	NA	face s1
+326601	327201	600	face s2	face s1	
+327201	328727	1526		NA	
+328727	329601	874		face s1	background floor
+329601	329833	232	face s3	background wall	background floor
+329833	330082	249	face s3	face s1	background floor
+330082	335374	5292		body s1	
+335374	337361	1987		NA	
+337361	339734	2373	NA	background camera	
+339734	341521	1787	NA	background wall	
+341521	342566	1045	NA	face s3	
+342566	344164	1598		background wall	background own body
+344164	345448	1284		face s3	
+345448	346284	836	background floor	NA	face s1
+346284	348961	2677		face s1	face s1
+348961	349242	281	face s3	NA	face s1
+349242	351806	2564		face s1	
+351806	352043	237	face s2	NA	face s2
+352043	353242	1199		face s1	face s2
+353242	353521	279		NA	face s2
+353521	353909	388		face s1	face s2
+353909	354125	216	background wall	body s1	face s2
+354126	355845	1719		face s1	face s2
+355845	356403	558		background floor	face s2
+356403	357202	799	background wall	NA	face s2
+357202	358769	1567		face s1	
+358769	366245	7476		face s3	
+366245	366801	556	face s3	background window	background wall
+366801	368042	1241	face s3	face s1	background wall
+368042	368404	362	face s3	background wall	
+368404	368807	403	face s3	face s3	background floor
+368807	369241	434	face s3	background wall	
+369241	371285	2044		face s3	
+371285	371611	326	background eyes closed	NA	
+371611	371882	271	background eyes closed	face s3	NA
+371882	372605	723		NA	
+372606	375643	3037	background wall	face s3	
+375643	376049	406	background wall	background wall	
+376049	376248	199		face s3	background wall
+376249	377682	1433		background wall	
+377682	378058	376		face s3	face s1
+378058	378437	379	background floor	background wall	face s1
+378437	379245	808	background floor	face s3	face s1
+379245	379601	356	background floor	background wall	face s1
+379601	381323	1722		face s1	
+381323	381800	477	face s3 	NA	
+381800	383140	1340		face s1	face s1
+383140	385853	2713		body s1	
+385853	387717	1864	face s3	face s1	
+387717	389002	1285		body s1	face s1
+389002	389804	802		background wall	face s1
+389805	391148	1343		face s1	face s1
+391148	391766	618		NA	face s1
+391766	392443	677		face s1	face s1
+392444	392976	532	face s3	background wall	face s1
+392977	393213	236	face s3	body s1	face s1
+393215	394052	837	face s3	face s1	face s1
+394052	394327	275	face s3	background wall	face s1
+394328	395842	1514		face s1	
+395842	397600	1758		body s1	
+397600	397973	373	face s3	face s1	
+397973	398582	609		background wall	
+398582	400768	2186		background floor	
+400768	401606	838		NA	face s1
+401606	402011	405	background wall	background camera	face s1
+402011	402688	677		body s1	
+402688	402885	197	background eyes closed	face s1	background wall
+402885	403879	994	background eyes closed	body s1	
+403879	405129	1250		face s1	
+405129	406447	1318	face s3	background wall	face s1
+406447	406925	478	face s3	NA	
+406926	407082	156	face s3	face s3	background wall
+407082	407444	362		NA	
+407444	409927	2483		face s3	
+409927	410084	157	face s3	background wall	NA
+410084	411404	1320	face s3	NA	
+411404	411573	169	face s3	background camera	
+411573	412322	749		face s3	
+412322	412921	599	NA	NA	face s1
+412921	413246	325	NA	face s3	face s1
+413246	413554	308	NA	NA	
+413554	413900	346	NA	face s3	NA
+413900	415364	1464	NA	background wall	
+415364	415763	399	NA	NA	face s1
+415763	416362	599		face s1	
+416362	418321	1959	face s2	background ceiling	
+418321	419524	1203	face s2	NA	face s2
+419524	421519	1995	face s2	background floor	face s2
+421519	422062	543	face s2	background camera	face s2
+422063	424574	2511		face s1	
+424574	425977	1403		face s3	NA
+425977	426561	584	face s2	NA	
+426561	427084	523		background floor	
+427084	429292	2208		face s1	
+429294	429719	425	face s2	NA	face s2
+429719	430611	892		face s1	face s2
+430611	431866	1255	face s2	background wall	
+431866	432522	656	face s2	face s3	face s2
+432522	433722	1200	face s2	background wall	face s2
+433724	434243	519	face s2	face s1	face s2
+434245	435244	999	face s2	body s1	face s2
+435244	436362	1118	face s2	face s1	face s2
+436363	436692	329	face s2	background wall	face s2
+436692	438921	2229		face s1	
+438921	442394	3473		face s3	
+442399	442803	404	face s2	background wall	
+442803	443284	481	face s2	face s1	face s2
+443284	443611	327	face s2	NA	face s2
+443611	444065	454	face s2	face s1	face s2
+444065	444482	417	face s2	background camera	face s2
+444484	444641	157	face s2	face s1	face s2
+444641	444890	249	face s2	background wall	face s2
+444890	445200	310		NA	face s2
+445200	445336	136	background eyes closed	background wall	face s2
+445336	445485	149	background eyes closed	face s1	face s2
+445485	445988	503	background eyes closed	face s3	face s2
+445989	448763	2774		NA	
+448763	450366	1603		background wall	
+450366	450521	155	NA	face s1	face s1
+450521	450923	402		background camera	
+450926	452165	1239		face s3	face s2
+452165	452641	476	NA	NA	
+452641	456253	3612		face s1	
+456254	456535	281		background wall	face s1
+456535	457882	1347		NA	face s1
+457882	458972	1090		background floor	
+458972	459314	342	face s2	background camera	background wall
+459314	460131	817	face s2	background wall	
+460131	461285	1154	face s2	face s1	face s2
+461285	461443	158	face s2	NA	face s2
+461443	461768	325	face s2	background wall	face s2
+461768	465853	4085		face s1	
+465853	466658	805	background own body	background wall	
+466658	466876	218	background own body	NA	body s1
+466876	467805	929		background wall	
+467805	468125	320	NA	NA	
+468125	468515	390	NA	NA	face s1
+468515	469059	544	NA	face s3	face s1
+469059	469765	706	NA	NA	
+469765	470787	1022		face s3	background floor
+470787	471947	1160	background window	background wall	
+471948	473930	1982		background floor	background camera
+473930	476860	2930		face s3	
+476860	477282	422	background camera	background ceiling	face s1
+477282	479058	1776		NA	
+479058	479907	849		background wall	background camera
+479907	480222	315	NA	face s1	background camera
+480222	480664	442	NA	background wall	background camera
+480665	480841	176	NA	face s1	
+480841	481110	269	NA	background wall	face s1
+481112	482489	1377		face s3	face s1
+482489	483163	674		background wall	
+483163	484129	966	face s3	face s3	
+484129	484489	360	face s3	NA	
+484489	484609	120	face s3	background wall	face s1
+484610	484759	149		face s3	face s1
+484759	484932	173	face s2	background wall	face s1
+484932	485280	348	face s2	face s3	
+485281	485688	407	face s2	NA	face s2
+485688	487238	1550		face s3	
+487238	487648	410	face s3	background ceiling	face s1
+487648	488875	1227		NA	face s1
+488875	490668	1793		background floor	
+490668	491321	653	background own body	face s1	
+491321	491780	459		background own body	face s2
+491780	492041	261	face s3	face s3	face s2
+492041	492229	188	face s3	background wall	face s2
+492231	492404	173		NA	face s2
+492404	492765	361	face s2	face s3	face s2
+492765	493242	477	face s2	background wall	face s2
+493242	493854	612	face s2	face s3	face s2
+493854	494007	153		background wall	face s2
+494007	494210	203	body s2	face s3	face s2
+494210	494617	407		background wall	face s2
+494617	499644	5027		face s1	
+499644	500825	1181		body s1	
+500825	503604	2779		face s1	
+503604	503937	333	face s3	gestures s1	
+503937	504169	232	face s3	face s1	face s1
+504169	513128	8959		face s3	
+513128	514061	933		gestures s3	
+514061	516220	2159		NA	
+516220	518079	1859	NA	face s3	
+518079	521371	3292		background wall	
+521371	522109	738	background wall	face s3	
+522109	522366	257	background wall	gestures s3	background down
+522366	523507	1141		face s3	
+523507	523777	270	face s3	body s3	
+523777	526450	2673		face s3	
+526450	526758	308		NA	face s1
+526758	527804	1046		face s3	
+527804	527923	119	background wall	NA	background down
+527923	528471	548	background wall	face s3	
+528471	529203	732		body s3	face s1
+529203	529324	121	NA	background floor	face s1
+529324	529732	408	NA	NA	face s1
+529732	530163	431	NA	face s1	face s1
+530166	531023	857	NA	face s3	face s1
+531023	532604	1581	NA	NA	
+532605	534213	1608		face s3	
+534213	534488	275	background floor	background wall	background wall
+534488	534685	197	background floor	face s3	background wall
+534685	534924	239	background floor	background wall	background wall
+534925	536484	1559		face s3	
+536484	537160	676		background wall	background floor
+537160	537460	300		face s3	background floor
+537460	538167	707		background wall	
+538167	538889	722	face s3	face s3	face s1
+538889	539099	210	face s3	background wall	face s1
+539099	541775	2676		face s3	
+541775	543413	1638		face s1	face s1
+543416	543687	271	face s3	background wall	face s1
+543687	545961	2274		face s3	
+545961	546416	455	face s3	background ceiling	
+546416	547479	1063		face s3	face s1
+547479	548850	1371		body s3	face s1
+548850	549340	490	face s2	background floor	face s1
+549340	549802	462		NA	face s1
+549802	550285	483	face s3	face s1	face s1
+550285	550811	526	face s3	body s1	face s1
+550811	552280	1469		face s1	face s1
+552282	552771	489		body s1	face s1
+552771	553281	510	background window	face s1	face s1
+553281	554467	1186		body s1	face s1
+554468	555964	1496	face s3	face s1	face s1
+555965	556665	700	face s3	body s1	
+556665	558158	1493		face s1	
+558158	558615	457	background eyes closed	body s1	
+558615	559448	833		face s1	
+559448	559660	212		body s1	face s1
+559660	562202	2542		face s1	
+562202	562964	762		face s3	face s2
+562964	563363	399	face s2	background wall	
+563363	563541	178	face s2	face s3	face s1
+563541	563967	426	face s2	background wall	
+563967	565165	1198		NA	face s1
+565165	565293	128	face s3	background wall	face s1
+565293	568258	2965		face s1	face s1
+568258	568733	475	face s3	gestures s1	face s1
+568733	569540	807		face s1	
+569540	570329	789		NA	face s1
+570329	570480	151	face s3	background wall	face s1
+570482	572371	1889		face s3	
+572371	573452	1081	background floor	face s1	
+573452	576988	3536		background floor	
+576988	585128	8140		face s3	
+585128	585374	246	face s3	gestures s3	background down
+585374	586088	714		face s3	
+586088	586322	234	face s2	gestures s3	background wall
+586322	586901	579	face s2	face s3	
+586901	587022	121	face s2	gestures s3	
+587025	587528	503		NA	face s1
+587528	588570	1042	face s3	face s3	face s1
+588572	589045	473	face s3	NA	
+589045	593154	4109		face s1	
+593154	593488	334		background wall	face s2
+593488	593806	318		NA	face s2
+593806	594089	283	background ceiling	background wall	
+594089	594554	465	background ceiling	NA	face s1
+594555	594967	412	background ceiling	background wall	face s1
+594969	595491	522		face s3	
+595491	596014	523	background wall	background camera	background wall
+596014	599040	3026		face s1	
+599040	599810	770	background window	background camera	background down
+599810	600046	236	background window	background floor	background down
+600046	601895	1849		background camera	
+601899	603381	1482	face s3	background floor	face s1
+603382	603565	183	face s3	background camera	face s1
+603565	605572	2007		face s1	
+605572	606126	554	face s2	NA	face s1
+606127	607720	1593		face s1	face s1
+607720	607864	144	NA	body s1	face s1
+607864	610366	2502		background wall	
+610366	615058	4692		face s3	face s1
+615058	615561	503	background floor	background wall	face s1
+615561	616723	1162	background floor	face s3	
+616723	617684	961		background wall	face s1
+617684	618167	483		face s3	
+618167	618969	802	background window	NA	background floor
+618970	620032	1062		face s3	
+620032	622162	2130	face s3	face s1	
+622162	623253	1091		body s1	
+623253	623965	712		background wall	
+623965	624687	722		face s1	face s1
+624687	624879	192	background ceiling	NA	
+624879	625362	483	background ceiling	background wall	
+625362	626325	963		body s1	face s1
+626325	629289	2964		face s1	
+629289	630367	1078		background floor	face s1
+630368	631137	769	face s3	background camera	face s1
+631137	631423	286	face s3	face s1	face s1
+631423	632139	716	face s3	body s1	face s1
+632139	632885	746	face s3	background floor	
+632888	633320	432	face s3	body s1	face s1
+633320	634330	1010	face s3	face s1	face s1
+634332	634621	289	face s3	body s1	face s1
+634622	635690	1068		face s1	
+635690	636203	513	face s2	body s1	
+636203	637169	966	face s2	face s1	
+637169	637447	278	face s2	background wall	
+637449	639643	2194		NA	
+639643	643453	3810		face s3	
+643453	644327	874		background floor	
+644327	646985	2658	face s3	face s3	background wall
+646986	648010	1024	face s3	background wall	background wall
+648010	649246	1236	face s3	face s3	background wall
+649246	652489	3243		body s3	
+652489	654530	2041		face s3	
+654530	655085	555	face s3	NA	face s1
+655085	656178	1093	face s3	face s3	face s1
+656178	656644	466		background wall	face s1
+656644	657884	1240	NA	face s3	
+657884	659403	1519		background wall	background wall
+659403	671849	12446		face s3	
+671849	672046	197	face s3	background floor	
+672047	672330	283	face s3	face s3	face s1
+672330	672571	241	face s3	background floor	face s1
+672574	672772	198	face s3	face s3	face s1
+672772	672926	154	face s3	background wall	face s1
+672926	673365	439		NA	face s1
+673365	673568	203		face s3	
+673571	673763	192	face s2	NA	face s2
+673763	674207	444	face s2	face s3	face s2
+674207	674565	358		body s3	face s2
+674566	675083	517	face s3	background wall	
+675084	678929	3845	face s3	face s3	
+678929	679906	977	face s3	background wall	
+679906	680689	783	face s3	body s3	
+680689	682768	2079		face s3	face s1
+682768	683321	553	face s3	body s3	face s1
+683321	686904	3583		face s3	
+686905	691043	4138		face s1	
+691043	691439	396	face s3	body s1	face s1
+691439	691621	182	face s3	face s1	face s1
+691621	694976	3355		face s3	
+694977	696608	1631	NA	NA	
+696608	697252	644	NA	face s3	face s1
+697252	698682	1430		NA	
+698682	698928	246	background ceiling	background ceiling	
+698928	699420	492		background wall	
+699421	701201	1780		face s1	
+701201	701843	642	face s2	NA	
+701843	702124	281	face s2	background wall	face s2
+702125	702742	617	face s2	face s1	face s2
+702743	703754	1011	face s2	face s3	face s2
+703754	704903	1149	face s2	NA	face s2
+704904	706009	1105	face s2	face s3	face s2
+706009	707485	1476	face s2	background floor	face s2
+707485	709616	2131		face s3	face s2
+709616	710001	385	face s2	background wall	face s2
+710001	710772	771	face s2	face s3	face s2
+710772	711171	399	face s2	background wall	face s2
+711172	712725	1553		face s3	
+712727	714325	1598	face s2	face s1	
+714325	714575	250	face s2	body s1	face s2
+714575	717204	2629		face s1	
+717204	717605	401		NA	face s2
+717606	717987	381	face s2	face s3	
+717989	720329	2340	face s2	face s1	
+720330	720610	280	face s2	background floor	face s2
+720610	723606	2996		face s1	face s2
+723606	724806	1200		NA	face s2
+724806	725812	1006		face s3	
+725812	726171	359	face s3	body s3	face s1
+726171	728053	1882		face s3	
+728054	728174	120	face s2	background wall	face s2
+728174	728894	720		NA	
+728894	729536	642	face s3	background wall	
+729536	730585	1049		face s3	
+730585	731247	662		body s3	
+731247	732968	1721		face s3	
+732968	733164	196	background floor	background wall	background down
+733164	733324	160	background floor	face s3	background down
+733324	737489	4165		face s1	
+737490	738520	1030	face s2	NA	face s2
+738520	739606	1086		background floor	face s2
+739606	740575	969		background wall	
+740576	740810	234	face s2	NA	face s2
+740810	741621	811	face s2	background ceiling	face s2
+741621	742257	636	face s2	background own body	face s2
+742257	742867	610	face s2	background wall	face s2
+742867	745166	2299		face s1	face s2
+745166	745288	122	NA	background wall	face s2
+745288	746562	1274		NA	face s2
+746562	747764	1202	face s2	background wall	face s2
+747764	748926	1162	face s2	background ceiling	
+748926	750560	1634		background wall	
+750560	751655	1095		face s1	
+751657	752138	481	face s2	background wall	
+752138	753448	1310		NA	face s2
+753449	757567	4118		face s1	face s2
+757567	757842	275	face s2	background wall	face s2
+757842	758728	886		NA	
+758728	759971	1243		face s1	face s1
+759971	761140	1169		face s3	
+761140	762132	992	face s2	face s1	
+762132	762328	196	face s2	background wall	face s2
+762328	762807	479	face s2	NA	face s2
+762807	763526	719	face s2	background wall	face s2
+763526	763775	249	face s2	NA	face s2
+763775	766765	2990	face s2	background ceiling	face s2
+766765	769332	2567		face s1	
+769332	770728	1396	face s2	NA	
+770728	771979	1251	face s2	background wall	face s2
+771979	772760	781		face s1	face s2
+772760	773057	297		background wall	
+773057	773885	828		face s3	
+773885	774600	715	face s3	NA	
+774600	775725	1125		face s3	face s2
+775725	777281	1556		background wall	face s2
+777281	777403	122	face s3	NA	face s2
+777403	779365	1962		face s3	
+779365	779648	283		NA	face s1
+779648	781164	1516		face s1	face s1
+781164	781284	120	face s2	background floor	face s1
+781284	781768	484	face s2	NA	face s1
+781768	782364	596	face s2	face s1	face s1
+782364	782920	556	face s2	background wall	
+782920	783525	605	face s2	NA	face s2
+783525	788243	4718		face s1	
+788243	788489	246		background camera	face s1
+788489	791762	3273		face s1	
+791762	792292	530	face s2	background wall	
+792292	792422	130	face s2	face s3	NA
+792423	792723	300	face s2	NA	NA
+792723	792961	238	face s2	body s3	
+792961	793169	208	face s2	body s1	face s2
+793169	793529	360	face s2	background camera	face s2
+793529	795668	2139		face s1	
+795668	796415	747	background floor	face s3	
+796415	796656	241	background floor	body s1	NA
+796656	797006	350	background floor	NA	
+797006	797370	364		face s1	
+797370	800764	3394		face s3	
+800764	801806	1042		background wall	
+801806	802007	201	face s2	NA	face s2
+802007	802492	485	face s2	background wall	face s2
+802492	806328	3836		face s1	face s2
+806328	806482	154	face s2	body s1	face s2
+806482	806885	403	face s2	face s1	face s2
+806885	807122	237	face s2	background camera	face s2
+807123	809282	2159		face s1	face s2
+809282	809771	489	NA	background wall	
+809771	810031	260	NA	face s3	
+810031	811364	1333		background wall	
+811364	811884	520	face s2	face s1	
+811884	812206	322	face s2	background wall	face s1
+812206	812454	248	face s2	background camera	
+812454	813043	589	face s2	face s1	
+813043	813643	600		NA	background wall
+813643	814002	359		face s3	background wall
+814002	814362	360	background window	NA	
+814362	814529	167		face s1	face s2
+814529	816565	2036		face s3	face s2
+816565	820891	4326		background wall	face s2
+820891	821160	269	face s2	background camera	face s2
+821160	822212	1052	face s2	background floor	face s2
+822212	822525	313	face s2	background own body	face s2
+822525	822776	251	face s2	background camera	face s2
+822776	823082	306	face s2	background own gestures	face s2
+823082	825160	2078	face s2	face s3	face s2
+825160	825820	660		face s1	face s2
+825820	827325	1505		face s3	face s2
+827325	827739	414	face s2 	background camera	face s2
+827739	828884	1145	face s2 	background wall	face s2
+828884	829565	681	face s2 	NA	face s2
+829565	833243	3678	face s2 	face s1	face s2
+833243	833565	322	face s2 	background camera	face s2
+833565	834006	441	face s2 	face s3	face s2
+834006	834528	522	face s2 	NA	face s2
+834528	835207	679	face s2 	background floor	face s2
+835207	836778	1571	face s2 	face s3	face s2
+836778	837243	465	face s2 	background floor	face s2
+837243	837487	244	face s2 	NA	face s2
+837487	837800	313	face s2 	background wall	face s2
+837800	839684	1884	face s2 	face s3	face s2
+839684	839887	203	face s2 	background camera	face s2
+839887	841801	1914	face s2 	face s3	face s2
+841801	842612	811		background wall	face s2
+842612	843760	1148		face s1	
+843760	844092	332	face s2 	background floor	
+844092	846732	2640	face s2 	face s1	
+846732	847129	397	face s2 	background wall	face s2
+847130	847609	479	face s2 	NA	face s2
+847609	852048	4439		face s1	
+852048	852368	320	background window	body s1	face s1
+852368	852564	196	background window	face s1	face s1
+852564	853325	761		body s1	face s1
+853325	853681	356	face s3	face s1	face s1
+853681	854329	648		body s1	
+854329	856125	1796		face s1	
+856125	856490	365	background window	body s1	background floor
+856490	856684	194	background window	face s1	background floor
+856684	856914	230	background window	NA	background floor
+856914	857040	126	background window	body s1	background floor
+857040	857326	286	background window	NA	background floor
+857326	861162	3836		face s1	
+861162	865615	4453		face s3	
+865615	866368	753		background wall	background floor
+866368	866800	432	NA	face s3	
+866800	866968	168	NA	NA	face s1
+866968	870048	3080		face s3	
+870048	870385	337		NA	
+870385	875723	5338		face s1	
+875723	877329	1606	NA	background wall	
+877329	879043	1714		face s1	
+879045	879406	361		background wall	background floor
+879406	879526	120	NA	face s1	background floor
+879526	879871	345	NA	NA	
+879871	880048	177	NA	background wall	face s1
+880048	880775	727	NA	NA	
+880775	887405	6630		background camera	
+887405	887812	407	face s3	NA	face s2
+887812	890970	3158		face s3	face s2
+890970	891532	562	face s2	NA	face s2
+891532	892251	719	face s2	background wall	
+892251	894245	1994	face s2	face s3	
+894245	896446	2201	face s2	background wall	face s2
+896446	896654	208	face s2	NA	face s2
+896654	897660	1006	face s2	background wall	face s2
+897660	898253	593	face s2	background camera	face s2
+898253	898921	668	face s2	NA	face s2
+898921	899176	255	face s2	face s3	face s2
+899176	900364	1188		background camera	
+900364	904160	3796		face s1	
+904160	904362	202	face s2	background camera	
+904362	904851	489	face s2	face s1	face s2
+904851	905009	158	face s2	background wall	face s2
+905009	907335	2326		face s1	face s2
+907335	908565	1230		face s3	
+908565	909646	1081		face s1	face s2
+909646	909842	196	face s2	NA	face s2
+909842	910409	567	face s2	face s1	face s2
+910409	910657	248	face s2	background wall	face s2
+910657	911329	672		face s1	
+911329	911804	475		background wall	face s1
+911804	912473	669	face s2	face s1	face s1
+912473	912690	217	face s2	body s1	face s1
+912690	912973	283	face s2	NA	face s1
+912973	916123	3150		face s1	
+916123	916729	606		background wall	
+916729	917048	319		background camera	background wall
+917048	918321	1273		face s1	background wall
+918321	918681	360	background window	NA	background wall
+918681	919168	487	background window	face s1	background wall
+919168	919728	560	background window	background camera	background wall
+919728	921453	1725	background window	body s1	background wall
+921453	922248	795		face s3	background wall
+922248	923403	1155		background down	
+923403	923809	406	face s2	NA	NA
+923809	927084	3275		face s3	
+927084	934092	7008		face s1	
+934092	934492	400	face s3	NA	face s1
+934492	935092	600	face s3	face s1	face s1
+935092	935485	393		gestures s1	face s1
+935485	936640	1155		NA	
+936640	937765	1125		body s1	
+937765	938087	322		background camera	
+938087	944015	5928		face s3	
+944015	944285	270	face s2	background wall	
+944285	944848	563		NA	
+944848	945164	316	face s3	background wall	face s1
+945165	945575	410	face s3	NA	face s1
+945575	946001	426	face s3	background ceiling	
+946001	946967	966	face s3	NA	
+946967	947240	273	face s3	background ceiling	background wall
+947242	947726	484	face s3	NA	background wall
+947726	949969	2243	face s3	face s3	
+949969	950406	437	face s3	NA	face s1
+950406	950723	317		face s3	face s1
+950723	951321	598		NA	face s1
+951321	951923	602	face s3	face s3	
+951923	952440	517	face s3	NA	background floor
+952440	954081	1641		face s3	
+954081	954523	442	NA	face s1	face s1
+954523	954960	437	NA	NA	face s1
+954960	955081	121	NA	background wall	face s1
+955081	955284	203	NA	NA	face s1
+955284	962682	7398		face s1	
+962682	962892	210	background wall	body s1	face s1
+962892	966364	3472		face s1	face s1
+966364	966701	337	background floor	gestures s1	face s1
+966701	973365	6664		face s1	
+973365	974000	635	background wall	NA	face s1
+974000	975010	1010	background wall	face s1	
+975010	979330	4320		face s3	
+979330	981403	2073		face s1	face s1
+981403	981603	200	NA	gestures s1	face s1
+981604	982625	1021		face s1	face s1
+982625	984317	1692		NA	
+984317	984442	125	NA	background window	face s1
+984442	984772	330	NA	background wall	face s1
+984775	985246	471	NA	NA	face s1
+985246	985803	557	NA	background camera	face s1
+985804	986166	362	NA	face s1	face s1
+986167	986407	240	NA	NA	face s1
+986408	986772	364	NA	face s1	
+986772	986923	151	NA	NA	background wall
+986924	987601	677		face s1	
+987602	987802	200	face s3	NA	face s1
+987803	988011	208	face s3	background wall	face s1
+988011	988242	231	face s3	NA	face s1
+988242	988486	244	face s3	background wall	face s1
+988486	988687	201	face s3	NA	face s1
+988687	989683	996		face s1	face s1
+989684	989943	259	background window	background down	face s1
+989943	990162	219	background window	face s1	face s1
+990162	990844	682	background window	background camera	face s1
+990844	991444	600	background window	NA	face s1
+991445	992698	1253	background window	gestures s1	face s1
+992698	998640	5942		face s1	face s1
+998640	1000964	2324		background camera	face s1
+1000964	1001882	918		body s1	face s1
+1001882	1002005	123	background floor	background wall	face s1
+1002005	1002205	200	background floor	body s1	face s1
+1002207	1010519	8312		face s1	
+1010519	1010728	209	face s3	body s1	face s1
+1010728	1029359	18631		face s1	
+1029359	1029568	209	NA	background camera	face s1
+1029568	1030006	438		NA	
+1030006	1031409	1403		face s3	
+1031409	1032808	1399		NA	
+1032809	1032944	135	face s3	face s1	face s1
+1032945	1033153	208	face s3	background camera	face s1
+1033153	1035635	2482		background floor	face s1
+1035635	1039720	4085		face s1	face s1
+1039720	1040322	602	background wall	background own body	face s1
+1040322	1040923	601		NA	face s1
+1040923	1043285	2362		face s1	face s1
+1043286	1044372	1086		body s1	face s1
+1044372	1046492	2120		face s1	face s1
+1046493	1048160	1667		body s1	face s1
+1048160	1049884	1724	face s3	face s1	face s1
+1049884	1050489	605		gestures s1	
+1050489	1051002	513	background own body	face s1	
+1051002	1051251	249	background own body	background wall	background wall
+1051251	1051403	152	background own body	face s1	background wall
+1051403	1051845	442	background own body	NA	
+1051845	1052766	921		face s1	face s1
+1052766	1053176	410	NA	body s1	face s1
+1053176	1053366	190		face s1	face s1
+1053367	1054125	758		body s1	
+1054125	1054886	761	background ceiling	face s1	background down
+1054886	1055723	837		body s1	
+1055723	1056893	1170		background down	face s1
+1056893	1057082	189	face s3	body s1	face s1
+1057082	1057245	163	face s3	NA	face s1
+1057245	1058201	956		face s1	face s1
+1058203	1058373	170	NA	body s1	face s1
+1058374	1058762	388	NA	background wall	face s1
+1058763	1059005	242	NA	NA	face s1
+1059006	1059645	639		background camera	
+1059645	1060242	597		NA	
+1060242	1060447	205	background wall	background wall	face s1
+1060448	1060979	531		face s1	face s1
+1060981	1062000	1019		background camera	face s1
+1062000	1062599	599		NA	
+1062599	1062886	287	face s3	background wall	background wall
+1062886	1063812	926		face s3	background wall
+1063812	1064081	269	background floor	NA	background wall
+1064081	1064443	362	background floor	face s3	background wall
+1064443	1065001	558	background floor	background wall	background wall
+1065001	1069721	4720		face s1	
+1069721	1069885	164	background wall	body s1	face s1
+1069885	1072725	2840		face s1	face s1
+1072725	1073562	837	background wall	body s1	face s1
+1073562	1075243	1681	background wall	background camera	face s1
+1075243	1075920	677		face s1	face s1
+1075921	1076772	851		body s1	
+1076773	1077403	630	background wall	face s1	
+1077403	1077689	286		gestures s1	face s1
+1077689	1079756	2067		face s1	face s1
+1079756	1080283	527		body s1	face s1
+1080283	1082815	2532		background down	
+1082816	1085161	2345		face s1	
+1085161	1086039	878	NA	NA	face s1
+1086039	1088630	2591	NA	background down	
+1088630	1089175	545		NA	
+1089176	1089614	438	background close s3	background wall	face s1
+1089614	1091567	1953	background close s3	face s1	
+1091567	1092286	719	background close s3	background window	face s1
+1092286	1092721	435	background close s3	background wall	face s1
+1092721	1092926	205	background close s3	background window	
+1092926	1093748	822		background wall	
+1093750	1094030	280		background ceiling	background camera
+1094030	1095102	1072	NA	background wall	background camera
+1095102	1096284	1182		background ceiling	
+1096287	1096644	357	background ceiling	face s1	
+1096644	1096961	317	background ceiling	body s1	
+1096961	1097852	891	background ceiling	face s1	
+1097852	1098257	405		background wall	face s1
+1098257	1105165	6908		face s1	
+1105165	1106366	1201		background eyes closed	face s1
+1106366	1107302	936	face s3	face s1	face s1
+1107303	1108167	864		body s1	
+1108167	1109411	1244	background floor	face s1	
+1109411	1109698	287	background floor	background down	face s1
+1109698	1109858	160	background floor	body s1	
+1109860	1110925	1065		face s1	
+1110925	1111089	164	face s3	body s1	face s1
+1111090	1111458	368	face s3	face s1	
+1111458	1111682	224	face s3	gestures s1	body s1
+1111682	1122762	11080		face s1	
+1122762	1122884	122	background wall	gestures s1	face s1
+1122884	1128241	5357		face s1	face s1
+1128241	1128608	367		gestures s1	
+1128609	1129563	954		face s1	
+1129563	1129702	139	background wall	body s1	face s1
+1129702	1130406	704	background wall	background floor	face s1
+1130406	1130605	199	background wall	background camera	face s1
+1130605	1132362	1757		face s1	face s1
+1132363	1133162	799		gestures s1	face s1
+1133163	1133802	639	background window	face s1	face s1
+1133802	1134162	360	background window	body s1	
+1134162	1134603	441		face s1	
+1134603	1135606	1003	face s3	face s3	face s1
+1135607	1137406	1799		face s1	
+1137406	1137573	167	face s2	background floor	face s2
+1137574	1140168	2594		face s1	
+1140169	1140722	553	face s2	NA	face s1
+1140722	1141417	695		background camera	face s1
+1141417	1143847	2430		background floor	
+1143847	1146100	2253		background camera	
+1146100	1149003	2903		face s3	
+1149003	1149328	325	face s3	background wall	
+1149328	1149764	436	face s3	NA	
+1149765	1151537	1772		background wall	face s1
+1151537	1153648	2111		face s1	face s1
+1153649	1153964	315	face s2	body s1	face s1
+1153964	1155840	1876		face s1	face s1
+1155840	1156246	406		NA	face s1
+1156247	1157042	795		face s1	
+1157042	1157508	466		background wall	face s2
+1157508	1158048	540		background eyes closed	face s2
+1158049	1158777	728		background floor	face s2
+1158777	1160520	1743		face s1	
+1160520	1160647	127	face s3	background wall	face s1
+1160648	1161882	1234		NA	face s1
+1161882	1163148	1266	face s3	background wall	face s1
+1163148	1164719	1571		face s1	face s1
+1164719	1166720	2001	NA	NA	
+1166720	1167115	395	NA	background wall	
+1167115	1169481	2366		face s1	
+1169481	1169769	288	background wall	background wall	face s1
+1169769	1170603	834		face s1	face s1
+1170603	1170764	161	background window	NA	face s1
+1170766	1172365	1599		face s1	face s1
+1172365	1172929	564		background wall	face s1
+1172929	1174065	1136		NA	
+1174065	1175162	1097		face s1	
+1175162	1175817	655	NA	background wall	
+1175817	1178406	2589		face s1	
+1178407	1179404	997	face s2	NA	face s2
+1179405	1179811	406	face s2	background floor	face s2
+1179812	1180203	391	face s2	body s1	face s2
+1180203	1180546	343	face s2	background floor	
+1180546	1182003	1457	face s2	face s1	
+1182003	1182364	361	face s2	NA	face s2
+1182364	1182568	204	face s2	background wall	face s2
+1182569	1183133	564	face s2	NA	face s2
+1183133	1183685	552	face s2	background camera	face s2
+1183685	1184041	356	face s2	background floor	face s2
+1184041	1184166	125	face s2	background camera	face s2
+1184166	1184607	441		NA	face s2
+1184607	1184884	277	NA	background wall	face s2
+1184884	1185442	558	NA	background wall	face s2
+1185442	1188798	3356		face s3	face s2
+1188798	1189528	730	face s2	face s1	face s2
+1189528	1189889	361	face s2	face s3	face s2
+1189890	1190610	720		NA	face s2
+1190610	1191486	876		background camera	face s2
+1191486	1191680	194		background wall	face s2
+1191680	1194410	2730		face s3	
+1194410	1194679	269		background wall	face s2
+1194679	1196167	1488		face s3	
+1196167	1196402	235	NA	background wall	face s1
+1196402	1197373	971		face s1	face s1
+1197373	1197640	267	background wall	background camera	
+1197640	1198444	804		face s3	NA
+1198444	1199731	1287		NA	
+295837	303484	7647			face s1
+303484	305558	2074			background wall
+305558	306683	1125	face s1	face s3	face s1
+306683	308920	2237	face s1	face s3	NA
+308920	309159	239	face s1	face s3	face s1
+309159	309683	524	face s1	face s3	NA
+309683	312042	2359	face s1		face s1
+312042	312291	249	face s1	face s1	body s1
+312291	316169	3878		face s1	face s1
+316169	316489	320	face s3	face s1	background wall
+316489	317165	676			face s1
+317165	317311	146	background wall		body s1
+317311	320370	3059		face s1	face s1
+320370	321206	836		face s1	body s1
+321206	326757	5551			face s1
+326757	327041	284	face s2	face s1	body s1
+327041	327808	767			face s1
+327809	333207	5398			background floor
+333207	334010	803	face s3	body s1	face s1
+334010	335170	1160	face s3	body s1	NA
+335171	336005	834			face s1
+336005	336662	657	NA	NA	NA
+336664	336974	310	NA	NA	face s2
+336974	337215	241	NA	NA	NA
+337215	338340	1125	NA		face s1
+338340	338921	581	NA	background camera	face s2
+338921	339413	492	NA	background camera	NA
+339413	339618	205	NA	background camera	background wall
+339618	340403	785	NA		background floor
+340403	341404	1001	NA	background wall	face s1
+341404	341546	142	NA		NA
+341546	341726	180	NA	face s3	background wall
+341727	342238	511	NA	face s3	NA
+342239	344295	2056			background own body
+344295	345204	909		face s3	background wall
+345204	350763	5559			face s1
+350763	350943	180	face s3	face s1	body s2
+350943	357800	6857			face s2
+357800	358901	1101			face s2
+358901	360896	1995		face s3	NA
+360897	361103	206	face s3	face s3	background wall
+361105	362071	966	face s3	face s3	face s1
+362071	363299	1228	face s3	face s3	background own body
+363299	364366	1067	face s3	face s3	face s1
+364366	365404	1038	face s3	face s3	background floor
+365404	366161	757		face s3	face s1
+366161	368125	1964	face s3		background wall
+368125	369153	1028	face s3		background floor
+369153	370684	1531			face s1
+370684	371532	848	background eyes closed		face s2
+371534	372094	560	background eyes closed		NA
+372096	374051	1955			face s1
+374051	375925	1874	background wall		NA
+375925	377065	1140			background wall
+377065	380328	3263			face s1
+380328	380478	150	body s3	face s1	background floor
+380478	381297	819		face s1	face s1
+381297	381446	149	face s3 		gestures s1
+381446	384697	3251			face s1
+384697	385292	595		body s1	body s1
+385293	386173	880	face s3		face s1
+386175	387003	828	face s3	face s1	background wall
+387003	394920	7917			face s1
+394920	396179	1259			background wall
+396179	396531	352	background wall	body s1	face s1
+396531	397898	1367			NA
+397898	398021	123	face s3		body s1
+398022	398643	621			face s1
+398643	399004	361		background floor	body s1
+399004	399241	237	face s3	background floor	background down
+399241	400362	1121	face s3	background floor	face s1
+400362	400507	145	face s3	background floor	body s1
+400507	402561	2054			face s1
+402561	403717	1156	background eyes closed		background wall
+403717	404005	288			NA
+404005	406523	2518			face s1
+406525	407321	796	face s3		background wall
+407323	407964	641			face s1
+407964	409172	1208		face s3	face s2
+409172	409444	272	face s3	face s3	body s1
+409444	409646	202		face s3	face s1
+409646	409806	160		face s3	background wall
+409808	410607	799	face s3		NA
+410607	411485	878	face s3		face s1
+411485	412010	525			face s2
+412010	413280	1270	NA		face s1
+413280	414574	1294	NA		NA
+414574	415767	1193	NA		face s1
+415767	416402	635			face s2
+416402	417861	1459	face s2	background ceiling	background floor
+417861	423570	5709	face s2		face s2
+423570	424202	632	face s2	face s1	face s1
+424202	424362	160		face s1	background wall
+424363	426084	1721			NA
+426084	426803	719			face s2
+426804	427054	250	body s2	background floor	face s1
+427057	427366	309			NA
+427366	428524	1158	face s2	face s1	face s1
+428524	431209	2685			face s2
+431209	431646	437	face s2	background wall	NA
+431646	437120	5474			face s2
+437120	441397	4277			face s1
+441397	441530	133	face s3	face s3	background wall
+441530	442765	1235			NA
+442765	447491	4726			face s2
+447491	449460	1969			face s1
+449461	450131	670		background wall	body s1
+450131	450665	534	NA		face s1
+450666	452245	1579			face s2
+452245	452443	198	NA	NA	NA
+452443	453985	1542			face s1
+453985	454482	497		face s1	gestures s1
+454482	458390	3908			face s1
+458390	459475	1085	face s2		background wall
+459476	462767	3291	face s2		face s2
+462767	466246	3479			face s1
+466246	466443	197	background own body	background wall	NA
+466443	467091	648	background own body		body s1
+467091	467482	391		background wall	face s1
+467482	467963	481	NA		body s1
+467963	469407	1444	NA		face s1
+469407	469718	311	NA	NA	NA
+469718	471840	2122			background floor
+471840	476682	4842			background camera
+476682	477918	1236	background camera		face s1
+477918	480712	2794			background camera
+480712	483161	2449			face s1
+483161	483375	214	face s3		NA
+483375	484485	1110	face s3		background own gestures
+484488	485204	716			face s1
+485204	485970	766	face s2		face s2
+485970	490049	4079			face s1
+490049	490204	155	background ceiling	background floor	NA
+490204	491013	809			background wall
+491013	491252	239	background own body	face s1	face s1
+491255	494925	3670			face s2
+494925	499662	4737			face s1
+499662	500094	432	face s3	body s1	NA
+500094	502083	1989			face s1
+502083	503659	1576			face s2
+503659	506319	2660	face s3		face s1
+506319	506680	361		face s3	NA
+506680	506805	125	background own body	face s3	background wall
+506805	508997	2192		face s3	face s1
+508997	509122	125	face s3 	face s3	background floor
+509122	509890	768	face s3 	face s3	face s1
+509892	511116	1224	face s3 	face s3	background wall
+511116	512328	1212	face s3 	face s3	face s1
+512328	513358	1030	face s3 		background down
+513358	514767	1409			face s1
+514767	515561	794		NA	face s2
+515561	516525	964	NA		face s1
+516527	518039	1512	NA	face s3	background wall
+518039	518207	168	NA		face s1
+518207	518529	322	NA	background wall	background wall
+518530	520037	1507		background wall	face s1
+520037	520540	503		background wall	NA
+520540	520812	272		background wall	background ceiling
+520812	521800	988	background wall		face s1
+521800	522607	807	background wall		background down
+522609	523608	999			face s1
+523608	525405	1797			face s2
+525405	526807	1402			face s1
+526807	527312	505		face s3	background wall
+527312	527537	225	background wall	face s3	face s1
+527537	528216	679	background wall		background down
+528216	531575	3359			face s1
+531575	532128	553	NA	NA	face s2
+532128	533560	1432			NA
+533560	533884	324	background floor	face s3	face s1
+533884	534989	1105	background floor		background wall
+534989	535440	451	background floor	face s3	face s1
+535440	537706	2266			background floor
+537706	539357	1651			face s1
+539357	540689	1332		face s3	background wall
+540689	543847	3158			face s1
+543847	544488	641	face s3	face s3	background wall
+544488	545805	1317		face s3	face s1
+545805	545921	116	face s3	face s3	background floor
+545921	546041	120	face s3		body s1
+546041	556121	10080			face s1
+556124	556645	521	face s3	body s1	NA
+556646	557767	1121	face s3		background wall
+557767	558475	708			face s1
+558475	558767	292	background eyes closed		body s1
+558767	561767	3000			face s1
+561767	561972	205	face s3	face s1	background floor
+561973	562118	145	face s3	face s1	face s1
+562118	563162	1044			face s2
+563162	563320	158	face s2	background wall	NA
+563320	563840	520	face s2		face s1
+563840	563964	124	face s2	background wall	NA
+563964	568925	4961			face s1
+568925	569122	197		face s1	NA
+569122	571077	1955			face s1
+571077	571762	685	face s3	face s3	NA
+571762	573348	1586			face s1
+573348	573947	599	background floor		body s1
+573947	575776	1829		background floor	face s1
+575776	576125	349	face s3	background floor	NA
+576127	576362	235	face s3	background floor	background wall
+576362	576724	362		background floor	NA
+576724	578205	1481			face s1
+578205	578351	146	face s3	face s3	background floor
+578351	578928	577	face s3	face s3	face s1
+578928	579274	346	face s3	face s3	background wall
+579274	582014	2740	face s3	face s3	face s1
+582014	582200	186	face s3	face s3	NA
+582200	583099	899		face s3	face s1
+583099	583531	432	background window	face s3	face s2
+583531	584367	836		face s3	background wall
+584367	584948	581	face s3	face s3	face s1
+584948	585738	790	face s3		background down
+585738	586074	336		face s3	face s1
+586074	586364	290	face s2		background wall
+586367	587010	643	face s2		face s2
+587010	588761	1751			face s1
+588761	589686	925			NA
+589686	592042	2356		face s1	face s1
+592042	592764	722		face s1	body s1
+592764	593041	277	NA	face s1	face s1
+593041	593968	927			face s2
+593968	595444	1476			face s1
+595444	596128	684	background wall		background wall
+596128	596354	226	background wall	face s1	body s1
+596354	597360	1006		face s1	face s1
+597360	600490	3130			background down
+600490	604006	3516			face s1
+604007	604560	553	face s3	face s1	background wall
+604560	605280	720		face s1	NA
+605280	608000	2720			face s1
+608000	608129	129	NA	background wall	face s2
+608129	608418	289	NA	background wall	NA
+608418	609792	1374	NA	background wall	face s1
+609792	610118	326		background wall	background wall
+610118	615672	5554			face s1
+615672	616683	1011	background floor	face s3	NA
+616683	618135	1452			face s1
+618135	619038	903	background window		background floor
+619038	619771	733	background window	face s3	NA
+619771	620476	705			
+620476	621439	963	face s3	face s1	face s1
+621439	621735	296	face s3	face s1	face s1
+621735	621849	114	face s3	face s1	face s1
+621849	622200	351	face s3		NA
+622200	622456	256		body s1	face s1
+622457	623322	865			NA
+623322	624796	1474			face s1
+624796	624937	141	background ceiling		background eyes closed
+624937	626727	1790			face s1
+626727	627361	634		face s1	background eyes closed
+627361	632201	4840			face s1
+632201	632356	155	face s3	background floor	NA
+632356	635442	3086	face s3		face s1
+635442	636005	563			NA
+636005	636170	165	face s2	body s1	face s2
+636171	636360	189	face s2		NA
+636360	637445	1085	face s2		face s1
+637445	638529	1084			face s2
+638529	641682	3153			face s1
+641682	642451	769	face s3	face s3	background floor
+642451	643685	1234			face s1
+643685	650292	6607			background wall
+650292	651722	1430	face s3	body s3	face s1
+651722	651963	241	face s3	body s3	NA
+651963	653238	1275			background wall
+653238	653405	167	NA	face s3	NA
+653405	654128	723		face s3	face s2
+654128	654325	197	face s3	face s3	NA
+654325	657242	2917			face s1
+657243	657520	277	NA	face s3	NA
+657520	659423	1903			background wall
+659423	659812	389	background floor	face s3	face s1
+659813	660627	814	background floor	face s3	background floor
+660627	661453	826	background floor	face s3	face s1
+661455	661605	150	background floor	face s3	body s1
+661605	661807	202	background floor	face s3	NA
+661807	662362	555		face s3	background wall
+662363	663395	1032	face s3	face s3	face s1
+663395	663687	292	face s3	face s3	background wall
+663687	664803	1116		face s3	face s1
+664805	665327	522	face s3	face s3	NA
+665327	666203	876	face s3	face s3	face s1
+666203	666481	278	face s3	face s3	NA
+666481	666807	326	face s3	face s3	face s2
+666807	667067	260	face s3	face s3	NA
+667068	667240	172	face s3	face s3	background wall
+667242	667646	404	face s3	face s3	NA
+667647	668735	1088		face s3	face s1
+668735	668857	122	background wall	face s3	body s1
+668858	669871	1013		face s3	NA
+669871	670371	500	background window	face s3	background own gestures
+670372	671285	913		face s3	face s1
+671285	671939	654	face s3		face s2
+671939	673454	1515			face s1
+673454	674640	1186			face s2
+674640	676620	1980	face s3		background wall
+676620	677279	659	face s3	face s3	face s1
+677279	677599	320	face s3	face s3	NA
+677599	678241	642	face s3	face s3	face s1
+678241	679081	840	face s3		face s2
+679081	680172	1091	face s3		face s1
+680172	680532	360	face s3	body s3	background wall
+680532	683478	2946			face s1
+683478	683754	276		face s3	NA
+683754	683876	122	face s3	face s3	face s2
+683878	684269	391	face s3	face s3	NA
+684269	688293	4024	face s3		face s1
+688293	688436	143	face s3	face s1	NA
+688436	690491	2055		face s1	face s1
+690491	690914	423	face s3	face s1	NA
+690914	692409	1495			face s1
+692409	692760	351	face s3	face s3	face s2
+692760	693517	757		face s3	face s1
+693517	694405	888	NA	face s3	background floor
+694405	695324	919	NA		face s1
+695324	696417	1093	NA	NA	face s2
+696419	697927	1508			face s1
+697927	698125	198	background ceiling	NA	background wall
+698125	698685	560	background ceiling		face s1
+698685	699283	598			background wall
+699283	699653	370	NA		face s1
+699653	700906	1253		face s1	background down
+700906	701393	487	face s2		face s1
+701393	711804	10411			face s2
+711804	714129	2325			face s1
+714129	715200	1071			face s2
+715200	716246	1046		face s1	face s1
+716246	716685	439	face s2	face s1	body s1
+716685	717735	1050			face s2
+717735	717886	151	face s2	face s3	NA
+717886	718793	907	face s2		face s1
+718793	719008	215	face s2	face s1	gestures s1
+719009	724898	5889			face s2
+724898	726569	1671			face s1
+726569	727738	1169		face s3	background floor
+727738	728198	460	face s2		face s2
+728198	728967	769			face s1
+728967	729562	595	face s3		NA
+729562	730922	1360			background wall
+730922	731370	448			face s1
+731371	733763	2392			background down
+733763	739727	5964			face s2
+739727	740086	359		background wall	body s2
+740086	748843	8757			face s2
+748843	749163	320	face s2		background wall
+749163	750409	1246		background wall	face s2
+750410	750655	245			background wall
+750655	750818	163		face s1	face s1
+750818	751296	478	face s2	face s1	background wall
+751296	751571	275	face s2	face s1	face s2
+751571	752086	515	face s2		NA
+752086	758618	6532			face s2
+758618	760007	1389			face s1
+760007	760203	196	face s3	face s3	background wall
+760203	760493	290	face s3	face s3	face s1
+760493	761481	988			NA
+761481	768051	6570			face s2
+768052	769565	1513			background own gestures
+769565	773046	3481			face s2
+773046	773441	395			face s1
+773441	773599	158	face s3	face s3	NA
+773599	773912	313	face s3		background wall
+773912	774037	125	face s3	NA	face s1
+774039	778246	4207			face s2
+778246	779206	960		face s3	NA
+779207	782377	3170			face s1
+782377	786076	3699			face s2
+786076	789301	3225			face s1
+789301	792243	2942	face s2		face s2
+792246	792725	479	face s2		NA
+792728	794962	2234			face s2
+794962	795603	641	background floor	face s1	NA
+795603	796164	561	background floor		face s1
+796164	796769	605	background floor		NA
+796769	797087	318	background floor		face s2
+797087	797525	438			background wall
+797525	798289	764	face s3	face s3	face s1
+798289	801408	3119			background wall
+801408	809579	8171			face s2
+809579	809843	264	NA		background wall
+809843	810481	638	NA		NA
+810483	811069	586		background wall	background wall
+811069	811604	535	face s2		body s1
+811604	812338	734	face s2		face s1
+812339	813004	665	face s2		face s2
+813004	814212	1208			background wall
+814212	843125	28913			face s2
+843125	843814	689	face s2 		NA
+843814	845845	2031	face s2 		face s1
+845846	850121	4275			face s2
+850121	850530	409	NA	face s1	face s1
+850530	851525	995		face s1	NA
+851525	851723	198	face s2	face s1	background floor
+851723	853931	2208			face s1
+853931	854441	510	face s2		body s1
+854441	856122	1681		face s1	face s1
+856122	857607	1485	background window		background floor
+857609	861362	3753			face s1
+861362	862004	642	NA 	face s3	NA
+862004	863526	1522	NA 	face s3	background floor
+863526	864281	755	NA 	face s3	face s1
+864281	866444	2163			background floor
+866444	867397	953	NA		face s1
+867397	868202	805		face s3	background wall
+868202	868524	322	face s3	face s3	face s2
+868525	869005	480		face s3	background down
+869005	869847	842	background wall	face s3	face s1
+869847	870082	235	background wall		background wall
+870084	870357	273		NA	NA
+870357	874326	3969			face s1
+874326	875273	947	NA	face s1	background wall
+875273	875853	580	NA		face s1
+875853	876005	152	NA	background wall	background wall
+876005	876282	277	NA	background wall	face s1
+876282	876880	598	NA	background wall	background wall
+876880	877284	404	NA	background wall	face s1
+877284	878897	1613			body s1
+878897	879603	706			background floor
+879603	880364	761	NA		face s1
+880364	882828	2464	NA		background wall
+882828	883534	706		background camera	face s1
+883534	884121	587	background floor	background camera	background wall
+884121	884943	822	background floor	background camera	face s1
+884943	886366	1423		background camera	background wall
+886366	887126	760	face s3	background camera	background floor
+887126	891726	4600			face s2
+891726	892246	520	face s2	background wall	NA
+892246	892808	562	face s2		background wall
+892808	893329	521	face s2	face s3	face s1
+893329	899361	6032	face s2		face s2
+899361	899758	397	face s2	background camera	NA
+899758	900130	372	face s2	background camera	face s1
+900130	900489	359			background wall
+900489	904243	3754			face s1
+904243	907659	3416			face s2
+907660	908093	433		face s3	face s1
+908093	910915	2822			face s2
+910915	913939	3024			face s1
+913939	915118	1179		face s1	background wall
+915118	916602	1484			face s1
+916602	922648	6046			background wall
+922649	924201	1552			NA
+924201	928202	4001	face s3		face s1
+928202	928652	450		face s1	NA
+928652	936395	7743			face s1
+936395	936519	124	face s3	NA	body s1
+936519	937124	605	face s3		face s1
+937127	938008	881			NA
+938009	939996	1987	face s3		face s1
+939996	940683	687	face s3	face s3	NA
+940683	941376	693		face s3	background wall
+941376	942599	1223		face s3	face s1
+942599	942925	326	face s3	face s3	background wall
+942925	944079	1154			face s2
+944079	944718	639			background wall
+944718	945835	1117	face s3		face s1
+945835	946482	647	face s3		background wall
+946482	946807	325	face s3	NA	face s1
+946807	947818	1011	face s3		background wall
+947818	949098	1280	face s3	face s3	face s1
+949098	949445	347	face s3	face s3	background wall
+949445	949721	276	face s3	face s3	face s2
+949721	951798	2077			face s1
+951798	952891	1093	face s3		background floor
+952891	959522	6631			face s1
+959522	959840	318	background window	face s1	background wall
+959840	969486	9646			face s1
+969486	970240	754	face s3	face s1	background wall
+970240	974402	4162			face s1
+974402	975805	1403	background wall		background wall
+975807	976820	1013		face s3	face s1
+976820	977492	672	face s3	face s3	background floor
+977492	978054	562		face s3	face s1
+978054	978489	435	background wall	face s3	background wall
+978489	979052	563	background wall	face s3	NA
+979052	983671	4619			face s1
+983671	984052	381	NA	NA	face s2
+984052	986568	2516	NA		face s1
+986568	987207	639			background wall
+987207	1005295	18088			face s1
+1005295	1005802	507	body s3	face s1	NA
+1005802	1010738	4936			face s1
+1010738	1011602	864		face s1	NA
+1011602	1015287	3685		face s1	face s1
+1015287	1016656	1369		face s1	background wall
+1016656	1017043	387	face s3	face s1	NA
+1017043	1018440	1397	face s3	face s1	face s1
+1018440	1019040	600		face s1	NA
+1019040	1019644	604	background wall	face s1	face s1
+1019646	1020042	396	background wall	face s1	NA
+1020042	1021528	1486		face s1	background floor
+1021528	1022439	911	background floor	face s1	face s1
+1022439	1023015	576	background floor	face s1	body s1
+1023015	1023672	657	background floor	face s1	face s1
+1023672	1024329	657	background floor	face s1	body s1
+1024329	1027684	3355		face s1	face s1
+1027684	1028158	474	body s3	face s1	background wall
+1028158	1029707	1549			face s1
+1029710	1030935	1225			face s2
+1030935	1031483	548			face s1
+1031483	1031765	282	face s2	NA	face s2
+1031765	1049969	18204			face s1
+1049969	1050645	676			NA
+1050645	1051438	793	background own body		background wall
+1051438	1053684	2246			face s1
+1053684	1055612	1928			background down
+1055613	1059242	3629			face s1
+1059242	1059364	122	NA	background camera	background wall
+1059364	1059775	411			NA
+1059776	1062119	2343			face s1
+1062119	1062362	243	background eyes closed	NA	NA
+1062362	1065323	2961			background wall
+1065323	1065442	119	background floor	face s1	NA
+1065443	1076239	10796			face s1
+1076239	1077361	1122			body s1
+1077362	1080438	3076			face s1
+1080438	1081764	1326		background down	background wall
+1081764	1082701	937		background down	face s1
+1082701	1083089	388			body s1
+1083089	1084796	1707		face s1	face s1
+1084796	1085125	329	face s2	face s1	face s2
+1085125	1087653	2528			face s1
+1087653	1088678	1025	NA		background camera
+1088678	1091093	2415			face s1
+1091096	1091567	471	background close s3	face s1	face s2
+1091567	1092881	1314	background close s3		face s1
+1092881	1093135	254	background close s3		body s1
+1093136	1093603	467	background close s3	background wall	face s1
+1093603	1095768	2165			background camera
+1095769	1096405	636			background wall
+1096405	1096541	136	background ceiling	face s1	body s1
+1096543	1096848	305	background ceiling		face s1
+1096848	1097104	256	background ceiling		body s1
+1097104	1103136	6032			face s1
+1103136	1103260	124	face s3	face s1	background wall
+1103260	1103649	389	face s3	face s1	NA
+1103649	1104175	526		face s1	face s1
+1104175	1105098	923	face s2	face s1	face s2
+1105098	1108053	2955			face s1
+1108054	1108724	670	background floor		background wall
+1108724	1109083	359	background floor	face s1	NA
+1109083	1109810	727	background floor		face s1
+1109810	1110337	527	background floor		body s1
+1110337	1111205	868			face s1
+1111205	1111760	555	face s3		body s1
+1111760	1128293	16533			face s1
+1128295	1128682	387			background wall
+1128682	1133930	5248			face s1
+1133930	1134279	349			background wall
+1134279	1134401	122	background wall	face s1	NA
+1134401	1137375	2974			face s1
+1137375	1137768	393	face s2		face s2
+1137768	1138121	353	face s2	face s1	background floor
+1138121	1142726	4605			face s1
+1142726	1143971	1245			background wall
+1143971	1144285	314	NA	background camera	body s1
+1144285	1147660	3375			face s1
+1147660	1149295	1635	face s3		face s2
+1149295	1149644	349	face s3		background floor
+1149644	1156840	7196			face s1
+1156840	1159687	2847			face s2
+1159690	1165656	5966			face s1
+1165656	1166482	826	NA	NA	background wall
+1166482	1166692	210	NA	NA	body s1
+1166692	1166886	194	NA		face s1
+1166886	1167935	1049			NA
+1167935	1168648	713	face s2	face s1	face s2
+1168648	1173281	4633			face s1
+1173281	1173401	120	face s3	NA	NA
+1173402	1174764	1362			background floor
+1174764	1175282	518			face s1
+1175282	1175885	603	NA		NA
+1175885	1176245	360	NA	face s1	background wall
+1176245	1176711	466		face s1	body s1
+1176711	1178042	1331		face s1	face s1
+1178042	1180442	2400			face s2
+1180442	1180757	315	face s2		body s2
+1180757	1191764	11007			face s2
+1191764	1193160	1396	NA	face s3	face s1
+1193160	1195927	2767			face s2
+1195927	1197605	1678			face s1
+1197605	1198525	920			NA
+1198526	1199492	966		NA	face s1

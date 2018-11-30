@@ -11,7 +11,6 @@ public class LocationAction : Action {
 	ActionType t;
 
 	Vector2 startLocation2D;
-	Vector3 startLocation3D;
 	GameObject target;
 
 	public LocationAction():base(0,0,null,""){
@@ -25,7 +24,6 @@ public class LocationAction : Action {
         this.param = parts[parts.Length - 1];
         this.target = GameObject.Find(this.param);
 		startLocation2D = new Vector2(int.MaxValue,int.MaxValue);
-		startLocation3D = new Vector3 (int.MaxValue, int.MaxValue, int.MaxValue);
 	}
 
 	
@@ -58,7 +56,7 @@ public class LocationAction : Action {
 			startLocation2D = Subject.getDude2D ().position;
 		if (target != null) {
 			string targetName = target.name;
-			Transform child = target.transform.Find (targetName + "2D"); // get the 2D representation of the TARGET!!!
+			Transform child = target.transform.Find (targetName ); // get the 2D representation of the TARGET!!!
 			if (child == null)
 				Debug.Log ("target name = " + targetName);
 
@@ -96,52 +94,6 @@ public class LocationAction : Action {
 		Subject.changeStance ("stand");
 	}
 
-
-	public override void execute3D(int current)
-	{
-		switch (t) 
-		{
-		case ActionType.goTo:
-			executeGoto3D (current);
-			break;
-		case ActionType.settling:
-			executeSettling(current);
-			break;
-		case ActionType.sit:
-			executeSit(current);
-			break;
-		case ActionType.stand:
-			executeStand(current);
-			break;
-
-		}
-	}
-
-	void executeGoto3D(int current){
-		Subject.changeStance ("stand");
-		if (startLocation3D == new Vector3 (int.MaxValue, int.MaxValue, int.MaxValue))
-			startLocation3D = Subject.getDude3D ().position;
-		if (target != null) {
-			string targetName = target.name;
-			Transform child = target.transform.Find (targetName + "3D"); // get the 3D representation of the TARGET!!!
-			if (child == null)
-				Debug.Log ("target name = " + targetName);
-
-			Vector3 targLoc = child.position; 
-			float lerp = ((float)current - start) / ((float)end - start);
-			Vector3 tmp = Vector3.Lerp (startLocation3D, targLoc, lerp * 0.7f);
-			Vector3 newLoc = tmp - new Vector3 (0.0f, -7.0f, 0.0f);
-			Subject.getDude3D ().position = newLoc;
-
-		} else {
-			if (current < end ) {
-				Debug.Log("Goto target failed: " + param);
-				Subject.setError (true);
-			} else {
-				Subject.setError (false);
-			}
-		}
-	}
 
 	public override string ToString ()
 	{

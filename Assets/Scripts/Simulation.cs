@@ -15,7 +15,6 @@ public class Simulation : MonoBehaviour {
 	Text durationText;
 	Text currentText;
 	Text loadedFileText;
-	public Camera camera3D;
 
 	public GUISkin sk;
 	public Texture2D file,folder,back,drive;
@@ -40,7 +39,7 @@ public class Simulation : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		//setting filebrowser
-		fb = new FileBrowser(0);
+		fb = new FileBrowser("./Data Files",0);
 		fb.setLayout (0);
 		fb.guiSkin = sk;
 		fb.fileTexture = file; 
@@ -51,7 +50,6 @@ public class Simulation : MonoBehaviour {
 		fb.searchRecursively = true;
 		playspeed = 1.0f;
 		speedtext.text = "Play Speed: " + playspeed + "x";
-        camera3D.enabled = false;
 
 
         ////different action types
@@ -68,7 +66,7 @@ public class Simulation : MonoBehaviour {
         //functions.Add ("context_focused", Color.green);
         //functions.Add ("communication_focused", Color.blue);
 
-        loadConfigFile();
+       
 		actions = new List<Action> ();
 		activeActions = new List<Action> ();
 		timeline = GameObject.Find ("Timeline").GetComponent<Slider> ();
@@ -100,7 +98,7 @@ public class Simulation : MonoBehaviour {
 		GameObject[] players = GameObject.FindGameObjectsWithTag ("Player");
 		initialState = new Dictionary<Transform, Vector2> ();
 		foreach (GameObject o in players) {
-			Transform p = o.transform.Find (o.name + "2D").transform;
+			Transform p = o.transform.Find (o.name).transform;
 			initialState.Add(p,p.position);
 			o.GetComponent<Player>().Reset();
 		}
@@ -122,15 +120,7 @@ public class Simulation : MonoBehaviour {
 	}
 
 
-	public void ChangeTo3DView(){
-		if (camera3D.enabled) {
-			camera3D.enabled = false;
-			GameObject.Find ("Button3D").GetComponentInChildren<Text> ().text = "3D";
-		} else {
-			camera3D.enabled = true;
-			GameObject.Find ("Button3D").GetComponentInChildren<Text> ().text = "2D";
-		}
-	}
+	
 
 	// Update is called once per frame
 	void Update () {
@@ -155,7 +145,6 @@ public class Simulation : MonoBehaviour {
 			if(a.start < current){
 				int val = current > a.end? a.end:current;
 				a.execute(val);
-				a.execute3D (val);
 			}
 		}
 	}
@@ -170,7 +159,6 @@ public class Simulation : MonoBehaviour {
 			activeActions.Remove (a);
 			//finish the action
 			a.execute(current);
-			a.execute3D (current);
 		}
 
 		int i = lastActionidx; 
@@ -185,7 +173,6 @@ public class Simulation : MonoBehaviour {
 	void ExecuteActiveActions(){
 		foreach (Action a in activeActions) {
 			a.execute(current);
-			a.execute3D(current);
 		}
 	}
 
@@ -203,9 +190,6 @@ public class Simulation : MonoBehaviour {
 		settings.toggleOpen();
 	}
 
-	public void toggleSetup(){
-		setupAnnotation.startSetup ();
-	}
 
 	public void stop(){
 		control.stop ();
@@ -231,22 +215,15 @@ public class Simulation : MonoBehaviour {
 				browse = false;
 			}else{
 				Debug.Log("Ouput File = \""+fb.outputFile.ToString()+"\"");
-				filename = fb.outputFile.ToString();
+				//filename = 
 				browse = false;
-				loadFile();
+                load(fb.outputFile.ToString());
 			}
 		}
 		System.TimeSpan ts = System.TimeSpan.FromMilliseconds (current);
 		currentText.text = string.Format("{0:00}:{1:00}:{2:00}:{3:00}",ts.Hours,ts.Minutes, ts.Seconds,ts.Milliseconds);
 	
 		settings.drawGUI ();
-
-		if(setupAnnotation.isSetupTiersActive)
-			setupAnnotation.drawSetupTiers ();
-
-		if (setupAnnotation.isSetupActionActive)
-			setupAnnotation.drawSetupActions ();
-
 
 		if (fb.outputFile != null && fileLoaded) {
 			loadedFileText.text ="Loaded File: "+ fb.outputFile.ToString();
@@ -337,6 +314,33 @@ public class Simulation : MonoBehaviour {
 
             }
             modifiersConfig.Add(className, configs);
+        }
+    }
+
+    void load(string s)
+    {
+        if (s.Contains("xml"))
+        {
+            configFilename = s;
+            loadConfigFile();
+            GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+            foreach (GameObject o in players)
+            {
+                o.GetComponent<Player>().loadSettings();
+            }
+            settings.loadModifiers();
+        }
+        else
+        {
+            filename = s;
+            if (configFilename == "")
+            {
+                Debug.Log("Load .xml config first, or run setup, loading with no model");
+            }
+            else
+            {
+                loadFile();
+            }
         }
     }
 

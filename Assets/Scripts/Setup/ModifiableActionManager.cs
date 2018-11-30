@@ -13,10 +13,10 @@ public class ModifiableActionManager : MonoBehaviour {
 	public Dictionary<string, List<string>> TiersByModifiableAction { get; set; }
 
 	private List<string> tierList;
-	private List<string> actionList;
+	private List<Action> actionList;
 
 
-	private AnnotationSetupManager annotationSetupManager;
+	private SetupButton setup;
 	private Dictionary<string, List<string>>  newTierConfig;
 	private Dictionary<string, List<string>> tiersByAction;
 
@@ -27,23 +27,23 @@ public class ModifiableActionManager : MonoBehaviour {
 	private List<Transform> contentActionItemList;
 
 	void Start(){
-		annotationSetupManager = GameObject.Find ("Boss Object").GetComponent<AnnotationSetupManager> ();
-		contentActionItemList = new List<Transform> ();
+        setup = GameObject.Find("Button Setup").GetComponent<SetupButton>();
+        contentActionItemList = new List<Transform>();
 		TiersByModifiableAction = new Dictionary<string, List<string>> ();
 		currentActionIndex = 0;
 
-		actionList = annotationSetupManager.ActionList;
-		newTierConfig = annotationSetupManager.GetNewTiersConfig ();
-		tiersByAction = annotationSetupManager.ActionManager.tiersByAction;
+		actionList = setup.ActionList;
+		newTierConfig = setup.GetNewTiersConfig ();
+		tiersByAction = setup.ActionManager.tiersByAction;
 
 		// Tiers not assigned yet
 		tierList = new List<string> ();
 		GetTiersNotAssigned ();
 
-		foreach (string action in actionList) {
+		foreach (Action action in actionList) {
 			GameObject actionStringGO = GameObject.Instantiate (itemPrefab);
 			Button actionStringButton = actionStringGO.GetComponent<Button> ();
-			actionStringGO.GetComponent<SampleItemButton> ().SetItemListText (action);
+			actionStringGO.GetComponent<SampleItemButton> ().SetItemListText (action.ToString());
 			actionStringGO.transform.SetParent (contentActions);
 
 			EventTrigger trigger = actionStringButton.GetComponent<EventTrigger>();
@@ -132,7 +132,7 @@ public class ModifiableActionManager : MonoBehaviour {
 
 	// Update is called once per frame
 	public void ClickedNext () {
-		annotationSetupManager.ModifiableActionSetupPanel.SetActive (false);
-		annotationSetupManager.ParameterSetupPanel.SetActive (true);
+		setup.ModifiableActionSetupPanel.SetActive (false);
+		setup.ParameterSetupPanel.SetActive (true);
 	}
 }
