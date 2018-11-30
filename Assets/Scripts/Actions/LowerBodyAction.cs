@@ -30,6 +30,10 @@ public class LowerBodyAction : ColorChangeableAction
         }
     }
 
+    public override string GetClassName()
+    {
+        return "LowerBodyAction";
+    }
 
     public override string ToString ()
 	{

@@ -43,7 +43,7 @@ public class ModifiableActionManager : MonoBehaviour {
 		foreach (Action action in actionList) {
 			GameObject actionStringGO = GameObject.Instantiate (itemPrefab);
 			Button actionStringButton = actionStringGO.GetComponent<Button> ();
-			actionStringGO.GetComponent<SampleItemButton> ().SetItemListText (action.ToString());
+			actionStringGO.GetComponent<SampleItemButton> ().SetItemListText (action.GetClassName());
 			actionStringGO.transform.SetParent (contentActions);
 
 			EventTrigger trigger = actionStringButton.GetComponent<EventTrigger>();

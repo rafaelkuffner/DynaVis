@@ -32,6 +32,10 @@ public class HeadFaceAction : ColorChangeableAction
     }
 
 
+    public override string GetClassName()
+    {
+        return "HeadFaceAction";
+    }
 
     public override string ToString ()
 	{

@@ -55,6 +55,10 @@ public class GazeAction : Action {
 		}
 	}
 
+    public override string GetClassName()
+    {
+        return "GazeAction";
+    }
 
 	public override string ToString ()
 	{

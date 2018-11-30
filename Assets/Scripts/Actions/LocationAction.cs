@@ -94,6 +94,10 @@ public class LocationAction : Action {
 		Subject.changeStance ("stand");
 	}
 
+    public override string GetClassName()
+    {
+        return "LocationAction";
+    }
 
 	public override string ToString ()
 	{

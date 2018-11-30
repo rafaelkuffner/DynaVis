@@ -78,4 +78,7 @@ public abstract class Action :  IComparable{
 			return this.start.CompareTo(((Action)comparePart).start);
 	}
 
+    public abstract string GetClassName();
+
+    //public abstract string GetDescriptionString();
 }

@@ -31,9 +31,17 @@ public class UpperBodyAction : ColorChangeableAction {
         }
 	}
 
- 
+
+    public override string GetClassName()
+    {
+        return "UpperBodyAction";
+    }
+
 	public override string ToString ()
 	{
 		return string.Format ("Upper Body MU");
 	}
+    
+  
+
 }

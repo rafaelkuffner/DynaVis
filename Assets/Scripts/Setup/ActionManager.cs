@@ -30,7 +30,7 @@ public class ActionManager : MonoBehaviour {
 		foreach (Action action in actionList) {
 			GameObject actionStringGO = GameObject.Instantiate (itemPrefab);
 			Button actionStringButton = actionStringGO.GetComponent<Button> ();
-			actionStringGO.GetComponent<SampleItemButton> ().SetItemListText (action.ToString());
+			actionStringGO.GetComponent<SampleItemButton> ().SetItemListText (action.GetClassName());
 			actionStringGO.transform.SetParent (contentActions);
             actionStringGO.transform.localScale = Vector3.one;
             actionStringGO.GetComponent<RectTransform>().sizeDelta =new Vector2(200,25);
