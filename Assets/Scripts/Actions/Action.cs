@@ -80,5 +80,5 @@ public abstract class Action :  IComparable{
 
     public abstract string GetClassName();
 
-    //public abstract string GetDescriptionString();
+    public abstract string GetDescriptionString();
 }

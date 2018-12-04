@@ -103,4 +103,12 @@ public class LocationAction : Action {
 	{
 		return string.Format ("Location");
 	}
+
+    public override string GetDescriptionString()
+    {
+        return "LocationAction: Write the name of the GameObject where the action is headed. "+ 
+            "Also supports sit_ and stand_ to change the representation of the subject." + 
+            " After _ on sit, you can choose full or part to decide the relative position to the chair." + 
+            "Finally, settling to show preparation to stand up.";
+    }
 }

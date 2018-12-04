@@ -21,9 +21,7 @@ public class SpriteManager : MonoBehaviour {
 	private GameObject currentButtonGO;
 	private GameObject currentItemGO;
 	private Dictionary<string, List<string>> tiersByAction;
-	private List<string> actions;
-	private string currentAction = "";
-    
+    private Action currentAction;
 
 	// Use this for initialization
 	void Start () {
@@ -33,12 +31,12 @@ public class SpriteManager : MonoBehaviour {
         setup = GameObject.Find("Button Setup").GetComponent<SetupButton>();
         actionList = setup.ActionList;
 		tiersByAction = setup.TiersByAction;
-		actions = new List<string>(tiersByAction.Keys);
 
-		if (actions.Count > 0) {
-			currentAction = actions [0];
-			NewSpriteTranslationTableByAction.Add (currentAction, new Dictionary<string, string> ());
-			List<string> tiers = tiersByAction [currentAction];
+        if (actionList.Count > 0)
+        {
+			currentAction = actionList[0];
+            NewSpriteTranslationTableByAction.Add(currentAction.GetClassName(), new Dictionary<string, string>());
+            List<string> tiers = tiersByAction[currentAction.GetClassName()];
 			List<string> parameterList = setup.getParametersByTierString (tiers);
 
 			foreach (string param in parameterList) {
@@ -56,14 +54,15 @@ public class SpriteManager : MonoBehaviour {
 				});
 				trigger.triggers.Add (entry);
 			}
-			actions.RemoveAt (0);
+            actionList.RemoveAt(0);
 
 		}
-        if (actions.Count == 0)
+        if (actionList.Count == 0)
         {
             buttonNext.GetComponentInChildren<Text>().text = "Next";
             buttonNext.onClick.AddListener(OnClickNext);
         }
+        currentAction.GetDescriptionString();
 	}
 
 	private void LoadContent(){
@@ -76,12 +75,12 @@ public class SpriteManager : MonoBehaviour {
 			Destroy(contentListDetached[i]);
 		}
 
-		if (actions.Count <= 0)
+        if (actionList.Count <= 0)
 			return;
 
-		currentAction = actions [0];
-		NewSpriteTranslationTableByAction.Add (currentAction, new Dictionary<string, string> ());
-		List<string> tiers = tiersByAction [currentAction];
+        currentAction = actionList[0];
+        NewSpriteTranslationTableByAction.Add(currentAction.GetClassName(), new Dictionary<string, string>());
+        List<string> tiers = tiersByAction[currentAction.GetClassName()];
 		List<string> parameterList = setup.getParametersByTierString (tiers);
 
 		foreach (string param in parameterList) {
@@ -98,7 +97,7 @@ public class SpriteManager : MonoBehaviour {
 			});
 			trigger.triggers.Add (entry);
 		}
-		actions.RemoveAt (0);
+        actionList.RemoveAt(0);
 	}
 
 	private void EditedInputField(){
@@ -107,7 +106,7 @@ public class SpriteManager : MonoBehaviour {
 
 		Debug.Log("EditedInputField = " + currentItemGO.GetComponentInChildren<Text>().text.ToString ());
 
-		NewSpriteTranslationTableByAction[currentAction].Add (button.GetComponent<SampleItemButton>().GetItemListText(), currentInputField.text.ToString ());
+        NewSpriteTranslationTableByAction[currentAction.GetClassName()].Add(button.GetComponent<SampleItemButton>().GetItemListText(), currentInputField.text.ToString());
 	}
 		
 	public void OnPointerClickButton(PointerEventData data)
@@ -115,9 +114,9 @@ public class SpriteManager : MonoBehaviour {
 		currentButtonGO = data.selectedObject;
 		Debug.Log("OnPointerClickButton called = " + currentButtonGO.GetComponent<SampleItemButton>().GetItemListText());
 
-		currentItemGO = GameObject.Instantiate (inputFieldPrefab);
-		InputField currentInputField = currentItemGO.GetComponentInChildren<InputField> ();
-		Button currentInputButton = currentItemGO.GetComponentInChildren<Button> ();
+		GameObject ob = GameObject.Instantiate (inputFieldPrefab);
+        InputField currentInputField = ob.GetComponentInChildren<InputField>();
+        Button currentInputButton = ob.GetComponentInChildren<Button>();
 
         EventTrigger trigger = currentInputButton.GetComponent<EventTrigger>();
         EventTrigger.Entry entry = new EventTrigger.Entry();
@@ -133,8 +132,8 @@ public class SpriteManager : MonoBehaviour {
         entry.callback.AddListener((datad) => { OnPointerClickButtonRight((PointerEventData)datad); });
         trigger.triggers.Add(entry);
 
-        currentItemGO.transform.SetParent (contentSpriteName);
-        currentItemGO.transform.localScale = Vector3.one;
+        ob.transform.SetParent(contentSpriteName);
+        ob.transform.localScale = Vector3.one;
 		Destroy(currentButtonGO);
 	}
 
@@ -157,6 +156,7 @@ public class SpriteManager : MonoBehaviour {
         }
 
         currentItemGO = data.selectedObject.transform.parent.gameObject;
+        Debug.Log("Selected item " + currentItemGO);
 
         ColorBlock cb1 = currentItemGO.GetComponentInChildren<Button>().colors;
         cb1.normalColor = cb1.pressedColor;
@@ -207,7 +207,8 @@ public class SpriteManager : MonoBehaviour {
 	public void OnClickNextAction(){
 
 		LoadContent ();
-		if (actions.Count == 0) {
+        if (actionList.Count == 0)
+        {
 			buttonNext.GetComponentInChildren<Text> ().text = "Next";
 			buttonNext.onClick.AddListener(OnClickNext);
 		}

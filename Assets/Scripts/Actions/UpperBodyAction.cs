@@ -41,7 +41,11 @@ public class UpperBodyAction : ColorChangeableAction {
 	{
 		return string.Format ("Upper Body MU");
 	}
-    
-  
+
+
+    public override string GetDescriptionString()
+    {
+        return "Lower Body Action: Use the name of the body part to highlight, as in the sprite sheet.";
+    }
 
 }

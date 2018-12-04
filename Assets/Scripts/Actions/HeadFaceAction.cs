@@ -41,4 +41,10 @@ public class HeadFaceAction : ColorChangeableAction
 	{
 		return string.Format ("Head/Face MU");
 	}
+
+    public override string GetDescriptionString()
+    {
+        return "HeadFaceAction: Assign to each parameter in the .csv file to one element in the Face expressions spritesheet attached " + 
+            "to the character.";
+    }
 }

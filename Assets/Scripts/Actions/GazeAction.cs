@@ -64,5 +64,13 @@ public class GazeAction : Action {
 	{
 		return string.Format ("Gaze Endpoint");
 	}
+
+
+    public override string GetDescriptionString()
+    {
+        return "Gaze Action: Assign to each parameter in the .csv file, the name of one element in the unity Scene that you set up. "
+        + "This action offers the following alternatives: home for starting position, free for a straight direction in front of you, "
+        + "up and down for relative positions to the character, self to look at the own chest.";
+    }
 }
 	
