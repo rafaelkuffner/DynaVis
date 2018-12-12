@@ -56,11 +56,9 @@ public class LocationAction : Action {
 			startLocation2D = Subject.getDude2D ().position;
 		if (target != null) {
 			string targetName = target.name;
-			Transform child = target.transform.Find (targetName ); // get the 2D representation of the TARGET!!!
-			if (child == null)
-				Debug.Log ("target name = " + targetName);
 
-			Vector2 targLoc = child.position; 
+
+			Vector2 targLoc = target.transform.position; 
 			float lerp = ((float)current - start) / ((float)end - start);
 			Vector2 newLoc = Vector2.Lerp (startLocation2D, targLoc, lerp);
 			Subject.getDude2D ().position = newLoc;
@@ -106,9 +104,9 @@ public class LocationAction : Action {
 
     public override string GetDescriptionString()
     {
-        return "LocationAction: Write the name of the GameObject where the action is headed. "+ 
-            "Also supports sit_ and stand_ to change the representation of the subject." + 
-            " After _ on sit, you can choose full or part to decide the relative position to the chair." + 
-            "Finally, settling to show preparation to stand up.";
+        return "LocationAction: Write the name of the scene element where the action is headed. "+ 
+            "Also supports \"sit_\" and \"stand_\" to change the representation of the subject." + 
+            " After \"_\" on sit, you can choose \"full\" or \"part\" to decide the relative position to the chair." + 
+            "Finally, \"settling\" to show preparation to stand up.";
     }
 }

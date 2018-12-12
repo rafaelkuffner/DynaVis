@@ -44,7 +44,7 @@ public class HeadFaceAction : ColorChangeableAction
 
     public override string GetDescriptionString()
     {
-        return "HeadFaceAction: Assign to each parameter in the .csv file to one element in the Face expressions spritesheet attached " + 
+        return "HeadFaceAction: Assign to each parameter in the .csv file to one element in the face expressions spritesheet attached " + 
             "to the character.";
     }
 }

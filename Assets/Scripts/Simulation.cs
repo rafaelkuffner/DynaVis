@@ -98,7 +98,7 @@ public class Simulation : MonoBehaviour {
 		GameObject[] players = GameObject.FindGameObjectsWithTag ("Player");
 		initialState = new Dictionary<Transform, Vector2> ();
 		foreach (GameObject o in players) {
-			Transform p = o.transform.Find (o.name).transform;
+			Transform p = o.transform;
 			initialState.Add(p,p.position);
 			o.GetComponent<Player>().Reset();
 		}

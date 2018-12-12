@@ -16,7 +16,7 @@ public class GazeAction : Action {
 	public override void execute (int current)
 	{
 		GameObject go = GameObject.Find (param);
-		Transform playerTransform = Subject.transform.Find (Subject.name).transform;
+		Transform playerTransform = Subject.transform;
         if (current >= end || !shouldExecute())
         {
 			Subject.lookat (playerTransform.position);
@@ -24,8 +24,7 @@ public class GazeAction : Action {
 	        return;
 		}
 		if (go != null) {
-			Transform child = go.transform.Find (param);
-			Subject.lookat (child.position);
+			Subject.lookat (go.transform.position);
 
 		}else if(param == "down"){
 			Subject.lookat (playerTransform.position + new Vector3 (0, -0.9f, 0));
@@ -69,8 +68,8 @@ public class GazeAction : Action {
     public override string GetDescriptionString()
     {
         return "Gaze Action: Assign to each parameter in the .csv file, the name of one element in the unity Scene that you set up. "
-        + "This action offers the following alternatives: home for starting position, free for a straight direction in front of you, "
-        + "up and down for relative positions to the character, self to look at the own chest.";
+        + "This action offers the following alternatives: \"home\" for starting position, \"free\" for a straight direction in front of you, "
+        + "\"up\" and \"down\" for relative positions to the character, \"self\" to look at the own chest.";
     }
 }
 	

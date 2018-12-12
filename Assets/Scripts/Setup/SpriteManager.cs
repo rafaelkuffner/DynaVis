@@ -13,7 +13,7 @@ public class SpriteManager : MonoBehaviour {
 	public GameObject inputFieldPrefab;
 	public Dictionary<string, Dictionary<string,  string>> NewSpriteTranslationTableByAction { get; set; }
 	public Button buttonNext;
-
+	public GameObject textDescriptionObject;
 	private SetupButton setup;
 	private List<Action> actionList;
 	private Dictionary<string, string> spriteTranslationTable;
@@ -22,6 +22,7 @@ public class SpriteManager : MonoBehaviour {
 	private GameObject currentItemGO;
 	private Dictionary<string, List<string>> tiersByAction;
     private Action currentAction;
+	private int processedActions;
 
 	// Use this for initialization
 	void Start () {
@@ -32,9 +33,14 @@ public class SpriteManager : MonoBehaviour {
         actionList = setup.ActionList;
 		tiersByAction = setup.TiersByAction;
 
-        if (actionList.Count > 0)
+		if (tiersByAction.Count > 0)
         {
+			while(!tiersByAction.ContainsKey(actionList[0].GetClassName()))
+			{
+				actionList.RemoveAt(0);
+			}
 			currentAction = actionList[0];
+			processedActions = 1;
             NewSpriteTranslationTableByAction.Add(currentAction.GetClassName(), new Dictionary<string, string>());
             List<string> tiers = tiersByAction[currentAction.GetClassName()];
 			List<string> parameterList = setup.getParametersByTierString (tiers);
@@ -57,12 +63,13 @@ public class SpriteManager : MonoBehaviour {
             actionList.RemoveAt(0);
 
 		}
-        if (actionList.Count == 0)
+		if (processedActions ==tiersByAction.Count)
         {
             buttonNext.GetComponentInChildren<Text>().text = "Next";
+			buttonNext.onClick.RemoveAllListeners ();
             buttonNext.onClick.AddListener(OnClickNext);
         }
-        currentAction.GetDescriptionString();
+		textDescriptionObject.GetComponent<Text>().text = currentAction.GetDescriptionString();
 	}
 
 	private void LoadContent(){
@@ -74,11 +81,15 @@ public class SpriteManager : MonoBehaviour {
 		for (int i = 0; i < contentListDetached.Length; i++) {
 			Destroy(contentListDetached[i]);
 		}
-
-        if (actionList.Count <= 0)
+			
+		while( actionList.Count >0  && !tiersByAction.ContainsKey(actionList[0].GetClassName()) )
+		{
+			actionList.RemoveAt(0);
+		}
+		if (actionList.Count <= 0)
 			return;
-
-        currentAction = actionList[0];
+		processedActions++;
+		currentAction = actionList[0];
         NewSpriteTranslationTableByAction.Add(currentAction.GetClassName(), new Dictionary<string, string>());
         List<string> tiers = tiersByAction[currentAction.GetClassName()];
 		List<string> parameterList = setup.getParametersByTierString (tiers);
@@ -98,6 +109,8 @@ public class SpriteManager : MonoBehaviour {
 			trigger.triggers.Add (entry);
 		}
         actionList.RemoveAt(0);
+		textDescriptionObject.GetComponent<Text>().text = currentAction.GetDescriptionString();
+
 	}
 
 	private void EditedInputField(){
@@ -126,9 +139,10 @@ public class SpriteManager : MonoBehaviour {
 
 		currentInputButton.GetComponent<SampleItemButton>().SetItemListText(currentButtonGO.GetComponent<SampleItemButton>().GetItemListText());
 		currentInputField.onEndEdit.AddListener (delegate {EditedInputField (); });
-        trigger = currentInputField.GetComponent<EventTrigger>();
+        
+		trigger = currentInputField.GetComponent<EventTrigger>();
         entry = new EventTrigger.Entry();
-        entry.eventID = EventTriggerType.PointerDown;
+        entry.eventID = EventTriggerType.PointerUp;
         entry.callback.AddListener((datad) => { OnPointerClickButtonRight((PointerEventData)datad); });
         trigger.triggers.Add(entry);
 
@@ -144,8 +158,9 @@ public class SpriteManager : MonoBehaviour {
 
         if (currentItemGO == null)
         {
-            normalButtonColor = data.selectedObject.GetComponentInChildren<Button>().colors.normalColor;
-            highlightButtonColor = data.selectedObject.GetComponentInChildren<Button>().colors.highlightedColor;
+			GameObject buttonGO = transform.parent.GetChild (0).gameObject;
+			normalButtonColor = buttonGO.GetComponentInChildren<Button>().colors.normalColor;
+			highlightButtonColor = buttonGO.GetComponentInChildren<Button>().colors.highlightedColor;
         }
         else
         {
@@ -207,9 +222,10 @@ public class SpriteManager : MonoBehaviour {
 	public void OnClickNextAction(){
 
 		LoadContent ();
-        if (actionList.Count == 0)
+		if (processedActions == tiersByAction.Count)
         {
 			buttonNext.GetComponentInChildren<Text> ().text = "Next";
+			buttonNext.onClick.RemoveAllListeners ();
 			buttonNext.onClick.AddListener(OnClickNext);
 		}
 	}

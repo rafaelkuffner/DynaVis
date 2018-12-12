@@ -54,7 +54,7 @@ public class Player : MonoBehaviour {
 		TextMesh tm = GetComponentInChildren<TextMesh> ();
 		tm.text = gameObject.name;
 
-		dude2D = GetComponent<Transform> ().Find(this.name).transform;
+		dude2D =this.transform;
 
 		prefabListByTagSitting = new Dictionary<string, List<Transform>> ();
 		prefabListByTagStand = new Dictionary<string, List<Transform>> ();
