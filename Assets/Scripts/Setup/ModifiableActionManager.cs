@@ -32,7 +32,15 @@ public class ModifiableActionManager : MonoBehaviour {
 		TiersByModifiableAction = new Dictionary<string, List<string>> ();
 		currentActionIndex = 0;
 
-		actionList = setup.ActionList;
+		List<Action> actionList = new List<Action> ();
+		foreach (Action a in setup.ActionList) 
+		{
+			if (a is ColorChangeableAction) {
+				actionList.Add (a);
+			}
+		}
+
+
 		newTierConfig = setup.GetNewTiersConfig ();
 		tiersByAction = setup.ActionManager.tiersByAction;
 

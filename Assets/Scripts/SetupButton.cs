@@ -51,6 +51,7 @@ public class SetupButton : MonoBehaviour {
         ActionList.Add(new HeadFaceAction());
         ActionList.Add(new UpperBodyAction());
         ActionList.Add(new LowerBodyAction());
+		ActionList.Add(new RotateJointAction());
 
         //ActionList = new List<string>();
         //ActionList.Add("UpperBodyAction");
@@ -111,7 +112,7 @@ public class SetupButton : MonoBehaviour {
         while ((line = sr.ReadLine()) != null)
         {
             string[] components = line.Split(delim);
-            if (components.Length == 5)
+			if (components.Length >= 5)
             {
                 int startTime;
                 int endTime;

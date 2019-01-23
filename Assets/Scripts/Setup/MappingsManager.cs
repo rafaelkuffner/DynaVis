@@ -23,6 +23,14 @@ public class MappingsManager : MonoBehaviour {
 	void Start () {
         setup = GameObject.Find("Button Setup").GetComponent<SetupButton>();
 		MappingInputOutput = new Dictionary<string, string> ();
+
+		List<Action> actionList = new List<Action> ();
+		foreach (Action a in setup.ActionList) 
+		{
+			if (a is ColorChangeableAction) {
+				actionList.Add (a);
+			}
+		}
 		//MappingInputList = new List<string> ();
 		//MappingOutputList = new List<string> ();
 	}

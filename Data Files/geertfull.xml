@@ -1,0 +1,113 @@
+<Definitions>
+  <Tiers>
+    <Tier name="Gaze">
+      <TierString>gaze s1</TierString>
+      <TierString>gaze s2</TierString>
+      <TierString>gaze s3</TierString>
+    </Tier>
+    <Tier name="Upper Body Movement">
+      <TierString>gestural holds s3</TierString>
+      <TierString>hand gestures S1</TierString>
+      <TierString>hand gestures S2</TierString>
+      <TierString>hand gestures S3</TierString>
+    </Tier>
+    <Tier name="Facial expression">
+      <TierString>facial expressions s1</TierString>
+      <TierString>facial expressions s2</TierString>
+      <TierString>facial expressions s3</TierString>
+	  <TierString>head gestures S1</TierString>
+      <TierString>head gestures S2</TierString>
+      <TierString>head gestures S3</TierString>
+      <TierString>transcriptie s1</TierString>
+      <TierString>transcriptie s2</TierString>
+      <TierString>transcriptie s3</TierString>
+    </Tier>
+  </Tiers>
+  <Actions>
+    <Action name="GazeAction">
+      <ApplicableTiers>
+        <ApplicableTier>Gaze</ApplicableTier>
+      </ApplicableTiers>
+      <Parameters>
+        <Parameter input="face s3" output="f1" />
+        <Parameter input="body s3" output="t1" />
+        <Parameter input="background floor" output="down" />
+        <Parameter input="background own body" output="self" />
+        <Parameter input="face s1" output="f1" />
+        <Parameter input="NA" output="boo" />
+        <Parameter input="background wall" output="beyond" />
+        <Parameter input="background ceiling" output="up" />
+        <Parameter input="face s2" output="f2" />
+        <Parameter input="background window" output="beyond" />
+        <Parameter input="face s3 " output="f3" />
+        <Parameter input="body s2" output="t2" />
+        <Parameter input="face s2 " output="f2" />
+        <Parameter input="gestures s2" output="g2" />
+        <Parameter input="gestures s3" output="g3" />
+        <Parameter input="body s1" output="t1" />
+        <Parameter input="gestures s1" output="g1" />
+        <Parameter input="background camera" output="camera" />
+        <Parameter input="NA " output="boo" />
+        <Parameter input="background close s3" output="beyond" />
+        <Parameter input="background own gestures" output="self" />
+        <Parameter input="background down" output="down" />
+      </Parameters>
+    </Action>
+    <Action name="HeadFaceAction">
+      <ApplicableTiers>
+        <ApplicableTier>Facial expression</ApplicableTier>
+      </ApplicableTiers>
+      <Parameters>
+        <Parameter input="laugh" output="mouth_head" />
+        <Parameter input="raised eyebrows" output="eyes_brows_head" />
+        <Parameter input="other" output="head" />
+		<Parameter input="forward" output="head" />
+        <Parameter input="jerk" output="head" />
+        <Parameter input="head tilt" output="head" />
+        <Parameter input="sideturn" output="head" />
+        <Parameter input="headshake" output="head" />
+        <Parameter input="backward" output="head" />
+        <Parameter input="back to normal" output="head" />
+        <Parameter input="placeholder" output="face" />
+      </Parameters>
+    </Action>
+    <Action name="UpperBodyAction">
+      <ApplicableTiers>
+        <ApplicableTier>Upper Body Movement</ApplicableTier>
+      </ApplicableTiers>
+      <Parameters>
+        <Parameter input="palm up" output="all" />
+        <Parameter input="palm up?" output="all" />
+        <Parameter input="puoh begint tijdens (ook stroke)" output="all" />
+        <Parameter input="pointing begint net voor (stroke tijdens)" output="all" />
+        <Parameter input="hold (deictic to self)" output="all" />
+        <Parameter input="stroke na HM (deictic)" output="all" />
+        <Parameter input="begin (palm down)" output="all" />
+        <Parameter input="retraction" output="all" />
+        <Parameter input="palm lateral" output="all" />
+        <Parameter input="deictic to self" output="all" />
+        <Parameter input="palm down" output="all" />
+        <Parameter input="handen naar hoofd" output="all" />
+        <Parameter input="puoh" output="all" />
+        <Parameter input="palm lateral (conduit)" output="all" />
+        <Parameter input="pointing" output="all" />
+        <Parameter input="2 hands" output="all" />
+        <Parameter input="cyclic next to head (ideën)" output="all" />
+        <Parameter input="representational gesture systeem" output="all" />
+        <Parameter input="aanhalingstekens " output="all" />
+        <Parameter input="clapping in hands" output="all" />
+        <Parameter input="2 handen" output="all" />
+        <Parameter input="palm down swipe" output="all" />
+        <Parameter input="palm down mvmts" output="all" />
+        <Parameter input="other" output="all" />
+        <Parameter input="hold" output="all" />
+        <Parameter input="puoh swipes" output="all" />
+        <Parameter input="palm laterals: koffer" output="all" />
+        <Parameter input="palm up afwerend" output="all" />
+        <Parameter input="self-adaptor" output="all" />
+        <Parameter input="counting" output="all" />
+      </Parameters>
+    </Action>
+  </Actions>
+  <Modifiers />
+</Definitions>

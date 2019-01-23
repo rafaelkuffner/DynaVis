@@ -30,7 +30,7 @@ public class SpriteManager : MonoBehaviour {
 
 		contentSpriteNamePosition = contentSpriteName.position;
         setup = GameObject.Find("Button Setup").GetComponent<SetupButton>();
-        actionList = setup.ActionList;
+		actionList = new List<Action>(setup.ActionList);
 		tiersByAction = setup.TiersByAction;
 
 		if (tiersByAction.Count > 0)
@@ -99,6 +99,7 @@ public class SpriteManager : MonoBehaviour {
 			Button currentButton = spriteNameGO.GetComponent<Button> ();
 			spriteNameGO.GetComponent<SampleItemButton> ().SetItemListText (param);
 			spriteNameGO.transform.SetParent (contentSprites);
+			spriteNameGO.transform.localScale = Vector3.one;
 
 			EventTrigger trigger = currentButton.GetComponent<EventTrigger> ();
 			EventTrigger.Entry entry = new EventTrigger.Entry ();

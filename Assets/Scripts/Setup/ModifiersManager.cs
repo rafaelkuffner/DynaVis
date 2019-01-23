@@ -23,7 +23,14 @@ public class ModifiersManager : MonoBehaviour {
 	void Start () {
         setup = GameObject.Find("Button Setup").GetComponent<SetupButton>();
 
-		List<Action> actionList = setup.ActionList;
+		List<Action> actionList = new List<Action> ();
+		foreach (Action a in setup.ActionList) 
+		{
+			if (a is ColorChangeableAction) {
+				actionList.Add (a);
+			}
+		}
+			
 		List<string> modifierList = setup.ModifierList;
 		contentModifiersItemList = new List<Transform> ();
 		ActionsByModifier = new Dictionary<string, List<string>> ();
