@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System.Xml;
+using System;
 
 public class SetupButton : MonoBehaviour {
 
@@ -103,8 +104,8 @@ public class SetupButton : MonoBehaviour {
 
     void loadFile()
     {
-       
-        StreamReader sr = new StreamReader(boss.filename);
+
+        StreamReader sr = new StreamReader(boss.filename, System.Text.Encoding.UTF8);
         //Skipping header;
         string line = sr.ReadLine();
         char[] delim = { ',' };
@@ -190,8 +191,9 @@ public class SetupButton : MonoBehaviour {
                 {
                     if (tierString == data.Tier)
                     {
-                        if (!parametersByTier.Contains(data.Parameter))
-                            parametersByTier.Add(data.Parameter);
+                        string s = tier + ":" + data.Parameter;
+                        if (!parametersByTier.Contains(s))
+                            parametersByTier.Add(s);
                     }
                 }
             }
@@ -227,7 +229,7 @@ public class SetupButton : MonoBehaviour {
         XmlNode actionsNode = xmlDoc.CreateElement("Actions");
         rootNode.AppendChild(actionsNode);
 
-        Dictionary<string, Dictionary<string, string>> newSpriteTranslateTableByAction = SpriteManager.NewSpriteTranslationTableByAction;
+        Dictionary<string, Dictionary<Tuple<string,string>, string>> newSpriteTranslateTableByAction = SpriteManager.NewSpriteTranslationTableByAction;
         foreach (string action in TiersByAction.Keys)
         {
             List<string> tiers = TiersByAction[action];
@@ -250,15 +252,18 @@ public class SetupButton : MonoBehaviour {
 
             XmlNode parametersNode = xmlDoc.CreateElement("Parameters");
             actionNode.AppendChild(parametersNode);
-            Dictionary<string, string> newSpriteTranslateTable = newSpriteTranslateTableByAction[action];
-            foreach (string oldSpriteName in newSpriteTranslateTable.Keys)
+            Dictionary<Tuple<string,string>, string> newSpriteTranslateTable = newSpriteTranslateTableByAction[action];
+            foreach (Tuple<string,string> t in newSpriteTranslateTable.Keys)
             {
                 XmlNode parameterNode = xmlDoc.CreateElement("Parameter");
+                XmlAttribute attributeTier = xmlDoc.CreateAttribute("tier");
+                attributeTier.Value = t.Item1;
+                parameterNode.Attributes.Append(attributeTier);
                 XmlAttribute attributeInput = xmlDoc.CreateAttribute("input");
-                attributeInput.Value = oldSpriteName;
+                attributeInput.Value = t.Item2;
                 parameterNode.Attributes.Append(attributeInput);
                 XmlAttribute attributeOutput = xmlDoc.CreateAttribute("output");
-                attributeOutput.Value = newSpriteTranslateTable[oldSpriteName];
+                attributeOutput.Value = newSpriteTranslateTable[t];
                 parameterNode.Attributes.Append(attributeOutput);
                 parametersNode.AppendChild(parameterNode);
             }
@@ -320,19 +325,21 @@ public class SetupButton : MonoBehaviour {
                 if (!ParameterManager.ParametersByModifiableAction.ContainsKey(mAction))
                     continue;
 
-                Dictionary<string, string> parameterDic = ParameterManager.ParametersByModifiableAction[mAction];
+                Dictionary<Tuple<string,string>, string> parameterDic = ParameterManager.ParametersByModifiableAction[mAction];
 
                 XmlNode parametersNode = xmlDoc.CreateElement("Parameters");
                 modifiableActionsNode.AppendChild(parametersNode);
-                foreach (string paramInput in parameterDic.Keys)
+                foreach (Tuple<string,string> t in parameterDic.Keys)
                 {
                     XmlNode parameterNode = xmlDoc.CreateElement("Parameter");
                     XmlAttribute attributeInput = xmlDoc.CreateAttribute("input");
-                    attributeInput.Value = paramInput;
+                    attributeInput.Value = t.Item2;
+                    XmlAttribute attributeTier = xmlDoc.CreateAttribute("tier");
+                    attributeTier.Value = t.Item1;
                     parameterNode.Attributes.Append(attributeInput);
 
                     XmlAttribute attributeOutput = xmlDoc.CreateAttribute("output");
-                    attributeOutput.Value = parameterDic[paramInput];
+                    attributeOutput.Value = parameterDic[t];
                     parameterNode.Attributes.Append(attributeOutput);
 
                     parametersNode.AppendChild(parameterNode);

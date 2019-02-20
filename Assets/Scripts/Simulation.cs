@@ -270,8 +270,9 @@ public class Simulation : MonoBehaviour {
             foreach(XmlNode node3 in parameters)
             {
                 string input = node3.Attributes["input"].Value;
+                string tier = node3.Attributes["tier"].Value;
                 string output = node3.Attributes["output"].Value;
-                c.translationTable.Add(input, output);
+                c.translationTable.Add(new Tuple<string, string>(tier,input), output);
             }
             actionsConfig.Add(c);
         }
@@ -307,8 +308,9 @@ public class Simulation : MonoBehaviour {
                 foreach (XmlNode node4 in parameters)
                 {
                     string input = node4.Attributes["input"].Value;
+                    string tier = node4.Attributes["tier"].Value;
                     string output = node4.Attributes["output"].Value;
-                    c.translationTable.Add(input, output);
+                    c.translationTable.Add(new Tuple<string, string>(tier,input), output);
                 }
                 configs.Add(c);
 
@@ -347,7 +349,7 @@ public class Simulation : MonoBehaviour {
     void loadFile(){
 		actions.Clear ();
 		activeActions.Clear ();
-		StreamReader sr = new StreamReader (filename);
+        StreamReader sr = new StreamReader(filename, System.Text.Encoding.UTF8);
 		//Skipping header;
 		string line = sr.ReadLine ();
 		char[] delim = {','};
@@ -365,12 +367,12 @@ public class Simulation : MonoBehaviour {
 			string tiername = tiersConfig[components[0]];
 			foreach(Configuration c in actionsConfig)
             {
-                if (c.tiers.Contains(tiername) && c.translationTable.ContainsKey(components[4]))
-
+                Tuple<string,string> key = new Tuple<string, string>(tiername, components[4]);
+                if (c.tiers.Contains(tiername) && c.translationTable.ContainsKey(key))
                 {
-                    string value = c.translationTable[components[4]];
+                    string value = c.translationTable[key];
                     Type t = Type.GetType(c.className);
-                    Action a = Activator.CreateInstance(t, int.Parse(components[2]), int.Parse(components[3]), p, value) as Action;
+                    Action a = Activator.CreateInstance(t,tiername, int.Parse(components[2]), int.Parse(components[3]), p, value) as Action;
                     actions.Add(a);
                     break;
                 }
@@ -381,10 +383,11 @@ public class Simulation : MonoBehaviour {
                 string className = kp.Key;
                 foreach(Configuration c in kp.Value)
                 {
-                    if (c.tiers.Contains(tiername) && c.translationTable.ContainsKey(components[4]))
+                    Tuple<string, string> key = new Tuple<string, string>(tiername, components[4]);
+                    if (c.tiers.Contains(tiername) && c.translationTable.ContainsKey(key))
                     {
                         Type t = Type.GetType(className);
-                        string value = c.translationTable[components[4]];
+                        string value = c.translationTable[key];
                         Modifier m = Activator.CreateInstance(t,tiername, int.Parse(components[2]), int.Parse(components[3]), p,value) as Modifier;
                         modifs.Add(m);
                     }

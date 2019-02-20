@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System;
 
 public class ParameterManager : MonoBehaviour {
 
@@ -12,7 +13,7 @@ public class ParameterManager : MonoBehaviour {
 	public GameObject itemPrefab;
 	public Vector3 contentMappingsPosition;
 	public Button buttonNext;
-	public Dictionary<string, Dictionary<string, string>> ParametersByModifiableAction;
+	public Dictionary<string, Dictionary<Tuple<string, string>, string>> ParametersByModifiableAction;
 
 	private SetupButton setup;
 	private GameObject currentDropdownGO;
@@ -25,7 +26,7 @@ public class ParameterManager : MonoBehaviour {
 	void Start () {
         setup = GameObject.Find("Button Setup").GetComponent<SetupButton>();
         tiersByModifiableAction = setup.ModifiableActionManager.TiersByModifiableAction;
-		ParametersByModifiableAction = new Dictionary<string, Dictionary<string, string>> ();
+		ParametersByModifiableAction = new Dictionary<string, Dictionary<Tuple<string, string>, string>> ();
 
 		MappingsManager mappingsManager = setup.MappingsSetupPanel.GetComponent<MappingsManager> ();
 		List<string> mappingsOutputManager = new List<string>(mappingsManager.MappingInputOutput.Values);
@@ -126,17 +127,19 @@ public class ParameterManager : MonoBehaviour {
 			return;
 		
 		string parameter = currentParameterList [--index];
-		if(ParametersByModifiableAction.ContainsKey(currentAction)){
-			if (!ParametersByModifiableAction [currentAction].ContainsKey (parameter)) {
-				ParametersByModifiableAction [currentAction].Add (parameter, dropdownText);
+        string[] parts = parameter.Split(':');
+        Tuple<string, string> key = new Tuple<string, string>(parts[0], parts[1]);
+        if (ParametersByModifiableAction.ContainsKey(currentAction)){
+            if (!ParametersByModifiableAction [currentAction].ContainsKey (key)) {
+				ParametersByModifiableAction [currentAction].Add (key, dropdownText);
 
 			}
 			else
-				ParametersByModifiableAction[currentAction][parameter] = dropdownText;
+				ParametersByModifiableAction[currentAction][key] = dropdownText;
 		}
 		else {
-			ParametersByModifiableAction.Add(currentAction, new Dictionary<string, string>());
-			ParametersByModifiableAction [currentAction].Add (parameter, dropdownText);
+			ParametersByModifiableAction.Add(currentAction, new Dictionary<Tuple<string,string>, string>());
+			ParametersByModifiableAction [currentAction].Add (key, dropdownText);
 		}
 		Debug.Log("dropbox = " + currentDropdown.captionText.text.ToString ());
 

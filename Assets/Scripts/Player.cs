@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class Player : MonoBehaviour {
 	
@@ -25,13 +26,13 @@ public class Player : MonoBehaviour {
 	Simulation boss;
 	Transform dude2D;
 
-
 	Dictionary<string, List<Transform>> prefabListByTagSitting;
 	Dictionary<string, List<Transform>> prefabListByTagStand;
 	List<Transform> prefabListDudeSitting;
 	List<Transform> prefabListDudeStand;
-
 	Vector3 startPosition;
+
+    public Dictionary<GameObject, Vector3> objectRotation;
 
     public Simulation Boss
     {
@@ -60,8 +61,14 @@ public class Player : MonoBehaviour {
 		prefabListByTagStand = new Dictionary<string, List<Transform>> ();
 		prefabListDudeSitting = new List<Transform> ();
 		prefabListDudeStand = new List<Transform> ();
+        objectRotation = new Dictionary<GameObject, Vector3>();
 
-	
+        GameObject[] joints = GameObject.FindGameObjectsWithTag("playerjoints");
+        foreach (GameObject joint in joints)
+        {
+            objectRotation[joint] = Vector3.zero;
+        }
+
         Reset();
 	}
 
@@ -89,6 +96,7 @@ public class Player : MonoBehaviour {
         changeStance("sit");
 		lookat(dude2D.position);
         updateSprites();
+        ResetRotations();
 	}
 
 	public Transform getDude2D(){
@@ -129,9 +137,11 @@ public class Player : MonoBehaviour {
 		updateSprites ();
 	}
 
+
 	public void lookat (Vector3 end){
 		if(lineRenderer2D == null) 
 			lineRenderer2D = dude2D.GetComponent<LineRenderer>();
+        if (lineRenderer2D == null) return; //player has no lr
 		if (end == dude2D.position) {
 			lineRenderer2D.enabled = false;
 			return;
@@ -153,6 +163,20 @@ public class Player : MonoBehaviour {
 	}
 
 
+    public void ResetRotations()
+    {
+        foreach(KeyValuePair<GameObject,Vector3> kp in objectRotation){
+            kp.Key.transform.localRotation = Quaternion.identity;
+        }
+        List<GameObject> keys = objectRotation.Keys.ToList();
+        foreach (GameObject g in keys)
+        {
+            objectRotation[g] = Vector3.zero;
+        }
+    }
+
+
+    //if he has no sprites, this goes right out
 	public void updateSprites(){
 		Debug.Log ("dude = " + dude);
 		if(sh == null)

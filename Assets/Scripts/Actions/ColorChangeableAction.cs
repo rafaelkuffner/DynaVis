@@ -7,10 +7,11 @@ public abstract class ColorChangeableAction : Action {
 
     protected Color actionColor;
 
-    public ColorChangeableAction():base(0,0,null,""){
+    public ColorChangeableAction():base("",0,0,null,""){
 
     }
-    public ColorChangeableAction(int start, int end, Player subject, string param) : base(start, end, subject, param)
+    public ColorChangeableAction(string tier, int start, int end, Player subject, string param)
+        : base(tier,start, end, subject, param)
     {
         ActionColor = Color.gray;
     }

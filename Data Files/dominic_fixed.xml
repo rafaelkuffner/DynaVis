@@ -1,0 +1,233 @@
+<Definitions>
+  <Tiers>
+    <Tier name="hand_both_x">
+      <TierString>2MainsAbdAdd_Locus</TierString>
+      <TierString>2MainsAbdAdd_Mvt</TierString>
+    </Tier>
+    <Tier name="hand_both_z">
+      <TierString>2MainsFlexExten_Locus</TierString>
+      <TierString>2MainsFlexExten_Mvt</TierString>
+    </Tier>
+    <Tier name="hand_both_y">
+      <TierString>2MainsProSupi_Locus</TierString>
+      <TierString>2MainsProSupi_Mvt</TierString>
+    </Tier>
+    <Tier name="elbow_both_x">
+      <TierString>Avant-Bras2FlexExten_Locus</TierString>
+      <TierString>Avant-Bras2FlexExten_Mvt</TierString>
+    </Tier>
+    <Tier name="elbow_both_y">
+      <TierString>Avant-Bras2RotIntRotExt_Locus</TierString>
+      <TierString>Avant-Bras2RotIntRotExt_Mvt</TierString>
+    </Tier>
+    <Tier name="elbow_right_x">
+      <TierString>Avant-BrasDFlexExten_Locus</TierString>
+      <TierString>Avant-BrasDFlexExten_Mvt</TierString>
+    </Tier>
+    <Tier name="elbow_right_y">
+      <TierString>Avant-BrasDRotIntRotExt_Locus</TierString>
+      <TierString>Avant-BrasDRotIntRotExt_Mvt</TierString>
+    </Tier>
+    <Tier name="shoulder_both_z">
+      <TierString>Bras2AbdAdd_Locus</TierString>
+      <TierString>Bras2AbdAdd_Mvt</TierString>
+    </Tier>
+    <Tier name="shoulder_both_x">
+      <TierString>Bras2FlexExten_Locus</TierString>
+      <TierString>Bras2FlexExten_Mvt</TierString>
+    </Tier>
+    <Tier name="shoulder_right_z">
+      <TierString>BrasDAbdAdd_Locus</TierString>
+      <TierString>BrasDAbdAdd_Mvt</TierString>
+    </Tier>
+    <Tier name="shoulder_right_x">
+      <TierString>BrasDFlexExten_Locus</TierString>
+      <TierString>BrasDFlexExten_Mvt</TierString>
+    </Tier>
+    <Tier name="hand_right_x">
+      <TierString>MDMainAbdAdd_Locus</TierString>
+      <TierString>MDMainAbdAdd_Mvt</TierString>
+    </Tier>
+    <Tier name="hand_right_z">
+      <TierString>MDMainFlexExten_Locus</TierString>
+      <TierString>MDMainFlexExten_Mvt</TierString>
+    </Tier>
+    <Tier name="hand_right_y">
+      <TierString>MDMainProSupi_Locus</TierString>
+      <TierString>MDMainProSupi_Mvt</TierString>
+    </Tier>
+	<Tier name="reset">
+	  <TierString>GLOSE</TierString>
+	</Tier>
+  </Tiers>
+  <Actions>
+    <Action name="RotateJointAction">
+      <ApplicableTiers>
+        <ApplicableTier>hand_both_x</ApplicableTier>
+        <ApplicableTier>hand_both_z</ApplicableTier>
+        <ApplicableTier>hand_both_y</ApplicableTier>
+        <ApplicableTier>elbow_both_x</ApplicableTier>
+        <ApplicableTier>elbow_both_y</ApplicableTier>
+        <ApplicableTier>elbow_right_x</ApplicableTier>
+        <ApplicableTier>elbow_right_y</ApplicableTier>
+        <ApplicableTier>shoulder_both_z</ApplicableTier>
+        <ApplicableTier>shoulder_both_x</ApplicableTier>
+        <ApplicableTier>shoulder_right_z</ApplicableTier>
+        <ApplicableTier>shoulder_right_x</ApplicableTier>
+        <ApplicableTier>hand_right_x</ApplicableTier>
+        <ApplicableTier>hand_right_z</ApplicableTier>
+        <ApplicableTier>hand_right_y</ApplicableTier>
+        <ApplicableTier>reset</ApplicableTier>
+      </ApplicableTiers>
+      <Parameters>
+		<Parameter tier="reset" input="placeholder" output="0"/>
+        <Parameter tier="hand_both_x" input="Add15" output="15" />
+        <Parameter tier="hand_both_x" input="Inter" output="0" />
+        <Parameter tier="hand_both_x" input="Addmax" output="45" />
+        <Parameter tier="hand_both_x" input="Abd15" output="-15" />
+        <Parameter tier="hand_both_x" input="Add30" output="-30" />
+        <Parameter tier="hand_both_x" input="Add60&lt;&gt;Add45" output="45:60" />
+        <Parameter tier="hand_both_x" input="Add90&lt;&gt;Add75" output="75:90" />
+        <Parameter tier="hand_both_x" input="0" output="0:0" />
+        <Parameter tier="hand_both_x" input="Add30&lt;&gt;Add15" output="15:30" />
+        <Parameter tier="hand_both_z" input="Exten30" output="30" />
+        <Parameter tier="hand_both_z" input="Flex30" output="-30" />
+        <Parameter tier="hand_both_z" input="Flex45" output="-45" />
+        <Parameter tier="hand_both_z" input="Exten60" output="60" />
+        <Parameter tier="hand_both_z" input="Exten60&lt;&gt;Exten45" output="45:60" />
+        <Parameter tier="hand_both_z" input="Flex30&lt;&gt;Flex15" output="-15:-30" />
+        <Parameter tier="hand_both_z" input="0" output="0:0" />
+        <Parameter tier="hand_both_z" input="Exten30&lt;&gt;Exten15" output="15:30" />
+        <Parameter tier="hand_both_y" input="Inter" output="0" />
+        <Parameter tier="hand_both_y" input="Supi60" output="60" />
+        <Parameter tier="hand_both_y" input="ProMax" output="-85" />
+        <Parameter tier="hand_both_y" input="Supi90" output="90" />
+        <Parameter tier="hand_both_y" input="Pro60" output="-60" />
+        <Parameter tier="hand_both_y" input="Pro45" output="-45" />
+        <Parameter tier="hand_both_y" input="Supi45" output="45" />
+        <Parameter tier="hand_both_y" input="Pro180&lt;&gt;Pro135" output="-135:-180" />
+        <Parameter tier="hand_both_y" input="Supi60&lt;&gt;Supi45" output="45:60" />
+        <Parameter tier="hand_both_y" input="Pro30&lt;&gt;Pro15" output="-15:-30" />
+        <Parameter tier="hand_both_y" input="0" output="0:0" />
+        <Parameter tier="hand_right_y" input="Supi90&lt;&gt;Supi75" output="75:90" />
+        <Parameter tier="hand_right_y" input="Supi30&lt;&gt;Supi15" output="15:30" />
+        <Parameter tier="hand_right_y" input="Pro30&lt;&gt;Pro15" output="-15:-30" />
+        <Parameter tier="hand_right_y" input="Pro60&lt;&gt;Pro45" output="-45:-60" />
+        <Parameter tier="hand_right_y" input="0" output="0:0" />
+        <Parameter tier="hand_right_y" input="Supi120&lt;&gt;Supi105" output="105:120" />
+        <Parameter tier="hand_right_y" input="Pro180&lt;&gt;Pro135" output="-135:-180" />
+        <Parameter tier="hand_right_y" input="Supi30" output="30" />
+        <Parameter tier="hand_right_y" input="Pro45" output="-45" />
+        <Parameter tier="hand_right_y" input="Pro60" output="-60" />
+        <Parameter tier="hand_right_y" input="Inter" output="0" />
+        <Parameter tier="hand_right_y" input="Pro30" output="-30" />
+        <Parameter tier="hand_right_y" input="ProMax" output="-85" />
+        <Parameter tier="hand_right_y" input="Supi90" output="90" />
+        <Parameter tier="hand_right_z" input="Exten30&lt;&gt;Exten15" output="15:30" />
+        <Parameter tier="hand_right_z" input="Flex120&lt;&gt;Flex105" output="-105:-120" />
+        <Parameter tier="hand_right_z" input="Flex30&lt;&gt;Flex15" output="-15:-30" />
+        <Parameter tier="hand_right_z" input="0" output="0:0" />
+        <Parameter tier="hand_right_z" input="Flex60&lt;&gt;Flex45" output="-45:-60" />
+        <Parameter tier="hand_right_z" input="Exten45" output="45" />
+        <Parameter tier="hand_right_z" input="Flex60" output="-60" />
+        <Parameter tier="hand_right_z" input="Exten30" output="30" />
+        <Parameter tier="hand_right_z" input="Exten60" output="60" />
+        <Parameter tier="hand_right_z" input="Flex45" output="-45" />
+        <Parameter tier="hand_right_z" input="Inter" output="0" />
+        <Parameter tier="hand_right_z" input="Flex30" output="-30" />
+        <Parameter tier="hand_right_x" input="Add90&lt;&gt;Add75" output="75:90" />
+        <Parameter tier="hand_right_x" input="Add60&lt;&gt;Add45" output="45:60" />
+        <Parameter tier="hand_right_x" input="Add30&lt;&gt;Add15" output="15:30" />
+        <Parameter tier="hand_right_x" input="0" output="0:0" />
+        <Parameter tier="hand_right_x" input="Abd30&lt;&gt;Abd15" output="-15:-30" />
+        <Parameter tier="hand_right_x" input="Addmax" output="45" />
+        <Parameter tier="hand_right_x" input="Add30" output="30" />
+        <Parameter tier="hand_right_x" input="Add15" output="15" />
+        <Parameter tier="hand_right_x" input="Abd15" output="-15" />
+        <Parameter tier="hand_right_x" input="Inter" output="0" />
+        <Parameter tier="hand_right_x" input="Abd30" output="-30" />
+        <Parameter tier="elbow_both_x" input="Flexmax" output="-145" />
+        <Parameter tier="elbow_both_x" input="Inter" output="-90" />
+        <Parameter tier="elbow_both_x" input="Flex60" output="-60" />
+        <Parameter tier="elbow_both_x" input="Flex30" output="-30" />
+        <Parameter tier="elbow_both_x" input="Exten90&lt;&gt;Exten75" output="75:90" />
+        <Parameter tier="elbow_both_x" input="Exten30&lt;&gt;Exten15" output="15:30" />
+        <Parameter tier="elbow_both_x" input="Exten60&lt;&gt;Exten45" output="45:60" />
+        <Parameter tier="elbow_both_x" input="0" output="0:0" />
+        <Parameter tier="elbow_both_y" input="Rot.Ext60" output="60" />
+        <Parameter tier="elbow_both_y" input="Rot.Ext45" output="45" />
+        <Parameter tier="elbow_both_y" input="Rot.Extmax" output="80" />
+        <Parameter tier="elbow_both_y" input="Rot.Ext30" output="30" />
+        <Parameter tier="elbow_both_y" input="Inter" output="0" />
+        <Parameter tier="elbow_both_y" input="Rot.Int30&lt;&gt;Rot.Int15" output="-15:-30" />
+        <Parameter tier="elbow_both_y" input="0" output="0:0" />
+        <Parameter tier="elbow_both_y" input="Rot.Ext90&lt;&gt;Rot.Ext75" output="75:90" />
+        <Parameter tier="elbow_both_y" input="Rot.Int60&lt;&gt;Rot.Int45" output="-45:-60" />
+        <Parameter tier="elbow_both_y" input="Rot.Ext60&lt;&gt;Rot.Ext45" output="45:60" />
+        <Parameter tier="elbow_both_y" input="Rot.Ext30&lt;&gt;Rot.Ext15" output="15:30" />
+        <Parameter tier="elbow_right_x" input="Flexmax" output="-145" />
+        <Parameter tier="elbow_right_x" input="Flex30" output="-30" />
+        <Parameter tier="elbow_right_x" input="Flex60" output="-60" />
+        <Parameter tier="elbow_right_x" input="Inter" output="-90" />
+        <Parameter tier="elbow_right_x" input="Flex45" output="-45" />
+        <Parameter tier="elbow_right_x" input="Flex120&lt;&gt;Flex105" output="-105:-120" />
+        <Parameter tier="elbow_right_x" input="Exten30&lt;&gt;Exten15" output="15:30" />
+        <Parameter tier="elbow_right_x" input="0" output="0:0" />
+        <Parameter tier="elbow_right_x" input="Exten60&lt;&gt;Exten45" output="45:60" />
+        <Parameter tier="elbow_right_x" input="Flex30&lt;&gt;Flex15" output="-15:-30" />
+        <Parameter tier="elbow_right_x" input="Exten90&lt;&gt;Exten75" output="75:90" />
+        <Parameter tier="elbow_right_y" input="Rot.Ext60" output="60" />
+        <Parameter tier="elbow_right_y" input="Rot.Ext30" output="30" />
+        <Parameter tier="elbow_right_y" input="Rot.Int45" output="-45" />
+        <Parameter tier="elbow_right_y" input="Rot.Int60" output="-60" />
+        <Parameter tier="elbow_right_y" input="Inter" output="0" />
+        <Parameter tier="elbow_right_y" input="Rot.Extmax" output="80" />
+        <Parameter tier="elbow_right_y" input="Rot.Int30" output="-30" />
+        <Parameter tier="elbow_right_y" input="Rot.Ext30&lt;&gt;Rot.Ext15" output="15:30" />
+        <Parameter tier="elbow_right_y" input="0" output="0" />
+        <Parameter tier="elbow_right_y" input="Rot.Int120&lt;&gt;Rot.Int105" output="-105:-120" />
+        <Parameter tier="elbow_right_y" input="Rot.Int60&lt;&gt;Rot.Int45" output="-45:-60" />
+        <Parameter tier="elbow_right_y" input="Rot.Int90&lt;&gt;Rot.Int75" output="-75:-90" />
+        <Parameter tier="elbow_right_y" input="Rot.Ext90&lt;&gt;Rot.Ext75" output="75:90" />
+        <Parameter tier="elbow_right_y" input="Rot.Ext120&lt;&gt;Rot.Ext105" output="105:120" />
+        <Parameter tier="elbow_right_y" input="Rot.Ext60&lt;&gt;Rot.Ext45" output="45:60" />
+        <Parameter tier="shoulder_both_z" input="Abd30" output="-30" />
+        <Parameter tier="shoulder_both_z" input="Abd15" output="-15" />
+        <Parameter tier="shoulder_both_z" input="Add15" output="15" />
+        <Parameter tier="shoulder_both_z" input="Add30" output="30" />
+        <Parameter tier="shoulder_both_z" input="Inter" output="0" />
+        <Parameter tier="shoulder_both_z" input="0" output="0:0" />
+        <Parameter tier="shoulder_both_z" input="Add30&lt;&gt;Add15" output="15:30" />
+        <Parameter tier="shoulder_both_z" input="Abd30&lt;&gt;Abd15" output="-15:-30" />
+        <Parameter tier="shoulder_both_x" input="Flex15" output="-15" />
+        <Parameter tier="shoulder_both_x" input="Flex30" output="-30" />
+        <Parameter tier="shoulder_both_x" input="Inter" output="0" />
+        <Parameter tier="shoulder_both_x" input="Flex60" output="-60" />
+        <Parameter tier="shoulder_both_x" input="Flex45" output="-45" />
+        <Parameter tier="shoulder_both_x" input="Exten30&lt;&gt;Exten15" output="15:30" />
+        <Parameter tier="shoulder_both_x" input="0" output="0:0" />
+        <Parameter tier="shoulder_both_x" input="Flex60&lt;&gt;Flex45" output="-45:-60" />
+        <Parameter tier="shoulder_right_z" input="Add15" output="15" />
+        <Parameter tier="shoulder_right_z" input="Add90" output="90" />
+        <Parameter tier="shoulder_right_z" input="Inter" output="0" />
+        <Parameter tier="shoulder_right_z" input="Add30" output="30" />
+        <Parameter tier="shoulder_right_z" input="Add45" output="45" />
+        <Parameter tier="shoulder_right_z" input="Add60" output="60" />
+        <Parameter tier="shoulder_right_z" input="Add90&lt;&gt;Add75" output="75:90" />
+        <Parameter tier="shoulder_right_z" input="Add30&lt;&gt;Add15" output="15:30" />
+        <Parameter tier="shoulder_right_z" input="0" output="0:0" />
+        <Parameter tier="shoulder_right_z" input="Abd30&lt;&gt;Abd15" output="-15:-30" />
+        <Parameter tier="shoulder_right_x" input="Flex15" output="-15" />
+        <Parameter tier="shoulder_right_x" input="Inter" output="0" />
+        <Parameter tier="shoulder_right_x" input="Flex30" output="-30" />
+        <Parameter tier="shoulder_right_x" input="Flex60" output="-60" />
+        <Parameter tier="shoulder_right_x" input="Exten15" output="15" />
+        <Parameter tier="shoulder_right_x" input="Flex30&lt;&gt;Flex15" output="-15:-30" />
+        <Parameter tier="shoulder_right_x" input="0" output="0:0" />
+        <Parameter tier="shoulder_right_x" input="Exten60&lt;&gt;Exten45" output="45:60" />
+        <Parameter tier="shoulder_right_x" input="Exten30&lt;&gt;Exten15" output="15:30" />
+      </Parameters>
+    </Action>
+  </Actions>
+  <Modifiers />
+</Definitions>

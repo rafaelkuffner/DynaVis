@@ -3,6 +3,7 @@ using System;
 
 public abstract class Action :  IComparable{
 
+    public string tier;
 	public int start;
 	public int end;
     protected Player subject;
@@ -35,7 +36,8 @@ public abstract class Action :  IComparable{
         }
     }
 
-    public Action(int start, int end, Player subject,string param){
+    public Action(string tier, int start, int end, Player subject,string param){
+        this.tier = tier;
 		this.start = start;
 		this.end = end;
 		this.Subject = subject;

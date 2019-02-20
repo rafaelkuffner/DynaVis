@@ -13,10 +13,14 @@ public class LocationAction : Action {
 	Vector2 startLocation2D;
 	GameObject target;
 
-	public LocationAction():base(0,0,null,""){
+    public LocationAction()
+        : base("", 0, 0, null, "")
+    {
 
 	}
-	public LocationAction(int start, int end, Player subject, string param):base(start,end,subject,param){
+    public LocationAction(string tier, int start, int end, Player subject, string param)
+        : base(tier,start, end, subject, param)
+    {
        
         char[] delim = { '_' };
         string[] parts = param.Split(delim);

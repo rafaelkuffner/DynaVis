@@ -429,8 +429,8 @@ BrasDFlexExten_Mvt,p1,52810,53210,Flex30<>Flex15
 BrasDFlexExten_Mvt,p1,54920,55160,0
 BrasDFlexExten_Mvt,p1,62390,62590,0
 BrasDFlexExten_Mvt,p1,65330,65570,Exten30<>Exten15
-Bras2AbdAdd_Locus,p1,870,1310,Abd30
-Bras2AbdAdd_Locus,p1,4010,4952,Abd15
+Bras2AbdAdd_Locus,p1,870,1310,Add30
+Bras2AbdAdd_Locus,p1,4010,4952,Add15
 Bras2AbdAdd_Locus,p1,17950,17970,Add15
 Bras2AbdAdd_Locus,p1,18195,18210,Add15
 Bras2AbdAdd_Locus,p1,23380,23410,Add15

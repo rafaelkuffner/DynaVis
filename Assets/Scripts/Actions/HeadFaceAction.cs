@@ -4,11 +4,15 @@ public class HeadFaceAction : ColorChangeableAction
 {
 
 
-	public HeadFaceAction():base(0,0,null,""){
+    public HeadFaceAction()
+        : base("", 0, 0, null, "")
+    {
 		
 	}
-	
-	public HeadFaceAction(int start, int end, Player subject, string param):base(start,end,subject,param){
+
+    public HeadFaceAction(string tier, int start, int end, Player subject, string param)
+        : base(tier,start, end, subject, param)
+    {
 
 	}
 	

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Definitions>
+  <Tiers>
+	<Tier name="reset">
+		<TierString>GLOSE</TierString>
+	</Tier>
+    <Tier name="hand_both_x">
+      <TierString>2MainsAbdAdd_Locus</TierString>
+      <TierString>2MainsAbdAdd_Mvt</TierString>
+    </Tier>
+    <Tier name="hand_both_z">
+      <TierString>2MainsFlexExten_Locus</TierString>
+      <TierString>2MainsFlexExten_Mvt</TierString>
+    </Tier>
+    <Tier name="hand_both_y">
+      <TierString>2MainsProSupi_Locus</TierString>
+      <TierString>2MainsProSupi_Mvt</TierString>
+    </Tier>
+    <Tier name="elbow_both_x">
+      <TierString>Avant-Bras2FlexExten_Locus</TierString>
+      <TierString>Avant-Bras2FlexExten_Mvt</TierString>
+    </Tier>
+    <Tier name="elbow_both_y">
+      <TierString>Avant-Bras2RotIntRotExt_Locus</TierString>
+      <TierString>Avant-Bras2RotIntRotExt_Mvt</TierString>
+    </Tier>
+    <Tier name="elbow_right_x">
+      <TierString>Avant-BrasDFlexExten_Locus</TierString>
+      <TierString>Avant-BrasDFlexExten_Mvt</TierString>
+    </Tier>
+    <Tier name="elbow_right_y">
+      <TierString>Avant-BrasDRotIntRotExt_Locus</TierString>
+      <TierString>Avant-BrasDRotIntRotExt_Mvt</TierString>
+    </Tier>
+    <Tier name="shoulder_both_z">
+      <TierString>Bras2AbdAdd_Locus</TierString>
+      <TierString>Bras2AbdAdd_Mvt</TierString>
+    </Tier>
+    <Tier name="shoulder_both_x">
+      <TierString>Bras2FlexExten_Locus</TierString>
+      <TierString>Bras2FlexExten_Mvt</TierString>
+    </Tier>
+    <Tier name="shoulder_right_z">
+      <TierString>BrasDAbdAdd_Locus</TierString>
+      <TierString>BrasDAbdAdd_Mvt</TierString>
+    </Tier>
+    <Tier name="shoulder_right_x">
+      <TierString>BrasDFlexExten_Locus</TierString>
+      <TierString>BrasDFlexExten_Mvt</TierString>
+    </Tier>
+    <Tier name="hand_right_x">
+      <TierString>MDMainAbdAdd_Locus</TierString>
+      <TierString>MDMainAbdAdd_Mvt</TierString>
+    </Tier>
+    <Tier name="hand_right_y">
+      <TierString>MDMainProSupi_Locus</TierString>
+      <TierString>MDMainProSupi_Mvt</TierString>
+    </Tier>
+    <Tier name="hand_right_z">
+      <TierString>MDMainFlexExten_Locus</TierString>
+      <TierString>MDMainFlexExten_Mvt</TierString>
+    </Tier>
+  </Tiers>
+  <Actions>
+    <Action name="RotateJointAction">
+      <ApplicableTiers>
+        <ApplicableTier>hand_both_x</ApplicableTier>
+        <ApplicableTier>hand_both_z</ApplicableTier>
+        <ApplicableTier>hand_both_y</ApplicableTier>
+        <ApplicableTier>elbow_both_x</ApplicableTier>
+        <ApplicableTier>elbow_both_y</ApplicableTier>
+        <ApplicableTier>elbow_right_x</ApplicableTier>
+        <ApplicableTier>elbow_right_y</ApplicableTier>
+        <ApplicableTier>shoulder_both_z</ApplicableTier>
+        <ApplicableTier>shoulder_both_x</ApplicableTier>
+        <ApplicableTier>shoulder_right_z</ApplicableTier>
+        <ApplicableTier>shoulder_right_x</ApplicableTier>
+        <ApplicableTier>hand_right_x</ApplicableTier>
+        <ApplicableTier>hand_right_y</ApplicableTier>
+        <ApplicableTier>hand_right_z</ApplicableTier>
+		<ApplicableTier>reset</ApplicableTier>
+      </ApplicableTiers>
+      <Parameters>
+		<Parameter input="placeholder" output="0"/>
+        <Parameter input="Inter" output="0" />
+        <Parameter input="Add15" output="-15" />
+        <Parameter input="Addmax" output="-45" />
+        <Parameter input="Abd15" output="15" />
+        <Parameter input="Add30" output="-30" />
+        <Parameter input="Add60&lt;&gt;Add45" output="-45:-60" />
+        <Parameter input="Add90&lt;&gt;Add75" output="-75:-90" />
+        <Parameter input="0" output="0:0" />
+        <Parameter input="Add30&lt;&gt;Add15" output="-15:-30" />
+        <Parameter input="Exten30" output="30" />
+        <Parameter input="Flex30" output="-30" />
+        <Parameter input="Flex45" output="-45" />
+        <Parameter input="Exten60" output="60" />
+        <Parameter input="Exten60&lt;&gt;Exten45" output="45:60" />
+        <Parameter input="Flex30&lt;&gt;Flex15" output="-15:-30" />
+        <Parameter input="Exten30&lt;&gt;Exten15" output="15:30" />
+        <Parameter input="Supi60" output="60" />
+        <Parameter input="ProMax" output="-85" />
+        <Parameter input="Supi90" output="90" />
+        <Parameter input="Pro60" output="-60" />
+        <Parameter input="Pro45" output="-45" />
+        <Parameter input="Supi45" output="45" />
+        <Parameter input="Pro180&lt;&gt;Pro135" output="-135:-180" />
+        <Parameter input="Supi60&lt;&gt;Supi45" output="45:60" />
+        <Parameter input="Pro30&lt;&gt;Pro15" output="-15:-30" />
+        <Parameter input="Flexmax" output="-145" />
+        <Parameter input="Flex60" output="-60" />
+        <Parameter input="Exten90&lt;&gt;Exten75" output="-75:-90" />
+        <Parameter input="Rot.Ext60" output="60" />
+        <Parameter input="Rot.Ext45" output="45" />
+        <Parameter input="Rot.Extmax" output="80" />
+        <Parameter input="Rot.Ext30" output="30" />
+        <Parameter input="Rot.Int30&lt;&gt;Rot.Int15" output="-15:-30" />
+        <Parameter input="Rot.Ext90&lt;&gt;Rot.Ext75" output="75:90" />
+        <Parameter input="Rot.Int60&lt;&gt;Rot.Int45" output="-45:-60" />
+        <Parameter input="Rot.Ext60&lt;&gt;Rot.Ext45" output="45:60" />
+        <Parameter input="Rot.Ext30&lt;&gt;Rot.Ext15" output="15:30" />
+        <Parameter input="Flex120&lt;&gt;Flex105" output="-105:-120" />
+        <Parameter input="Rot.Int45" output="-45" />
+        <Parameter input="Rot.Int60" output="-60" />
+        <Parameter input="Rot.Int30" output="-30" />
+        <Parameter input="Rot.Int120&lt;&gt;Rot.Int105" output="-105:-120" />
+        <Parameter input="Rot.Int90&lt;&gt;Rot.Int75" output="-75:-90" />
+        <Parameter input="Rot.Ext120&lt;&gt;Rot.Ext105" output="105:120" />
+        <Parameter input="Abd30" output="30" />
+        <Parameter input="Abd30&lt;&gt;Abd15" output="15:30" />
+        <Parameter input="Add90" output="-90" />
+        <Parameter input="Add45" output="-45" />
+        <Parameter input="Add60" output="-60" />
+        <Parameter input="Flex15" output="-15" />
+        <Parameter input="Flex60&lt;&gt;Flex45" output="-45:-60" />
+        <Parameter input="Exten15" output="15" />
+        <Parameter input="Pro30" output="-30" />
+        <Parameter input="Supi30" output="30" />
+        <Parameter input="Supi120&lt;&gt;Supi105" output="105:120" />
+        <Parameter input="Pro60&lt;&gt;Pro45" output="-45:-60" />
+        <Parameter input="Supi30&lt;&gt;Supi15" output="15:30" />
+        <Parameter input="Supi90&lt;&gt;Supi75" output="75:90" />
+        <Parameter input="Exten45" output="45" />
+      </Parameters>
+    </Action>
+  </Actions>
+  <Modifiers />
+</Definitions>

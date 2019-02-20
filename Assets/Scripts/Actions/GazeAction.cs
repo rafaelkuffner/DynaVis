@@ -3,11 +3,15 @@ using System.Collections;
 
 public class GazeAction : Action {
 
-	public GazeAction():base(0,0,null,""){
+    public GazeAction()
+        : base("", 0, 0, null, "")
+    {
 		
 	}
 
-	public GazeAction(int start, int end, Player subject, string param):base(start,end,subject,param){
+    public GazeAction(string tier, int start, int end, Player subject, string param)
+        : base(tier,start, end, subject, param)
+    {
 
 	}
 	

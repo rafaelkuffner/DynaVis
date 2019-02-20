@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System;
 
 public class SpriteManager : MonoBehaviour {
 
@@ -11,12 +12,12 @@ public class SpriteManager : MonoBehaviour {
 	public Transform contentSpriteName;
 	public Vector3 contentSpriteNamePosition;
 	public GameObject inputFieldPrefab;
-	public Dictionary<string, Dictionary<string,  string>> NewSpriteTranslationTableByAction { get; set; }
+	public Dictionary<string, Dictionary<Tuple<string, string>,  string>> NewSpriteTranslationTableByAction { get; set; }
 	public Button buttonNext;
 	public GameObject textDescriptionObject;
 	private SetupButton setup;
 	private List<Action> actionList;
-	private Dictionary<string, string> spriteTranslationTable;
+	private Dictionary<Tuple<string,string>, string> spriteTranslationTable;
 	private GameObject spriteNameGO;
 	private GameObject currentButtonGO;
 	private GameObject currentItemGO;
@@ -26,7 +27,7 @@ public class SpriteManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		NewSpriteTranslationTableByAction = new Dictionary<string, Dictionary<string,  string>> ();
+		NewSpriteTranslationTableByAction = new Dictionary<string, Dictionary<Tuple<string, string>,  string>> ();
 
 		contentSpriteNamePosition = contentSpriteName.position;
         setup = GameObject.Find("Button Setup").GetComponent<SetupButton>();
@@ -41,7 +42,7 @@ public class SpriteManager : MonoBehaviour {
 			}
 			currentAction = actionList[0];
 			processedActions = 1;
-            NewSpriteTranslationTableByAction.Add(currentAction.GetClassName(), new Dictionary<string, string>());
+            NewSpriteTranslationTableByAction.Add(currentAction.GetClassName(), new Dictionary<Tuple<string, string>, string>());
             List<string> tiers = tiersByAction[currentAction.GetClassName()];
 			List<string> parameterList = setup.getParametersByTierString (tiers);
 
@@ -90,7 +91,7 @@ public class SpriteManager : MonoBehaviour {
 			return;
 		processedActions++;
 		currentAction = actionList[0];
-        NewSpriteTranslationTableByAction.Add(currentAction.GetClassName(), new Dictionary<string, string>());
+        NewSpriteTranslationTableByAction.Add(currentAction.GetClassName(), new Dictionary<Tuple<string, string>, string>());
         List<string> tiers = tiersByAction[currentAction.GetClassName()];
 		List<string> parameterList = setup.getParametersByTierString (tiers);
 
@@ -119,8 +120,13 @@ public class SpriteManager : MonoBehaviour {
 		Button button = currentItemGO.GetComponentInChildren<Button> ();
 
 		Debug.Log("EditedInputField = " + currentItemGO.GetComponentInChildren<Text>().text.ToString ());
-
-        NewSpriteTranslationTableByAction[currentAction.GetClassName()].Add(button.GetComponent<SampleItemButton>().GetItemListText(), currentInputField.text.ToString());
+        string lefts = button.GetComponent<SampleItemButton>().GetItemListText();
+        string []parts = lefts.Split(':');
+        Tuple<string, string> key = new Tuple<string, string>(parts[0], parts[1]);
+        if (!NewSpriteTranslationTableByAction[currentAction.GetClassName()].ContainsKey(key))
+            NewSpriteTranslationTableByAction[currentAction.GetClassName()].Add(key, currentInputField.text.ToString());
+        else
+            NewSpriteTranslationTableByAction[currentAction.GetClassName()][key] = currentInputField.text.ToString();
 	}
 		
 	public void OnPointerClickButton(PointerEventData data)

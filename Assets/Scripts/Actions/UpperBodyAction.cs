@@ -4,11 +4,13 @@ using System.Collections.Generic;
 public class UpperBodyAction : ColorChangeableAction {
 
 
-	public UpperBodyAction():base(0,0,null,""){
+    public UpperBodyAction()
+        : base("", 0, 0, null, "")
+    {
 		
 	}
 	
-	public UpperBodyAction(int start, int end, Player subject, string param):base(start,end,subject,param){
+	public UpperBodyAction(string tier, int start, int end, Player subject, string param):base(tier,start,end,subject,param){
 		
 	}
 

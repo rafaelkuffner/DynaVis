@@ -3,11 +3,15 @@
 public class LowerBodyAction : ColorChangeableAction
 {
 
-	public LowerBodyAction():base(0,0,null,""){
+    public LowerBodyAction()
+        : base("", 0, 0, null, "")
+    {
 		
 	}
-	
-	public LowerBodyAction(int start, int end, Player subject, string param):base(start,end,subject,param){
+
+    public LowerBodyAction(string tier, int start, int end, Player subject, string param)
+        : base(tier,start, end, subject, param)
+    {
 	
 	}
 	
