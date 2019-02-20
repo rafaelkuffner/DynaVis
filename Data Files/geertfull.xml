@@ -10,6 +10,9 @@
       <TierString>hand gestures S1</TierString>
       <TierString>hand gestures S2</TierString>
       <TierString>hand gestures S3</TierString>
+	  <TierString>transcriptie s1</TierString>
+      <TierString>transcriptie s2</TierString>
+      <TierString>transcriptie s3</TierString>
     </Tier>
     <Tier name="Facial expression">
       <TierString>facial expressions s1</TierString>
@@ -18,9 +21,6 @@
 	  <TierString>head gestures S1</TierString>
       <TierString>head gestures S2</TierString>
       <TierString>head gestures S3</TierString>
-      <TierString>transcriptie s1</TierString>
-      <TierString>transcriptie s2</TierString>
-      <TierString>transcriptie s3</TierString>
     </Tier>
   </Tiers>
   <Actions>
@@ -68,7 +68,6 @@
         <Parameter input="headshake" output="head" />
         <Parameter input="backward" output="head" />
         <Parameter input="back to normal" output="head" />
-        <Parameter input="placeholder" output="face" />
       </Parameters>
     </Action>
     <Action name="UpperBodyAction">
@@ -106,6 +105,8 @@
         <Parameter input="palm up afwerend" output="all" />
         <Parameter input="self-adaptor" output="all" />
         <Parameter input="counting" output="all" />
+		<Parameter input="placeholder" output="head" />
+
       </Parameters>
     </Action>
   </Actions>
